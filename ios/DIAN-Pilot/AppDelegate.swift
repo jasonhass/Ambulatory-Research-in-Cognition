@@ -33,11 +33,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
-        //TODO: remove this before final release
-        /////////////////////////
+        
         DNLogManager.setLogToFile(log: true);
         DNLog("--------------------------------");
         DNLog("Application did finish launching");
+        
         DNRestAPI.shared.storeZips = false;
         DNRestAPI.shared.sendData = false;
         
