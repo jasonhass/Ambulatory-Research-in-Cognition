@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "60X-FY-Afp"; */
+"60X-FY-Afp.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Is this a good price?"; ObjectID = "9YS-6z-g1L"; */
+"9YS-6z-g1L.text" = "Is this a good price?";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "A4U-ME-sU5"; */
+"A4U-ME-sU5.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "Soap"; ObjectID = "PBl-Ob-cpO"; */
+"PBl-Ob-cpO.text" = "Soap";
+
+/* Class = "UILabel"; text = "$0.52"; ObjectID = "cC6-dj-MYS"; */
+"cC6-dj-MYS.text" = "$0.52";
+
+/* Class = "UILabel"; text = "What was the price of the"; ObjectID = "efW-l8-QvT"; */
+"efW-l8-QvT.text" = "What was the price of the";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "hns-HN-xki"; */
+"hns-HN-xki.normalTitle" = "Yes";
+
+/* Class = "UITextView"; text = "In this task, we’ll show you some shopping items and prices.\n\nPlease decide if the displayed price is a “good bargain” for that item.\n\nThe pair will only remain on the screen for a short time so please make your decision quickly and pay careful attention.\n\nAfter you see 10 items, you will be asked to match the correct price with each item so try to remember the prices.\n\nPress Start to begin."; ObjectID = "rWE-R1-mq7"; */
+"rWE-R1-mq7.text" = "In this task, we’ll show you some shopping items and prices.\n\nPlease decide if the displayed price is a “good bargain” for that item.\n\nThe pair will only remain on the screen for a short time so please make your decision quickly and pay careful attention.\n\nAfter you see 10 items, you will be asked to match the correct price with each item so try to remember the prices.\n\nPress Start to begin.";
+
+/* Class = "UITextView"; text = "Let’s see how many you can remember. \nFor each item, click on the price that was shown previously. \nPress Start to begin"; ObjectID = "ypj-wr-GUA"; */
+"ypj-wr-GUA.text" = "Let’s see how many you can remember. \nFor each item, click on the price that was shown previously. \nPress Start to begin";

@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "Normalmente me duermo a las (NO cuando se mete en la cama):\n"; ObjectID = "3kw-yk-hth"; */
+"3kw-yk-hth.text" = "Normalmente me duermo a las (NO cuando se mete en la cama):\n";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "4nK-jc-qQz"; */
+"4nK-jc-qQz.normalTitle" = "EDITAR";
+
+/* Class = "UIButton"; normalTitle = "Elija una hora"; ObjectID = "500-sH-tol"; */
+"500-sH-tol.normalTitle" = "Elija una hora";
+
+/* Class = "UILabel"; text = "CRONOTIPO"; ObjectID = "62j-EQ-jMI"; */
+"62j-EQ-jMI.text" = "CRONOTIPO";
+
+/* Class = "UITextField"; placeholder = "Ex: 5"; ObjectID = "6UB-6m-JTy"; */
+"6UB-6m-JTy.placeholder" = "Ex: 5";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "9EO-LC-anQ"; */
+"9EO-LC-anQ.normalTitle" = "Siguiente";
+
+/* Class = "UIButton"; normalTitle = "Elija una hora"; ObjectID = "CAd-JR-dpw"; */
+"CAd-JR-dpw.normalTitle" = "Elija una hora";
+
+/* Class = "UILabel"; text = "Normalmente me duermo a las (NO cuando se mete en la cama):"; ObjectID = "EXZ-4J-5bb"; */
+"EXZ-4J-5bb.text" = "Normalmente me duermo a las (NO cuando se mete en la cama):";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "GQc-C0-SNz"; */
+"GQc-C0-SNz.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "CRONOTIPO"; ObjectID = "I0b-qR-rcM"; */
+"I0b-qR-rcM.text" = "CRONOTIPO";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "LQo-GC-dll"; */
+"LQo-GC-dll.normalTitle" = "EDITAR";
+
+/* Class = "UILabel"; text = "En los días laborables…"; ObjectID = "MxL-SX-ana"; */
+"MxL-SX-ana.text" = "En los días laborables…";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "PHl-Cm-Q5G"; */
+"PHl-Cm-Q5G.text" = "9:30 AM";
+
+/* Class = "UILabel"; text = "He trabajado de noche o por turnos en los últimos tres meses."; ObjectID = "Pfd-CO-kdn"; */
+"Pfd-CO-kdn.text" = "He trabajado de noche o por turnos en los últimos tres meses.";
+
+/* Class = "UILabel"; text = "En los días no laborables cuando no uso la alarma…"; ObjectID = "R3x-hb-sZO"; */
+"R3x-hb-sZO.text" = "En los días no laborables cuando no uso la alarma…";
+
+/* Class = "UIButton"; normalTitle = "Sí"; ObjectID = "UFP-IN-JpV"; */
+"UFP-IN-JpV.normalTitle" = "Sí";
+
+/* Class = "UILabel"; text = "CRONOTIPO"; ObjectID = "URE-Bg-haR"; */
+"URE-Bg-haR.text" = "CRONOTIPO";
+
+/* Class = "UILabel"; text = "CRONOTIPO"; ObjectID = "V8c-bk-1xl"; */
+"V8c-bk-1xl.text" = "CRONOTIPO";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "ViN-U7-1Ha"; */
+"ViN-U7-1Ha.normalTitle" = "EDITAR";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "Vzp-E8-9h4"; */
+"Vzp-E8-9h4.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "cvf-II-4AC"; */
+"cvf-II-4AC.text" = "9:30 AM";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "d0N-SK-GY2"; */
+"d0N-SK-GY2.normalTitle" = "Siguiente";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "d28-h4-9b2"; */
+"d28-h4-9b2.normalTitle" = "EDITAR";
+
+/* Class = "UILabel"; text = "Normalmente me despierto a las (NO cuando se levanta de la cama):"; ObjectID = "dNJ-8B-Akl"; */
+"dNJ-8B-Akl.text" = "Normalmente me despierto a las (NO cuando se levanta de la cama):";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "eWy-E0-4bg"; */
+"eWy-E0-4bg.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "CRONOTIPO"; ObjectID = "f1u-5y-pmh"; */
+"f1u-5y-pmh.text" = "CRONOTIPO";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "qGF-a5-5xZ"; */
+"qGF-a5-5xZ.text" = "9:30 AM";
+
+/* Class = "UILabel"; text = "Habitualmente, trabajo ____ días/semana."; ObjectID = "rME-Y7-m7J"; */
+"rME-Y7-m7J.text" = "Habitualmente, trabajo ____ días/semana.";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "ruv-Ot-2oJ"; */
+"ruv-Ot-2oJ.text" = "9:30 AM";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "sdg-zW-mwD"; */
+"sdg-zW-mwD.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Elija una hora"; ObjectID = "t4y-bJ-PCh"; */
+"t4y-bJ-PCh.normalTitle" = "Elija una hora";
+
+/* Class = "UIButton"; normalTitle = "Elija una hora"; ObjectID = "wjQ-cw-px7"; */
+"wjQ-cw-px7.normalTitle" = "Elija una hora";
+
+/* Class = "UILabel"; text = "Normalmente me despierto a las (NO cuando se levanta de la cama):"; ObjectID = "xdS-Kt-sDf"; */
+"xdS-Kt-sDf.text" = "Normalmente me despierto a las (NO cuando se levanta de la cama):";

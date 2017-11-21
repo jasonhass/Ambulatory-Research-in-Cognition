@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Please confirm or adjust this start date."; ObjectID = "PB8-Ya-aSm"; */
+"PB8-Ya-aSm.text" = "開始日を確認または調整してください。";
+
+/* Class = "UIButton"; normalTitle = "Okay"; ObjectID = "Yh7-1L-MsI"; */
+"Yh7-1L-MsI.normalTitle" = "OK";
+
+/* Class = "UILabel"; text = "Your next test will begin on xx/xx/xxxx"; ObjectID = "aiK-54-ttr"; */
+"aiK-54-ttr.text" = "次のテストは{MM}月／{DD}日、{YY}年からです";
+
+/* Class = "UILabel"; text = "CONFIRM START DATE"; ObjectID = "bsg-Ie-T13"; */
+"bsg-Ie-T13.text" = "開始日を確認してください";
+
+/* Class = "UILabel"; text = "There are no tests available at this time. You will be notified when it is time to start."; ObjectID = "fBh-G1-haY"; */
+"fBh-G1-haY.text" = "現時点で行えるテストはありません。開始日になりましたら通知します。";
+
+/* Class = "UIButton"; normalTitle = "I NEED TO ADJUST MY START DATE"; ObjectID = "mcY-WS-TTV"; */
+"mcY-WS-TTV.normalTitle" = "テスト日時を調整する必要があります";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "uj1-Yv-cFq"; */
+"uj1-Yv-cFq.normalTitle" = "確認";
+
+/* Class = "UILabel"; text = "Questions?\nContact site coordinator."; ObjectID = "zHK-GJ-Q0z"; */
+"zHK-GJ-Q0z.text" = "質問はありますか？\n治験施設のコーディネーターに連絡してください。";

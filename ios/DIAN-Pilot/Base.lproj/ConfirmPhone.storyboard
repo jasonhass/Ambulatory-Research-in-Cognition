@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tahoma Bold.ttf">
+            <string>Tahoma-Bold</string>
+        </array>
+        <array key="Tahoma.ttf">
+            <string>Tahoma</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Confirm Phone View Controller-->
+        <scene sceneID="63v-1f-mJW">
+            <objects>
+                <viewController storyboardIdentifier="ConfirmPhoneViewController" id="9S6-4C-dox" customClass="ConfirmPhoneViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fP1-ZO-4lx"/>
+                        <viewControllerLayoutGuide type="bottom" id="nE5-78-ZiP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cRF-51-rFW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="CONFIRM PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiG-Ac-4Sp" userLabel="Page title">
+                                <rect key="frame" x="18" y="33" width="339" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Page title"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="RAW-pe-1Sj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7g-HE-qfn">
+                                <rect key="frame" x="16" y="62" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="aNE-cI-cDP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-yA-x0P" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="16" y="144" width="343" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Inq-6Z-CBY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <state key="normal" title="Yes">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="yesTapped:" destination="9S6-4C-dox" eventType="touchUpInside" id="VwM-l0-o9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-rR-2Wf" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="16" y="213" width="343" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="Rc5-LI-QAR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <state key="normal" title="No">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="noTapped:" destination="9S6-4C-dox" eventType="touchUpInside" id="AeG-Zf-HYq"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you plan to upgrade your phone in the next 3 months?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-fo-hz3">
+                                <rect key="frame" x="16" y="83" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="cWG-vA-m9p"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQX-kp-614">
+                                <rect key="frame" x="0.0" y="606" width="375" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="HHT-4y-CbQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Done" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPressed:" destination="9S6-4C-dox" eventType="touchUpInside" id="Puh-ua-8Pt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="K7g-HE-qfn" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leadingMargin" id="1Er-yZ-oJA"/>
+                            <constraint firstAttribute="trailing" secondItem="TiG-Ac-4Sp" secondAttribute="trailing" constant="18" id="3jM-8a-GSp"/>
+                            <constraint firstItem="K7g-HE-qfn" firstAttribute="trailing" secondItem="cRF-51-rFW" secondAttribute="trailingMargin" id="4TQ-uj-pnx"/>
+                            <constraint firstItem="iQX-kp-614" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leading" id="DJ7-zf-yeo"/>
+                            <constraint firstItem="fM3-yA-x0P" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leadingMargin" id="E4U-OJ-xup"/>
+                            <constraint firstItem="TiG-Ac-4Sp" firstAttribute="top" secondItem="fP1-ZO-4lx" secondAttribute="bottom" constant="13" id="TlH-ZF-dxa"/>
+                            <constraint firstItem="nE5-78-ZiP" firstAttribute="top" secondItem="iQX-kp-614" secondAttribute="bottom" id="UpV-cI-Ujy"/>
+                            <constraint firstItem="fM3-yA-x0P" firstAttribute="top" secondItem="m2m-fo-hz3" secondAttribute="bottom" constant="12" id="VcV-er-0L1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="fM3-yA-x0P" secondAttribute="trailing" id="Y2o-Ro-EGA"/>
+                            <constraint firstAttribute="trailing" secondItem="iQX-kp-614" secondAttribute="trailing" id="aVY-Y6-t4u"/>
+                            <constraint firstItem="m2m-fo-hz3" firstAttribute="trailing" secondItem="cRF-51-rFW" secondAttribute="trailingMargin" id="dyP-0V-Dd9"/>
+                            <constraint firstItem="K7g-HE-qfn" firstAttribute="top" secondItem="TiG-Ac-4Sp" secondAttribute="bottom" constant="8" id="jPT-up-dzI"/>
+                            <constraint firstItem="w0S-rR-2Wf" firstAttribute="top" secondItem="fM3-yA-x0P" secondAttribute="bottom" constant="12" id="k1P-e1-KWa"/>
+                            <constraint firstItem="TiG-Ac-4Sp" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leadingMargin" constant="2" id="lge-fL-ixx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w0S-rR-2Wf" secondAttribute="trailing" id="mzf-BM-QwL"/>
+                            <constraint firstItem="m2m-fo-hz3" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leadingMargin" id="tf0-7S-4nJ"/>
+                            <constraint firstItem="w0S-rR-2Wf" firstAttribute="leading" secondItem="cRF-51-rFW" secondAttribute="leadingMargin" id="w0k-O1-in8"/>
+                            <constraint firstItem="m2m-fo-hz3" firstAttribute="top" secondItem="K7g-HE-qfn" secondAttribute="bottom" constant="19" id="w9H-7l-Mr8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="doneButton" destination="iQX-kp-614" id="IvT-ke-FZq"/>
+                        <outlet property="noButton" destination="w0S-rR-2Wf" id="Q0T-la-hNO"/>
+                        <outlet property="yesButton" destination="fM3-yA-x0P" id="2wK-wR-7vg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oT-eN-3Ft" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="31.5" y="131.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_bg1" width="10" height="55"/>
+    </resources>
+</document>

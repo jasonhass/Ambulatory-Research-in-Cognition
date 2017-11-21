@@ -1,0 +1,39 @@
+
+/* Class = "UILabel"; text = "¿Le interrumpieron o tuvo que detenerse mientras estaba completando estos tests?"; ObjectID = "0R7-mC-puP"; */
+"0R7-mC-puP.text" = "¿Le interrumpieron o tuvo que detenerse mientras estaba completando estos tests?";
+
+/* Class = "UILabel"; text = "¿Le interrumpieron o tuvo que detenerse mientras estaba completando estos tests?"; ObjectID = "50L-wV-cMW"; */
+"50L-wV-cMW.text" = "¿Le interrumpieron o tuvo que detenerse mientras estaba completando estos tests?";
+
+/* Class = "UIButton"; normalTitle = "Sí"; ObjectID = "6sN-1U-glp"; */
+"6sN-1U-glp.normalTitle" = "Sí";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "AvH-3c-wsa"; */
+"AvH-3c-wsa.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "PREGUNTAS FINALES"; ObjectID = "DkN-nc-rYb"; */
+"DkN-nc-rYb.text" = "PREGUNTAS FINALES";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "EyJ-Fn-2ON"; */
+"EyJ-Fn-2ON.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "J7Y-Yv-gkf"; */
+"J7Y-Yv-gkf.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Sí"; ObjectID = "YgR-i5-AHo"; */
+"YgR-i5-AHo.normalTitle" = "Sí";
+
+/* Class = "UILabel"; text = "PREGUNTA FINALE"; ObjectID = "e09-c7-XZ6"; */
+"e09-c7-XZ6.text" = "PREGUNTA FINALE";
+
+/* Class = "UILabel"; text = "¿Planea actualizar su teléfono en los próximos tres meses?"; ObjectID = "oyI-Eh-RzJ"; */
+"oyI-Eh-RzJ.text" = "¿Planea actualizar su teléfono en los próximos tres meses?";
+
+/* Class = "UIButton"; normalTitle = "Sí"; ObjectID = "q4Q-pt-ahW"; */
+"q4Q-pt-ahW.normalTitle" = "Sí";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "vfY-6E-S3c"; */
+"vfY-6E-S3c.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "yNK-mC-VI2"; */
+"yNK-mC-VI2.normalTitle" = "No";

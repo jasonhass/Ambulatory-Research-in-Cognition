@@ -1,0 +1,81 @@
+
+/* Class = "UIButton"; normalTitle = "Elija la respuesta"; ObjectID = "1Bs-Nb-SyT"; */
+"1Bs-Nb-SyT.normalTitle" = "Elija la respuesta";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "3Lp-hO-74t"; */
+"3Lp-hO-74t.text" = "9:30 AM";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "5GW-BW-UfY"; */
+"5GW-BW-UfY.normalTitle" = "EDITAR";
+
+/* Class = "UIButton"; normalTitle = "Elija la respuesta"; ObjectID = "5Is-E2-kw8"; */
+"5Is-E2-kw8.normalTitle" = "Elija la respuesta";
+
+/* Class = "UILabel"; text = "¿Cómo calificaría la calidad de su sueño?"; ObjectID = "6Nh-iW-pRz"; */
+"6Nh-iW-pRz.text" = "¿Cómo calificaría la calidad de su sueño?";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "7OK-YH-KOM"; */
+"7OK-YH-KOM.text" = "9:30 AM";
+
+/* Class = "UILabel"; text = "ENCUESTA SOBRE LA VIGILIA "; ObjectID = "AEi-0s-BuK"; */
+"AEi-0s-BuK.text" = "ENCUESTA SOBRE LA VIGILIA ";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "Dee-lr-AW0"; */
+"Dee-lr-AW0.normalTitle" = "EDITAR";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "Gxs-Lo-rvA"; */
+"Gxs-Lo-rvA.normalTitle" = "EDITAR";
+
+/* Class = "UILabel"; text = "EXCELENTE"; ObjectID = "IoS-SD-c1s"; */
+"IoS-SD-c1s.text" = "EXCELENTE";
+
+/* Class = "UILabel"; text = "¿A qué hora se fue a la cama anoche?"; ObjectID = "JDf-N1-yja"; */
+"JDf-N1-yja.text" = "¿A qué hora se fue a la cama anoche?";
+
+/* Class = "UIButton"; normalTitle = "Elija la respuesta"; ObjectID = "OcW-1c-fsJ"; */
+"OcW-1c-fsJ.normalTitle" = "Elija la respuesta";
+
+/* Class = "UILabel"; text = "¿A qué hora se despertó en la mañana?"; ObjectID = "V4D-KR-53k"; */
+"V4D-KR-53k.text" = "¿A qué hora se despertó en la mañana?";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "VVf-V0-5wk"; */
+"VVf-V0-5wk.text" = "9:30 AM";
+
+/* Class = "UIButton"; normalTitle = "Elija la respuesta"; ObjectID = "Z3S-8Q-QBn"; */
+"Z3S-8Q-QBn.normalTitle" = "Elija la respuesta";
+
+/* Class = "UIButton"; normalTitle = "Elija la respuesta"; ObjectID = "by5-Yh-p4d"; */
+"by5-Yh-p4d.normalTitle" = "Elija la respuesta";
+
+/* Class = "UILabel"; text = "¿Cuánto tiempo tardó en dormirse?"; ObjectID = "cbk-oO-r0h"; */
+"cbk-oO-r0h.text" = "¿Cuánto tiempo tardó en dormirse?";
+
+/* Class = "UILabel"; text = "¿Cuántas veces se despertó durante 5 minutos o más?"; ObjectID = "ckG-D5-vMq"; */
+"ckG-D5-vMq.text" = "¿Cuántas veces se despertó durante 5 minutos o más?";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "dgm-yl-1Yb"; */
+"dgm-yl-1Yb.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "ENCUESTA SOBRE LA VIGILIA "; ObjectID = "dkQ-wu-WRM"; */
+"dkQ-wu-WRM.text" = "ENCUESTA SOBRE LA VIGILIA ";
+
+/* Class = "UILabel"; text = "MALO"; ObjectID = "g83-sP-aOl"; */
+"g83-sP-aOl.text" = "MALO";
+
+/* Class = "UILabel"; text = "¿A qué hora se levantó de la cama?"; ObjectID = "iPW-Ji-QJ0"; */
+"iPW-Ji-QJ0.text" = "¿A qué hora se levantó de la cama?";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "moM-2N-IR2"; */
+"moM-2N-IR2.text" = "9:30 AM";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "nJj-tR-xdi"; */
+"nJj-tR-xdi.normalTitle" = "Siguiente";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "qCH-1M-Z6h"; */
+"qCH-1M-Z6h.normalTitle" = "EDITAR";
+
+/* Class = "UIButton"; normalTitle = "EDITAR"; ObjectID = "u9S-3k-6v4"; */
+"u9S-3k-6v4.normalTitle" = "EDITAR";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "xfX-ep-HFK"; */
+"xfX-ep-HFK.text" = "9:30 AM";

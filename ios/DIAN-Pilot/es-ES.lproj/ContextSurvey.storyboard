@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FCB-hK-zjW">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tahoma Bold.ttf">
+            <string>Tahoma-Bold</string>
+        </array>
+        <array key="Tahoma.ttf">
+            <string>Tahoma</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Context Survey View Controller-->
+        <scene sceneID="B3e-je-eKE">
+            <objects>
+                <viewController storyboardIdentifier="ContextSurveyViewController" id="FCB-hK-zjW" customClass="ContextSurveyViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RQm-uc-MMi"/>
+                        <viewControllerLayoutGuide type="bottom" id="jsO-ux-NXY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rKc-CG-fNT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ENCUESTA DE CONTEXTO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLQ-iy-8iu" userLabel="Label">
+                                <rect key="frame" x="18" y="33" width="161" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="YL0-aM-zT4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-PX-hHt">
+                                <rect key="frame" x="-9" y="1139" width="393" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="lWI-Lb-TMl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Hecho" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="surveyCompletedPressedWithSender:" destination="FCB-hK-zjW" eventType="touchUpInside" id="P6Z-KF-q1P"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e3U-Ww-bf7">
+                                <rect key="frame" x="0.0" y="70" width="375" height="1069"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2un-pK-zsm">
+                                        <rect key="frame" x="16" y="0.0" width="343" height="941"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-8I-Tl2" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="158"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-UW-i7I">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="X16-ae-Muy"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="¿Quién está ahora mismo con usted?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVM-0a-Y64">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-ov-XBo" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="54" width="343" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="7ks-cF-Sji"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <state key="normal" title="Seleccionar respuesta">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editValuePressedWithSender:" destination="8i0-8I-Tl2" eventType="touchUpInside" id="849-fk-9Vy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zh-M5-QGe">
+                                                        <rect key="frame" x="0.0" y="127" width="343" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upX-ev-SHJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="243" height="31"/>
+                                                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                                <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-Kt-BSi">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="xBS-mI-4Tt"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                                <state key="normal" title="MODIFICAR">
+                                                                    <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="editValuePressedWithSender:" destination="8i0-8I-Tl2" eventType="touchUpInside" id="8dd-iv-bfA"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="questionKey">
+                                                        <integer key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="button" destination="hwI-ov-XBo" id="34G-Zg-e9G"/>
+                                                    <outlet property="displayLabel" destination="upX-ev-SHJ" id="Uq0-X0-W7D"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="38v-Jm-SH2" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="178" width="343" height="158"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUV-nD-QwP">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="Cnj-KI-LWk"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="¿Dónde está usted ahora mismo?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Y-vn-DfA">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="20"/>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-xT-80Z" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="54" width="343" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="k95-mt-zXe"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <state key="normal" title="Seleccionar respuesta">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editValuePressedWithSender:" destination="38v-Jm-SH2" eventType="touchUpInside" id="NF3-HT-C2L"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXq-sf-ZhY">
+                                                        <rect key="frame" x="0.0" y="127" width="343" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAI-tx-L7x">
+                                                                <rect key="frame" x="0.0" y="0.0" width="243" height="31"/>
+                                                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                                <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asz-ra-CKo">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="cH3-cP-eet"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                                <state key="normal" title="MODIFICAR">
+                                                                    <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="editValuePressedWithSender:" destination="38v-Jm-SH2" eventType="touchUpInside" id="MIT-rh-xMN"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="questionKey">
+                                                        <integer key="value" value="2"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="button" destination="ih0-xT-80Z" id="6za-07-xK9"/>
+                                                    <outlet property="displayLabel" destination="pAI-tx-L7x" id="ZQS-Ie-Id9"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n79-QL-nAh" customClass="SurveyStackRangeView" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="356" width="343" height="183.66666666666663"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-eO-5fJ">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="ArV-vA-KIg"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="¿Cuál de estas respuestas describe mejor su estado de ánimo general ahora mismo?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Bl-3Ar">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="39.666666666666686"/>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUp-7T-rps">
+                                                        <rect key="frame" x="0.0" y="73.666666666666686" width="343" height="109.99999999999994"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MSM-oH-HGh">
+                                                                <rect key="frame" x="-2" y="49.999999999999943" width="347" height="41"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="eAL-O5-OR3"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="editValuePressedWithSender:" destination="n79-QL-nAh" eventType="valueChanged" id="x86-DX-h7z"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MALO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-ly-Aev">
+                                                                <rect key="frame" x="0.0" y="26.666666666666686" width="37" height="15.333333333333258"/>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUENO" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-zh-rrn">
+                                                                <rect key="frame" x="297.33333333333326" y="26.666666666666686" width="45.666666666666686" height="15.333333333333258"/>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="MSM-oH-HGh" firstAttribute="top" secondItem="KUp-7T-rps" secondAttribute="top" constant="50" id="831-Wa-uei"/>
+                                                            <constraint firstItem="FGc-zh-rrn" firstAttribute="trailing" secondItem="MSM-oH-HGh" secondAttribute="trailing" id="Kx7-uB-I0A"/>
+                                                            <constraint firstAttribute="bottom" secondItem="MSM-oH-HGh" secondAttribute="bottom" constant="20" id="Rdg-Zp-QaJ"/>
+                                                            <constraint firstItem="Dzt-ly-Aev" firstAttribute="leading" secondItem="MSM-oH-HGh" secondAttribute="leading" id="cHw-FJ-9oy"/>
+                                                            <constraint firstItem="MSM-oH-HGh" firstAttribute="top" secondItem="FGc-zh-rrn" secondAttribute="bottom" constant="8" id="i11-X0-eUV"/>
+                                                            <constraint firstAttribute="trailing" secondItem="MSM-oH-HGh" secondAttribute="trailing" id="quR-rW-lf5"/>
+                                                            <constraint firstItem="MSM-oH-HGh" firstAttribute="leading" secondItem="KUp-7T-rps" secondAttribute="leading" id="taI-h9-CFj"/>
+                                                            <constraint firstItem="MSM-oH-HGh" firstAttribute="top" secondItem="Dzt-ly-Aev" secondAttribute="bottom" constant="8" id="tvo-XQ-1ja"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="questionKey">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="slider" destination="MSM-oH-HGh" id="oOi-YA-hnj"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxA-Bh-hTF" customClass="SurveyStackRangeView" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="559.66666666666663" width="343" height="183.66666666666674"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-Mh-xAb">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="Wh2-dy-oPc"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="¿Cuál de estas respuestas describe mejor cómo se siente ahora mismo?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-a9-0JW">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="39.666666666666742"/>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mo-dG-cHz">
+                                                        <rect key="frame" x="0.0" y="73.666666666666742" width="343" height="110"/>
+                                                        <subviews>
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-os-F84">
+                                                                <rect key="frame" x="-2" y="50" width="347" height="41"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="40" id="kcM-un-ggg"/>
+                                                                </constraints>
+                                                                <connections>
+                                                                    <action selector="editValuePressedWithSender:" destination="oxA-Bh-hTF" eventType="valueChanged" id="FkK-20-ibl"/>
+                                                                </connections>
+                                                            </slider>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SOMNOLIENTO/CANSADO" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-X4-5tL">
+                                                                <rect key="frame" x="0.0" y="21" width="161.66666666666666" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="vIc-Br-VUf"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVO/ALERTA" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvU-Hn-EZe">
+                                                                <rect key="frame" x="245" y="21" width="98" height="21"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="21" id="OyR-d9-PYg"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                        <constraints>
+                                                            <constraint firstItem="SnB-os-F84" firstAttribute="leading" secondItem="4Mo-dG-cHz" secondAttribute="leading" id="0BY-jJ-yIF"/>
+                                                            <constraint firstItem="SnB-os-F84" firstAttribute="top" secondItem="cvU-Hn-EZe" secondAttribute="bottom" constant="8" id="4qI-ZY-5CP"/>
+                                                            <constraint firstAttribute="bottom" secondItem="SnB-os-F84" secondAttribute="bottom" constant="20" id="Jc7-wj-utx"/>
+                                                            <constraint firstItem="cvU-Hn-EZe" firstAttribute="trailing" secondItem="SnB-os-F84" secondAttribute="trailing" id="ggg-tz-XhA"/>
+                                                            <constraint firstItem="SnB-os-F84" firstAttribute="top" secondItem="4Mo-dG-cHz" secondAttribute="top" constant="50" id="mZw-xa-DrS"/>
+                                                            <constraint firstAttribute="trailing" secondItem="SnB-os-F84" secondAttribute="trailing" id="mdW-K9-1Wj"/>
+                                                            <constraint firstItem="SnB-os-F84" firstAttribute="top" secondItem="OQW-X4-5tL" secondAttribute="bottom" constant="8" id="tiP-79-PxI"/>
+                                                            <constraint firstItem="OQW-X4-5tL" firstAttribute="leading" secondItem="SnB-os-F84" secondAttribute="leading" id="vDr-ha-87j"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="questionKey">
+                                                        <integer key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="slider" destination="SnB-os-F84" id="uB9-Uc-3Qa"/>
+                                                </connections>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jqx-ZE-iYz" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="763.33333333333348" width="343" height="177.66666666666663"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUi-MV-cVV">
+                                                        <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
+                                                        <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="2" id="EZk-nC-X39"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="En los últimos 5 minutos… ¿Cuál era su PRINCIPAL actividad?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acE-2B-zBW">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="39.666666666666629"/>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-WD-spz" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="73.666666666666629" width="343" height="57"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="57" id="FvL-gK-ag1"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                        <state key="normal" title="Seleccionar respuesta">
+                                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="editValuePressedWithSender:" destination="Jqx-ZE-iYz" eventType="touchUpInside" id="M9o-bg-AW3"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-5b-F1d">
+                                                        <rect key="frame" x="0.0" y="146.66666666666663" width="343" height="31"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6n-Pk-gZb">
+                                                                <rect key="frame" x="0.0" y="0.0" width="243" height="31"/>
+                                                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                                <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-xS-m2w">
+                                                                <rect key="frame" x="243" y="0.0" width="100" height="31"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="100" id="ZkX-6i-Evw"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
+                                                                <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
+                                                                <state key="normal" title="MODIFICAR">
+                                                                    <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="editValuePressedWithSender:" destination="Jqx-ZE-iYz" eventType="touchUpInside" id="b3w-Dc-sE5"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="questionKey">
+                                                        <integer key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="button" destination="XWZ-WD-spz" id="33D-W4-tk5"/>
+                                                    <outlet property="displayLabel" destination="c6n-Pk-gZb" id="QmK-hX-zkc"/>
+                                                </connections>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2un-pK-zsm" firstAttribute="top" secondItem="e3U-Ww-bf7" secondAttribute="top" id="4VR-cD-MmJ"/>
+                                    <constraint firstItem="2un-pK-zsm" firstAttribute="width" secondItem="e3U-Ww-bf7" secondAttribute="width" constant="-32" id="Vwm-SA-hW3"/>
+                                    <constraint firstItem="2un-pK-zsm" firstAttribute="leading" secondItem="e3U-Ww-bf7" secondAttribute="leading" constant="16" id="fYf-c9-DCL"/>
+                                    <constraint firstAttribute="bottom" secondItem="2un-pK-zsm" secondAttribute="bottom" id="gb9-Xo-68U"/>
+                                    <constraint firstAttribute="trailing" secondItem="2un-pK-zsm" secondAttribute="trailing" constant="16" id="oDQ-WC-4us"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RLQ-iy-8iu" firstAttribute="leading" secondItem="rKc-CG-fNT" secondAttribute="leadingMargin" constant="2" id="Cqt-nh-ehY"/>
+                            <constraint firstItem="e3U-Ww-bf7" firstAttribute="top" secondItem="RLQ-iy-8iu" secondAttribute="bottom" constant="16" id="EcS-Rs-avC"/>
+                            <constraint firstItem="PMd-PX-hHt" firstAttribute="top" secondItem="e3U-Ww-bf7" secondAttribute="bottom" id="Fkv-NI-ZDO"/>
+                            <constraint firstAttribute="trailing" secondItem="e3U-Ww-bf7" secondAttribute="trailing" id="M6q-xE-LHH"/>
+                            <constraint firstItem="RLQ-iy-8iu" firstAttribute="top" secondItem="RQm-uc-MMi" secondAttribute="bottom" constant="13" id="dut-rk-GrE"/>
+                            <constraint firstItem="PMd-PX-hHt" firstAttribute="leading" secondItem="rKc-CG-fNT" secondAttribute="leading" constant="-9" id="hFj-of-Fws"/>
+                            <constraint firstItem="e3U-Ww-bf7" firstAttribute="leading" secondItem="rKc-CG-fNT" secondAttribute="leading" id="n3p-Xp-yUT"/>
+                            <constraint firstItem="jsO-ux-NXY" firstAttribute="top" secondItem="PMd-PX-hHt" secondAttribute="bottom" id="oRj-am-1RY"/>
+                            <constraint firstAttribute="trailing" secondItem="PMd-PX-hHt" secondAttribute="trailing" constant="-9" id="sEP-HI-ijQ"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1200"/>
+                    <connections>
+                        <outlet property="doneButton" destination="PMd-PX-hHt" id="qgJ-19-Him"/>
+                        <outletCollection property="surveyQuestionViews" destination="8i0-8I-Tl2" collectionClass="NSMutableArray" id="f5t-xw-qnt"/>
+                        <outletCollection property="surveyQuestionViews" destination="38v-Jm-SH2" collectionClass="NSMutableArray" id="0N0-tf-Vvc"/>
+                        <outletCollection property="surveyQuestionViews" destination="n79-QL-nAh" collectionClass="NSMutableArray" id="eEP-qm-4jV"/>
+                        <outletCollection property="surveyQuestionViews" destination="oxA-Bh-hTF" collectionClass="NSMutableArray" id="CtH-kB-Z6a"/>
+                        <outletCollection property="surveyQuestionViews" destination="Jqx-ZE-iYz" collectionClass="NSMutableArray" id="Zpp-6J-2Km"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pNu-PL-JT0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1731" y="-108"/>
+        </scene>
+        <!--Survey Select View Controller-->
+        <scene sceneID="DgK-ZI-IDs">
+            <objects>
+                <viewController storyboardIdentifier="surveySelect" id="U2d-iO-x1P" customClass="SurveySelectViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GYQ-D4-NSn"/>
+                        <viewControllerLayoutGuide type="bottom" id="VP4-Q9-qnh"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="k5t-9U-E5g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fo5-RJ-C0O">
+                                <rect key="frame" x="16" y="32" width="382" height="640"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Select all that apply:" selectable="NO" id="jAd-to-NLM">
+                                    <rect key="frame" x="0.0" y="0.0" width="382" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                </textView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answer" id="AXg-Ul-ajq" customClass="SurveySelectTableViewCell" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="63" width="382" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXg-Ul-ajq" id="i3L-an-TZz">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qj-62-5qw" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                                    <rect key="frame" x="26" y="8" width="330" height="28"/>
+                                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                                    <state key="normal" title="Button">
+                                                        <color key="titleColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="pressedButton:" destination="AXg-Ul-ajq" eventType="touchUpInside" id="KFO-OQ-UT6"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="5Qj-62-5qw" firstAttribute="top" secondItem="i3L-an-TZz" secondAttribute="top" constant="8" id="GHB-kU-L5d"/>
+                                                <constraint firstItem="5Qj-62-5qw" firstAttribute="leading" secondItem="i3L-an-TZz" secondAttribute="leading" constant="26" id="eOx-Iu-iRj"/>
+                                                <constraint firstAttribute="trailing" secondItem="5Qj-62-5qw" secondAttribute="trailing" constant="26" id="sTS-Gd-fXx"/>
+                                                <constraint firstAttribute="bottom" secondItem="5Qj-62-5qw" secondAttribute="bottom" constant="8" id="so8-rI-ezH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="selectButton" destination="5Qj-62-5qw" id="uky-oU-jdA"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="U2d-iO-x1P" id="rih-45-d6g"/>
+                                    <outlet property="delegate" destination="U2d-iO-x1P" id="AK4-uw-bMl"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-5h-MRu">
+                                <rect key="frame" x="16" y="667" width="382" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="Hne-D1-egj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Hecho" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedNextWithSender:" destination="U2d-iO-x1P" eventType="touchUpInside" id="u6m-Dz-X2u"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VP4-Q9-qnh" firstAttribute="top" secondItem="VwG-5h-MRu" secondAttribute="bottom" constant="8" id="DVH-E8-LWh"/>
+                            <constraint firstItem="Fo5-RJ-C0O" firstAttribute="top" secondItem="k5t-9U-E5g" secondAttribute="top" constant="32" id="HQm-i1-m55"/>
+                            <constraint firstItem="VwG-5h-MRu" firstAttribute="top" secondItem="Fo5-RJ-C0O" secondAttribute="bottom" constant="-5" id="XJ2-VP-Cnr"/>
+                            <constraint firstItem="Fo5-RJ-C0O" firstAttribute="leading" secondItem="k5t-9U-E5g" secondAttribute="leading" constant="16" id="n8u-Pg-qL3"/>
+                            <constraint firstItem="VwG-5h-MRu" firstAttribute="trailing" secondItem="Fo5-RJ-C0O" secondAttribute="trailing" id="r0m-GC-0Bk"/>
+                            <constraint firstItem="VwG-5h-MRu" firstAttribute="leading" secondItem="Fo5-RJ-C0O" secondAttribute="leading" id="w9k-GV-79i"/>
+                            <constraint firstAttribute="trailing" secondItem="Fo5-RJ-C0O" secondAttribute="trailing" constant="16" id="zH9-7m-ogr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="VwG-5h-MRu" id="kM1-rr-MtM"/>
+                        <outlet property="tableView" destination="Fo5-RJ-C0O" id="m5M-wC-CXL"/>
+                        <outlet property="titleTextView" destination="jAd-to-NLM" id="Pgb-lK-D0G"/>
+                        <outlet property="view" destination="k5t-9U-E5g" id="KBg-eI-Yuu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9tk-R9-BRB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1092" y="-296.40179910044981"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_bg1" width="10" height="55"/>
+    </resources>
+</document>

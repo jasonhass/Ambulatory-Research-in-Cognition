@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tahoma Bold.ttf">
+            <string>Tahoma-Bold</string>
+        </array>
+        <array key="Tahoma.ttf">
+            <string>Tahoma</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--UserSetupViewController-->
+        <scene sceneID="TH1-HN-CFd">
+            <objects>
+                <viewController storyboardIdentifier="UserSetupViewController" title="UserSetupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6ln-JA-62i" customClass="UserSetupViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="x8P-rk-CFB"/>
+                        <viewControllerLayoutGuide type="bottom" id="EV1-Di-7k0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R7a-Nh-una">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIGURATION DU PARTICIPANT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dq7-0D-7U2">
+                                <rect key="frame" x="24" y="38" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jCZ-4p-1bR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FBO-p3-dn2" userLabel="seperator">
+                                <rect key="frame" x="16" y="71" width="288" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="TOT-mI-lZC"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbz-xK-RVl">
+                                <rect key="frame" x="-9" y="507" width="338" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="AHh-U1-0bw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Suivant" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPressed:" destination="6ln-JA-62i" eventType="touchUpInside" id="zrg-ln-PdS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-rh-ipv">
+                                <rect key="frame" x="24" y="98" width="272" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="wJW-Oq-x2A"/>
+                                </constraints>
+                                <string key="text">Saisir l’identifiant du participant
+</string>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xw2-7X-CYz" customClass="BorderTextField" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="127" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9RY-SP-VJd"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirmer l’identifiant du participant" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ArJ-Qh-UoV">
+                                <rect key="frame" x="24" y="194" width="272" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="mxv-H6-GSI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NhW-3H-Ji9" customClass="BorderTextField" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="223" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="fzf-Fk-E2G"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numéro d’identification de l’évaluateur" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eq-8Y-gbU">
+                                <rect key="frame" x="24" y="290" width="272" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Q6J-eO-2AL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voE-gu-O9B" customClass="BorderTextField" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="319" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="RzS-MT-Dzi"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Hl-qw-cIs" customClass="Checkbox" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="386" width="30" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Mt8-BY-a8h"/>
+                                    <constraint firstAttribute="width" constant="30" id="kfx-Z9-agr"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="checkboxTapped:" destination="6ln-JA-62i" eventType="touchUpInside" id="Fva-Sk-qTh"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PARTICIPANT EXISTANT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fe-AP-qIg">
+                                <rect key="frame" x="74" y="389" width="222" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="23" id="Xv0-L4-B4T"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="QfI-H3-fde">
+                                <rect key="frame" x="141.5" y="524" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Mbk-rh-ipv" firstAttribute="top" secondItem="FBO-p3-dn2" secondAttribute="bottom" constant="25" id="3Eu-qn-CS5"/>
+                            <constraint firstItem="5Hl-qw-cIs" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="7dF-HG-dlu"/>
+                            <constraint firstItem="8eq-8Y-gbU" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="8cx-QG-c5D"/>
+                            <constraint firstItem="nbz-xK-RVl" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="-9" id="Bqo-qw-lR6"/>
+                            <constraint firstItem="5Hl-qw-cIs" firstAttribute="top" secondItem="voE-gu-O9B" secondAttribute="bottom" constant="22" id="Dk3-zO-Niv"/>
+                            <constraint firstItem="ArJ-Qh-UoV" firstAttribute="top" secondItem="Xw2-7X-CYz" secondAttribute="bottom" constant="22" id="DnZ-Vl-mKu"/>
+                            <constraint firstAttribute="trailing" secondItem="1Fe-AP-qIg" secondAttribute="trailing" constant="24" id="E7F-2j-Acp"/>
+                            <constraint firstItem="Mbk-rh-ipv" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="GZI-h9-FD8"/>
+                            <constraint firstItem="1Fe-AP-qIg" firstAttribute="centerY" secondItem="5Hl-qw-cIs" secondAttribute="centerY" id="JdG-cN-pvS"/>
+                            <constraint firstAttribute="trailing" secondItem="voE-gu-O9B" secondAttribute="trailing" constant="24" id="P5l-wk-5wI"/>
+                            <constraint firstAttribute="trailing" secondItem="nbz-xK-RVl" secondAttribute="trailing" constant="-9" id="PQ6-cX-FUq"/>
+                            <constraint firstItem="Xw2-7X-CYz" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="QX4-L3-giI"/>
+                            <constraint firstItem="8eq-8Y-gbU" firstAttribute="top" secondItem="NhW-3H-Ji9" secondAttribute="bottom" constant="22" id="RCM-RK-MIG"/>
+                            <constraint firstItem="FBO-p3-dn2" firstAttribute="top" secondItem="Dq7-0D-7U2" secondAttribute="bottom" constant="12" id="SAn-Fh-cc9"/>
+                            <constraint firstItem="NhW-3H-Ji9" firstAttribute="top" secondItem="ArJ-Qh-UoV" secondAttribute="bottom" constant="6" id="Wku-K3-tfu"/>
+                            <constraint firstItem="NhW-3H-Ji9" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="YdK-hp-hnP"/>
+                            <constraint firstItem="voE-gu-O9B" firstAttribute="top" secondItem="8eq-8Y-gbU" secondAttribute="bottom" constant="6" id="Yfu-U8-vhl"/>
+                            <constraint firstItem="FBO-p3-dn2" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="16" id="cSB-c5-ca9"/>
+                            <constraint firstAttribute="trailing" secondItem="ArJ-Qh-UoV" secondAttribute="trailing" constant="24" id="dLF-5e-Prh"/>
+                            <constraint firstAttribute="trailing" secondItem="8eq-8Y-gbU" secondAttribute="trailing" constant="24" id="dT8-wJ-dg6"/>
+                            <constraint firstItem="1Fe-AP-qIg" firstAttribute="leading" secondItem="5Hl-qw-cIs" secondAttribute="trailing" constant="20" id="dh1-Zm-Usk"/>
+                            <constraint firstAttribute="trailing" secondItem="Mbk-rh-ipv" secondAttribute="trailing" constant="24" id="f4r-of-b3b"/>
+                            <constraint firstItem="Dq7-0D-7U2" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="fuF-vc-Qps"/>
+                            <constraint firstItem="EV1-Di-7k0" firstAttribute="top" secondItem="QfI-H3-fde" secondAttribute="bottom" constant="7" id="fw3-TD-SYs"/>
+                            <constraint firstAttribute="trailing" secondItem="NhW-3H-Ji9" secondAttribute="trailing" constant="24" id="gvT-Fs-yeT"/>
+                            <constraint firstItem="Dq7-0D-7U2" firstAttribute="top" secondItem="x8P-rk-CFB" secondAttribute="bottom" constant="18" id="h4g-mu-h0z"/>
+                            <constraint firstAttribute="trailing" secondItem="FBO-p3-dn2" secondAttribute="trailing" constant="16" id="iHH-jb-2pY"/>
+                            <constraint firstItem="EV1-Di-7k0" firstAttribute="top" secondItem="nbz-xK-RVl" secondAttribute="bottom" id="pYc-V1-WSX"/>
+                            <constraint firstAttribute="trailing" secondItem="Dq7-0D-7U2" secondAttribute="trailing" constant="16" id="qKU-aM-68Z"/>
+                            <constraint firstItem="voE-gu-O9B" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="sbg-UZ-I9e"/>
+                            <constraint firstItem="ArJ-Qh-UoV" firstAttribute="leading" secondItem="R7a-Nh-una" secondAttribute="leading" constant="24" id="shG-YF-qvT"/>
+                            <constraint firstAttribute="trailing" secondItem="Xw2-7X-CYz" secondAttribute="trailing" constant="24" id="tDs-Gn-wgM"/>
+                            <constraint firstItem="QfI-H3-fde" firstAttribute="centerX" secondItem="R7a-Nh-una" secondAttribute="centerX" id="whV-6n-r5M"/>
+                            <constraint firstItem="Xw2-7X-CYz" firstAttribute="top" secondItem="Mbk-rh-ipv" secondAttribute="bottom" constant="6" id="zgv-Cb-Qio"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="confirmId" destination="NhW-3H-Ji9" id="FZw-zj-uPb"/>
+                        <outlet property="existingParticipantCheckbox" destination="5Hl-qw-cIs" id="UWt-no-b9G"/>
+                        <outlet property="existingParticipantLabel" destination="1Fe-AP-qIg" id="1TK-XR-atF"/>
+                        <outlet property="nextButton" destination="nbz-xK-RVl" id="Bjx-Tk-JEu"/>
+                        <outlet property="participantId" destination="Xw2-7X-CYz" id="etk-ve-Z2U"/>
+                        <outlet property="raterId" destination="voE-gu-O9B" id="Rsz-Bf-7sT"/>
+                        <outlet property="spinner" destination="QfI-H3-fde" id="no2-kG-fRm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1ro-6t-myE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1763" y="-19"/>
+        </scene>
+        <!--Date Selection View Controller-->
+        <scene sceneID="vFP-GV-Gcl">
+            <objects>
+                <viewController storyboardIdentifier="DateSelectionViewController" id="G3Z-00-zi3" customClass="DateSelectionViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zH5-BF-5nx"/>
+                        <viewControllerLayoutGuide type="bottom" id="Muu-oG-dz5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Px-EV-hNI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiC-V8-BAy">
+                                <rect key="frame" x="0.0" y="507" width="320" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="UnC-kW-yLX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Confirmer" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmPressed:" destination="G3Z-00-zi3" eventType="touchUpInside" id="oB8-E7-DR7"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8gw-h9-m5O">
+                                <rect key="frame" x="2.5" y="184" width="315" height="315"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="315" id="DDN-MW-8fb"/>
+                                    <constraint firstAttribute="height" constant="315" id="ksB-Pb-dgy"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="daE-3H-phD">
+                                    <size key="itemSize" width="45" height="45"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="G3Z-00-zi3" id="SHW-mw-eP4"/>
+                                    <outlet property="delegate" destination="G3Z-00-zi3" id="rYm-Uo-JnM"/>
+                                </connections>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DÉFINIR LA DATE DE DÉBUT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zPd-7E-gLa">
+                                <rect key="frame" x="24" y="38" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="ZKg-jm-53t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Yf-Pcy" userLabel="seperator">
+                                <rect key="frame" x="16" y="71" width="288" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="9Nd-zB-tVo"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entrez la prochaine date de début pour le participant." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bt7-AR-oo9">
+                                <rect key="frame" x="16" y="81" width="288" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="86S-Nm-5XC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-SZ-axf">
+                                <rect key="frame" x="0.0" y="144" width="30" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="5DA-zg-5gn"/>
+                                    <constraint firstAttribute="width" constant="30" id="s3u-WZ-g3a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="previousMonthTapped:" destination="G3Z-00-zi3" eventType="touchUpInside" id="bqF-aZ-fP1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WfI-P4-0M2">
+                                <rect key="frame" x="290" y="144" width="30" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="UPG-cE-XiT"/>
+                                    <constraint firstAttribute="height" constant="32" id="agw-NO-uFM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextMonthTapped:" destination="G3Z-00-zi3" eventType="touchUpInside" id="Cr3-8h-qjs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="September 20xx" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Onk-f0-Kow">
+                                <rect key="frame" x="40" y="141" width="240" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="38" id="6qc-hR-1sb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="32"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="WfI-P4-0M2" secondAttribute="trailing" id="2kz-Yg-B4U"/>
+                            <constraint firstAttribute="trailing" secondItem="zPd-7E-gLa" secondAttribute="trailing" constant="16" id="7OW-BZ-dd5"/>
+                            <constraint firstItem="Onk-f0-Kow" firstAttribute="centerY" secondItem="9YO-SZ-axf" secondAttribute="centerY" id="86Z-DG-fLw"/>
+                            <constraint firstItem="8gw-h9-m5O" firstAttribute="top" secondItem="WfI-P4-0M2" secondAttribute="bottom" constant="8" id="DJy-QY-CJc"/>
+                            <constraint firstItem="8gw-h9-m5O" firstAttribute="top" secondItem="9YO-SZ-axf" secondAttribute="bottom" constant="8" id="DLM-6Y-iq9"/>
+                            <constraint firstItem="zPd-7E-gLa" firstAttribute="leading" secondItem="2Px-EV-hNI" secondAttribute="leading" constant="24" id="G7B-gj-1gT"/>
+                            <constraint firstItem="8gw-h9-m5O" firstAttribute="centerX" secondItem="2Px-EV-hNI" secondAttribute="centerX" id="G7o-U7-ak6"/>
+                            <constraint firstItem="RiC-V8-BAy" firstAttribute="top" relation="greaterThanOrEqual" secondItem="8gw-h9-m5O" secondAttribute="bottom" constant="8" id="JQe-8q-C4j"/>
+                            <constraint firstItem="RiC-V8-BAy" firstAttribute="leading" secondItem="2Px-EV-hNI" secondAttribute="leading" id="OFa-uS-GbE"/>
+                            <constraint firstItem="Bt7-AR-oo9" firstAttribute="top" secondItem="q0b-Yf-Pcy" secondAttribute="bottom" constant="8" id="PhK-KP-sUq"/>
+                            <constraint firstAttribute="trailing" secondItem="RiC-V8-BAy" secondAttribute="trailing" id="S3I-gm-TuN"/>
+                            <constraint firstItem="zPd-7E-gLa" firstAttribute="top" secondItem="zH5-BF-5nx" secondAttribute="bottom" constant="18" id="SQc-9M-QcC"/>
+                            <constraint firstItem="Bt7-AR-oo9" firstAttribute="leading" secondItem="2Px-EV-hNI" secondAttribute="leading" constant="16" id="a5A-Sw-Fk3"/>
+                            <constraint firstItem="Muu-oG-dz5" firstAttribute="top" secondItem="RiC-V8-BAy" secondAttribute="bottom" id="fmP-XQ-rgQ"/>
+                            <constraint firstItem="q0b-Yf-Pcy" firstAttribute="leading" secondItem="2Px-EV-hNI" secondAttribute="leading" constant="16" id="nui-ja-wZ1"/>
+                            <constraint firstItem="Onk-f0-Kow" firstAttribute="leading" secondItem="9YO-SZ-axf" secondAttribute="trailing" constant="10" id="qPh-41-cgi"/>
+                            <constraint firstItem="WfI-P4-0M2" firstAttribute="leading" secondItem="Onk-f0-Kow" secondAttribute="trailing" constant="10" id="rGg-xY-Tvg"/>
+                            <constraint firstItem="Onk-f0-Kow" firstAttribute="top" secondItem="Bt7-AR-oo9" secondAttribute="bottom" constant="20" id="tEF-zn-aKV"/>
+                            <constraint firstItem="q0b-Yf-Pcy" firstAttribute="top" secondItem="zPd-7E-gLa" secondAttribute="bottom" constant="12" id="tXF-wn-nT3"/>
+                            <constraint firstAttribute="trailing" secondItem="Bt7-AR-oo9" secondAttribute="trailing" constant="16" id="tdA-s0-arn"/>
+                            <constraint firstAttribute="trailing" secondItem="q0b-Yf-Pcy" secondAttribute="trailing" constant="16" id="uOY-ev-bFL"/>
+                            <constraint firstItem="9YO-SZ-axf" firstAttribute="leading" secondItem="2Px-EV-hNI" secondAttribute="leading" id="yrt-bW-kkO"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="monthCollectionView" destination="8gw-h9-m5O" id="lFB-Xs-TOh"/>
+                        <outlet property="monthLabel" destination="Onk-f0-Kow" id="TPG-Vq-EeK"/>
+                        <outlet property="nextMonthButton" destination="WfI-P4-0M2" id="6dE-n2-zLR"/>
+                        <outlet property="previousMonthButton" destination="9YO-SZ-axf" id="vmT-Qk-iTT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UqT-Cu-mIg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-453.75" y="-19.014084507042252"/>
+        </scene>
+        <!--TimeSetupViewController-->
+        <scene sceneID="usH-sM-6cu">
+            <objects>
+                <viewController storyboardIdentifier="TimeSetupViewController" title="TimeSetupViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="6h4-Vh-Hqm" customClass="TimeSetupViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ebp-NY-oVQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="AYQ-Tu-FQv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="L0q-LP-akH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONFIGURER LA DISPONIBILITÉ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-HO-Lu0">
+                                <rect key="frame" x="24" y="38" width="280" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9D3-h3-bvM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XaE-Zb-Ls2">
+                                <rect key="frame" x="-9" y="507" width="338" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="AIl-CP-deZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Suivant" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPressed:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="O27-ru-ib8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À quelle heure vous réveillez-vous d’habitude ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="iWf-et-5zP">
+                                <rect key="frame" x="24" y="156" width="272" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="41C-JB-oNW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fu-s5-4F1" customClass="BorderTextField" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="201" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="quj-YI-FcC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6h4-Vh-Hqm" id="zSh-7V-pKt"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="À quelle heure vous couchez-vous d’habitude ?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="tHC-Py-MHS">
+                                <rect key="frame" x="24" y="286" width="272" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="tmf-9w-daX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="17"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drL-hA-Ztc" customClass="BorderTextField" customModule="ARC" customModuleProvider="target">
+                                <rect key="frame" x="24" y="331" width="272" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="GrB-gC-nrK"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="6h4-Vh-Hqm" id="Hpm-tB-q49"/>
+                                </connections>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hPZ-y6-hL0">
+                                <rect key="frame" x="24" y="81" width="272" height="35"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqS-v7-Fmd" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="39" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Avj-ea-bN0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Di">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="s4x-um-1A1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImV-Qb-x6U" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="39" y="0.0" width="38.5" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="TPe-zb-qgw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Lu">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="WZK-ec-H0a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZb-nC-5yo" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="77" y="0.0" width="39" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="tf0-3g-gqr"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Ma">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="o8g-FT-lR4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTr-wU-y2D" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="116" y="0.0" width="39" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="dKj-gg-LFX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Me">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="XKT-if-t4Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfC-UR-RcJ" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="155" y="0.0" width="39" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="rYk-Zm-vWf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Je">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="xsA-dx-YwD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="khQ-Bk-CjN" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="194" y="0.0" width="38.5" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="7I6-vc-qAC"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Ve">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="6zw-sv-ukQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7Y-39-Y5P" customClass="WeekdayButton" customModule="ARC" customModuleProvider="target">
+                                        <rect key="frame" x="233" y="0.0" width="39" height="35"/>
+                                        <color key="backgroundColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="MpJ-Al-iWB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="-5" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sa">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected">
+                                            <color key="titleColor" red="0.050980392159999999" green="0.56078431370000004" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="weekdaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="WLI-aS-dt2"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ImV-Qb-x6U" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="0lD-Ap-eTv"/>
+                                    <constraint firstAttribute="bottom" secondItem="ImV-Qb-x6U" secondAttribute="bottom" id="13W-hf-XNe"/>
+                                    <constraint firstItem="bqS-v7-Fmd" firstAttribute="leading" secondItem="hPZ-y6-hL0" secondAttribute="leading" id="2gT-SX-mWj"/>
+                                    <constraint firstItem="nfC-UR-RcJ" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="99h-sB-u71"/>
+                                    <constraint firstAttribute="bottom" secondItem="nfC-UR-RcJ" secondAttribute="bottom" id="9cM-DW-rZV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y7Y-39-Y5P" secondAttribute="trailing" id="BUX-TC-9wE"/>
+                                    <constraint firstItem="ImV-Qb-x6U" firstAttribute="leading" secondItem="bqS-v7-Fmd" secondAttribute="trailing" id="CEn-wb-I7z"/>
+                                    <constraint firstItem="dTr-wU-y2D" firstAttribute="leading" secondItem="iZb-nC-5yo" secondAttribute="trailing" id="GND-eq-VSe"/>
+                                    <constraint firstItem="iZb-nC-5yo" firstAttribute="leading" secondItem="ImV-Qb-x6U" secondAttribute="trailing" id="HBM-BA-Yq2"/>
+                                    <constraint firstItem="Y7Y-39-Y5P" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="KjX-XJ-pjE"/>
+                                    <constraint firstAttribute="bottom" secondItem="iZb-nC-5yo" secondAttribute="bottom" id="P95-7M-x5w"/>
+                                    <constraint firstItem="khQ-Bk-CjN" firstAttribute="leading" secondItem="nfC-UR-RcJ" secondAttribute="trailing" id="Pm7-Ix-0Yi"/>
+                                    <constraint firstAttribute="bottom" secondItem="khQ-Bk-CjN" secondAttribute="bottom" id="SuX-wr-yp8"/>
+                                    <constraint firstItem="dTr-wU-y2D" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="UQr-uR-eVo"/>
+                                    <constraint firstAttribute="bottom" secondItem="dTr-wU-y2D" secondAttribute="bottom" id="V5w-JI-ZMA"/>
+                                    <constraint firstItem="khQ-Bk-CjN" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="aao-lN-j6X"/>
+                                    <constraint firstItem="iZb-nC-5yo" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="atk-hD-RKV"/>
+                                    <constraint firstItem="nfC-UR-RcJ" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="bjt-IL-OVs"/>
+                                    <constraint firstAttribute="height" constant="35" id="csf-06-gyR"/>
+                                    <constraint firstAttribute="bottom" secondItem="bqS-v7-Fmd" secondAttribute="bottom" id="fIa-jL-Cwu"/>
+                                    <constraint firstItem="Y7Y-39-Y5P" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="fYZ-gD-7mW"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y7Y-39-Y5P" secondAttribute="bottom" id="i9r-8l-9uh"/>
+                                    <constraint firstItem="khQ-Bk-CjN" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="lXF-o8-d9u"/>
+                                    <constraint firstItem="ImV-Qb-x6U" firstAttribute="width" secondItem="bqS-v7-Fmd" secondAttribute="width" id="n93-mF-bFf"/>
+                                    <constraint firstItem="iZb-nC-5yo" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="nbh-go-aQl"/>
+                                    <constraint firstItem="dTr-wU-y2D" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="tB3-TD-EOh"/>
+                                    <constraint firstItem="bqS-v7-Fmd" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="top" id="uIg-No-t3D"/>
+                                    <constraint firstItem="Y7Y-39-Y5P" firstAttribute="leading" secondItem="khQ-Bk-CjN" secondAttribute="trailing" id="udi-et-PNh"/>
+                                    <constraint firstItem="nfC-UR-RcJ" firstAttribute="leading" secondItem="dTr-wU-y2D" secondAttribute="trailing" id="xNd-Ki-24S"/>
+                                </constraints>
+                            </view>
+                            <button hidden="YES" opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="YVz-dD-YqF">
+                                <rect key="frame" x="16" y="439" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Ldb-Yl-X2t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <state key="normal" title="APPLIQUER LES HEURES AUX AUTRES JOURS">
+                                    <color key="titleColor" red="0.050980392156862744" green="0.5607843137254902" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyTimes:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="j8k-Gg-MPJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cbu-J0-oSN" userLabel="seperator">
+                                <rect key="frame" x="16" y="71" width="288" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="OH4-sq-cpq"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="2" id="YeT-1f-57O"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ayg-HO-Lu0" firstAttribute="top" secondItem="Ebp-NY-oVQ" secondAttribute="bottom" constant="18" id="3cq-UK-J9J"/>
+                            <constraint firstItem="Cbu-J0-oSN" firstAttribute="trailing" secondItem="L0q-LP-akH" secondAttribute="trailingMargin" id="6Bd-fC-U8m"/>
+                            <constraint firstAttribute="trailing" secondItem="hPZ-y6-hL0" secondAttribute="trailing" constant="24" id="6iu-p5-spH"/>
+                            <constraint firstItem="hPZ-y6-hL0" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="81j-VA-6xh"/>
+                            <constraint firstItem="tHC-Py-MHS" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="EBY-KT-1I4"/>
+                            <constraint firstItem="Cbu-J0-oSN" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leadingMargin" id="EGI-Jx-mxs"/>
+                            <constraint firstItem="drL-hA-Ztc" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="IIs-On-lC7"/>
+                            <constraint firstAttribute="trailing" secondItem="iWf-et-5zP" secondAttribute="trailing" constant="24" id="JGg-sI-M2M"/>
+                            <constraint firstItem="iWf-et-5zP" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="Mfb-l9-B83"/>
+                            <constraint firstItem="drL-hA-Ztc" firstAttribute="top" secondItem="tHC-Py-MHS" secondAttribute="bottom" constant="6" id="P5M-xa-Ab4"/>
+                            <constraint firstAttribute="trailing" secondItem="drL-hA-Ztc" secondAttribute="trailing" constant="24" id="QOJ-kc-k4n"/>
+                            <constraint firstItem="7fu-s5-4F1" firstAttribute="top" secondItem="iWf-et-5zP" secondAttribute="bottom" constant="6" id="Sie-fO-XPR"/>
+                            <constraint firstAttribute="trailing" secondItem="tHC-Py-MHS" secondAttribute="trailing" constant="24" id="THI-Rl-bV8"/>
+                            <constraint firstItem="XaE-Zb-Ls2" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="-9" id="bNz-jw-akT"/>
+                            <constraint firstAttribute="trailing" secondItem="7fu-s5-4F1" secondAttribute="trailing" constant="24" id="bo4-08-CtT"/>
+                            <constraint firstItem="XaE-Zb-Ls2" firstAttribute="top" secondItem="YVz-dD-YqF" secondAttribute="bottom" constant="8" id="d7A-ut-ssW"/>
+                            <constraint firstItem="iWf-et-5zP" firstAttribute="top" secondItem="hPZ-y6-hL0" secondAttribute="bottom" constant="40" id="gXn-lC-r73"/>
+                            <constraint firstItem="ayg-HO-Lu0" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="icI-aJ-dtA"/>
+                            <constraint firstAttribute="trailing" secondItem="ayg-HO-Lu0" secondAttribute="trailing" constant="16" id="iws-ZN-5Bd"/>
+                            <constraint firstItem="AYQ-Tu-FQv" firstAttribute="top" secondItem="XaE-Zb-Ls2" secondAttribute="bottom" id="izg-Hd-Crn"/>
+                            <constraint firstItem="hPZ-y6-hL0" firstAttribute="top" secondItem="Cbu-J0-oSN" secondAttribute="bottom" constant="8" id="kPa-AH-Wmy"/>
+                            <constraint firstItem="tHC-Py-MHS" firstAttribute="top" secondItem="7fu-s5-4F1" secondAttribute="bottom" constant="40" id="lMf-KA-gBJ"/>
+                            <constraint firstItem="7fu-s5-4F1" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="24" id="n13-Xr-dCn"/>
+                            <constraint firstAttribute="trailing" secondItem="XaE-Zb-Ls2" secondAttribute="trailing" constant="-9" id="o3L-sG-0vL"/>
+                            <constraint firstItem="Cbu-J0-oSN" firstAttribute="top" secondItem="ayg-HO-Lu0" secondAttribute="bottom" constant="12" id="sWb-V2-dWu"/>
+                            <constraint firstItem="YVz-dD-YqF" firstAttribute="leading" secondItem="L0q-LP-akH" secondAttribute="leading" constant="16" id="wwg-Ir-1Ku"/>
+                            <constraint firstAttribute="trailing" secondItem="YVz-dD-YqF" secondAttribute="trailing" constant="16" id="z4u-su-RQT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="bedField" destination="drL-hA-Ztc" id="Gf2-i9-Oo2"/>
+                        <outlet property="copyDaysDoneButton" destination="jkK-8Y-py8" id="RWp-4B-k8b"/>
+                        <outlet property="copyDaysLabel" destination="VhA-R8-t52" id="BfV-Zf-tTq"/>
+                        <outlet property="copyDaysView" destination="Erq-Ql-u21" id="MM9-40-gf1"/>
+                        <outlet property="copyTimeButton" destination="YVz-dD-YqF" id="7Hg-S4-w8W"/>
+                        <outlet property="nextButton" destination="XaE-Zb-Ls2" id="58g-DT-yFm"/>
+                        <outlet property="okayButton" destination="klT-bA-150" id="eV0-9q-ALp"/>
+                        <outlet property="pickerContainer" destination="bWl-3h-Ink" id="oLR-9b-Khr"/>
+                        <outlet property="timePicker" destination="saE-Sm-clI" id="5Nf-A5-Op8"/>
+                        <outlet property="wakeupField" destination="7fu-s5-4F1" id="oQE-sC-MmA"/>
+                        <outletCollection property="weekdays" destination="bqS-v7-Fmd" collectionClass="NSMutableArray" id="Qob-Ct-fDS"/>
+                        <outletCollection property="weekdays" destination="ImV-Qb-x6U" collectionClass="NSMutableArray" id="h1o-Dg-dxZ"/>
+                        <outletCollection property="weekdays" destination="iZb-nC-5yo" collectionClass="NSMutableArray" id="GSd-a4-9RV"/>
+                        <outletCollection property="weekdays" destination="dTr-wU-y2D" collectionClass="NSMutableArray" id="JS9-DP-LvD"/>
+                        <outletCollection property="weekdays" destination="nfC-UR-RcJ" collectionClass="NSMutableArray" id="dm3-Dk-iiv"/>
+                        <outletCollection property="weekdays" destination="khQ-Bk-CjN" collectionClass="NSMutableArray" id="eP5-4l-n20"/>
+                        <outletCollection property="weekdays" destination="Y7Y-39-Y5P" collectionClass="NSMutableArray" id="5BZ-bf-BTF"/>
+                        <outletCollection property="copyDaysButtons" destination="pjD-Sf-upj" collectionClass="NSMutableArray" id="W4f-if-aeE"/>
+                        <outletCollection property="copyDaysButtons" destination="7Gj-eR-lTv" collectionClass="NSMutableArray" id="nAj-uS-md8"/>
+                        <outletCollection property="copyDaysButtons" destination="31S-ou-ZV0" collectionClass="NSMutableArray" id="U7H-EU-v8o"/>
+                        <outletCollection property="copyDaysButtons" destination="6QX-Oj-t0h" collectionClass="NSMutableArray" id="5Lp-WC-IB6"/>
+                        <outletCollection property="copyDaysButtons" destination="pDl-Is-JuX" collectionClass="NSMutableArray" id="ARt-19-luC"/>
+                        <outletCollection property="copyDaysButtons" destination="3ic-Gj-qt7" collectionClass="NSMutableArray" id="fdz-go-pDS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZB-V3-Auq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view opaque="NO" contentMode="scaleToFill" id="Erq-Ql-u21">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wKU-2t-gBY">
+                            <rect key="frame" x="10" y="64" width="300" height="440"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pjD-Sf-upj" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="66.5" width="248" height="47"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Xt7-8k-fQc"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="9cP-3h-rOX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Gj-eR-lTv" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="118.5" width="248" height="47"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="enE-TU-Hvf"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31S-ou-ZV0" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="170" width="248" height="47"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="MIH-pp-8BB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6QX-Oj-t0h" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="222" width="248" height="46.5"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="RBr-IJ-Vw9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDl-Is-JuX" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="273.5" width="248" height="47.5"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="G8G-O5-XwA"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ic-Gj-qt7" customClass="wkCopyButton" customModule="ARC" customModuleProvider="target">
+                                    <rect key="frame" x="26" y="326.5" width="248" height="46.5"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <state key="normal" title="Button">
+                                        <color key="titleColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaySelected:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="LMS-rn-9wJ"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appliquer le planning du {jour de la semaine} au :" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="VhA-R8-t52">
+                                    <rect key="frame" x="36" y="15" width="228" height="41.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="23" id="qvV-37-kZA"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkK-8Y-py8">
+                                    <rect key="frame" x="0.0" y="379" width="300" height="61"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="300" id="XOa-5Z-etO"/>
+                                        <constraint firstAttribute="height" constant="61" id="sWN-SU-CZY"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="Terminé" backgroundImage="button_bg1">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyDaysDonePressed:" destination="6h4-Vh-Hqm" eventType="touchUpInside" id="Ow4-9A-Qfi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="pjD-Sf-upj" secondAttribute="trailing" constant="26" id="230-7q-lDl"/>
+                                <constraint firstItem="pjD-Sf-upj" firstAttribute="top" secondItem="VhA-R8-t52" secondAttribute="bottom" constant="10" id="33k-Fg-NQY"/>
+                                <constraint firstItem="3ic-Gj-qt7" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="5nz-zW-7te"/>
+                                <constraint firstAttribute="height" constant="440" id="8tf-gy-Asq"/>
+                                <constraint firstItem="pDl-Is-JuX" firstAttribute="height" secondItem="pjD-Sf-upj" secondAttribute="height" id="97o-3b-U5a"/>
+                                <constraint firstAttribute="width" constant="300" id="9h6-Zp-r1x"/>
+                                <constraint firstAttribute="trailing" secondItem="VhA-R8-t52" secondAttribute="trailing" constant="36" id="G47-0h-Qry"/>
+                                <constraint firstItem="3ic-Gj-qt7" firstAttribute="top" secondItem="pDl-Is-JuX" secondAttribute="bottom" constant="5" id="H55-fx-5aa"/>
+                                <constraint firstItem="pjD-Sf-upj" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="Ihr-CD-NVD"/>
+                                <constraint firstItem="VhA-R8-t52" firstAttribute="top" secondItem="wKU-2t-gBY" secondAttribute="top" constant="15" id="KRZ-rS-DYu"/>
+                                <constraint firstItem="6QX-Oj-t0h" firstAttribute="top" secondItem="31S-ou-ZV0" secondAttribute="bottom" constant="5" id="LlD-3F-XdM"/>
+                                <constraint firstAttribute="trailing" secondItem="31S-ou-ZV0" secondAttribute="trailing" constant="26" id="Q1s-cQ-7IF"/>
+                                <constraint firstItem="7Gj-eR-lTv" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="Qeg-ph-RpG"/>
+                                <constraint firstAttribute="trailing" secondItem="6QX-Oj-t0h" secondAttribute="trailing" constant="26" id="RsH-nm-8vn"/>
+                                <constraint firstAttribute="bottom" secondItem="jkK-8Y-py8" secondAttribute="bottom" id="TWE-xX-sLb"/>
+                                <constraint firstItem="jkK-8Y-py8" firstAttribute="centerX" secondItem="wKU-2t-gBY" secondAttribute="centerX" id="UHY-ex-8kt"/>
+                                <constraint firstItem="31S-ou-ZV0" firstAttribute="height" secondItem="pjD-Sf-upj" secondAttribute="height" id="W2m-hd-rbq"/>
+                                <constraint firstItem="31S-ou-ZV0" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="WJ9-Up-dvJ"/>
+                                <constraint firstItem="31S-ou-ZV0" firstAttribute="top" secondItem="7Gj-eR-lTv" secondAttribute="bottom" constant="5" id="ZQd-s3-dqG"/>
+                                <constraint firstItem="7Gj-eR-lTv" firstAttribute="height" secondItem="pjD-Sf-upj" secondAttribute="height" id="c6s-of-7ZK"/>
+                                <constraint firstAttribute="trailing" secondItem="pDl-Is-JuX" secondAttribute="trailing" constant="26" id="dr4-hB-GJS"/>
+                                <constraint firstItem="6QX-Oj-t0h" firstAttribute="height" secondItem="pjD-Sf-upj" secondAttribute="height" id="fHe-lq-eTI"/>
+                                <constraint firstAttribute="trailing" secondItem="3ic-Gj-qt7" secondAttribute="trailing" constant="26" id="g3X-b7-Gvr"/>
+                                <constraint firstItem="jkK-8Y-py8" firstAttribute="top" secondItem="3ic-Gj-qt7" secondAttribute="bottom" constant="6" id="g7C-lT-D6p"/>
+                                <constraint firstItem="pDl-Is-JuX" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="gYh-T8-V9w"/>
+                                <constraint firstItem="7Gj-eR-lTv" firstAttribute="top" secondItem="pjD-Sf-upj" secondAttribute="bottom" constant="5" id="hTX-fz-Q46"/>
+                                <constraint firstItem="pDl-Is-JuX" firstAttribute="top" secondItem="6QX-Oj-t0h" secondAttribute="bottom" constant="5" id="i7B-n0-caZ"/>
+                                <constraint firstAttribute="trailing" secondItem="7Gj-eR-lTv" secondAttribute="trailing" constant="26" id="iEj-CA-ZkH"/>
+                                <constraint firstItem="3ic-Gj-qt7" firstAttribute="height" secondItem="pjD-Sf-upj" secondAttribute="height" id="jCE-WJ-3Y6"/>
+                                <constraint firstItem="6QX-Oj-t0h" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="26" id="nXi-aL-T4T"/>
+                                <constraint firstItem="VhA-R8-t52" firstAttribute="leading" secondItem="wKU-2t-gBY" secondAttribute="leading" constant="36" id="uOD-6K-VsW"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29149070945945948" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="wKU-2t-gBY" firstAttribute="centerY" secondItem="Erq-Ql-u21" secondAttribute="centerY" id="0UH-Qi-eu7"/>
+                        <constraint firstItem="wKU-2t-gBY" firstAttribute="centerX" secondItem="Erq-Ql-u21" secondAttribute="centerX" id="HTm-4B-DAG"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" id="bWl-3h-Ink">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="5" translatesAutoresizingMaskIntoConstraints="NO" id="saE-Sm-clI">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="179"/>
+                            <date key="date" timeIntervalSinceReferenceDate="501457920.21032298">
+                                <!--2016-11-21 21:52:00 +0000-->
+                            </date>
+                        </datePicker>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="klT-bA-150">
+                            <rect key="frame" x="-9" y="179" width="338" height="61"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="61" id="8GP-q2-oVv"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="OK" backgroundImage="button_bg1">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="klT-bA-150" firstAttribute="top" secondItem="saE-Sm-clI" secondAttribute="bottom" id="4Fw-mG-vA9"/>
+                        <constraint firstItem="klT-bA-150" firstAttribute="leading" secondItem="bWl-3h-Ink" secondAttribute="leading" constant="-9" id="IKV-QP-oxN"/>
+                        <constraint firstItem="saE-Sm-clI" firstAttribute="leading" secondItem="bWl-3h-Ink" secondAttribute="leading" id="Ibn-fS-gY8"/>
+                        <constraint firstItem="saE-Sm-clI" firstAttribute="top" secondItem="bWl-3h-Ink" secondAttribute="top" id="VBB-3a-ncp"/>
+                        <constraint firstAttribute="trailing" secondItem="saE-Sm-clI" secondAttribute="trailing" id="e1v-tM-Yx7"/>
+                        <constraint firstAttribute="trailing" secondItem="klT-bA-150" secondAttribute="trailing" constant="-9" id="kJd-UD-cqf"/>
+                        <constraint firstAttribute="bottom" secondItem="klT-bA-150" secondAttribute="bottom" id="mSg-hz-UjG"/>
+                    </constraints>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-1106" y="-19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_bg1" width="10" height="55"/>
+    </resources>
+</document>

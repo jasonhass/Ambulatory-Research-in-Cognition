@@ -1,0 +1,70 @@
+{
+
+	"questions" : [
+
+		{
+			"type" : "selectMultiple",
+			"title" : "Who is with you right now? (select all that apply)",
+			"questions" : [
+				"Personne",
+				"Partenaire/conjoint",
+				"Famille",
+				"Amis",
+				"Collègues",
+				"Animal de compagnie",
+				"Autre"
+			]
+		},
+
+		{
+			"type" : "select",
+			"title" : "Where are you right now? (select one)",
+			"questions" : [
+				"Chez moi",
+				"Au travail",
+				"À l’école",
+				"Chez quelqu’un d’autre",
+				"En voiture/dans les transports",
+				"Dehors",
+				"Autre"
+			]
+		},
+
+		{
+			"type" : "range",
+			"title" : "Which of these best describes your overall mood right now?",
+			"questions" : [
+				"BAD",
+				"GOOD"
+			]
+		},
+
+		{
+			"type" : "range",
+			"title" : "Which of these best describes how you feel right now?",
+			"questions" : [
+				"SLEEPY/TIRED",
+				"ACTIVE/ALERT"
+			]
+		},
+
+		{
+			"type" : "select",
+			"title" : "In the past 5 minutes… What were you MOSTLY doing? (select one)",
+			"questions" : [
+				"Être assis à un bureau",
+				"Regarder la télévision",
+				"Manger",
+				"Faire de l’exercice",
+				"Tâches ménagères",
+				"Conduire",
+				"Rencontrer des amis",
+				"Soins personnels",
+				"Se reposer",
+				"Autre"
+			]
+		}
+
+	]
+
+}

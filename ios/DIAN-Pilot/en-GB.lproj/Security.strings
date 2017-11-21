@@ -1,0 +1,24 @@
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "7Pc-T5-Xdz"; */
+"7Pc-T5-Xdz.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "YhV-VM-5Mf"; */
+"YhV-VM-5Mf.text" = "X";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "aFk-sY-xMu"; */
+"aFk-sY-xMu.text" = "X";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "aK8-RW-AB4"; */
+"aK8-RW-AB4.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "dB4-r9-byV"; */
+"dB4-r9-byV.normalTitle" = "Undo";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "sSj-pd-q9Z"; */
+"sSj-pd-q9Z.normalTitle" = "Undo";
+
+/* Class = "UILabel"; text = "ID VERIFICATION"; ObjectID = "ta3-LD-NiE"; */
+"ta3-LD-NiE.text" = "ID VERIFICATION";
+
+/* Class = "UILabel"; text = "ID VERIFICATION"; ObjectID = "trJ-we-sgi"; */
+"trJ-we-sgi.text" = "ID VERIFICATION";

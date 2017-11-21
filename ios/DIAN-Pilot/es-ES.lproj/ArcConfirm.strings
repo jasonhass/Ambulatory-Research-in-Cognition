@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "Please confirm or adjust this start date."; ObjectID = "PB8-Ya-aSm"; */
+"PB8-Ya-aSm.text" = "Confirme o ajuste esta fecha de inicio.";
+
+/* Class = "UIButton"; normalTitle = "Okay"; ObjectID = "Yh7-1L-MsI"; */
+"Yh7-1L-MsI.normalTitle" = "Aceptar";
+
+/* Class = "UILabel"; text = "Your next test will begin on xx/xx/xxxx"; ObjectID = "aiK-54-ttr"; */
+"aiK-54-ttr.text" = "Su siguiente prueba comenzará el DÍA/MES/AÑO.";
+
+/* Class = "UILabel"; text = "CONFIRM START DATE"; ObjectID = "bsg-Ie-T13"; */
+"bsg-Ie-T13.text" = "CONFIRMAR FECHA DE INICIO";
+
+/* Class = "UILabel"; text = "There are no tests available at this time. You will be notified when it is time to start."; ObjectID = "fBh-G1-haY"; */
+"fBh-G1-haY.text" = "Actualmente no hay ninguna prueba disponible. Le notificaremos cuando deba comenzar.";
+
+/* Class = "UIButton"; normalTitle = "I NEED TO ADJUST MY START DATE"; ObjectID = "mcY-WS-TTV"; */
+"mcY-WS-TTV.normalTitle" = "NECESITO AJUSTAR LA FECHA DE INICIO";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "uj1-Yv-cFq"; */
+"uj1-Yv-cFq.normalTitle" = "Confirmar";
+
+/* Class = "UILabel"; text = "Questions?\nContact site coordinator."; ObjectID = "zHK-GJ-Q0z"; */
+"zHK-GJ-Q0z.text" = "¿Tiene preguntas?\nContacte con el coordinador del centro.";

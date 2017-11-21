@@ -1,0 +1,69 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "5Qj-62-5qw"; */
+"5Qj-62-5qw.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Where are you right now?"; ObjectID = "D9Y-vn-DfA"; */
+"D9Y-vn-DfA.text" = "今どこにいますか？";
+
+/* Class = "UILabel"; text = "BAD"; ObjectID = "Dzt-ly-Aev"; */
+"Dzt-ly-Aev.text" = "悪い";
+
+/* Class = "UILabel"; text = "GOOD"; ObjectID = "FGc-zh-rrn"; */
+"FGc-zh-rrn.text" = "良い";
+
+/* Class = "UILabel"; text = "Which of these best describes how you feel right now?"; ObjectID = "JPa-a9-0JW"; */
+"JPa-a9-0JW.text" = "あなたが今感じていることをもっともよく表すように回答してください。";
+
+/* Class = "UILabel"; text = "SLEEPY/TIRED"; ObjectID = "OQW-X4-5tL"; */
+"OQW-X4-5tL.text" = "眠い／疲れた";
+
+/* Class = "UILabel"; text = "Which of these best describes your overall mood right now?"; ObjectID = "P7i-Bl-3Ar"; */
+"P7i-Bl-3Ar.text" = "あなたの今の気分をもっともよく表すように回答してください。";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "PMd-PX-hHt"; */
+"PMd-PX-hHt.normalTitle" = "完了";
+
+/* Class = "UILabel"; text = "CONTEXT SURVEY"; ObjectID = "RLQ-iy-8iu"; */
+"RLQ-iy-8iu.text" = "状況調査";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "VwG-5h-MRu"; */
+"VwG-5h-MRu.normalTitle" = "完了";
+
+/* Class = "UIButton"; normalTitle = "Choose Answer"; ObjectID = "XWZ-WD-spz"; */
+"XWZ-WD-spz.normalTitle" = "答えを選択してください";
+
+/* Class = "UILabel"; text = "In the past 5 minutes … What were you MOSTLY doing?"; ObjectID = "acE-2B-zBW"; */
+"acE-2B-zBW.text" = "これまでの5分間 …主に何をしていましたか？";
+
+/* Class = "UIButton"; normalTitle = "EDIT"; ObjectID = "asz-ra-CKo"; */
+"asz-ra-CKo.normalTitle" = "編集";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "c6n-Pk-gZb"; */
+"c6n-Pk-gZb.text" = "9:30 AM";
+
+/* Class = "UILabel"; text = "ACTIVE/ALERT"; ObjectID = "cvU-Hn-EZe"; */
+"cvU-Hn-EZe.text" = "元気／活発";
+
+/* Class = "UIButton"; normalTitle = "EDIT"; ObjectID = "dyP-xS-m2w"; */
+"dyP-xS-m2w.normalTitle" = "編集";
+
+/* Class = "UIButton"; normalTitle = "EDIT"; ObjectID = "gEJ-Kt-BSi"; */
+"gEJ-Kt-BSi.normalTitle" = "編集";
+
+/* Class = "UIButton"; normalTitle = "Choose Answer"; ObjectID = "hwI-ov-XBo"; */
+"hwI-ov-XBo.normalTitle" = "答えを選択してください";
+
+/* Class = "UIButton"; normalTitle = "Choose Answer"; ObjectID = "ih0-xT-80Z"; */
+"ih0-xT-80Z.normalTitle" = "答えを選択してください";
+
+/* Class = "UITextView"; text = "Select all that apply:"; ObjectID = "jAd-to-NLM"; */
+"jAd-to-NLM.text" = "Select all that apply:";
+
+/* Class = "UILabel"; text = "Who is with you right now?"; ObjectID = "nVM-0a-Y64"; */
+"nVM-0a-Y64.text" = "今誰と一緒にいますか？";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "pAI-tx-L7x"; */
+"pAI-tx-L7x.text" = "9:30 AM";
+
+/* Class = "UILabel"; text = "9:30 AM"; ObjectID = "upX-ev-SHJ"; */
+"upX-ev-SHJ.text" = "9:30 AM";

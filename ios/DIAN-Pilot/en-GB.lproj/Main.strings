@@ -1,0 +1,24 @@
+
+/* Class = "UILabel"; text = "HOME"; ObjectID = "H9w-Ji-7Bk"; */
+"H9w-Ji-7Bk.text" = "HOME";
+
+/* Class = "UILabel"; text = "There are no tests available at this time. Your schedule will be determined at your baseline visit."; ObjectID = "JVl-hM-FOx"; */
+"JVl-hM-FOx.text" = "There are no tests available at this time. Your schedule will be determined at your baseline visit.";
+
+/* Class = "UIButton"; normalTitle = "Site Coordinator"; ObjectID = "LYb-gT-iTQ"; */
+"LYb-gT-iTQ.normalTitle" = "Site Coordinator";
+
+/* Class = "UILabel"; text = "There are no tests available at this time. You will be notified when it is time to start."; ObjectID = "Ts6-GG-aQE"; */
+"Ts6-GG-aQE.text" = "There are no tests available at this time. You will be notified when it is time to start.";
+
+/* Class = "UIButton"; normalTitle = "EDIT AVAILABILTY"; ObjectID = "Xj5-DJ-tgO"; */
+"Xj5-DJ-tgO.normalTitle" = "EDIT AVAILABILTY";
+
+/* Class = "UILabel"; text = "BASELINE"; ObjectID = "fcx-D1-iKo"; */
+"fcx-D1-iKo.text" = "BASELINE";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "ig2-Ne-P4G"; */
+"ig2-Ne-P4G.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "HOME"; ObjectID = "tK8-Nh-b30"; */
+"tK8-Nh-b30.text" = "HOME";

@@ -1,0 +1,105 @@
+
+/* Class = "UILabel"; text = "Existing Participant"; ObjectID = "1Fe-AP-qIg"; */
+"1Fe-AP-qIg.text" = "既存の参加者";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "31S-ou-ZV0"; */
+"31S-ou-ZV0.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "3ic-Gj-qt7"; */
+"3ic-Gj-qt7.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6QX-Oj-t0h"; */
+"6QX-Oj-t0h.normalTitle" = "Button";
+
+/* Class = "UIViewController"; title = "TimeSetupViewController"; ObjectID = "6h4-Vh-Hqm"; */
+"6h4-Vh-Hqm.title" = "TimeSetupViewController";
+
+/* Class = "UIViewController"; title = "UserSetupViewController"; ObjectID = "6ln-JA-62i"; */
+"6ln-JA-62i.title" = "UserSetupViewController";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "7Gj-eR-lTv"; */
+"7Gj-eR-lTv.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Rater ID  Number"; ObjectID = "8eq-8Y-gbU"; */
+"8eq-8Y-gbU.text" = "評価者ID番号";
+
+/* Class = "UIButton"; normalTitle = "<"; ObjectID = "9YO-SZ-axf"; */
+"9YO-SZ-axf.normalTitle" = "<";
+
+/* Class = "UILabel"; text = "Confirm Participant ID"; ObjectID = "ArJ-Qh-UoV"; */
+"ArJ-Qh-UoV.text" = "被験者IDを確認してください";
+
+/* Class = "UILabel"; text = "Please set the next start date for the participant."; ObjectID = "Bt7-AR-oo9"; */
+"Bt7-AR-oo9.text" = "この被験者の次の開始日を設定してください。";
+
+/* Class = "UILabel"; text = "SET UP PARTICIPANT"; ObjectID = "Dq7-0D-7U2"; */
+"Dq7-0D-7U2.text" = "被験者設定";
+
+/* Class = "UIButton"; normalTitle = "Mo"; ObjectID = "ImV-Qb-x6U"; */
+"ImV-Qb-x6U.normalTitle" = "月";
+
+/* Class = "UILabel"; text = "Enter Participant ID"; ObjectID = "Mbk-rh-ipv"; */
+"Mbk-rh-ipv.text" = "被験者IDを入力してください";
+
+/* Class = "UILabel"; text = "September 20xx"; ObjectID = "Onk-f0-Kow"; */
+"Onk-f0-Kow.text" = "9月 20xx";
+
+/* Class = "UIButton"; normalTitle = "Confirm"; ObjectID = "RiC-V8-BAy"; */
+"RiC-V8-BAy.normalTitle" = "確認";
+
+/* Class = "UILabel"; text = "Copy Monday's schedule to:"; ObjectID = "VhA-R8-t52"; */
+"VhA-R8-t52.text" = "{曜日}のスケジュールコピー先";
+
+/* Class = "UIButton"; normalTitle = ">"; ObjectID = "WfI-P4-0M2"; */
+"WfI-P4-0M2.normalTitle" = ">";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "XaE-Zb-Ls2"; */
+"XaE-Zb-Ls2.normalTitle" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "Sa"; ObjectID = "Y7Y-39-Y5P"; */
+"Y7Y-39-Y5P.normalTitle" = "日";
+
+/* Class = "UIButton"; normalTitle = "COPY TIME TO OTHER DAYS"; ObjectID = "YVz-dD-YqF"; */
+"YVz-dD-YqF.normalTitle" = "時刻を他の日にコピー";
+
+/* Class = "UILabel"; text = "SET UP AVAILABILITY"; ObjectID = "ayg-HO-Lu0"; */
+"ayg-HO-Lu0.text" = "可能時間設定";
+
+/* Class = "UIButton"; normalTitle = "Su"; ObjectID = "bqS-v7-Fmd"; */
+"bqS-v7-Fmd.normalTitle" = "土";
+
+/* Class = "UIButton"; normalTitle = "We"; ObjectID = "dTr-wU-y2D"; */
+"dTr-wU-y2D.normalTitle" = "水";
+
+/* Class = "UILabel"; text = "When do you usually wake up?"; ObjectID = "iWf-et-5zP"; */
+"iWf-et-5zP.text" = "普段あなたは何時に目が覚めますか？";
+
+/* Class = "UIButton"; normalTitle = "Tu"; ObjectID = "iZb-nC-5yo"; */
+"iZb-nC-5yo.normalTitle" = "火";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "jkK-8Y-py8"; */
+"jkK-8Y-py8.normalTitle" = "完了";
+
+/* Class = "UIButton"; normalTitle = "Fr"; ObjectID = "khQ-Bk-CjN"; */
+"khQ-Bk-CjN.normalTitle" = "金";
+
+/* Class = "UIButton"; normalTitle = "Okay"; ObjectID = "klT-bA-150"; */
+"klT-bA-150.normalTitle" = "OK";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "nbz-xK-RVl"; */
+"nbz-xK-RVl.normalTitle" = "次へ";
+
+/* Class = "UIButton"; normalTitle = "Th"; ObjectID = "nfC-UR-RcJ"; */
+"nfC-UR-RcJ.normalTitle" = "木";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pDl-Is-JuX"; */
+"pDl-Is-JuX.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "pjD-Sf-upj"; */
+"pjD-Sf-upj.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "When do you usually go to bed?"; ObjectID = "tHC-Py-MHS"; */
+"tHC-Py-MHS.text" = "普段あなたは何時に寝ますか？";
+
+/* Class = "UILabel"; text = "SET START DATE"; ObjectID = "zPd-7E-gLa"; */
+"zPd-7E-gLa.text" = "開始日の設定";

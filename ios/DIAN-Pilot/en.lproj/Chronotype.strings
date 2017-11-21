@@ -1,0 +1,72 @@
+
+/* Class = "UILabel"; text = "CHRONOTYPE"; ObjectID = "62j-EQ-jMI"; */
+"62j-EQ-jMI.text" = "CHRONOTYPE";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "9EO-LC-anQ"; */
+"9EO-LC-anQ.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Choose Time"; ObjectID = "CE0-HM-Lq7"; */
+"CE0-HM-Lq7.normalTitle" = "Choose Time";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "GQc-C0-SNz"; */
+"GQc-C0-SNz.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "CHRONOTYPE"; ObjectID = "I0b-qR-rcM"; */
+"I0b-qR-rcM.text" = "CHRONOTYPE";
+
+/* Class = "UILabel"; text = "I have been a shift- or night-worker in the past three months"; ObjectID = "Pfd-CO-kdn"; */
+"Pfd-CO-kdn.text" = "I have been a shift- or night-worker in the past three months";
+
+/* Class = "UILabel"; text = "On work-free days when I don’t use an alarm clock…"; ObjectID = "R3x-hb-sZO"; */
+"R3x-hb-sZO.text" = "On work-free days when I don’t use an alarm clock…";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "UFP-IN-JpV"; */
+"UFP-IN-JpV.normalTitle" = "Yes";
+
+/* Class = "UILabel"; text = "CHRONOTYPE"; ObjectID = "URE-Bg-haR"; */
+"URE-Bg-haR.text" = "CHRONOTYPE";
+
+/* Class = "UILabel"; text = "CHRONOTYPE"; ObjectID = "V8c-bk-1xl"; */
+"V8c-bk-1xl.text" = "CHRONOTYPE";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "Vzp-E8-9h4"; */
+"Vzp-E8-9h4.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "d0N-SK-GY2"; */
+"d0N-SK-GY2.normalTitle" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "eWy-E0-4bg"; */
+"eWy-E0-4bg.normalTitle" = "Next";
+
+/* Class = "UILabel"; text = "CHRONOTYPE"; ObjectID = "f1u-5y-pmh"; */
+"f1u-5y-pmh.text" = "CHRONOTYPE";
+
+/* Class = "UILabel"; text = "On Workdays...."; ObjectID = "fx8-W3-3kY"; */
+"fx8-W3-3kY.text" = "On Workdays....";
+
+/* Class = "UILabel"; text = "I normally fall asleep at (this is NOT when you get to bed):"; ObjectID = "fyr-BX-GKj"; */
+"fyr-BX-GKj.text" = "I normally fall asleep at (this is NOT when you get into bed):";
+
+/* Class = "UIButton"; normalTitle = "Choose Time"; ObjectID = "lhS-lN-Mka"; */
+"lhS-lN-Mka.normalTitle" = "Choose Time";
+
+/* Class = "UILabel"; text = "I normally fall asleep at (this is NOT when you get to bed):"; ObjectID = "mee-cw-mOI"; */
+"mee-cw-mOI.text" = "I normally fall asleep at (this is NOT when you get into bed):";
+
+/* Class = "UILabel"; text = "I normally wake up at (this is NOT when you get out of bed):"; ObjectID = "qau-zw-KAL"; */
+"qau-zw-KAL.text" = "I normally wake up at (this is NOT when you get out of bed):";
+
+/* Class = "UILabel"; text = "Normally, I work ____ days/week."; ObjectID = "rME-Y7-m7J"; */
+"rME-Y7-m7J.text" = "Normally, I work ____ days/week.";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "sdg-zW-mwD"; */
+"sdg-zW-mwD.normalTitle" = "No";
+
+/* Class = "UIButton"; normalTitle = "Choose Time"; ObjectID = "sux-bi-NLx"; */
+"sux-bi-NLx.normalTitle" = "Choose Time";
+
+/* Class = "UILabel"; text = "I normally wake up at (this is NOT when you get out of bed):"; ObjectID = "xmL-II-stV"; */
+"xmL-II-stV.text" = "I normally wake up at (this is NOT when you get out of bed):";
+
+/* Class = "UIButton"; normalTitle = "Choose Time"; ObjectID = "zPD-kT-Ffp"; */
+"zPD-kT-Ffp.normalTitle" = "Choose Time";

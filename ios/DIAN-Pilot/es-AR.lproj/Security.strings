@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "4zS-of-x1v"; */
+"4zS-of-x1v.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "D2v-Jz-8m5"; */
+"D2v-Jz-8m5.text" = "X";
+
+/* Class = "UIButton"; normalTitle = "Deshacer"; ObjectID = "Llp-mO-eMR"; */
+"Llp-mO-eMR.normalTitle" = "Deshacer";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "QMr-JW-NmN"; */
+"QMr-JW-NmN.text" = "X";
+
+/* Class = "UILabel"; text = " Firme con sus iniciales en la línea a continuación para verificar su identidad."; ObjectID = "UeI-qQ-Hhl"; */
+"UeI-qQ-Hhl.text" = " Firme con sus iniciales en la línea a continuación para verificar su identidad.";
+
+/* Class = "UILabel"; text = "VERIFICACIÓN DE IDENTIFICACIÓN"; ObjectID = "ea5-nQ-6Kl"; */
+"ea5-nQ-6Kl.text" = "VERIFICACIÓN DE IDENTIFICACIÓN";
+
+/* Class = "UIButton"; normalTitle = "Deshacer"; ObjectID = "fh6-hO-Ygs"; */
+"fh6-hO-Ygs.normalTitle" = "Deshacer";
+
+/* Class = "UIButton"; normalTitle = "Hecho"; ObjectID = "i2T-Vq-2eb"; */
+"i2T-Vq-2eb.normalTitle" = "Hecho";
+
+/* Class = "UILabel"; text = " Firme con sus iniciales en la línea a continuación para verificar su identidad."; ObjectID = "l4T-fq-b47"; */
+"l4T-fq-b47.text" = " Firme con sus iniciales en la línea a continuación para verificar su identidad.";
+
+/* Class = "UILabel"; text = "VERIFICACIÓN DE IDENTIFICACIÓN"; ObjectID = "ltb-du-OpI"; */
+"ltb-du-OpI.text" = "VERIFICACIÓN DE IDENTIFICACIÓN";

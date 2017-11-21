@@ -1,0 +1,30 @@
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "7Pc-T5-Xdz"; */
+"7Pc-T5-Xdz.normalTitle" = "次へ";
+
+/* Class = "UILabel"; text = "Please sign your initials on the line below to verify your identity."; ObjectID = "AbL-eq-fHU"; */
+"AbL-eq-fHU.text" = "下の線上にイニシャル署名を行い、本人確認を行ってください。";
+
+/* Class = "UILabel"; text = "Please sign your initials on the line below to verify your identity."; ObjectID = "HHL-DG-tpd"; */
+"HHL-DG-tpd.text" = "下の線上にイニシャル署名を行い、本人確認を行ってください。";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "YhV-VM-5Mf"; */
+"YhV-VM-5Mf.text" = "X";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "aFk-sY-xMu"; */
+"aFk-sY-xMu.text" = "X";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "aK8-RW-AB4"; */
+"aK8-RW-AB4.normalTitle" = "Done";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "dB4-r9-byV"; */
+"dB4-r9-byV.normalTitle" = "元に戻す";
+
+/* Class = "UIButton"; normalTitle = "Undo"; ObjectID = "sSj-pd-q9Z"; */
+"sSj-pd-q9Z.normalTitle" = "元に戻す";
+
+/* Class = "UILabel"; text = "ID VERIFICATION"; ObjectID = "ta3-LD-NiE"; */
+"ta3-LD-NiE.text" = "IDの確認";
+
+/* Class = "UILabel"; text = "ID VERIFICATION"; ObjectID = "trJ-we-sgi"; */
+"trJ-we-sgi.text" = "IDの確認";

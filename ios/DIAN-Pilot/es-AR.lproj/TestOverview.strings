@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "3DO-CB-UTR"; */
+"3DO-CB-UTR.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "INSTRUCCIONES"; ObjectID = "eBt-1e-2A7"; */
+"eBt-1e-2A7.text" = "INSTRUCCIONES";
+
+/* Class = "UITextView"; text = "Necesitará aproximadamente cinco minutos para completar todo, tal vez menos.  Se le harán unas pocas preguntas y luego completará tres tests breves.  Presione siguiente para continuar."; ObjectID = "k4f-dk-7o5"; */
+"k4f-dk-7o5.text" = "Necesitará aproximadamente cinco minutos para completar todo, tal vez menos.  Se le harán unas pocas preguntas y luego completará tres tests breves.  Presione siguiente para continuar.";
+
+/* Class = "UITextView"; text = "Ahora completará tres tests breves.  No podrá pausar este test después de iniciado.  Presione Siguiente para dar inicio."; ObjectID = "kqI-dr-KHk"; */
+"kqI-dr-KHk.text" = "Ahora completará tres tests breves.  No podrá pausar este test después de iniciado.  Presione Siguiente para dar inicio.";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "paA-xq-CaO"; */
+"paA-xq-CaO.normalTitle" = "Siguiente";
+
+/* Class = "UILabel"; text = "RESUMEN DEL TEST"; ObjectID = "vuV-H3-q9e"; */
+"vuV-H3-q9e.text" = "RESUMEN DEL TEST";

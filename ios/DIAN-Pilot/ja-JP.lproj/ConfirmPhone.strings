@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "CONFIRM PHONE"; ObjectID = "TiG-Ac-4Sp"; */
+"TiG-Ac-4Sp.text" = "電話を確認してください";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "fM3-yA-x0P"; */
+"fM3-yA-x0P.normalTitle" = "はい";
+
+/* Class = "UIButton"; normalTitle = "Done"; ObjectID = "iQX-kp-614"; */
+"iQX-kp-614.normalTitle" = "完了";
+
+/* Class = "UILabel"; text = "Do you plan to upgrade your phone in the next 3 months?"; ObjectID = "m2m-fo-hz3"; */
+"m2m-fo-hz3.text" = "次の3か月以内に電話の機種変更を予定していますか？";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "w0S-rR-2Wf"; */
+"w0S-rR-2Wf.normalTitle" = "いいえ";

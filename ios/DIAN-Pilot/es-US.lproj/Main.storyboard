@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tahoma Bold.ttf">
+            <string>Tahoma-Bold</string>
+        </array>
+        <array key="Tahoma.ttf">
+            <string>Tahoma</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--TestSession-->
+        <scene sceneID="hkp-Bz-1Ij">
+            <objects>
+                <viewControllerPlaceholder storyboardName="TestSession" id="gVV-4z-7k1" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xkc-2V-4QI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-531" y="-223"/>
+        </scene>
+        <!--Baseline Wait View Controller-->
+        <scene sceneID="vvr-Yr-2GI">
+            <objects>
+                <viewController storyboardIdentifier="BaselineWaitViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="X4F-ph-jMa" customClass="BaselineWaitViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rV8-s1-Rkh"/>
+                        <viewControllerLayoutGuide type="bottom" id="cCF-6X-1Mc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="skV-yQ-pqT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="Inicial" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-D1-iKo" userLabel="Page title">
+                                <rect key="frame" x="18" y="33" width="41.5" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Page title"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Gut-FO-3ln"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gNv-9r-6r7">
+                                <rect key="frame" x="16" y="62" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="bwz-2A-JK4"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LYb-gT-iTQ">
+                                <rect key="frame" x="-9" y="606" width="393" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="hnv-U3-gsV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Coordinador del centro" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="siteCoordinatorTapped:" destination="X4F-ph-jMa" eventType="touchUpInside" id="381-h1-dI5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No hay tests disponibles en este momento. Su cronograma se determinará en la visita inicial." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-hM-FOx">
+                                <rect key="frame" x="22" y="84" width="331" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="69" id="xJl-ah-Ifv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="JVl-hM-FOx" secondAttribute="trailing" constant="22" id="503-8M-kSq"/>
+                            <constraint firstItem="gNv-9r-6r7" firstAttribute="top" secondItem="fcx-D1-iKo" secondAttribute="bottom" constant="8" id="EhL-Mv-gOL"/>
+                            <constraint firstItem="gNv-9r-6r7" firstAttribute="leading" secondItem="skV-yQ-pqT" secondAttribute="leadingMargin" id="GCv-Uv-aRT"/>
+                            <constraint firstItem="LYb-gT-iTQ" firstAttribute="leading" secondItem="skV-yQ-pqT" secondAttribute="leading" constant="-9" id="KEf-ju-VP2"/>
+                            <constraint firstItem="fcx-D1-iKo" firstAttribute="leading" secondItem="skV-yQ-pqT" secondAttribute="leadingMargin" constant="2" id="UBh-Nc-oPu"/>
+                            <constraint firstAttribute="trailing" secondItem="LYb-gT-iTQ" secondAttribute="trailing" constant="-9" id="e6E-uP-NHN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gNv-9r-6r7" secondAttribute="trailing" id="fYk-xr-bgz"/>
+                            <constraint firstItem="JVl-hM-FOx" firstAttribute="top" secondItem="gNv-9r-6r7" secondAttribute="bottom" constant="20" id="ghZ-cN-e4C"/>
+                            <constraint firstItem="JVl-hM-FOx" firstAttribute="leading" secondItem="skV-yQ-pqT" secondAttribute="leading" constant="22" id="pjm-RF-pJW"/>
+                            <constraint firstItem="fcx-D1-iKo" firstAttribute="top" secondItem="rV8-s1-Rkh" secondAttribute="bottom" constant="13" id="rjl-ZN-Qx8"/>
+                            <constraint firstItem="cCF-6X-1Mc" firstAttribute="top" secondItem="LYb-gT-iTQ" secondAttribute="bottom" id="zT9-jZ-DRh"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lih-Ct-Kri" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="746" y="216"/>
+        </scene>
+        <!--Test Start View Controller-->
+        <scene sceneID="xs1-TU-hgY">
+            <objects>
+                <viewController storyboardIdentifier="TestStartViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0OS-nB-Yjm" customClass="TestStartViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="WuU-th-cY6"/>
+                        <viewControllerLayoutGuide type="bottom" id="z6f-Ep-jQy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pxi-Ca-DuU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H9w-Ji-7Bk" userLabel="Page title">
+                                <rect key="frame" x="18" y="33" width="40" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Page title"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pP7-62-3UZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1rc-gt-k8H">
+                                <rect key="frame" x="16" y="62" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="YN5-TP-dtf"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-Ne-P4G">
+                                <rect key="frame" x="-9" y="606" width="393" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="sGg-XP-gOs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Start" backgroundImage="button_bg1">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startPressed:" destination="0OS-nB-Yjm" eventType="touchUpInside" id="ZqG-Eb-pP1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggm-1r-YfS">
+                                <rect key="frame" x="22" y="225" width="331" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="161" id="vuw-sa-acO"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="It's time for a test! When you are ready, please click Start.">
+                                        <attributes>
+                                            <font key="NSFont" size="29" name="Georgia"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.2" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ggm-1r-YfS" firstAttribute="leading" secondItem="pxi-Ca-DuU" secondAttribute="leading" constant="22" id="GFA-lZ-FyF"/>
+                            <constraint firstItem="H9w-Ji-7Bk" firstAttribute="leading" secondItem="pxi-Ca-DuU" secondAttribute="leadingMargin" constant="2" id="I7a-9U-jwJ"/>
+                            <constraint firstAttribute="trailing" secondItem="ig2-Ne-P4G" secondAttribute="trailing" constant="-9" id="J6q-dx-NSP"/>
+                            <constraint firstItem="ig2-Ne-P4G" firstAttribute="leading" secondItem="pxi-Ca-DuU" secondAttribute="leading" constant="-9" id="OU0-W9-tgD"/>
+                            <constraint firstItem="1rc-gt-k8H" firstAttribute="leading" secondItem="pxi-Ca-DuU" secondAttribute="leadingMargin" id="R4O-BT-bJK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1rc-gt-k8H" secondAttribute="trailing" id="WB4-Iq-sx6"/>
+                            <constraint firstAttribute="trailing" secondItem="ggm-1r-YfS" secondAttribute="trailing" constant="22" id="lD1-cm-1Qf"/>
+                            <constraint firstItem="1rc-gt-k8H" firstAttribute="top" secondItem="H9w-Ji-7Bk" secondAttribute="bottom" constant="8" id="mqJ-LS-sgT"/>
+                            <constraint firstItem="H9w-Ji-7Bk" firstAttribute="top" secondItem="WuU-th-cY6" secondAttribute="bottom" constant="13" id="ucX-et-ifN"/>
+                            <constraint firstItem="z6f-Ep-jQy" firstAttribute="top" secondItem="ig2-Ne-P4G" secondAttribute="bottom" id="vRc-b7-WkS"/>
+                            <constraint firstItem="ggm-1r-YfS" firstAttribute="centerY" secondItem="pxi-Ca-DuU" secondAttribute="centerY" constant="-28" id="znM-G7-mDD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2qD-bq-MBx" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="54" y="216"/>
+        </scene>
+        <!--No Test View Controller-->
+        <scene sceneID="qxx-GC-BYb">
+            <objects>
+                <viewController storyboardIdentifier="NoTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tI4-gj-kMb" customClass="NoTestViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e1v-F1-TNz"/>
+                        <viewControllerLayoutGuide type="bottom" id="qu5-l5-icu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IEl-df-Cqd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="HOME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK8-Nh-b30" userLabel="Page title">
+                                <rect key="frame" x="18" y="33" width="40" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="Page title"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="9Oz-XV-CKz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xj5-DJ-tgO">
+                                <rect key="frame" x="224" y="20" width="133" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="1fF-xd-mm9"/>
+                                    <constraint firstAttribute="width" constant="133" id="vgy-kg-RZT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
+                                <state key="normal" title="EDIT AVAILABILTY">
+                                    <color key="titleColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="selected">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="editAvailabilityPressed:" destination="tI4-gj-kMb" eventType="touchUpInside" id="iXS-W0-atK"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JH4-cv-KMo">
+                                <rect key="frame" x="16" y="62" width="343" height="2"/>
+                                <color key="backgroundColor" red="0.81960784310000001" green="0.8196542859" blue="0.81950968499999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="JCK-qs-orJ"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ts6-GG-aQE">
+                                <rect key="frame" x="22" y="84" width="331" height="82.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="69" id="Ycz-ko-S1o"/>
+                                </constraints>
+                                <string key="text">No hay tests disponibles en este momento. 
+Se le notificará cuando sea el momento de comenzar.
+</string>
+                                <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="JH4-cv-KMo" secondAttribute="trailing" id="653-zm-sMk"/>
+                            <constraint firstItem="tK8-Nh-b30" firstAttribute="leading" secondItem="IEl-df-Cqd" secondAttribute="leadingMargin" constant="2" id="7Et-G1-7IM"/>
+                            <constraint firstAttribute="trailing" secondItem="Ts6-GG-aQE" secondAttribute="trailing" constant="22" id="GCb-QV-wKT"/>
+                            <constraint firstItem="Ts6-GG-aQE" firstAttribute="top" secondItem="JH4-cv-KMo" secondAttribute="bottom" constant="20" id="PDx-IW-8uy"/>
+                            <constraint firstItem="tK8-Nh-b30" firstAttribute="top" secondItem="e1v-F1-TNz" secondAttribute="bottom" constant="13" id="Vag-40-Rpm"/>
+                            <constraint firstItem="JH4-cv-KMo" firstAttribute="top" secondItem="Xj5-DJ-tgO" secondAttribute="bottom" id="bJh-oL-5Gv"/>
+                            <constraint firstItem="Ts6-GG-aQE" firstAttribute="leading" secondItem="IEl-df-Cqd" secondAttribute="leading" constant="22" id="nf1-Wh-5e1"/>
+                            <constraint firstItem="JH4-cv-KMo" firstAttribute="leading" secondItem="IEl-df-Cqd" secondAttribute="leadingMargin" id="pGc-S4-YD6"/>
+                            <constraint firstItem="JH4-cv-KMo" firstAttribute="top" secondItem="tK8-Nh-b30" secondAttribute="bottom" constant="8" id="v96-l8-eIt"/>
+                            <constraint firstItem="Xj5-DJ-tgO" firstAttribute="top" secondItem="e1v-F1-TNz" secondAttribute="bottom" id="vaZ-mq-WLA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Xj5-DJ-tgO" secondAttribute="trailing" constant="2" id="xtN-gD-jK6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kPs-7J-WBU" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-657" y="215"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="button_bg1" width="10" height="55"/>
+    </resources>
+</document>

@@ -1,0 +1,52 @@
+
+/* Class = "UILabel"; text = "EXAMPLE"; ObjectID = "8m1-U8-Sgc"; */
+"8m1-U8-Sgc.text" = "EXAMPLE";
+
+/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "A4U-ME-sU5"; */
+"A4U-ME-sU5.normalTitle" = "Start";
+
+/* Class = "UILabel"; text = "Cheese"; ObjectID = "IiB-Rg-bVY"; */
+"IiB-Rg-bVY.text" = "Cheese";
+
+/* Class = "UIButton"; normalTitle = "No"; ObjectID = "KCH-Ui-d48"; */
+"KCH-Ui-d48.normalTitle" = "No";
+
+/* Class = "UILabel"; text = "Soap"; ObjectID = "PBl-Ob-cpO"; */
+"PBl-Ob-cpO.text" = "Soap";
+
+/* Class = "UIButton"; normalTitle = "Yes"; ObjectID = "UQF-Ef-reS"; */
+"UQF-Ef-reS.normalTitle" = "Yes";
+
+/* Class = "UITextView"; text = "Press Next to continue."; ObjectID = "bG1-gO-A8K"; */
+"bG1-gO-A8K.text" = "Press Next to continue.";
+
+/* Class = "UILabel"; text = "$0.52"; ObjectID = "cC6-dj-MYS"; */
+"cC6-dj-MYS.text" = "$0.52";
+
+/* Class = "UILabel"; text = "Which price were you shown before?"; ObjectID = "efW-l8-QvT"; */
+"efW-l8-QvT.text" = "What was the price of the";
+
+/* Class = "UITextView"; text = "You will see 8 pairs of items and prices, one pair at a time.
+\nTry to remember each item and its price.
+\nAfter all 8 have been shown, you will be asked to select the correct price for each item.
+\nPress Start to begin."; ObjectID = "hTv-uf-a95"; */
+"hTv-uf-a95.text" = "You will see 8 pairs of items and prices, one pair at a time.
+\nTry to remember each item and its price.
+\nAfter all 8 have been shown, you will be asked to select the correct price for each item.
+\nPress Start to begin.";
+
+/* Class = "UITextView"; text = "In this test, you will see an item and a price, for example:"; ObjectID = "rWE-R1-mq7"; */
+"rWE-R1-mq7.text" = "In this test, you will see an item and a price, for example:";
+
+/* Class = "UILabel"; text = "$0.52"; ObjectID = "vnw-RI-EGV"; */
+"vnw-RI-EGV.text" = "$0.52";
+
+/* Class = "UITextView"; text = "Let’s see how many you can remember.
+\nFor each item, click on the price that was shown previously.
+\nPress Start to begin"; ObjectID = "ypj-wr-GUA"; */
+"ypj-wr-GUA.text" = "Let’s see how many you can remember.
+\nFor each item, click on the price that was shown previously.
+\nPress Start to begin";
+
+/* Class = "UILabel"; text = "Is this the price that you were shown before?"; ObjectID = "z2M-5N-iof"; */
+"z2M-5N-iof.text" = "Is this the price that you were shown before?";

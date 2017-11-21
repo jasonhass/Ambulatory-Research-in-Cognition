@@ -1,0 +1,27 @@
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "7Pc-T5-Xdz"; */
+"7Pc-T5-Xdz.normalTitle" = "Siguiente";
+
+/* Class = "UITextView"; text = "Firme con sus iniciales en la línea a continuación para verificar su identidad."; ObjectID = "YFd-17-fcT"; */
+"YFd-17-fcT.text" = "Firme con sus iniciales en la línea a continuación para verificar su identidad.";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "YhV-VM-5Mf"; */
+"YhV-VM-5Mf.text" = "X";
+
+/* Class = "UILabel"; text = "X"; ObjectID = "aFk-sY-xMu"; */
+"aFk-sY-xMu.text" = "X";
+
+/* Class = "UIButton"; normalTitle = "Siguiente"; ObjectID = "aK8-RW-AB4"; */
+"aK8-RW-AB4.normalTitle" = "Siguiente";
+
+/* Class = "UIButton"; normalTitle = "Deshacer"; ObjectID = "dB4-r9-byV"; */
+"dB4-r9-byV.normalTitle" = "Deshacer";
+
+/* Class = "UIButton"; normalTitle = "Deshacer"; ObjectID = "sSj-pd-q9Z"; */
+"sSj-pd-q9Z.normalTitle" = "Deshacer";
+
+/* Class = "UILabel"; text = "VERIFICACIÓN DE IDENTIFICACIÓN"; ObjectID = "ta3-LD-NiE"; */
+"ta3-LD-NiE.text" = "VERIFICACIÓN DE IDENTIFICACIÓN";
+
+/* Class = "UILabel"; text = "VERIFICACIÓN DE IDENTIFICACIÓN"; ObjectID = "trJ-we-sgi"; */
+"trJ-we-sgi.text" = "VERIFICACIÓN DE IDENTIFICACIÓN";
