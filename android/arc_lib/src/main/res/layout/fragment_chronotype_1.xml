@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/edittextChronotype1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView12"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:background="@drawable/background_edittext"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="@dimen/text_edit_padding" />
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/header_below"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/header_above"
+        android:text="@string/chronotype_header"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView3"
+        android:layout_marginBottom="@dimen/between_cluster"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:text="@string/chronotype_1_q1"
+        android:textAllCaps="false" />
+
+    <com.dian.arc.libs.custom.ToggledButton
+        android:id="@+id/togglebuttonChronotype1No"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/togglebuttonChronotype1Yes"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/toggle_spacing"
+        android:text="@string/no" />
+
+    <com.dian.arc.libs.custom.ToggledButton
+        android:id="@+id/togglebuttonChronotype1Yes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:text="@string/yes" />
+
+    <com.dian.arc.libs.custom.FancyButton
+        android:id="@+id/fancybuttonChronotype1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="6dp"
+        android:padding="20dp"
+        android:text="@string/next" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_spacer"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/togglebuttonChronotype1No"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/fancybuttonChronotype0"
+        android:layout_alignParentStart="true"
+        android:alpha="0.5"
+        android:background="@color/grey" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/textView10"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:text="@string/chronotype_1_q2" />
+
+</RelativeLayout>

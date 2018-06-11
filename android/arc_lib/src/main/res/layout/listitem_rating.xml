@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textviewRatingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/fancyButton6"
+        android:layout_alignStart="@+id/fancyButton6"
+        android:layout_below="@+id/textView17"
+        android:layout_marginBottom="@dimen/toggle_spacing"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:text="@string/wakeup_0_q1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/frame_vertical"
+            android:layout_marginRight="@dimen/frame_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textviewRatingLow"
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="LOW"
+                android:textAlignment="textStart"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textviewRatingHigh"
+                style="@style/TextHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="HIGH"
+                android:textAlignment="textEnd"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/toggle_spacing">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            app:srcCompat="@drawable/seekbar_track" />
+
+        <SeekBar
+            android:id="@+id/seekbarRating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:progress="50"
+            android:progressDrawable="@android:color/transparent"
+            android:splitTrack="true"
+            android:thumb="@drawable/seekbar_thumb" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textviewRatingSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:background="@color/grey" />
+
+</LinearLayout>
+

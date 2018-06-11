@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="country_key">US</string>
+	<string name="language_key">en</string>
+	<string name="baseline_sitecoordinator">EXR ARC Coordinator</string>
+	<string name="startdate_body">Select your next test date (it should be 6 months from your last test date)</string>
+	<string name="between_questions">Questions?\nContact EXR ARC Coordinator.</string>
+</resources>

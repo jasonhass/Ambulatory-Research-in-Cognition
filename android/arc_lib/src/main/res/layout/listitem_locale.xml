@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textviewLocaleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/header_below"
+        android:paddingLeft="@dimen/frame_vertical"
+        android:paddingRight="@dimen/frame_vertical"
+        android:paddingTop="@dimen/header_below"
+        android:text="Country - Langauge" />
+
+    <TextView
+        android:id="@+id/textviewLocaleSeparator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/textviewLocaleText"
+        android:layout_centerHorizontal="true"
+        android:background="@color/primary" />
+
+</RelativeLayout>
+

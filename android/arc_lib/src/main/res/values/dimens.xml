@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="frame_vertical">20dp</dimen>
+    <dimen name="header_above">18dp</dimen>
+    <dimen name="header_below">14dp</dimen>
+    <dimen name="between_cluster">27dp</dimen>
+    <dimen name="label_below">10dp</dimen>
+    <dimen name="activity_horizontal_margin">10dp</dimen>
+    <dimen name="frame_padding">20dp</dimen>
+    <dimen name="header__bottom_margin">20dp</dimen>
+    <dimen name="text_edit_padding">15dp</dimen>
+    <dimen name="half_margin">8dp</dimen>
+    <dimen name="bottom_spacer">2dp</dimen>
+    <dimen name="border">2dp</dimen>
+    <dimen name="toggle_spacing">15dp</dimen>
+</resources>

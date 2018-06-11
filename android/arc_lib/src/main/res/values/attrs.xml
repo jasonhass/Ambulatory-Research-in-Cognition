@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="text" format="string" />
+    <attr name="hide_separator" format="boolean" />
+
+    <declare-styleable name="FancyButton">
+        <attr name="rounded" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Question">
+        <attr name="text"/>
+        <attr name="button_text" format="string" />
+        <attr name="hide_separator"/>
+    </declare-styleable>
+
+    <declare-styleable name="Rating">
+        <attr name="text"/>
+        <attr name="text_low" format="string" />
+        <attr name="text_high" format="string" />
+        <attr name="hide_separator"/>
+    </declare-styleable>
+
+    <declare-styleable name="WeekdayButton">
+        <attr name="text"/>
+    </declare-styleable>
+
+
+</resources>

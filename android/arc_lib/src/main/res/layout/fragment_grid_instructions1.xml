@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_above="@+id/textView8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView3"
+                android:layout_marginBottom="@dimen/between_cluster"
+                android:layout_marginLeft="@dimen/frame_vertical"
+                android:layout_marginRight="@dimen/frame_vertical"
+                android:layout_marginTop="@dimen/between_cluster"
+                android:text="@string/grid_body1"
+                android:textAllCaps="false" />
+
+            <GridLayout
+                android:id="@+id/gridLayout"
+                android:layout_width="303dp"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/textView21"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_gravity="center"
+                android:columnCount="5"
+                android:padding="1dp"
+                android:rowCount="2">
+
+
+                <ImageView
+                    android:id="@+id/image11"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#b6ddec"
+                    app:srcCompat="@drawable/phone" />
+
+                <ImageView
+                    android:id="@+id/image12"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image13"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image14"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image15"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image21"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image22"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image23"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+                <ImageView
+                    android:id="@+id/image24"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC"
+                    app:srcCompat="@drawable/pen" />
+
+                <ImageView
+                    android:id="@+id/image25"
+                    android:layout_width="58dp"
+                    android:layout_height="95dp"
+                    android:layout_margin="1dp"
+                    android:background="#FFB6DDEC" />
+
+            </GridLayout>
+
+            <TextView
+                android:id="@+id/textView21"
+                style="@style/TextHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView8"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/between_cluster"
+                android:layout_marginTop="@dimen/label_below"
+                android:gravity="center_horizontal"
+                android:text="@string/grid_example_test"
+                android:textAllCaps="true"
+                android:textColor="@color/darkGrey"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textviewOrder"
+        style="@style/TextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/header_below"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/header_above"
+        android:text="@string/grid_subheader"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/border"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textviewGridSubheader"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/header_below"
+        android:background="@color/grey" />
+
+    <com.dian.arc.libs.custom.FancyButton
+        android:id="@+id/fancybuttonGridNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="6dp"
+        android:padding="20dp"
+        android:text="@string/next" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:alpha="0.5"
+        android:background="@color/grey"
+        android:layout_above="@+id/fancybuttonGridNext"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textviewGridSubheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textviewOrder"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:text="@string/grid_subheader"
+        android:textColor="@color/primary"
+        android:textSize="24dp" />
+
+</RelativeLayout>

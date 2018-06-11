@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/header_above">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/TextHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/header_below"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:text="@string/setup_b_header"
+        android:textAllCaps="true"
+        android:textStyle="bold" />
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/textView2"
+        android:layout_below="@+id/textView3"
+        android:background="@color/grey">
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutWeekday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/textView3"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/frame_vertical"
+        android:paddingRight="@dimen/frame_vertical">
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdaySun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableBottom="@drawable/weekday_off"
+            android:text="SU"
+            app:text="@string/weekdays_su" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdayMon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="MO"
+            app:text="@string/weekdays_mo" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdayTue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TU"
+            app:text="@string/weekdays_tu" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdayWed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="WE"
+            app:text="@string/weekdays_we" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdayThu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TH"
+            app:text="@string/weekdays_th" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdayFri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="FR"
+            app:text="@string/weekdays_fr" />
+
+        <com.dian.arc.libs.custom.WeekdayButton
+            android:id="@+id/weekdaySat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SA"
+            app:text="@string/weekdays_sa" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:background="@color/grey"
+        android:paddingLeft="@dimen/frame_vertical"
+        android:paddingRight="@dimen/frame_vertical" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/frameLayout"
+        android:background="@color/grey"
+        android:paddingLeft="@dimen/frame_vertical"
+        android:paddingRight="@dimen/frame_vertical" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/layoutWeekday"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:paddingBottom="@dimen/label_below"
+        android:text="@string/setup_b_inputbox1"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textviewWaketime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:background="@drawable/background_edittext"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="@dimen/text_edit_padding" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textviewWaketime"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:layout_marginTop="@dimen/between_cluster"
+        android:paddingBottom="@dimen/label_below"
+        android:text="@string/setup_b_inputbox2"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textviewBedtime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView4"
+        android:layout_marginLeft="@dimen/frame_vertical"
+        android:layout_marginRight="@dimen/frame_vertical"
+        android:background="@drawable/background_edittext"
+        android:ems="10"
+        android:inputType="number"
+        android:padding="@dimen/text_edit_padding" />
+
+    <TextView
+        android:id="@+id/textviewSetupCopyTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fancybuttonSetupAvailabilityNext"
+        android:layout_alignParentStart="true"
+        android:padding="@dimen/between_cluster"
+        android:text="@string/setup_b_popup"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@color/primary"
+        android:textSize="14dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_above="@+id/fancybuttonSetupAvailabilityNext"
+        android:layout_alignParentStart="true"
+        android:alpha="0.5"
+        android:background="@color/grey" />
+
+    <com.dian.arc.libs.custom.FancyButton
+        android:id="@+id/fancybuttonSetupAvailabilityNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:elevation="12dp"
+        android:text="@string/next" />
+
+</RelativeLayout>
