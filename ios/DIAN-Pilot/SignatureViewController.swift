@@ -1,14 +1,15 @@
-//
-//  SignatureViewController.swift
-//  ARC
-//
-//  Created by Philip Hayes on 5/16/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 
-class SignatureViewController: DNViewController {
+class SignatureViewController: DNViewController, SignatureViewDelegate {
     @IBOutlet weak var signatureView:SignatureView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +20,12 @@ class SignatureViewController: DNViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated);
         
-        DNDataManager.sharedInstance.currentTestSession = TestArc.getCurrentArc()?.getAvailableTestSession();
+        DNDataManager.sharedInstance.currentTestSession = TestVisit.getCurrentVisit()?.getAvailableTestSession();
+        DNDataManager.sharedInstance.currentTestSession?.clearNotifications();
         DNDataManager.sharedInstance.isTesting = true
         DNDataManager.sharedInstance.currentTestSession?.startTime = Date() as NSDate;
-        
+        self.signatureView.delegate = self
+        self.signatureViewContentChanged(state: .empty)
 //        DNDataManager.sharedInstance.takeDeviceSample();
     }
     
@@ -39,15 +42,15 @@ class SignatureViewController: DNViewController {
         if signatureView.path.isEmpty {
             return
         }
-        if let arc = TestArc.getCurrentArc(), let session = DNDataManager.sharedInstance.currentTestSession, let img = signatureView.save()
+        if let visit = TestVisit.getCurrentVisit(), let session = DNDataManager.sharedInstance.currentTestSession, let img = signatureView.save()
         {
             session.startSignature = UIImagePNGRepresentation(img) as NSData?;
             DNDataManager.save();
-            if arc.hasTakenChronotypeSurvey() == false
+            if visit.hasTakenChronotypeSurvey() == false
             {
                 AppDelegate.go(state: .surveyChronotype);
             }
-            else if arc.hasTakenWakeSurvey(forDay: Date()) == false
+            else if visit.hasTakenWakeSurvey(forDay: Date()) == false
             {
                 AppDelegate.go(state: .surveyWake);
             }
@@ -55,6 +58,27 @@ class SignatureViewController: DNViewController {
             {
                 AppDelegate.go(state: .surveyContext);
             }
+        }
+    }
+    
+    func signatureViewContentChanged(state: SignatureViewContentState) {
+        let btns = [self.view.viewWithTag(1) as! UIButton,self.view.viewWithTag(2) as! UIButton]
+        
+        switch  state {
+            
+        case .empty:
+            
+            for b in btns {
+                b.alpha = 0.5
+                b.isEnabled = false
+            }
+        case .dirty:
+            for b in btns {
+                
+                b.alpha = 1
+                b.isEnabled = true
+            }
+            
         }
     }
     /*

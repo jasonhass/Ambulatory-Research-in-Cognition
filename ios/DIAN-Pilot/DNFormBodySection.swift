@@ -1,7 +1,7 @@
 //
 //  DNFormBodySection.swift
 //
-//  Created by Michael Votaw on 5/22/17.
+
 //  Copyright © 2017 happyMedum. All rights reserved.
 //
 

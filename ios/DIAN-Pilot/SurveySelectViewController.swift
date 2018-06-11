@@ -1,10 +1,11 @@
-//
-//  SurveySelectViewController.swift
-//  DIAN-Pilot
-//
-//  Created by Geoff Strom on 11/21/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 fileprivate struct SurveySelectItem {
@@ -45,6 +46,17 @@ class SurveySelectViewController: DNViewController, UITableViewDelegate, UITable
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         self.tableView.flashScrollIndicators()
+        if isMultiple
+        {
+            self.titleTextView.text = "Select all that apply:".localized(key:"list_selectall");
+            self.titleTextView.sizeToFit()
+        }
+        else
+        {
+            self.titleTextView.text = "Select one:".localized(key:"list_selectone");
+        }
+        self.tableView.reloadData()
+
 
     }
     func setChoices(values:Array<String>){
@@ -73,21 +85,16 @@ class SurveySelectViewController: DNViewController, UITableViewDelegate, UITable
                 nextButton.isEnabled = true;
             }
         }
+        
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(white: 0, alpha: 0.5);
         self.view.isOpaque = false;
         self.tableView.allowsSelection = false;
         
-        if isMultiple
-        {
-            self.titleTextView.text = NSLocalizedString("Select all that apply:", comment: "");
-        }
-        else
-        {
-            self.titleTextView.text = NSLocalizedString("Select one:", comment: "");
-        }
+        
         
         if numberOfSelections > 0
         {
@@ -105,7 +112,7 @@ class SurveySelectViewController: DNViewController, UITableViewDelegate, UITable
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell:SurveySelectTableViewCell = tableView.dequeueReusableCell(withIdentifier: "answer") as! SurveySelectTableViewCell
-        let title = choices[indexPath.row].name
+        let title = choices[indexPath.row].name.localized()
         cell.selectButton.setTitle(title, for: .normal)
         cell.selectButton.addTarget(self, action: #selector(selectedAnswer(sender:)), for: .touchUpInside)
         cell.selectButton.isSelected = choices[indexPath.row].selected
@@ -184,7 +191,7 @@ class SurveySelectViewController: DNViewController, UITableViewDelegate, UITable
 
         for i in 0 ..< choices.count {
             if choices[i].selected {
-                answersArray.append(choices[i].name)
+                answersArray.append(choices[i].name.localized())
             }
         }
 

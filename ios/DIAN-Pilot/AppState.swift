@@ -2,7 +2,7 @@
 //  AppState.swift
 //  StateMachineNavigation
 //
-//  Created by Philip Hayes on 5/3/17.
+
 //  Copyright © 2017 Philip Hayes. All rights reserved.
 //
 
@@ -18,10 +18,12 @@ enum AppState {
     setupUser,
     setupTime,
     setupArcDate,
+    setupLanguage,
     
     confirmArcDate,
     noTest,
     baselineWait,
+    endProject,
     
     testStart,
     testOverview,
@@ -36,7 +38,12 @@ enum AppState {
     surveyUpgradePhone,
     
     beginningVerification,
-    endingVerification
+    endingVerification,
+    
+    twoFactorEnterCode,
+    twoFactorResendCode,
+    twoFactorThankYou
+    
     
     
     
@@ -51,6 +58,8 @@ enum AppState {
             return (storyboardName: "Setup", storyboardId: "TimeSetupViewController");
         case .setupArcDate:
             return (storyboardName: "Setup", storyboardId: "DateSelectionViewController");
+        case .setupLanguage:
+            return (storyboardName: "Setup", storyboardId: "Language");
             
             
         case .confirmArcDate:
@@ -59,6 +68,8 @@ enum AppState {
             return (storyboardName: "Main", storyboardId: "NoTestViewController");
         case .baselineWait:
             return (storyboardName: "Main", storyboardId: "BaselineWaitViewController");
+        case .endProject:
+            return (storyboardName: "Main", storyboardId: "EndProjectViewController");
             
         case .testStart:
             return (storyboardName: "Security", storyboardId: "SignatureViewController");
@@ -88,7 +99,12 @@ enum AppState {
         case .endingVerification:
             return (storyboardName: "Security", storyboardId: "EndSignatureViewController");
             
-            
+        case .twoFactorEnterCode:
+            return (storyboardName: "Setup", storyboardId: "EnterCodeViewController");
+        case .twoFactorResendCode:
+            return (storyboardName: "Setup", storyboardId: "ResendCodeViewController");
+        case .twoFactorThankYou:
+            return (storyboardName: "Setup", storyboardId: "ResendCodeVerificationViewController");
         }
     }
         
@@ -112,6 +128,13 @@ class AppRouter {
             }
         }
         
+        let vc = get(state: state, userInfo: userInfo)
+        
+        window.rootViewController = vc;
+        return window.rootViewController as! DNViewController
+    }
+    
+    func get(state:AppState, userInfo:Dictionary<String, Any>? = nil) -> DNViewController {
         let sbInfo = state.sbInfo();
         
         
@@ -121,10 +144,7 @@ class AppRouter {
         {
             v.userInfo = ui;
         }
-        
-        window.rootViewController = vc;
-        return window.rootViewController as! DNViewController
+        return vc as! DNViewController
     }
-    
     
 }

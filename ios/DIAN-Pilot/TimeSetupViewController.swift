@@ -1,10 +1,11 @@
-//
-//  TimeSetupViewController.swift
-//  DIAN-Pilot
-//
-//  Created by Michael Votaw on 11/21/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+    /*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 
@@ -34,13 +35,21 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
     var df = DateFormatter();
     
     var times:Dictionary<Int, dayTime> = Dictionary();
-    var daysOfWeek:Array<String> = [NSLocalizedString("Sunday", comment: "Sunday"),
-                                    NSLocalizedString("Monday", comment: "Monday"),
-                                    NSLocalizedString("Tuesday", comment: "Tuesday"),
-                                    NSLocalizedString("Wednesday", comment: "Wednesday"),
-                                    NSLocalizedString("Thursday", comment: "Thursday"),
-                                    NSLocalizedString("Friday", comment: "Friday"),
-                                    NSLocalizedString("Saturday", comment: "Saturday")];
+    var daysOfWeek:Array<String> = ["Sunday".localized(),
+                                    "Monday".localized(),
+                                    "Tuesday".localized(),
+                                    "Wednesday".localized(),
+                                    "Thursday".localized(),
+                                    "Friday".localized(),
+                                    "Saturday".localized()]
+    var dayStrings = [
+        "setup_b_popup_header_su",
+        "setup_b_popup_header_mo",
+        "setup_b_popup_header_tu",
+        "setup_b_popup_header_we",
+        "setup_b_popup_header_th",
+        "setup_b_popup_header_fr",
+        "setup_b_popup_header_sa"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,7 +97,7 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
         // on either the current or upcoming Arc.
         // 
         
-        if let t = TestArc.getCurrentArc()
+        if let t = TestVisit.getCurrentVisit()
         {
             if t.getUpcomingSessions().count == 0 || t.willSessionsFitWithinSleepSchedule() == false
             {
@@ -99,7 +108,7 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
             }
             
         }
-        else if let t = TestArc.getUpcomingArc(includeToday:true)
+        else if let t = TestVisit.getUpcomingVisit(includeToday:true)
         {
             if t.getUpcomingSessions().count == 0 || t.willSessionsFitWithinSleepSchedule() == false
             {
@@ -118,7 +127,8 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
         }
         
         DNRestAPI.shared.sendWakeSleepSchedule(wakeSleepTimes: wakeSleepTimes);
-        
+        DNDataManager.sharedInstance.initialTimeSetupComplete()
+
         AppDelegate.chooseDisplay();
     }
     
@@ -359,7 +369,7 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
     {
         if let l = lastSelectedDay
         {
-            copyDaysLabel.text = String(format:NSLocalizedString("Copy %@'s schedule to:", comment: "Copy <name-of-day>'s schedule to:"), daysOfWeek[l.tag]);
+            copyDaysLabel.text = String(format: "".localized(key: dayStrings[l.tag]), daysOfWeek[l.tag]);
             
             var offset:Int = 0;
             for i in 0...5
@@ -374,6 +384,8 @@ class TimeSetupViewController: DNViewController, UITextFieldDelegate, UIPickerVi
                 currentButton.isSelected = false;
                 print("\(i + offset): \(daysOfWeek[i + offset])");
                 currentButton.setTitle(daysOfWeek[currentButton.tag], for: .normal);
+                currentButton.layoutSubviews()
+                print(currentButton.title(for: .normal))
             }
             copyDaysView.frame = self.view.bounds;
             self.view.addSubview(copyDaysView);

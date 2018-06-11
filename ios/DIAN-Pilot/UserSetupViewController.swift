@@ -1,21 +1,27 @@
-//
-//  UserSetupViewController.swift
-//  DIAN-Pilot
-//
-//  Created by Michael Votaw on 11/21/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 
 class UserSetupViewController: DNViewController, UITextFieldDelegate {
     @IBOutlet weak var nextButton: UIButton!
 
-    @IBOutlet var participantId: UITextField!
+    @IBOutlet var arcId: UITextField!
     @IBOutlet var confirmId: UITextField!
     @IBOutlet var raterId: UITextField!
     @IBOutlet weak var existingParticipantCheckbox: Checkbox!
     @IBOutlet weak var existingParticipantLabel: UILabel!
+    @IBOutlet weak var raterIdField: BorderTextField!
+    
+    @IBOutlet weak var raterIdLabel: DNLabel!
+    
+    @IBOutlet weak var exrLabel: DNLabel!
     
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     override func viewDidLoad() {
@@ -28,15 +34,16 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
         toolbar.items = [space, doneButton];
         toolbar.sizeToFit();
         
-        self.participantId.inputAccessoryView = toolbar;
+        self.arcId.inputAccessoryView = toolbar;
         self.confirmId.inputAccessoryView = toolbar;
         self.raterId.inputAccessoryView = toolbar;
         
-        self.participantId.delegate = self;
+        self.arcId.delegate = self;
         self.confirmId.delegate = self;
         self.raterId.delegate = self;
         
         nextButton.isEnabled = false
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +58,23 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
                 existingParticipantLabel.isHidden = true;
             }
         }
+//        #if DBG
+            existingParticipantCheckbox.isHidden = true;
+            existingParticipantLabel.isHidden = true;
+
+//        #endif
+        
+        #if EXR
+            exrLabel.isHidden = false;
+        #endif
+        
+        
+        if DNRestAPI.shared.requireRegistration == false
+        {
+            raterIdField.isHidden = true;
+            raterIdLabel.isHidden = true;
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,9 +85,9 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
     @IBAction func nextPressed(_ sender: Any) {
         
         var invalid:Bool = false;
-        if participantId.text == nil || participantId.text! == ""
+        if arcId.text == nil || arcId.text! == ""
         {
-            participantId.setErrorBorder();
+            arcId.setErrorBorder();
             invalid = true;
         }
         
@@ -73,14 +97,14 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
             invalid = true;
         }
         
-        if confirmId.text != nil && participantId.text != nil && confirmId.text! != participantId.text!
+        if confirmId.text != nil && arcId.text != nil && confirmId.text! != arcId.text!
         {
             confirmId.setErrorBorder();
-            participantId.setErrorBorder();
+            arcId.setErrorBorder();
             invalid = true;
         }
         
-        if raterId.text == nil || raterId.text == ""
+        if DNRestAPI.shared.requireRegistration == true && ( raterId.text == nil || raterId.text == "")
         {
             raterId.setErrorBorder();
             invalid = true;
@@ -93,15 +117,41 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
             self.view.isUserInteractionEnabled = false;
             nextButton.isEnabled = false;
             spinner.startAnimating();
-            DNRestAPI.shared.registerParticipant(participantId: participantId.text!, raterId: raterId.text!, onCompletion: { (error) in
-                
+            #if EXR
+                DNRestAPI.shared.requestVerificationCode(arcId: arcId.text!, onCompletion: { (error) in
+                    if error != nil
+                    {
+                        
+                        
+                        DispatchQueue.main.async {
+                            self.raterId.setErrorBorder();
+                            self.arcId.setErrorBorder();
+                            self.confirmId.setErrorBorder();
+                            self.spinner.stopAnimating();
+                            self.nextButton.isEnabled = true;
+                            self.view.isUserInteractionEnabled = true;
+                        }
+                    }
+                    else
+                    {
+                        
+                        DispatchQueue.main.async {
+                            
+                            self.finishSetup(arcId: self.arcId.text!);
+                        }
+                        
+                    }
+                })
+            #else
+            
+                DNRestAPI.shared.registerParticipant(arcId: arcId.text!, raterId: raterId.text!, onCompletion: { (error) in
                 if error != nil
                 {
                     
                     
                     DispatchQueue.main.async {
                         self.raterId.setErrorBorder();
-                        self.participantId.setErrorBorder();
+                        self.arcId.setErrorBorder();
                         self.confirmId.setErrorBorder();
                         self.spinner.stopAnimating();
                         self.nextButton.isEnabled = true;
@@ -110,34 +160,16 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
                 }
                 else
                 {
-                    if self.existingParticipantCheckbox.isSelected
-                    {
-                        DNRestAPI.shared.getCompletedArcCount(onCompletion: { (count, errors) in
-                            if errors.count > 0
-                            {
-                                //TODO: what do we do here? Do we just assume it's zero?
-                                DNDataManager.sharedInstance.arcCount = 0;
-                            }
-                            else
-                            {
-                                DNDataManager.sharedInstance.arcCount = count;
-                            }
-                            
-                            DispatchQueue.main.async {
-                                self.finishSetup(participantId: self.participantId.text!);
-                            }
-                        })
+
+                    DispatchQueue.main.async {
+
+                        self.finishSetup(arcId: self.arcId.text!);
                     }
-                    else
-                    {
-                        DispatchQueue.main.async {
-                            self.finishSetup(participantId: self.participantId.text!);
-                        }
-                    }
+
                 }
             })
-            
-            
+            #endif
+
         }
     }
     
@@ -147,11 +179,13 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
     }
     func closeTextField()
     {
-        participantId.resignFirstResponder();
+        arcId.resignFirstResponder();
         confirmId.resignFirstResponder();
         raterId.resignFirstResponder();
         
-        if raterId.text != nil && raterId.text != "" && participantId.text != nil && confirmId.text != nil && participantId.text != "" &&  participantId.text == confirmId.text
+        if (DNRestAPI.shared.requireRegistration == false || (raterId.text != nil && raterId.text != ""))
+            && arcId.text != nil && confirmId.text != nil
+            && arcId.text != "" &&  arcId.text == confirmId.text
         {
             nextButton.isEnabled = true
         } else {
@@ -160,19 +194,26 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
     }
 
     
-    func finishSetup(participantId:String)
+    func finishSetup(arcId:String)
     {
-        DNDataManager.sharedInstance.participantId =  participantId;
-        
-        if existingParticipantCheckbox.isSelected
+        DNDataManager.sharedInstance.arcId =  arcId;
+        ///EXR-CHANGES
+//        #if DBG
+        #if EXR
+            AppDelegate.go(state: .twoFactorEnterCode);
+
+        #else
+
+        if DNDataManager.sharedInstance.visitCount > 0
         {
             AppDelegate.go(state: .setupArcDate);
         }
         else
         {
-            TestArc.createArc(forDate: Date());
+            TestVisit.createVisit(forDate: Date());
             AppDelegate.go(state: .setupTime);
         }
+        #endif
     }
     
     
@@ -185,7 +226,7 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField)
     {
-        if textField == participantId || textField == confirmId
+        if textField == arcId || textField == confirmId
         {
             validateParticipantID();
         }
@@ -197,13 +238,13 @@ class UserSetupViewController: DNViewController, UITextFieldDelegate {
     
     func validateParticipantID()
     {
-        participantId.clearErrorBorder();
+        arcId.clearErrorBorder();
         confirmId.clearErrorBorder();
         
-        if confirmId.text != nil && participantId.text != nil && confirmId.text! != participantId.text!
+        if confirmId.text != nil && arcId.text != nil && confirmId.text! != arcId.text!
         {
             confirmId.setErrorBorder();
-            participantId.setErrorBorder();
+            arcId.setErrorBorder();
         }
     }
     

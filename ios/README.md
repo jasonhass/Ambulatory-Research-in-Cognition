@@ -3,7 +3,8 @@
 Usage Notes
 ----
 
-The current version of this application is written in Swift 3. We recommend using XCode 8.3.3. As of writing this, the latest version of XCode 9 (9.1) appears to have some issues with compiling Swift 3 code.
+The current version of this application is written in Swift 4, confirmed to work in XCode 9.1-9.4
+There are several Schemes setup, which specialize functionality for different versions of this application (both production and QA versions of TU,CS, and EXR).
 
 Dependencies
 ----

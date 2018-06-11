@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
         <array key="Tahoma Bold.ttf">
             <string>Tahoma-Bold</string>
         </array>
@@ -20,7 +24,7 @@
         <!--Final Questions View Controller-->
         <scene sceneID="eld-qx-C1N">
             <objects>
-                <viewController storyboardIdentifier="FinalSessionQuestionsViewController" id="gXA-3e-Kyg" customClass="FinalQuestionsViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalSessionQuestionsViewController" id="gXA-3e-Kyg" customClass="FinalQuestionsViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="95t-j4-gQM"/>
                         <viewControllerLayoutGuide type="bottom" id="k3V-T5-hiI"/>
@@ -35,7 +39,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbS-La-1jW">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="595"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="FINAL QUESTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHd-d6-K55" userLabel="Page title">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="FINAL QUESTIONS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHd-d6-K55" userLabel="Page title" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="33" width="122.5" height="21"/>
                                                 <accessibility key="accessibilityConfiguration" identifier="Page title"/>
                                                 <constraints>
@@ -44,6 +48,9 @@
                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="interrupted_header"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ex-WF-WIo">
                                                 <rect key="frame" x="24" y="62" width="327" height="2"/>
@@ -59,7 +66,7 @@
                                                     <constraint firstAttribute="height" constant="2" id="bFS-KJ-ag9"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-5R-twB" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LpR-5R-twB" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="157" width="327" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="Y2e-oP-e7p"/>
@@ -70,12 +77,14 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="yes"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="interruptedYesTapped:" destination="gXA-3e-Kyg" eventType="touchUpInside" id="mma-29-ITP"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-W5-Kc9" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHR-W5-Kc9" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="226" width="327" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="Xze-Sc-nQV"/>
@@ -86,12 +95,14 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="no"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="interruptedNoTapped:" destination="gXA-3e-Kyg" eventType="touchUpInside" id="SGx-qw-Fay"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you interrupted or did you have to stop while taking any of these tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-Ny-5lK">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you interrupted or did you have to stop while taking any of these tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoR-Ny-5lK" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="83" width="343" height="62"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="61D-Ad-niX"/>
@@ -99,8 +110,11 @@
                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="interrupted_body"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-WO-5Bm" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ApK-WO-5Bm" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="394" width="327" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="z6o-SA-JuS"/>
@@ -111,12 +125,14 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="yes"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="upgradeYesTapped:" destination="gXA-3e-Kyg" eventType="touchUpInside" id="Z8J-1L-ydp"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZR-D2-PvW" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZR-D2-PvW" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="463" width="327" height="57"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="57" id="YU3-J3-KCA"/>
@@ -127,12 +143,14 @@
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="no"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="upgradeNoTapped:" destination="gXA-3e-Kyg" eventType="touchUpInside" id="WXi-GP-E6G"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you plan to upgrade your phone in the next 3 months?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-wy-dML">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you plan to upgrade your phone in the next 3 months?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FnI-wy-dML" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="16" y="333" width="343" height="49"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="T5O-z2-ihh"/>
@@ -140,6 +158,9 @@
                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="upgrade_body"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -182,7 +203,7 @@
                                     <constraint firstAttribute="bottom" secondItem="jbS-La-1jW" secondAttribute="bottom" id="rgL-KO-Pjd"/>
                                 </constraints>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-tH-Pp2">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqF-tH-Pp2" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="606" width="375" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="eP1-YT-ieB"/>
@@ -192,6 +213,10 @@
                                 <state key="normal" title="Next" backgroundImage="button_bg1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="next"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPressed:" destination="gXA-3e-Kyg" eventType="touchUpInside" id="0Ov-cU-bDJ"/>
                                 </connections>
@@ -224,7 +249,7 @@
         <!--Final Questions View Controller-->
         <scene sceneID="Vhf-7f-EwY">
             <objects>
-                <viewController storyboardIdentifier="FinalQuestionsViewController" id="hkd-Zb-3Ck" customClass="FinalQuestionsViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FinalQuestionsViewController" id="hkd-Zb-3Ck" customClass="FinalQuestionsViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Oe7-Dn-0CO"/>
                         <viewControllerLayoutGuide type="bottom" id="wQt-Qo-gRX"/>
@@ -236,7 +261,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YeI-Zn-F1A">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="FINAL QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e09-c7-XZ6" userLabel="Page title">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="FINAL QUESTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e09-c7-XZ6" userLabel="Page title" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="24" y="33" width="114.5" height="21"/>
                                         <accessibility key="accessibilityConfiguration" identifier="Page title"/>
                                         <constraints>
@@ -245,6 +270,9 @@
                                         <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="interrupted_header"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EqM-xs-sBj">
                                         <rect key="frame" x="24" y="62" width="327" height="2"/>
@@ -253,7 +281,7 @@
                                             <constraint firstAttribute="height" constant="2" id="aYe-pP-wGL"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4Q-pt-ahW" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q4Q-pt-ahW" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="24" y="157" width="327" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="UCG-jh-hVo"/>
@@ -264,12 +292,14 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="yes"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="interruptedYesTapped:" destination="hkd-Zb-3Ck" eventType="touchUpInside" id="HcB-39-hbh"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfY-6E-S3c" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfY-6E-S3c" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="24" y="226" width="327" height="57"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="9TX-iz-3C8"/>
@@ -280,12 +310,14 @@
                                         </state>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAutoToggle" value="NO"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="no"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="interruptedNoTapped:" destination="hkd-Zb-3Ck" eventType="touchUpInside" id="Pvi-7b-fTg"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you interrupted or did you have to stop while taking any of these tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50L-wV-cMW">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Were you interrupted or did you have to stop while taking any of these tests?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50L-wV-cMW" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="24" y="83" width="327" height="62"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="EmH-HT-It3"/>
@@ -293,8 +325,11 @@
                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="interrupted_body"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyJ-Fn-2ON">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EyJ-Fn-2ON" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="606" width="375" height="61"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="61" id="w8t-rd-gMm"/>
@@ -304,6 +339,10 @@
                                         <state key="normal" title="Next" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="next"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="nextPressed:" destination="hkd-Zb-3Ck" eventType="touchUpInside" id="3pR-BP-vrZ"/>
                                         </connections>

@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
         <array key="Tahoma.ttf">
             <string>Tahoma</string>
         </array>
@@ -17,7 +20,7 @@
         <!--Date Picker Alert View Controller-->
         <scene sceneID="7E5-d8-u1F">
             <objects>
-                <viewController storyboardIdentifier="DatePickerAlertViewController" modalPresentationStyle="overCurrentContext" id="XGH-qj-Ctp" customClass="DatePickerAlertViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DatePickerAlertViewController" modalPresentationStyle="overCurrentContext" id="XGH-qj-Ctp" customClass="DatePickerAlertViewController" customModule="ARCTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aEx-mq-iA5"/>
                         <viewControllerLayoutGuide type="bottom" id="eXG-Yl-lUY"/>
@@ -39,7 +42,7 @@
                                             <action selector="datePicked:" destination="XGH-qj-Ctp" eventType="valueChanged" id="pul-Zt-4tl"/>
                                         </connections>
                                     </datePicker>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-av-lKS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-av-lKS" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="181" width="299" height="59"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="59" id="ami-ch-1zO"/>
@@ -49,12 +52,16 @@
                                         <state key="normal" title="Okay" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="okay"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="confirm:" destination="XGH-qj-Ctp" eventType="touchUpInside" id="NVB-5j-qA5"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="299" id="4P3-qR-1rI"/>
                                     <constraint firstItem="lsc-av-lKS" firstAttribute="top" secondItem="1Wp-VF-gbg" secondAttribute="bottom" constant="-9" id="6a4-wz-gVg"/>
@@ -85,7 +92,7 @@
         <!--Text Alert View Controller-->
         <scene sceneID="w3j-Un-SgM">
             <objects>
-                <viewController storyboardIdentifier="TextAlertViewController" modalPresentationStyle="overCurrentContext" id="nqb-L2-lAM" customClass="TextAlertViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TextAlertViewController" modalPresentationStyle="overCurrentContext" id="nqb-L2-lAM" customClass="TextAlertViewController" customModule="ARCTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="l61-St-g7K"/>
                         <viewControllerLayoutGuide type="bottom" id="ZYS-jc-A5C"/>
@@ -115,7 +122,7 @@
                                             <constraint firstAttribute="bottom" secondItem="VM3-lB-2KS" secondAttribute="bottom" constant="8" id="pRC-ge-Iam"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bV-jB-K0k">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bV-jB-K0k" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                         <rect key="frame" x="-11" y="176" width="321" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="6RF-zq-ANY"/>
@@ -125,6 +132,10 @@
                                         <state key="normal" title="Okay" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="okay"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="confirm:" destination="nqb-L2-lAM" eventType="touchUpInside" id="QKa-hy-w7J"/>
                                         </connections>
@@ -162,7 +173,7 @@
         <!--Question Alert View Controller-->
         <scene sceneID="dBl-nT-7jl">
             <objects>
-                <viewController storyboardIdentifier="QuestionAlertViewController" modalPresentationStyle="overCurrentContext" id="lss-Z0-ACp" customClass="QuestionAlertViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="QuestionAlertViewController" modalPresentationStyle="overCurrentContext" id="lss-Z0-ACp" customClass="QuestionAlertViewController" customModule="ARCTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ysu-RM-qCP"/>
                         <viewControllerLayoutGuide type="bottom" id="RVY-bt-HMq"/>
@@ -192,7 +203,7 @@
                                             <constraint firstItem="95P-fp-d6E" firstAttribute="leading" secondItem="w3Y-ti-AMY" secondAttribute="leading" constant="8" id="ow9-xX-575"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Z-RU-RxE">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8Z-RU-RxE" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                         <rect key="frame" x="152" y="184" width="147" height="56"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="YSf-dt-4TN"/>
@@ -202,23 +213,31 @@
                                         <state key="normal" title="No" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="no"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="confirm:" destination="lss-Z0-ACp" eventType="touchUpInside" id="FtL-4v-x29"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCL-KP-3HS">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCL-KP-3HS" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="184" width="153" height="55"/>
                                         <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
                                         <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
                                         <state key="normal" title="Yes" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="yes"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="confirm:" destination="lss-Z0-ACp" eventType="touchUpInside" id="Ejj-V1-U9C"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="w3Y-ti-AMY" firstAttribute="leading" secondItem="yaW-x3-bh5" secondAttribute="leading" id="1Jg-0B-HBq"/>
                                     <constraint firstItem="U8Z-RU-RxE" firstAttribute="width" secondItem="yaW-x3-bh5" secondAttribute="width" multiplier="0.5" constant="-2.5" id="3cj-eK-iz9"/>
@@ -253,7 +272,7 @@
         <!--Picker Alert View Controller-->
         <scene sceneID="COk-z4-70s">
             <objects>
-                <viewController storyboardIdentifier="PickerAlertViewController" modalPresentationStyle="overCurrentContext" id="3b4-rS-VDz" customClass="PickerAlertViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PickerAlertViewController" modalPresentationStyle="overCurrentContext" id="3b4-rS-VDz" customClass="PickerAlertViewController" customModule="ARCTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gDE-Yp-sYo"/>
                         <viewControllerLayoutGuide type="bottom" id="jr3-FA-f2O"/>
@@ -273,7 +292,7 @@
                                             <outlet property="delegate" destination="3b4-rS-VDz" id="UXd-Ua-YeI"/>
                                         </connections>
                                     </pickerView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba0-hB-4t4">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ba0-hB-4t4" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="176" width="299" height="64"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="04b-MB-qUF"/>
@@ -283,12 +302,16 @@
                                         <state key="normal" title="Okay" backgroundImage="button_bg1">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="okay"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="confirm:" destination="3b4-rS-VDz" eventType="touchUpInside" id="7h4-v1-uDU"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Ba0-hB-4t4" firstAttribute="top" secondItem="Uh9-ce-wzG" secondAttribute="bottom" constant="-5" id="BYQ-BL-7YB"/>
                                     <constraint firstAttribute="bottom" secondItem="Ba0-hB-4t4" secondAttribute="bottom" id="PwI-ip-twM"/>

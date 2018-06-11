@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jtw-NS-pam">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="jtw-NS-pam">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +25,7 @@
         <!--Grid Test View Controller-->
         <scene sceneID="XCE-qG-f5z">
             <objects>
-                <viewController id="jtw-NS-pam" customClass="DNGridTestViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jtw-NS-pam" customClass="DNGridTestViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Uk-BP-vRC"/>
                         <viewControllerLayoutGuide type="bottom" id="u1n-6p-sxC"/>
@@ -48,14 +48,14 @@
                                     <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="5"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="NIy-eY-oqo" customClass="GridImageCell" customModule="ARC" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="imageCell" id="NIy-eY-oqo" customClass="GridImageCell" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="4" y="4" width="60" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="60" height="105"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-hI-hN7">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V1I-hI-hN7" customClass="DNImageView" customModule="ARC_CS" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="105"/>
                                                     <color key="backgroundColor" red="0.71469217539999996" green="0.86813789610000003" blue="0.92742979530000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </imageView>
@@ -101,11 +101,14 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OU4-Hj-h59">
                             <rect key="frame" x="26" y="202.5" width="268" height="75"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM3-yx-iuN">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ready" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TM3-yx-iuN" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="268" height="75"/>
                                     <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="ready"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -142,14 +145,14 @@
                                 <inset key="sectionInset" minX="9" minY="8" maxX="10" maxY="5"/>
                             </collectionViewFlowLayout>
                             <cells>
-                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fCell" id="QrG-r7-6sW" customClass="GridFCell" customModule="ARC" customModuleProvider="target">
+                                <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fCell" id="QrG-r7-6sW" customClass="GridFCell" customModule="ARC_CS" customModuleProvider="target">
                                     <rect key="frame" x="9" y="8" width="38" height="48"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                         <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoY-iK-jYI">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoY-iK-jYI" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
                                                 <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                                 <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -175,11 +178,14 @@
                                 <outlet property="delegate" destination="jtw-NS-pam" id="hYS-vE-ZbY"/>
                             </connections>
                         </collectionView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the Fs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKJ-FV-01J">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the Fs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kKJ-FV-01J" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                             <rect key="frame" x="109" y="40" width="102" height="21"/>
                             <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                             <color key="textColor" red="0.25490197539999998" green="0.27450981740000002" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_tap"/>
+                            </userDefinedRuntimeAttributes>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -198,13 +204,16 @@
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9Z-r5-i9m">
                             <rect key="frame" x="26" y="202.5" width="268" height="75"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48g-US-8dS">
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="48g-US-8dS" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="268" height="75"/>
                                     <string key="text">Try to remember the location
  of the items!</string>
                                     <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_transition"/>
+                                    </userDefinedRuntimeAttributes>
                                 </label>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -243,9 +252,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BVc-K8-FbZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="349"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="350"/>
                                         <subviews>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-MP-vuo" customClass="DNPaddinglessTextView" customModule="ARC" customModuleProvider="target">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8r4-MP-vuo" customClass="DNPaddinglessTextView" customModule="ARC_CS" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="140"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -256,6 +265,9 @@ There will be three items placed in that grid. Try to remember where the items a
                                                 <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_body1"/>
+                                                </userDefinedRuntimeAttributes>
                                             </textView>
                                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="grid reference" translatesAutoresizingMaskIntoConstraints="NO" id="kmZ-ld-Bez">
                                                 <rect key="frame" x="0.0" y="140" width="320" height="192"/>
@@ -263,11 +275,14 @@ There will be three items placed in that grid. Try to remember where the items a
                                                     <constraint firstAttribute="height" constant="192" id="4mu-fJ-H24"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-rD-lIk">
-                                                <rect key="frame" x="0.0" y="332" width="320" height="17"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgH-rD-lIk" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="332" width="320" height="18"/>
                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="14.5"/>
                                                 <color key="textColor" red="0.59994584321975708" green="0.60003471374511719" blue="0.5999264121055603" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_example_test"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -306,7 +321,7 @@ There will be three items placed in that grid. Try to remember where the items a
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You will then do a different task where you will touch all the letter “F”’s that you find as quickly as you can." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRV-TG-ia8" customClass="DNPaddinglessTextView" customModule="ARC" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="You will then do a different task where you will touch all the letter “F”’s that you find as quickly as you can." selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pRV-TG-ia8" customClass="DNPaddinglessTextView" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="30" width="320" height="104"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -315,8 +330,11 @@ There will be three items placed in that grid. Try to remember where the items a
                                 <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_body2"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-OB-clT" customClass="DNPaddinglessTextView" customModule="ARC" customModuleProvider="target">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWn-OB-clT" customClass="DNPaddinglessTextView" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="281" width="320" height="136"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -327,65 +345,68 @@ Press Start to begin.</string>
                                 <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_body3"/>
+                                </userDefinedRuntimeAttributes>
                             </textView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="858-sq-3qP">
                                 <rect key="frame" x="18" y="157" width="284" height="90"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-BT-xNv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SiA-BT-xNv" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="154" y="5" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ow-Um-yRs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ow-Um-yRs" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="53" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNX-bh-ne0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNX-bh-ne0" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="154" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-oS-aoa">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uO-oS-aoa" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="206" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-3f-L94">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gov-3f-L94" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="3" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9db-Wh-JWr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9db-Wh-JWr" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="53" y="5" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-cW-3JF">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oUm-cW-3JF" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="255" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izX-IE-u4a">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="izX-IE-u4a" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="255" y="5" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KA1-cY-GfN">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KA1-cY-GfN" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="105" y="5" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92Q-Ty-zol">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="92Q-Ty-zol" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="3" y="5" width="27" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="guh-kJ-cEI"/>
@@ -394,13 +415,13 @@ Press Start to begin.</string>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-jn-mqS">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="F" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQb-jn-mqS" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="206" y="5" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9C-ME-fJk">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S9C-ME-fJk" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="105" y="54" width="27" height="31"/>
                                         <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
                                         <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -449,7 +470,7 @@ Press Start to begin.</string>
                                     <constraint firstItem="VQb-jn-mqS" firstAttribute="leading" secondItem="SiA-BT-xNv" secondAttribute="trailing" constant="25" id="yqd-pm-bUe"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATP-Ie-XrM">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXAMPLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ATP-Ie-XrM" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="126.5" y="255" width="68.5" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="3iQ-mV-5CV"/>
@@ -457,6 +478,9 @@ Press Start to begin.</string>
                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="14.5"/>
                                 <color key="textColor" red="0.5999458432" green="0.60003471370000006" blue="0.59992641209999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="grid_example_letters"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

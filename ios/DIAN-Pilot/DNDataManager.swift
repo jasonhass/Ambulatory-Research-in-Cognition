@@ -1,10 +1,14 @@
 
 //  DNDataManager.swift
 //  DIAN-Pilot
-//
-//  Created by Philip Hayes on 11/15/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 import UIKit
@@ -34,7 +38,15 @@ public class DNDataManager {
     var isTesting:Bool = false
     
     var currentTestSession:TestSession?;
-        
+    
+    lazy var info: NSDictionary? = {
+        if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            return NSDictionary(contentsOfFile: path)
+            
+        }
+        return nil
+    }()
+    
     //MARK: - Core Data Stack
     
     lazy var applicationDocumentsDirectory: URL = {
@@ -55,9 +67,11 @@ public class DNDataManager {
         // Create the coordinator and store
         let coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.managedObjectModel)
         let url = self.applicationDocumentsDirectory.appendingPathComponent("DIAN_Pilot.sqlite")
+        let mOptions = [NSMigratePersistentStoresAutomaticallyOption: true,
+                        NSInferMappingModelAutomaticallyOption: true]
         var failureReason = "There was an error creating or loading the application's saved data."
         do {
-            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: nil)
+            try coordinator.addPersistentStore(ofType: NSSQLiteStoreType, configurationName: nil, at: url, options: mOptions)
         } catch {
             // Report any error we got.
             var dict = [String: AnyObject]()
@@ -86,8 +100,68 @@ public class DNDataManager {
     
     
     
+    var languageKey:String {
+        get {
+            return (defaults.value(forKey:"setupLanguage") as? String) ?? "";
+        }
+        set (newVal)
+        {
+            defaults.setValue(newVal, forKey: "setupLanguage");
+            defaults.synchronize();
+        }
+    }
     
+    var availableLanguages:[String] = []
     
+    // "normal" translation, uses the actual translation keys for selecting a translation.
+    
+    lazy var translation:Dictionary<String, Dictionary<String, String>> = {
+        
+        
+        let stream = InputStream(fileAtPath: Bundle.main.path(forResource:"translation", ofType: "csv")!)!
+        let csv = try! CSVReader(stream: stream, hasHeaderRow: true, trimFields: true, delimiter: ",", whitespaces: .whitespaces)
+        let header = csv.headerRow ?? []
+        var dict = Dictionary<String, Dictionary<String, String>>()
+        
+        for c in header {
+            DNDataManager.sharedInstance.availableLanguages.append(c)
+            dict[c] = [:]
+        }
+        
+        while let row = csv.next() {
+            for i in 0 ..< header.count {
+                
+                dict[header[i]]?[row[0].lowercased()] = row[i]
+            }
+        }
+        return dict
+    }()
+    
+    // so-called "keyless translation". This allows us to select a translation
+    // based on the English value as the translation key.
+    
+    lazy var keylessTranslation:Dictionary<String, Dictionary<String, String>> = {
+        
+        
+        let stream = InputStream(fileAtPath: Bundle.main.path(forResource:"translation", ofType: "csv")!)!
+        let csv = try! CSVReader(stream: stream, hasHeaderRow: true, trimFields: true, delimiter: ",", whitespaces: .whitespaces)
+        let header = csv.headerRow ?? []
+        var dict = Dictionary<String, Dictionary<String, String>>()
+        
+        for c in header {
+            dict[c] = [:]
+        }
+        
+        while let row = csv.next() {
+            for i in 1 ..< header.count {
+                //This bases the keys on the english column of the translation doc
+                let k = row[1].lowercased().replacingOccurrences(of: "\'", with: "")
+
+                dict[header[i]]?[k] = row[i]
+            }
+        }
+        return dict
+    }()
     
     static func save()
     {
@@ -106,20 +180,20 @@ public class DNDataManager {
     
     //Mark: - UserDefaults-backed data
     
-    var arcCount:Int
+    var visitCount:Int
     {
         get {
-            return (defaults.value(forKey:"arcCount") as? Int) ?? 0;
+            return (defaults.value(forKey:"visitCount") as? Int) ?? 0;
         }
         set (newVal)
         {
-            defaults.setValue(newVal, forKey: "arcCount");
+            defaults.setValue(newVal, forKey: "visitCount");
             defaults.synchronize();
         }
     }
     
 
-    var participantId:String? {
+    var arcId:String? {
         get {
             return defaults.value(forKey: "participantId") as? String;
         }
@@ -128,6 +202,21 @@ public class DNDataManager {
             defaults.setValue(newVal, forKey: "participantId");
             defaults.synchronize()
 
+        }
+    }
+    
+    var hasAuthenticated:Bool {
+        get {
+            if let auth = defaults.value(forKey:"hasAuthenticated") as? Bool
+            {
+                return auth;
+            }
+            return false;
+        }
+        set (newVal)
+        {
+            defaults.setValue(true, forKey:"hasAuthenticated");
+            defaults.synchronize();
         }
     }
         
@@ -146,13 +235,27 @@ public class DNDataManager {
         }
     }
     
+    var lastUploadDate:Date? {
+        get {
+            if let _lastUploadDate = defaults.value(forKey:"lastUploadDate") as? Date
+            {
+                return _lastUploadDate;
+            }
+            return nil;
+        }
+        set (newVal)
+        {
+            defaults.setValue(newVal, forKey:"lastUploadDate");
+            defaults.synchronize();
+        }
+    }
     // the Date that the application was sent to background. This isn't backed by UserDefaults, because we don't want
     // this to persist if the application is terminated.
     var lastClosedDate:Date?
     
     func hasParticipantId() -> Bool
     {
-        return self.participantId != nil;
+        return self.arcId != nil;
     }
     
     func hasSleepWakeTimes() -> Bool
@@ -163,8 +266,11 @@ public class DNDataManager {
             {
                 return false;
             }
+            
         }
-        
+        if !self.didCompleteInitialTimeSetup() {
+            return false;
+        }
         return true;
     }
     
@@ -214,6 +320,16 @@ public class DNDataManager {
         return nil
     }
     
+    func initialTimeSetupComplete() {
+        defaults.setValue(true, forKey: "initialTimeSetup")
+        defaults.synchronize()
+    }
+    func didCompleteInitialTimeSetup() -> Bool {
+        if let _ = defaults.value(forKey: "initialTimeSetup") {
+            return true
+        }
+        return false
+    }
     func setTimes(wake:Date, bed:Date, dayOfWeek:Int)
     {
         var times:Dictionary<String, Date> = Dictionary();
@@ -221,6 +337,7 @@ public class DNDataManager {
         times["bed"] = bed;
         defaults.setValue(times, forKey: String(format:"%dTimes", dayOfWeek));
         defaults.synchronize()
+
     }
     
     
@@ -234,68 +351,68 @@ public class DNDataManager {
         // to the Arc.
         
         DNRestAPI.shared.sendDailyPing();
+        DNRestAPI.shared.processEnqueuedFiles();
         
         
-        
-        if let arc = TestArc.getCurrentArc()
+        if let visit = TestVisit.getCurrentVisit()
         {
-            arc.markMissedSessions();
+            visit.markMissedSessions();
             
             
             // we don't want to fire off the missed test notification while the app is open,
             // so we have to check to make sure it's in the background
             if UIApplication.shared.applicationState == .background
-                && arc.consecutiveMissedSessionCount() >= 4
-                && arc.hasScheduledMissedTestsNotification() == false
+                && visit.consecutiveMissedSessionCount() >= 4
+                && visit.hasScheduledMissedTestsNotification() == false
             {
-                arc.scheduleMissedTestsNotification();
+                visit.scheduleMissedTestsNotification();
             }
         }
         
-        if let arc = TestArc.getUpcomingArc()
+        if let visit = TestVisit.getUpcomingVisit()
         {
-            if  let startDate = arc.userStartDate as Date?
+            if  let startDate = visit.userStartDate as Date?
             {
-                if arc.hasConfirmedDate == false
+                if visit.hasConfirmedDate == false
                 {
                     
-                    if arc.hasScheduledDateReminder() == false
+                    if visit.hasScheduledDateReminder() == false
                     {
-                        arc.scheduleDateRemdinderNotification();
+                        visit.scheduleDateRemdinderNotification();
                     }
                     
-                    if arc.hasScheduledConfirmationReminders() == false
+                    if visit.hasScheduledConfirmationReminders() == false
                     {
-                        arc.scheduleConfirmationReminders();
+                        visit.scheduleConfirmationReminders();
                     }
                 }
                 else
                 {
-                    arc.clearConfirmationReminders();
-                    arc.clearDateReminderNotification();
+                    visit.clearConfirmationReminders();
+                    visit.clearDateReminderNotification();
                 }
                 
                 // if we're one day away, and we haven't scheduled sessions yet, do so now.
-                if startDate.daysSince(date: now) == 1 && arc.hasScheduledTestSessions() == false
+                if startDate.daysSince(date: now) == 1 && visit.hasScheduledTestSessions() == false
                 {
-                    arc.createTestSessions();
-                    arc.scheduleSessionNotifications();
+                    visit.createTestSessions();
+                    visit.scheduleSessionNotifications();
                 }
             }
         }
         
         
-        // Now check if we have any past arcs that need to be marked as missed
+        // Now check if we have any past visits  that need to be marked as missed
         
-        let arcs = TestArc.getPastArcs()
+        let visits  = TestVisit.getPastVisits()
         
-        for arc in arcs
+        for visit in visits 
         {
-            arc.markMissedSessions();
+            visit.markMissedSessions();
             if DNRestAPI.shared.storeZips == false
             {
                 // delete any past Arcs that have had all of their data uploaded successfully
-                let sessions = arc.getAllSessions();
+                let sessions = visit.getAllSessions();
                 
                 var hasUploadedAll:Bool = true;
                 for session in sessions
@@ -311,25 +428,21 @@ public class DNDataManager {
                 {
                     DNDataManager.backgroundContext.perform {
                         
-                        DNLog("Deleting Arc \(arc.arcID)");
+                        DNLog("Deleting Visit \(visit.visitID)");
                         for session in sessions
                         {
                             DNDataManager.backgroundContext.delete(session);
                         }
                         
-                        DNDataManager.backgroundContext.delete(arc);
+                        DNDataManager.backgroundContext.delete(visit);
                         DNDataManager.save();
                     }
                 }
             }
         }
         
-                
-        // now, send any unfinished tests
         sendFinishedSessions();
         sendMissedSessions();
-        
-
         
         completion();
         
@@ -344,7 +457,7 @@ public class DNDataManager {
             for i in 0..<sessions.count
             {
                 let session = sessions[i];
-                DNRestAPI.shared.sendFinishedTestSession(session: session, delay: 1 * TimeInterval(i));
+                DNRestAPI.shared.sendFinishedTestSession(session: session, delay: 3 * TimeInterval(i));
             }
         }
     }
@@ -358,7 +471,7 @@ public class DNDataManager {
             for i in 0..<sessions.count
             {
                 let session = sessions[i];
-                DNRestAPI.shared.sendMissedTestSession(session: session, delay: 1 * TimeInterval(i));
+                DNRestAPI.shared.sendMissedTestSession(session: session, delay: 3 * TimeInterval(i));
             }
         }
     }

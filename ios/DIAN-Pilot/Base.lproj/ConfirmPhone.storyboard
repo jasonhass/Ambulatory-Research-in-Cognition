@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
         <array key="Tahoma Bold.ttf">
             <string>Tahoma-Bold</string>
         </array>
@@ -20,7 +24,7 @@
         <!--Confirm Phone View Controller-->
         <scene sceneID="63v-1f-mJW">
             <objects>
-                <viewController storyboardIdentifier="ConfirmPhoneViewController" id="9S6-4C-dox" customClass="ConfirmPhoneViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConfirmPhoneViewController" id="9S6-4C-dox" customClass="ConfirmPhoneViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fP1-ZO-4lx"/>
                         <viewControllerLayoutGuide type="bottom" id="nE5-78-ZiP"/>
@@ -29,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="CONFIRM PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiG-Ac-4Sp" userLabel="Page title">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="Page title" text="CONFIRM PHONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiG-Ac-4Sp" userLabel="Page title" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="18" y="33" width="339" height="21"/>
                                 <accessibility key="accessibilityConfiguration" identifier="Page title"/>
                                 <constraints>
@@ -38,6 +42,9 @@
                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.27450980390000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="upgrade_header"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K7g-HE-qfn">
                                 <rect key="frame" x="16" y="62" width="343" height="2"/>
@@ -46,7 +53,7 @@
                                     <constraint firstAttribute="height" constant="2" id="aNE-cI-cDP"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-yA-x0P" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fM3-yA-x0P" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="144" width="343" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Inq-6Z-CBY"/>
@@ -55,11 +62,14 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="yes"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="yesTapped:" destination="9S6-4C-dox" eventType="touchUpInside" id="VwM-l0-o9S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-rR-2Wf" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0S-rR-2Wf" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="213" width="343" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="Rc5-LI-QAR"/>
@@ -68,11 +78,14 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="no"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="noTapped:" destination="9S6-4C-dox" eventType="touchUpInside" id="AeG-Zf-HYq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you plan to upgrade your phone in the next 3 months?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-fo-hz3">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you plan to upgrade your phone in the next 3 months?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m2m-fo-hz3" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="83" width="343" height="49"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="49" id="cWG-vA-m9p"/>
@@ -80,8 +93,11 @@
                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="upgrade_body"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQX-kp-614">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iQX-kp-614" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="606" width="375" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="HHT-4y-CbQ"/>
@@ -91,6 +107,10 @@
                                 <state key="normal" title="Done" backgroundImage="button_bg1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="done"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPressed:" destination="9S6-4C-dox" eventType="touchUpInside" id="Puh-ua-8Pt"/>
                                 </connections>

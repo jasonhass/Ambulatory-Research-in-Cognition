@@ -1,10 +1,11 @@
-//
-//  TestArc+Methods.swift
-//  ARC
-//
-//  Created by Michael Votaw on 5/11/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 import UIKit
@@ -16,8 +17,48 @@ import CoreData
 
 var MIN_SPACING:TimeInterval = 7200; // min spacing betweeen tests, 2 hours
 var SESSIONS_PER_DAY:Int =  4; // sessions per day of arc
-var DAYS_PER_ARC:Int = 7; //number of days an arc lasts
 var TEST_TIMEOUT:TimeInterval = 300; // 5 minute timeout if the application is closed
+var TEST_START_ALLOWANCE:TimeInterval = -300; // 5 minute window before actual start time
+
+
+#if CS
+    
+var InterArcWeeks: Dictionary<Int, Int> = [1: 0];
+var DAYS_PER_ARC:Int = 7; //number of days an visit lasts
+#elseif EXR
+
+var InterArcWeeks: Dictionary<Int, Int> = [1: 26,
+                                           2: 26,
+                                           3: 26,
+                                           4: 26,
+                                           5: 26,
+                                           6: 26,
+                                           7: 26,
+                                           8: 26,
+                                           9: 26,
+                                           10: 26,
+                                           11: 26,
+                                           12: 26,
+                                           13: 26,
+                                           14: 26,
+                                           15: 26,
+                                           16: 26,
+                                           17: 26,
+                                           18: 26,
+                                           19: 26,
+                                           20: 26,
+                                           21: 26,
+                                           22: 26,
+                                           23: 26,
+                                           24: 26,
+                                           25: 26,
+                                           26: 26,
+                                           27: 26,
+                                           28: 26,
+                                           29: 26];
+var DAYS_PER_ARC:Int = 7; //number of days an visit lasts
+#else
+
 
 // This contains the info for deciding how many weeks are between each Arc.
 // The key is the index of the "next" Arc, and the value is the weeks from the "previous" Arc.
@@ -51,58 +92,18 @@ var InterArcWeeks: Dictionary<Int, Int> = [1: 0,
                                            27: 12,
                                            28: 12,
                                            29: 16];
+var DAYS_PER_ARC:Int = 7; //number of days an visit lasts
+#endif
 
 
-
-/////////// TEST VALUES ////////////////////
-
-
-//var MIN_SPACING:TimeInterval = 7200; // min spacing betweeen tests
-//var SESSIONS_PER_DAY:Int =  4; // sessions per day of arc
-//var DAYS_PER_ARC:Int = 7; //number of days an arc lasts
-//
-//
-//// This contains the info for deciding how many weeks are between each Arc.
-//// The key is the index of the "next" Arc, and the value is the weeks from the "previous" Arc.
-//// So for instance, Arc 2 is 12 weeks after the start date of Arc 1, and Arc 4 is 16 weeks after Arc 3.
-//var InterArcWeeks: Dictionary<Int, Int> = [1: 0,
-//                                           2: 1,
-//                                           3: 1,
-//                                           4: 1,
-//                                           5: 1,
-//                                           6: 1,
-//                                           7: 1,
-//                                           8: 1,
-//                                           9: 1,
-//                                           10: 1,
-//                                           11: 1,
-//                                           12: 1,
-//                                           13: 1,
-//                                           14: 12,
-//                                           15: 12,
-//                                           16: 12,
-//                                           17: 16,
-//                                           18: 12,
-//                                           19: 12,
-//                                           20: 12,
-//                                           21: 16,
-//                                           22: 12,
-//                                           23: 12,
-//                                           24: 12,
-//                                           25: 16,
-//                                           26: 12,
-//                                           27: 12,
-//                                           28: 12,
-//                                           29: 16];
-
-extension TestArc
+extension TestVisit
 {
     
     //MARK: - static methods
     
-    static func getAllArcs() -> [TestArc]
+    static func getAllVisits() -> [TestVisit]
     {
-        let request:NSFetchRequest<TestArc> = NSFetchRequest<TestArc>(entityName: "TestArc");
+        let request:NSFetchRequest<TestVisit> = NSFetchRequest<TestVisit>(entityName: "TestVisit");
         
         do
         {
@@ -118,9 +119,9 @@ extension TestArc
         return [];
     }
     
-    static func getPastArcs() -> [TestArc]
+    static func getPastVisits() -> [TestVisit]
     {
-        let request:NSFetchRequest<TestArc> = NSFetchRequest<TestArc>(entityName: "TestArc");
+        let request:NSFetchRequest<TestVisit> = NSFetchRequest<TestVisit>(entityName: "TestVisit");
         
         let now = NSDate();
         request.predicate = NSPredicate(format: "userEndDate<=%@",now, now);
@@ -143,9 +144,9 @@ extension TestArc
     // static: get current arc
     // Finds an Arc whose start date and end date fall around the current date ( startDate <= now <= endDate)
     // And has at least one upcoming (or currently available) TestSession
-    static func getCurrentArc() -> TestArc?
+    static func getCurrentVisit() -> TestVisit?
     {
-        let request:NSFetchRequest<TestArc> = NSFetchRequest<TestArc>(entityName: "TestArc");
+        let request:NSFetchRequest<TestVisit> = NSFetchRequest<TestVisit>(entityName: "TestVisit");
         
         let now = NSDate();
         request.predicate = NSPredicate(format: "userStartDate<=%@ AND userEndDate>=%@",now, now);
@@ -157,7 +158,7 @@ extension TestArc
             
             if(results.count > 0)
             {
-                let firstResult = results[0] as TestArc;
+                let firstResult = results[0] as TestVisit;
                 if firstResult.getUpcomingSessions().count > 0 || firstResult.getAvailableTestSession() != nil || firstResult.getCurrentTestSession() != nil
                 {
                     return firstResult;
@@ -176,9 +177,9 @@ extension TestArc
     // Finds the most recent upcoming Arc, not including any currently running ( userStartDate >= now)
     // includeToday will return any Arcs that would start at the beginning of the current day (this is useful for finding newly created Arcs
     // that we haven't scheduled tests for yet)
-    static func getUpcomingArc(includeToday:Bool = false) -> TestArc?
+    static func getUpcomingVisit(includeToday:Bool = false) -> TestVisit?
     {
-        let request:NSFetchRequest<TestArc> = NSFetchRequest<TestArc>(entityName: "TestArc");
+        let request:NSFetchRequest<TestVisit> = NSFetchRequest<TestVisit>(entityName: "TestVisit");
         
         var now = NSDate();
         if includeToday
@@ -194,7 +195,7 @@ extension TestArc
             
             if(results.count > 0)
             {
-                let firstResult = results[0] as TestArc;
+                let firstResult = results[0] as TestVisit;
                 return firstResult;
             }
         }
@@ -206,9 +207,9 @@ extension TestArc
         return nil;
     }
     
-    static func getMostRecentArc() -> TestArc?
+    static func getMostRecentVisit() -> TestVisit?
     {
-        let request:NSFetchRequest<TestArc> = NSFetchRequest<TestArc>(entityName: "TestArc");
+        let request:NSFetchRequest<TestVisit> = NSFetchRequest<TestVisit>(entityName: "TestVisit");
         
         request.sortDescriptors = [NSSortDescriptor(key:"userStartDate", ascending:false)];
         
@@ -218,7 +219,7 @@ extension TestArc
             
             if(results.count > 0)
             {
-                let firstResult = results[0] as TestArc;
+                let firstResult = results[0] as TestVisit;
                 return firstResult;
             }
         }
@@ -230,22 +231,24 @@ extension TestArc
         return nil;
     }
     
-    // Creates a new Arc, sets the arcStartDate and arcEndDate, increments DNDataManager's arcCount
+    
+    
+    // Creates a new Arc, sets the visitStartDate and visitEndDate, increments DNDataManager's visitCount
     
     @discardableResult
-    static func createArc(forDate: Date) -> TestArc
+    static func createVisit(forDate: Date) -> TestVisit
     {
         
-        DNLog("Creating Arc \(DNDataManager.sharedInstance.arcCount) at date: \(DateFormatter.localizedString(from: forDate, dateStyle: .short, timeStyle: .none))");
-        let newTestArc:TestArc = NSManagedObject.createIn(context: DNDataManager.backgroundContext);
-        newTestArc.arcID = Int64(DNDataManager.sharedInstance.arcCount);
-        newTestArc.arcStartDate = forDate.startOfDay() as NSDate;
-        newTestArc.arcEndDate = forDate.startOfDay().addingDays(days: DAYS_PER_ARC).endOfDay() as NSDate;
-        newTestArc.userStartDate = newTestArc.arcStartDate;
-        newTestArc.userEndDate = newTestArc.arcEndDate;
-        DNDataManager.sharedInstance.arcCount = DNDataManager.sharedInstance.arcCount + 1;
+        DNLog("Creating Arc \(DNDataManager.sharedInstance.visitCount) at date: \(DateFormatter.localizedString(from: forDate, dateStyle: .short, timeStyle: .none))");
+        let newTestVisit:TestVisit = NSManagedObject.createIn(context: DNDataManager.backgroundContext);
+        newTestVisit.visitID = Int64(DNDataManager.sharedInstance.visitCount);
+        newTestVisit.visitStartDate = forDate.startOfDay() as NSDate;
+        newTestVisit.visitEndDate = forDate.startOfDay().addingDays(days: DAYS_PER_ARC).endOfDay() as NSDate;
+        newTestVisit.userStartDate = newTestVisit.visitStartDate;
+        newTestVisit.userEndDate = newTestVisit.visitEndDate;
+        DNDataManager.sharedInstance.visitCount = DNDataManager.sharedInstance.visitCount + 1;
         DNDataManager.save();
-        return newTestArc;
+        return newTestVisit;
     }
     
     
@@ -253,16 +256,15 @@ extension TestArc
     // Also creates the first Date Reminder notification for 4 weeks before the start of the Arc.
     // The first Arc is created on startDate, and each subsequent Arc is created N weeks from that.
     
-    static func createAllArcs(startingID:Int, startDate:Date)
+    static func createAllVisits(startingID:Int, startDate:Date)
     {
         var nextStartDate:Date = startDate;
         var nextId:Int = startingID;
         
         while InterArcWeeks[nextId] != nil
         {
-            let newArc = TestArc.createArc(forDate: nextStartDate);
+            TestVisit.createVisit(forDate: nextStartDate);
             
-           
             nextId += 1;
             if let weeks = InterArcWeeks[nextId]
             {
@@ -320,7 +322,7 @@ extension TestArc
         self.userStartDate = date.startOfDay() as NSDate;
         self.userEndDate = date.addingDays(days: DAYS_PER_ARC).endOfDay() as NSDate;
         DNDataManager.save();
-        DNRestAPI.shared.sendArcDateUpdate(forArc: self);
+        DNRestAPI.shared.sendArcDateUpdate(forVisit : self);
     }
     
     // get days remaining in Arc
@@ -328,6 +330,18 @@ extension TestArc
     func getDaysRemaining() -> Int
     {
         return (self.userEndDate! as Date).daysSince(date: Date());
+    }
+    
+    // gets the weeks until the next visit, if there is another visit after the current one.
+    
+    func getWeeksUntilNextVisit() -> Int?
+    {
+        if let weeks = InterArcWeeks[Int(self.visitID) + 1]
+        {
+            return weeks;
+        }
+        
+        return nil;
     }
     
     //MARK: session-related methods
@@ -351,7 +365,7 @@ extension TestArc
                     continue;
                 }
                 
-                if let sessionTime = test.sessionDate, let sessionEndTime = test.expirationDate
+                if let sessionTime = test.sessionDate?.addingTimeInterval(TEST_START_ALLOWANCE), let sessionEndTime = test.expirationDate
                 {
                     // the current time should be at least sessionTime, and not more than sessionTime plus one hour
                     
@@ -388,7 +402,7 @@ extension TestArc
                     continue;
                 }
                 
-                if let sessionTime = test.sessionDate, let sessionEndTime = test.expirationDate
+                if let sessionTime = test.sessionDate?.addingTimeInterval(TEST_START_ALLOWANCE), let sessionEndTime = test.expirationDate
                 {
                     // the current time should be at least sessionTime, and not more than sessionEndTime
                     
@@ -543,7 +557,7 @@ extension TestArc
     func createTestSessions(days:Int = DAYS_PER_ARC, sessionsPerDay:Int = SESSIONS_PER_DAY)
     {
         
-        guard let startDate = self.userStartDate as? Date else {
+        guard let startDate = self.userStartDate as Date? else {
             DNLog("HEY DUDE YOU NEED TO SET A START DATE");
             return;
         }
@@ -661,6 +675,8 @@ extension TestArc
             for time in times
             {
                 let session = self.scheduleSession(atDate: time);
+                session.sessionDayIndex = Int64(i);
+
                 createdSessions.append(session);
             }
             
@@ -685,7 +701,7 @@ extension TestArc
         }
                 
         DNDataManager.save();
-        DNRestAPI.shared.sendTestSchedule(forArc: self);
+        DNRestAPI.shared.sendTestSchedule(forVisit : self);
     }
     
     
@@ -704,7 +720,7 @@ extension TestArc
     {
         
         let newSession:TestSession = TestSession.createIn(context: DNDataManager.backgroundContext);
-        newSession.testArc = self;
+        newSession.testVisit = self;
         newSession.sessionDate = atDate as NSDate;
         newSession.expirationDate = atDate.addingHours(hours: 2) as NSDate;
         DNDataManager.save();
@@ -863,6 +879,22 @@ extension TestArc
         return (self.testSessions?.count ?? 0) > 0;
     }
     
+    func hasTakenAllTests() -> Bool
+    {
+        var hasFinished:Bool = true;
+        
+        for session in self.getAllSessions()
+        {
+            if !session.missedSession && session.startTime == nil && !session.finishedSession
+            {
+                hasFinished = false;
+            }
+        }
+        
+        return hasFinished;
+        
+    }
+    
     
     //MARK: notification-related methods
     
@@ -874,12 +906,12 @@ extension TestArc
         for test in tests
         {
             
-            let title = NSLocalizedString("It's time to take a quick test!", comment: "Notification text for test session");
+            let title = "It's time to take a quick test!".localized(key:"notification_take");
             let body = title;
             
             let newNotification = NotificationEntry.scheduleNotification(date: test.sessionDate! as Date, title: title, body: body, identifierPrefix: "TestSession");
             
-            newNotification.arcID = self.arcID;
+            newNotification.visitID = self.visitID;
             newNotification.sessionID = test.sessionID;
         }
         
@@ -915,27 +947,27 @@ extension TestArc
                 fireDate = midDay;
             }
             
-            var body = NSLocalizedString("Your next test will be on <DATE>", comment: "Notification text for one-month reminder");
+            var body = "Your next test will be on {DATE}.".localized(key:"notification_next1") //"Notification text for one-month reminder"
             
             let formattedDate = DateFormatter.localizedString(from: d, dateStyle: .short, timeStyle: .none);
             
-            body = body.replacingOccurrences(of: "<DATE>", with: formattedDate);
+            body = body.replacingOccurrences(of: "{DATE}", with: formattedDate);
             
-            let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "DateReminder-\(self.arcID)");
-            newNotification.arcID = self.arcID;
+            let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "DateReminder-\(self.visitID)");
+            newNotification.visitID = self.visitID;
             DNDataManager.save();
         }
     }
     
     func hasScheduledDateReminder() -> Bool
     {
-        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateReminder-\(self.arcID)", onlyPending: false);
+        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateReminder-\(self.visitID)", onlyPending: false);
         return maybeNotifications.count > 0;
     }
     
     func clearDateReminderNotification()
     {
-        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateReminder-\(self.arcID)");
+        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateReminder-\(self.visitID)");
     }
     
     // Start Date confirmations
@@ -944,7 +976,7 @@ extension TestArc
     
     func scheduleConfirmationReminders()
     {
-        if let d = self.arcStartDate as Date?
+        if let d = self.visitStartDate as Date?
         {
             
             for week in 1...3
@@ -970,34 +1002,34 @@ extension TestArc
     
     func scheduleConfirmationReminder(week:Int, fireDate:Date = Date().addingMinutes(minutes: 1))
     {
-        let body = NSLocalizedString("Please confirm your next test date.", comment: "Notification for Arc date confirmation");
+        let body = "Please confirm your next test date.".localized(key:"notification_confirm") //"Notification for Arc date confirmation");
         
-        let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "DateConfirmation-\(self.arcID)-\(week)");
-        newNotification.arcID = self.arcID;
+        let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "DateConfirmation-\(self.visitID)-\(week)");
+        newNotification.visitID = self.visitID;
         DNDataManager.save();
     }
     
     func hasScheduledConfirmationReminder(forWeek week:Int) -> Bool
     {
-        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateConfirmation-\(self.arcID)-\(week)", onlyPending: false);
+        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateConfirmation-\(self.visitID)-\(week)", onlyPending: false);
         return maybeNotifications.count > 0;
     }
     
     func hasScheduledConfirmationReminders() -> Bool
     {
-        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateConfirmation-\(self.arcID)", onlyPending: false);
+        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "DateConfirmation-\(self.visitID)", onlyPending: false);
         return maybeNotifications.count > 0;
     }
     
     
     func clearConfirmationReminder(forWeek week:Int)
     {
-        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateConfirmation-\(self.arcID)-\(week)");
+        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateConfirmation-\(self.visitID)-\(week)");
     }
     
     func clearConfirmationReminders()
     {
-        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateConfirmation-\(self.arcID)");
+        NotificationEntry.clearNotifications(withIdentifierPrefix: "DateConfirmation-\(self.visitID)");
     }
     
     
@@ -1005,16 +1037,16 @@ extension TestArc
     
     func scheduleMissedTestsNotification(fireDate:Date = Date().addingMinutes(minutes: 1))
     {
-        let body = NSLocalizedString("You've missed your tests. If you're unable to finish this week, please contact your site coordinator.", comment: "Notification for missed test sessions");
+        let body = "You've missed your tests. If you're unable to finish this week, please contact your site coordinator.".localized(key: "notification_missed") //comment: "Notification for missed test sessions"
         
-        let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "MissedTests-\(self.arcID)");
-        newNotification.arcID = self.arcID;
+        let newNotification = NotificationEntry.scheduleNotification(date: fireDate, title: "", body: body, identifierPrefix: "MissedTests-\(self.visitID)");
+        newNotification.visitID = self.visitID;
         DNDataManager.save();
     }
     
     func hasScheduledMissedTestsNotification() -> Bool
     {
-        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "MissedTests-\(self.arcID)", onlyPending: false);
+        let maybeNotifications = NotificationEntry.getNotifications(withIdentifierPrefix: "MissedTests-\(self.visitID)", onlyPending: false);
         return maybeNotifications.count > 0;
     }
     
@@ -1077,7 +1109,7 @@ extension TestArc
         DNLog("total pending notifications: \(notifications.count)");
         for notification in notifications
         {
-            DNLog("\(notification.notificationIdentifier!) | '\(notification.title!)'\(notification.body!)' date: \(DateFormatter.localizedString(from: notification.scheduledAt! as Date, dateStyle: .short, timeStyle: .short)) | arc id: \(notification.arcID) | session id: \(notification.sessionID)",quiet: true );
+            DNLog("\(notification.notificationIdentifier!) | '\(notification.title!)'\(notification.body!)' date: \(DateFormatter.localizedString(from: notification.scheduledAt! as Date, dateStyle: .short, timeStyle: .short)) | visit id: \(notification.visitID) | session id: \(notification.sessionID)",quiet: true );
         }
         
         

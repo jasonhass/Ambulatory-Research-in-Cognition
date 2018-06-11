@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FCB-hK-zjW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FCB-hK-zjW">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
         <array key="Tahoma Bold.ttf">
             <string>Tahoma-Bold</string>
         </array>
@@ -20,7 +24,7 @@
         <!--Context Survey View Controller-->
         <scene sceneID="B3e-je-eKE">
             <objects>
-                <viewController storyboardIdentifier="ContextSurveyViewController" id="FCB-hK-zjW" customClass="ContextSurveyViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ContextSurveyViewController" id="FCB-hK-zjW" customClass="ContextSurveyViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="RQm-uc-MMi"/>
                         <viewControllerLayoutGuide type="bottom" id="jsO-ux-NXY"/>
@@ -29,16 +33,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTEXT SURVEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLQ-iy-8iu" userLabel="Label">
-                                <rect key="frame" x="18" y="33" width="118.33333333333334" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CONTEXT SURVEY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLQ-iy-8iu" userLabel="Label" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                <rect key="frame" x="18" y="33" width="114" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="YL0-aM-zT4"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_header"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-PX-hHt">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMd-PX-hHt" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="-9" y="1139" width="393" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="lWI-Lb-TMl"/>
@@ -48,6 +55,10 @@
                                 <state key="normal" title="Done" backgroundImage="button_bg1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="done"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="surveyCompletedPressedWithSender:" destination="FCB-hK-zjW" eventType="touchUpInside" id="P6Z-KF-q1P"/>
                                 </connections>
@@ -56,10 +67,10 @@
                                 <rect key="frame" x="0.0" y="70" width="375" height="1069"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="2un-pK-zsm">
-                                        <rect key="frame" x="16" y="0.0" width="343" height="950.33333333333337"/>
+                                        <rect key="frame" x="16" y="0.0" width="343" height="941"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-8I-Tl2" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="159.66666666666666"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8i0-8I-Tl2" customClass="SurveyStackButtonView" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="158"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P3b-UW-i7I">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -68,14 +79,17 @@
                                                             <constraint firstAttribute="height" constant="2" id="X16-ae-Muy"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Who is with you right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVM-0a-Y64">
-                                                        <rect key="frame" x="0.0" y="18" width="343" height="20.666666666666671"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Who is with you right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVM-0a-Y64" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="20"/>
                                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_q1"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-ov-XBo" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="54.666666666666664" width="343" height="56.999999999999993"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hwI-ov-XBo" customClass="SurveyButton" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="54" width="343" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="57" id="7ks-cF-Sji"/>
                                                         </constraints>
@@ -83,29 +97,40 @@
                                                         <state key="normal" title="Choose Answer">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="chooseanswer"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="editValuePressedWithSender:" destination="8i0-8I-Tl2" eventType="touchUpInside" id="849-fk-9Vy"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5zh-M5-QGe">
-                                                        <rect key="frame" x="0.0" y="127.66666666666666" width="343" height="32"/>
+                                                        <rect key="frame" x="0.0" y="127" width="343" height="31"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upX-ev-SHJ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="283" height="32"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="upX-ev-SHJ" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                                 <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-Kt-BSi">
-                                                                <rect key="frame" x="283" y="0.0" width="60" height="32"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gEJ-Kt-BSi" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="-16" y="0.0" width="0.0" height="31"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="xBS-mI-4Tt"/>
+                                                                    <constraint firstAttribute="width" priority="750" constant="60" id="xBS-mI-4Tt"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                                                                 <state key="normal" title="EDIT">
                                                                     <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="edit"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="editValuePressedWithSender:" destination="8i0-8I-Tl2" eventType="touchUpInside" id="8dd-iv-bfA"/>
                                                                 </connections>
@@ -123,8 +148,8 @@
                                                     <outlet property="displayLabel" destination="upX-ev-SHJ" id="Uq0-X0-W7D"/>
                                                 </connections>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="38v-Jm-SH2" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="179.66666666666669" width="343" height="159.66666666666669"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="38v-Jm-SH2" customClass="SurveyStackButtonView" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="178" width="343" height="158"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUV-nD-QwP">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -133,14 +158,17 @@
                                                             <constraint firstAttribute="height" constant="2" id="Cnj-KI-LWk"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Where are you right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Y-vn-DfA">
-                                                        <rect key="frame" x="0.0" y="18.000000000000028" width="343" height="20.666666666666629"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Where are you right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D9Y-vn-DfA" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="18" width="343" height="20"/>
                                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_q2"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-xT-80Z" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="54.666666666666657" width="343" height="57"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ih0-xT-80Z" customClass="SurveyButton" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="54" width="343" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="57" id="k95-mt-zXe"/>
                                                         </constraints>
@@ -148,29 +176,40 @@
                                                         <state key="normal" title="Choose Answer">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="chooseanswer"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="editValuePressedWithSender:" destination="38v-Jm-SH2" eventType="touchUpInside" id="NF3-HT-C2L"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXq-sf-ZhY">
-                                                        <rect key="frame" x="0.0" y="127.66666666666666" width="343" height="32"/>
+                                                        <rect key="frame" x="0.0" y="127" width="343" height="31"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAI-tx-L7x">
-                                                                <rect key="frame" x="0.0" y="0.0" width="283" height="32"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAI-tx-L7x" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                                 <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asz-ra-CKo">
-                                                                <rect key="frame" x="283" y="0.0" width="60" height="32"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asz-ra-CKo" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="-16" y="0.0" width="0.0" height="31"/>
                                                                 <constraints>
-                                                                    <constraint firstAttribute="width" constant="60" id="w1f-bY-FVg"/>
+                                                                    <constraint firstAttribute="width" priority="500" constant="60" id="w1f-bY-FVg"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                                                                 <state key="normal" title="EDIT">
                                                                     <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="edit"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="editValuePressedWithSender:" destination="38v-Jm-SH2" eventType="touchUpInside" id="MIT-rh-xMN"/>
                                                                 </connections>
@@ -188,8 +227,8 @@
                                                     <outlet property="displayLabel" destination="pAI-tx-L7x" id="ZQS-Ie-Id9"/>
                                                 </connections>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n79-QL-nAh" customClass="SurveyStackRangeView" customModule="ARC" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="359.33333333333337" width="343" height="185.33333333333337"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="n79-QL-nAh" customClass="SurveyStackRangeView" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="356" width="343" height="183.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hnj-eO-5fJ">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -198,35 +237,47 @@
                                                             <constraint firstAttribute="height" constant="2" id="ArV-vA-KIg"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Which of these best describes your overall mood right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Bl-3Ar">
-                                                        <rect key="frame" x="0.0" y="18" width="343" height="41.333333333333371"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Which of these best describes your overall mood right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P7i-Bl-3Ar" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="17.999999999999996" width="343" height="39.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_q3"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUp-7T-rps">
-                                                        <rect key="frame" x="0.0" y="75.333333333333371" width="343" height="109.99999999999994"/>
+                                                        <rect key="frame" x="0.0" y="73.666666666666686" width="343" height="110"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MSM-oH-HGh">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="MSM-oH-HGh" customClass="DNSlider" customModule="ARC_CS" customModuleProvider="target">
                                                                 <rect key="frame" x="-2" y="49.999999999999943" width="347" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="eAL-O5-OR3"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="editValuePressedWithSender:" destination="n79-QL-nAh" eventType="valueChanged" id="x86-DX-h7z"/>
                                                                 </connections>
                                                             </slider>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-ly-Aev">
-                                                                <rect key="frame" x="0.0" y="25.999999999999943" width="27.666666666666664" height="16"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BAD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dzt-ly-Aev" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="26.666666666666682" width="26.666666666666668" height="15.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_bad"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-zh-rrn">
-                                                                <rect key="frame" x="303.33333333333326" y="25.999999999999943" width="39.666666666666686" height="16"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOOD" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGc-zh-rrn" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="304" y="26.666666666666682" width="39" height="15.333333333333332"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_good"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -251,8 +302,8 @@
                                                     <outlet property="slider" destination="MSM-oH-HGh" id="oOi-YA-hnj"/>
                                                 </connections>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxA-Bh-hTF" customClass="SurveyStackRangeView" customModule="ARC" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="564.66666666666652" width="343" height="185.33333333333337"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="oxA-Bh-hTF" customClass="SurveyStackRangeView" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="559.66666666666663" width="343" height="183.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYT-Mh-xAb">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -261,41 +312,53 @@
                                                             <constraint firstAttribute="height" constant="2" id="Wh2-dy-oPc"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Which of these best describes how you feel right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-a9-0JW">
-                                                        <rect key="frame" x="0.0" y="18" width="343" height="41.333333333333371"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Which of these best describes how you feel right now?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JPa-a9-0JW" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="17.999999999999996" width="343" height="39.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_q4"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mo-dG-cHz">
-                                                        <rect key="frame" x="0.0" y="75.333333333333371" width="343" height="110"/>
+                                                        <rect key="frame" x="0.0" y="73.666666666666742" width="343" height="110"/>
                                                         <subviews>
-                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-os-F84">
+                                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SnB-os-F84" customClass="DNSlider" customModule="ARC_CS" customModuleProvider="target">
                                                                 <rect key="frame" x="-2" y="50" width="347" height="41"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="40" id="kcM-un-ggg"/>
                                                                 </constraints>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="editValuePressedWithSender:" destination="oxA-Bh-hTF" eventType="valueChanged" id="FkK-20-ibl"/>
                                                                 </connections>
                                                             </slider>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLEEPY/TIRED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-X4-5tL">
-                                                                <rect key="frame" x="0.0" y="21" width="98" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SLEEPY/TIRED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OQW-X4-5tL" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="21" width="89.666666666666671" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="vIc-Br-VUf"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_tired"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVE/ALERT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvU-Hn-EZe">
-                                                                <rect key="frame" x="245" y="21" width="98" height="21"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACTIVE/ALERT" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvU-Hn-EZe" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="254.33333333333329" y="21" width="88.666666666666657" height="21"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="21" id="OyR-d9-PYg"/>
                                                                 </constraints>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="13"/>
                                                                 <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_active"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
                                                         </subviews>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -320,8 +383,8 @@
                                                     <outlet property="slider" destination="SnB-os-F84" id="uB9-Uc-3Qa"/>
                                                 </connections>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jqx-ZE-iYz" customClass="SurveyStackButtonView" customModule="ARC" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="770" width="343" height="180.33333333333337"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Jqx-ZE-iYz" customClass="SurveyStackButtonView" customModule="ARC_CS" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="763.33333333333337" width="343" height="177.66666666666663"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RUi-MV-cVV">
                                                         <rect key="frame" x="0.0" y="0.0" width="343" height="2"/>
@@ -330,14 +393,17 @@
                                                             <constraint firstAttribute="height" constant="2" id="EZk-nC-X39"/>
                                                         </constraints>
                                                     </view>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="In the past 5 minutes … What were you MOSTLY doing?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acE-2B-zBW">
-                                                        <rect key="frame" x="0.0" y="18" width="343" height="41.333333333333371"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="In the past 5 minutes … What were you MOSTLY doing?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acE-2B-zBW" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="17.999999999999996" width="343" height="39.666666666666657"/>
                                                         <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                         <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="context_q5"/>
+                                                        </userDefinedRuntimeAttributes>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-WD-spz" customClass="SurveyButton" customModule="ARC" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="75.333333333333371" width="343" height="57"/>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWZ-WD-spz" customClass="SurveyButton" customModule="ARC_CS" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="73.666666666666629" width="343" height="57"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="57" id="FvL-gK-ag1"/>
                                                         </constraints>
@@ -345,26 +411,37 @@
                                                         <state key="normal" title="Choose Answer">
                                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="chooseanswer"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                        </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <action selector="editValuePressedWithSender:" destination="Jqx-ZE-iYz" eventType="touchUpInside" id="M9o-bg-AW3"/>
                                                         </connections>
                                                     </button>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a6x-5b-F1d">
-                                                        <rect key="frame" x="0.0" y="148.33333333333337" width="343" height="32"/>
+                                                        <rect key="frame" x="0.0" y="146.66666666666663" width="343" height="31"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6n-Pk-gZb">
-                                                                <rect key="frame" x="0.0" y="0.0" width="62.666666666666671" height="32"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9:30 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c6n-Pk-gZb" customClass="DNLabel" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                                 <color key="textColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 <nil key="highlightedColor"/>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                             </label>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-xS-m2w">
-                                                                <rect key="frame" x="62.666666666666657" y="0.0" width="280.33333333333337" height="32"/>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dyP-xS-m2w" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
+                                                                <rect key="frame" x="-16" y="0.0" width="0.0" height="31"/>
                                                                 <fontDescription key="fontDescription" name="Tahoma-Bold" family="Tahoma" pointSize="16"/>
                                                                 <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="1" maxY="0.0"/>
                                                                 <state key="normal" title="EDIT">
                                                                     <color key="titleColor" red="0.2532045543" green="0.55255746839999997" blue="0.73731338980000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                 </state>
+                                                                <userDefinedRuntimeAttributes>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="edit"/>
+                                                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                                                </userDefinedRuntimeAttributes>
                                                                 <connections>
                                                                     <action selector="editValuePressedWithSender:" destination="Jqx-ZE-iYz" eventType="touchUpInside" id="b3w-Dc-sE5"/>
                                                                 </connections>
@@ -425,7 +502,7 @@
         <!--Survey Select View Controller-->
         <scene sceneID="DgK-ZI-IDs">
             <objects>
-                <viewController storyboardIdentifier="surveySelect" id="U2d-iO-x1P" customClass="SurveySelectViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="surveySelect" id="U2d-iO-x1P" customClass="SurveySelectViewController" customModule="ARC_CS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GYQ-D4-NSn"/>
                         <viewControllerLayoutGuide type="bottom" id="VP4-Q9-qnh"/>
@@ -437,7 +514,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fo5-RJ-C0O">
                                 <rect key="frame" x="16" y="32" width="382" height="640"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Select all that apply:" selectable="NO" id="jAd-to-NLM">
+                                <textView key="tableHeaderView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" selectable="NO" id="jAd-to-NLM" customClass="DNTextView" customModule="ARC_CS" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="382" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -445,14 +522,14 @@
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answer" id="AXg-Ul-ajq" customClass="SurveySelectTableViewCell" customModule="ARC" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="answer" id="AXg-Ul-ajq" customClass="SurveySelectTableViewCell" customModule="ARC_CS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="63" width="382" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AXg-Ul-ajq" id="i3L-an-TZz">
                                             <rect key="frame" x="0.0" y="0.0" width="382" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Qj-62-5qw" customClass="ToggleButton" customModule="ARC" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5Qj-62-5qw" customClass="ToggleButton" customModule="ARC_CS" customModuleProvider="target">
                                                     <rect key="frame" x="26" y="8" width="330" height="28"/>
                                                     <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
                                                     <state key="normal" title="Button">
@@ -462,6 +539,7 @@
                                                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                             <integer key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="pressedButton:" destination="AXg-Ul-ajq" eventType="touchUpInside" id="KFO-OQ-UT6"/>
@@ -485,7 +563,7 @@
                                     <outlet property="delegate" destination="U2d-iO-x1P" id="AK4-uw-bMl"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-5h-MRu">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VwG-5h-MRu" customClass="DNButton" customModule="ARC_CS" customModuleProvider="target">
                                 <rect key="frame" x="16" y="667" width="382" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="Hne-D1-egj"/>
@@ -495,6 +573,10 @@
                                 <state key="normal" title="Done" backgroundImage="button_bg1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="done"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="pressedNextWithSender:" destination="U2d-iO-x1P" eventType="touchUpInside" id="u6m-Dz-X2u"/>
                                 </connections>

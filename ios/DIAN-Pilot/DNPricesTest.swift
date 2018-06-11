@@ -1,10 +1,11 @@
-//
-//  DNPricesTest.swift
-//  DIAN-Pilot
-//
-//  Created by Philip Hayes on 11/21/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 import UIKit
@@ -17,16 +18,17 @@ public class DNPricesTest : DNTest {
     var setId = 0
     override func getTestDescription() -> DNTestDescription {
         
-        return DNTestDescription(title: NSLocalizedString("Prices Instructions", comment: ""), storyBoardName:"PricesTest", pages: ["Page 1"])
+        return DNTestDescription(title: "Prices Instructions".localized(), storyBoardName:"PricesTest", pages: ["Page 1"])
     }
 
 
     init(setId:Int) {
 
         super.init()
-        
+        let languageKey = "en".localized(key: "language_key")
+        let countryKey = "US".localized(key: "country_key")
         // load price sets json
-        let file = Bundle.main.path(forResource: "priceSets", ofType: ".json")
+        let file = Bundle.main.path(forResource: "priceSets-\(languageKey)-\(countryKey)", ofType: ".json")
         let data = NSData(contentsOfFile: file!)
         priceSets = JSON(data: data! as Data)
         self.setId = setId;
@@ -46,13 +48,13 @@ public class DNPricesTest : DNTest {
         itemCount = testSet.count
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
-        
+        formatter.currencySymbol = ""
         for index in 0 ..< testSet.count {
             let testItem = testSet[index].dictionary!
             
             
-            let price =  formatter.string(from: NSNumber(value: Float(testItem["price"]!.string!)!))!;
-            let alternate = formatter.string(from: NSNumber(value: Float(testItem["alt"]!.string!)!))!;
+            let price =  "\("".localized(key: "money_prefix"))\(testItem["price"]!.string!)\("".localized(key: "money_suffix"))";
+            let alternate = "\("".localized(key: "money_prefix"))\(testItem["alt"]!.string!)\("".localized(key: "money_suffix"))";
             let itemName = testItem["item"]!.string!
             var prices = [price , alternate];
             prices.shuffle();
@@ -78,7 +80,7 @@ public class DNPricesTest : DNTest {
         
        
         let sessionNumber = testSession.sessionID;
-        let participantId = DNDataManager.sharedInstance.participantId!;
+        let arcId = DNDataManager.sharedInstance.arcId!;
         
         let testObject:PriceTestData = NSManagedObject.createIn(context: context)
         testObject.date = self.startTime as NSDate

@@ -1,10 +1,11 @@
-//
-//  AppDelegate.swift
-//  DIAN-Pilot
-//
-//  Created by Philip Hayes on 11/14/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 import CoreData
@@ -30,16 +31,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     }
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        DNStyle.applyStyle()
+        _ = DNDataManager.sharedInstance.translation
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(AppDelegate.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+
         
+        #if DBG
+            DNLogManager.setLogToFile(log: true);
+            DNLog("--------------------------------");
+            DNLog("Application did finish launching");
+            DNRestAPI.shared.storeZips = true;
+            DNRestAPI.shared.sendData = false;
+            DNRestAPI.shared.requireRegistration = true;
+        #elseif QA
+            DNLogManager.setLogToFile(log: true);
+            DNLog("--------------------------------");
+            DNLog("Application did finish launching");
+            DNRestAPI.shared.storeZips = true;
+            DNRestAPI.shared.sendData = true;
+            DNRestAPI.shared.requireRegistration = true;
+        #endif
         
-        DNLogManager.setLogToFile(log: true);
-        DNLog("--------------------------------");
-        DNLog("Application did finish launching");
+        #if CS
+            DNLogManager.setLogToFile(log: false);
+            DNRestAPI.shared.storeZips = false;
+            DNRestAPI.shared.sendData = true;
+            DNRestAPI.shared.requireRegistration = false;
+            DNRestAPI.shared.sendPing = false;
+        #elseif TU
+            DNLogManager.setLogToFile(log: false);
+            DNRestAPI.shared.storeZips = false;
+            DNRestAPI.shared.sendData = true;
+        #elseif EXR
+            DNRestAPI.shared.requireRegistration = false;
+            DNLogManager.setLogToFile(log: false);
+            DNRestAPI.shared.storeZips = false;
+            DNRestAPI.shared.sendData = true;
+            DNRestAPI.shared.skipBaseline = true;
+        #endif
         
-        DNRestAPI.shared.storeZips = false;
-        DNRestAPI.shared.sendData = false;
+        #if EXR_QA
+            DNLogManager.setLogToFile(log: true);
+            DNRestAPI.shared.storeZips = true;
+        #endif
+        
+        // DEBUG Compilation Condition is set for non DBG/QA conditions when running from xcode.
+        // When you build for archiving, DEBUG will not be set.
+        
+        #if DEBUG
+            DNLogManager.setLogToFile(log: true);
+            DNRestAPI.shared.storeZips = true;
+            DNRestAPI.shared.sendData = false;
+            DNRestAPI.shared.PRINT_REQUESTS = false;
+            DNRestAPI.shared.requireRegistration = false;
+        #endif
+        
         
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().requestAuthorization(
@@ -170,13 +217,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
         DNLog("applicationDidEnterBackground");
-        self.splashScreen = Bundle.main.loadNibNamed("SplashScreen", owner: self, options: nil)?[0] as? UIView;
-        
-        if let s = splashScreen, let w = self.window
-        {
-            s.frame = w.bounds;
-            w.addSubview(s);
-        }
+//        self.splashScreen = Bundle.main.loadNibNamed("SplashScreen", owner: self, options: nil)?[0] as? UIView;
+//        
+//        if let s = splashScreen, let w = self.window
+//        {
+//            s.frame = w.bounds;
+//            w.addSubview(s);
+//        }
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
@@ -242,13 +289,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         
         DNLog("chooseDisplay");
-
+        
+        
+        
+        if DNDataManager.sharedInstance.languageKey == "" {
+            
+            #if CS
+                DNDataManager.sharedInstance.languageKey = "United States - English";
+            #elseif EXR
+                DNDataManager.sharedInstance.languageKey = "United States - English";
+            #else // TU, QA, DBG
+            go(state: .setupLanguage);
+            return;
+            #endif
+        }
+        
+        
+        
         //1: Participant setup
         if !DNDataManager.sharedInstance.hasParticipantId()
         {
             go(state: .setupUser);
             return;
         }
+        
+        #if EXR
+        
+            if DNDataManager.sharedInstance.hasAuthenticated == false
+            {
+                go(state:.twoFactorEnterCode);
+                return;
+            }
+        #endif
         
         if !DNDataManager.sharedInstance.hasSleepWakeTimes()
         {
@@ -274,7 +346,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 {
                     DNDataManager.sharedInstance.isTesting = false;
                     DNDataManager.sharedInstance.currentTestSession = nil;
-                    if let arc = TestArc.getCurrentArc(), let test = arc.getCurrentTestSession()
+                    if let visit = TestVisit.getCurrentVisit(), let test = visit.getCurrentTestSession()
                     {
                         test.markMissed();
                     }
@@ -282,12 +354,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             }
         }
         
-        if let arc = TestArc.getCurrentArc()
+        if let visit = TestVisit.getCurrentVisit()
         {
             
             //3: Test Session is available, but has not been started yet
             
-            if arc.getAvailableTestSession() != nil
+            if visit.getAvailableTestSession() != nil
             {
                 go(state:.testStart);
                 return;
@@ -300,7 +372,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         }
         else    //5: no Arc at this time
         {
-            if DNDataManager.sharedInstance.arcCount == 1
+            #if CS
+                
+                //just show them a "thanks for participating" screen.
+                go(state: .endProject);
+                
+            #elseif EXR
+            
+            go(state:.confirmArcDate);
+            
+            #else // TU, QA, DEBUG
+            
+            if DNDataManager.sharedInstance.visitCount == 1
             {
                 go(state: .baselineWait);
             }
@@ -309,6 +392,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                 go(state:.confirmArcDate);
             }
             return;
+                
+            #endif
         }
     }
     
@@ -320,6 +405,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void)
     {
+        DNLog("presenting notification");
         completionHandler([.alert,.sound,.badge]);
     }
     
@@ -331,8 +417,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
      
 
         UIApplication.shared.applicationIconBadgeNumber = 0;
-
-        AppDelegate.chooseDisplay();
+        DNLog("received notification");
+        
+        if DNDataManager.sharedInstance.isTesting == false
+        {
+            AppDelegate.chooseDisplay();
+        }
         
         completionHandler();
     }

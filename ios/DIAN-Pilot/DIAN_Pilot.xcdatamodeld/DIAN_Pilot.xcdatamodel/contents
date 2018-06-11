@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16D32" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="ChronotypeSurvey" representedClassName="ChronotypeSurvey" syncable="YES" codeGenerationType="class">
-        <attribute name="cpuLoad" attributeType="String" syncable="YES"/>
-        <attribute name="deviceMemory" attributeType="String" syncable="YES"/>
+        <attribute name="cpuLoad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceMemory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numWorkDays" optional="YES" attributeType="Integer 64" defaultValueString="-1" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="wasShiftWorker" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="workFreeSleepTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,8 +13,8 @@
     </entity>
     <entity name="ContextSurvey" representedClassName="ContextSurvey" syncable="YES" codeGenerationType="class">
         <attribute name="alertness" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.5" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="cpuLoad" attributeType="String" syncable="YES"/>
-        <attribute name="deviceMemory" attributeType="String" syncable="YES"/>
+        <attribute name="cpuLoad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceMemory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mood" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.5" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="recentActivity" optional="YES" attributeType="String" syncable="YES"/>
@@ -158,8 +158,8 @@
     </entity>
     <entity name="WakeSurvey" representedClassName="WakeSurvey" syncable="YES" codeGenerationType="class">
         <attribute name="bedTime" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cpuLoad" attributeType="String" syncable="YES"/>
-        <attribute name="deviceMemory" attributeType="String" syncable="YES"/>
+        <attribute name="cpuLoad" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="deviceMemory" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="getUpTime" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numWakes" optional="YES" attributeType="Integer 64" defaultValueString="99" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="sleepQuality" optional="YES" attributeType="Float" minValueString="0" maxValueString="1" defaultValueString="0.5" usesScalarValueType="YES" syncable="YES"/>

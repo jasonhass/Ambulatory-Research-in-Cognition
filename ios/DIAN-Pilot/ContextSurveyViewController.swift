@@ -1,10 +1,11 @@
-//
-//  ContextSurveyViewController.swift
-//  ARC
-//
-//  Created by Philip Hayes on 5/9/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 import CoreData
@@ -131,10 +132,17 @@ class ContextSurveyViewController: DNViewController, SurveyStackViewDelegate {
         switch  key {
         case .whoIsWith:
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "surveySelect") as! SurveySelectViewController
-            let items = json?["questions"][0]["questions"]
             vc.isMultiple = true
             vc.exclusiveSelectables = [0];
-            vc.setChoices(values: items?.arrayObject as! Array<String>)
+            
+            var items = (json?["questions"][0]["questions"].arrayObject as! Array<String>)
+            var index = 0
+            items.forEach({ (i) in
+                items[index] = i.localized(key: "context_q1_answers\(index + 1)")
+                index += 1
+            })
+            
+            vc.setChoices(values: items)
             if let s = self.selectedIndexes[.whoIsWith]
             {
                 vc.setSelected(s);
@@ -157,8 +165,16 @@ class ContextSurveyViewController: DNViewController, SurveyStackViewDelegate {
             break
         case .location:
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "surveySelect") as! SurveySelectViewController
-            let items = json?["questions"][1]["questions"]
-            vc.setChoices(values: items?.arrayObject as! Array<String>)
+            
+            
+            var items = (json?["questions"][1]["questions"].arrayObject as! Array<String>)
+            var index = 0
+            items.forEach({ (i) in
+                items[index] = i.localized(key: "context_q2_answers\(index + 1)")
+                index += 1
+            })
+            
+            vc.setChoices(values: items)
             if let s = self.selectedIndexes[.location]
             {
                 vc.setSelected(s);
@@ -198,9 +214,14 @@ class ContextSurveyViewController: DNViewController, SurveyStackViewDelegate {
             break
         case .recentActivity:
             let vc = self.storyboard!.instantiateViewController(withIdentifier: "surveySelect") as! SurveySelectViewController
-            let items = json?["questions"][4]["questions"]
+            var items = (json?["questions"][4]["questions"].arrayObject as! Array<String>)
+            var index = 0
+            items.forEach({ (i) in
+                items[index] = i.localized(key: "context_q5_answers\(index + 1)")
+                index += 1
+            })
             
-            vc.setChoices(values: items?.arrayObject as! Array<String>)
+            vc.setChoices(values: items)
             if let s = self.selectedIndexes[.recentActivity]
             {
                 vc.setSelected(s);

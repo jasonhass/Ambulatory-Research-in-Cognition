@@ -1,10 +1,11 @@
-//
-//  ArcConfirmViewController.swift
-//  ARC
-//
-//  Created by Michael Votaw on 5/17/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+        /*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 
@@ -14,12 +15,13 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var pageTitle: UILabel!
     @IBOutlet weak var pageHR: UIView!
     
+    @IBOutlet weak var questionsLabel: DNLabel!
     
     
     @IBOutlet weak var adjustHeight: NSLayoutConstraint!
     @IBOutlet weak var confirmHeight: NSLayoutConstraint!
     @IBOutlet weak var startLabel: UILabel!
-    @IBOutlet weak var adjustDateButton: UIButton!
+    @IBOutlet weak var adjustDateButton: DNButton!
     @IBOutlet weak var confirmButton: UIButton!
     
     @IBOutlet weak var noTestsText: UILabel!
@@ -30,40 +32,40 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
     
     var weekPickerChoices:Array<(date:Date, label:String)> = Array();
     
-    var upcomingArc:TestArc?
+    var upcomingVisit:TestVisit?
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
         //if we don't already have an upcoming Arc setup, we need to create one.
         
-        if let arc = TestArc.getUpcomingArc()
+        if let visit = TestVisit.getUpcomingVisit()
         {
-            upcomingArc = arc;
+            upcomingVisit = visit;
         }
         else
         {
             var nextDate:Date = Date();
             
-            if let previousArc = TestArc.getMostRecentArc()
+            if let previousArc = TestVisit.getMostRecentVisit()
             {
-                nextDate = (previousArc.arcStartDate! as Date).addingWeeks(weeks: 12);
+                nextDate = (previousArc.visitStartDate! as Date).addingWeeks(weeks: previousArc.getWeeksUntilNextVisit() ?? 0);
             }
             
-            let newArc = TestArc.createArc(forDate: nextDate);
-            newArc.clearUpcomingSessions();
-            newArc.createTestSessions();
+            let newVisit = TestVisit.createVisit(forDate: nextDate);
+            newVisit.clearUpcomingSessions();
+            newVisit.createTestSessions();
             
-            newArc.clearSessionNotifications();
-            newArc.scheduleSessionNotifications();
-            upcomingArc = newArc;
+            newVisit.clearSessionNotifications();
+            newVisit.scheduleSessionNotifications();
+            upcomingVisit = newVisit;
         }
         
         
-        if let arc = upcomingArc
+        if let visit = upcomingVisit
         {
             // are we one day away?
-            if (arc.userStartDate! as Date).daysSince(date: Date()) <= 1
+            if (visit.userStartDate! as Date).daysSince(date: Date()) <= 1
             {
                 noTestsText.isHidden = false;
                 confirmText.isHidden = true;
@@ -71,14 +73,16 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
                 adjustDateButton.isHidden = true;
                 confirmHeight.constant = 0;
                 confirmButton.isHidden = true;
-                if arc.hasScheduledNotifications == false
+                pageTitle.isHidden = true;
+                pageHR.isHidden = true;
+                if visit.hasScheduledNotifications == false
                 {
-                    arc.scheduleSessionNotifications();
+                    visit.scheduleSessionNotifications();
                 }
             }
             else
             {
-                if arc.hasConfirmedDate
+                if visit.hasConfirmedDate
                 {
                     noTestsText.isHidden = false;
                     confirmText.isHidden = true;
@@ -86,20 +90,23 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
                     confirmHeight.constant = 0;
                     pageTitle.isHidden = true;
                     pageHR.isHidden = true;
+                    adjustDateButton.translationKey = "notest_adjust";
+                    
                 }
                 else
                 {
                     noTestsText.isHidden = true;
                     confirmText.isHidden = false;
-                    
-                    if arc.hasScheduledDateReminder() == false
+                    questionsLabel.isHidden = true;
+                    adjustDateButton.translationKey = "adjust_start_date";
+                    if visit.hasScheduledDateReminder() == false
                     {
-                        arc.scheduleDateRemdinderNotification();
+                        visit.scheduleDateRemdinderNotification();
                     }
                     
-                    if arc.hasScheduledConfirmationReminders() == false
+                    if visit.hasScheduledConfirmationReminders() == false
                     {
-                        arc.scheduleConfirmationReminders();
+                        visit.scheduleConfirmationReminders();
                     }
                 }
             }
@@ -110,10 +117,10 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
     
     func updateStartLabel()
     {
-        if let arc = upcomingArc
+        if let visit = upcomingVisit
         {
-            let startDate = DateFormatter.localizedString(from: arc.userStartDate! as Date, dateStyle: .short, timeStyle: .none);
-            startLabel.text = String(format: NSLocalizedString("Your next test will begin on %@", comment: ""), startDate);
+            let startDate = DateFormatter.localizedString(from: visit.userStartDate! as Date, dateStyle: .short, timeStyle: .none);
+            startLabel.text = String(format: "Your next test will begin on {DATE}".localized(key: "confirm_body1").replacingOccurrences(of: "{DATE}", with: startDate))
         }
     }
     
@@ -123,10 +130,10 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
      
         weekPickerChoices.removeAll();
         var select:Int = 0;
-        if let arc = upcomingArc
+        if let visit = upcomingVisit
         {
             // get possible week choices, +/- 2 weeks.
-            let start = arc.arcStartDate! as Date;
+            let start = visit.visitStartDate! as Date;
             
             for i:Int in -2...2
             {
@@ -164,13 +171,13 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
         
         let selectedDate = weekPickerChoices[selectedIndex].date;
         
-        if let arc = upcomingArc
+        if let visit = upcomingVisit
         {
-            arc.setStartDate(date: selectedDate);
-            arc.clearSessionNotifications();
-            arc.clearUpcomingSessions();
-            arc.createTestSessions();
-            arc.scheduleSessionNotifications();
+            visit.setStartDate(date: selectedDate);
+            visit.clearSessionNotifications();
+            visit.clearUpcomingSessions();
+            visit.createTestSessions();
+            visit.scheduleSessionNotifications();
         }
      
         updateStartLabel();
@@ -178,9 +185,9 @@ class ArcConfirmViewController: DNViewController, UIPickerViewDelegate, UIPicker
     
     @IBAction func confirmTapped(_ sender: Any)
     {
-        if let arc = upcomingArc
+        if let visit = upcomingVisit
         {
-            arc.hasConfirmedDate = true;
+            visit.hasConfirmedDate = true;
             DNDataManager.save();
             AppDelegate.go(state: .surveyUpgradePhone);
         }

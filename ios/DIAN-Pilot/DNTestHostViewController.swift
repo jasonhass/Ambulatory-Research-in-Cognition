@@ -1,10 +1,11 @@
-//
-//  DNTestHostViewController.swift
-//  DIAN-Pilot
-//
-//  Created by Philip Hayes on 11/14/16.
-//  Copyright © 2016 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import UIKit
 import Zip
@@ -27,13 +28,13 @@ class DNTestHostViewController: DNViewController, DNTestViewControllerDelegate {
     var tests:[DNTest] = []
     var currentTask:URLSessionDataTask?
         
-    var currentArc:TestArc?;
+    var currentArc:TestVisit?;
     var currentSession:TestSession?;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.currentArc = TestArc.getCurrentArc();
+        self.currentArc = TestVisit.getCurrentVisit();
         self.currentSession = DNDataManager.sharedInstance.currentTestSession
         
         loadTests()
@@ -77,14 +78,12 @@ class DNTestHostViewController: DNViewController, DNTestViewControllerDelegate {
     
     func nextTest()
     {
-        guard let vc:TextAlertViewController = DNAlertViewController.GetAlertController() else {
-            return
-        }
+        let vc:TextAlertViewController = DNAlertViewController.GetAlertController()
         
         DNDataManager.save();
         
-        vc.setText(string: NSLocalizedString("You finished this test, ready for the next one?", comment: ""));
-        vc.setConfirmText(string: NSLocalizedString("Okay", comment: ""));
+        vc.setText(string: "You finished this test, ready for the next one?".localized());
+        vc.setConfirmText(string: "Next".localized());
         vc.onConfirm = {[weak self] ret in
             if let weakSelf = self {
                 DispatchQueue.main.async {
@@ -125,11 +124,11 @@ class DNTestHostViewController: DNViewController, DNTestViewControllerDelegate {
         
         if(DNRestAPI.shared.dontRandomize)
         {
-            tests = [DNGridTest(), DNSymbolsTest(), DNPricesTest(setId: Int(max(0,currentSession!.sessionID)) + Int(max(0, currentSession!.testArc!.arcID)) * SESSIONS_PER_DAY * DAYS_PER_ARC)];
+            tests = [DNGridTest(), DNSymbolsTest(), DNPricesTest(setId: Int(max(0,currentSession!.sessionID)) + Int(max(0, currentSession!.testVisit!.visitID)) * SESSIONS_PER_DAY * DAYS_PER_ARC)];
         }
         else
         {
-            tests = [DNSymbolsTest(), DNGridTest(), DNPricesTest(setId: Int(max(0,currentSession!.sessionID)) + Int(max(0, currentSession!.testArc!.arcID)) * SESSIONS_PER_DAY * DAYS_PER_ARC) ]
+            tests = [DNSymbolsTest(), DNGridTest(), DNPricesTest(setId: Int(max(0,currentSession!.sessionID)) + Int(max(0, currentSession!.testVisit!.visitID)) * SESSIONS_PER_DAY * DAYS_PER_ARC) ]
             tests.shuffle();
         }
     }
@@ -160,13 +159,13 @@ class DNTestHostViewController: DNViewController, DNTestViewControllerDelegate {
         let testDesc = tests[currentTest].getTestDescription()
         //Configure button state
         if page >= testDesc.pages.count - 1 {
-            startButton.setTitle(NSLocalizedString("Start", comment: ""), for: .normal)
+            startButton.setTitle("Start".localized(), for: .normal)
         } else {
-            startButton.setTitle(NSLocalizedString("Next", comment: ""), for: .normal)
+            startButton.setTitle("Next".localized(), for: .normal)
         }
         
         lineView.isHidden = false;
-        progressLabel.text = String(format:NSLocalizedString("%@ OF %@", comment: ""), "\(currentTest + 1)", "\(tests.count)");
+        progressLabel.text = String(format:"\("TEST".localized()) %@ %@ %@", "\(currentTest + 1)", "/" ,"\(tests.count)");
         
         titleLabel.text = testDesc.title;
         if let v = instructionContainer.subviews.first {

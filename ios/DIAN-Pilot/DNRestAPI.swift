@@ -1,24 +1,45 @@
-//
-//  DNRestAPI.swift
-//  ARC
-//
-//  Created by Michael Votaw on 5/22/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 import MobileCoreServices
 import SystemConfiguration
+import CoreData
 
-var PRINT_REQUESTS = false;
-var PRINT_A_LOT_OF_STUFF = false;
+var ARC_VERSION_INFO_KEY = "ARC_VERSION"
 
 typealias ServiceResponse = (_ data:Data?, _ statusCode:Int, _ response: URLResponse?, _ error: Error?) -> Void
 
 
 class DNRestAPI: NSObject {
+
+
     
-    let baseURL = "[BASE URL HERE]";
+    #if QA
+        let baseURL = "[URL GOES HERE]";   // QA link
+    #elseif TU
+        let baseURL = "[URL GOES HERE]"; // Prod link
+    #elseif EXR_QA
+        let baseURL = "[URL GOES HERE]";
+    #elseif EXR
+        let baseURL = "[URL GOES HERE]";
+    #elseif CS
+        let baseURL = "[URL GOES HERE]"; // local simple server
+        let AuthToken = "[AUTH TOKEN GOES HERE]"; // simple server token
+    #else //DBG
+        let baseURL:String = "";
+        let AuthToken:String = "";
+    #endif
+    
+    var PRINT_REQUESTS:Bool = false;
+    var PRINT_A_LOT_OF_STUFF:Bool = false;
+    
     var lastRequest: URLRequest?;
     var lastResponse: HTTPURLResponse?;
     var lastError: Error?;
@@ -32,8 +53,17 @@ class DNRestAPI: NSObject {
     //Set this to true if you want the app to save all zip files into the Documents directory, instead of the tmp dir.
     var storeZips:Bool = false;
     var sendData:Bool = true;
+    var requireRegistration:Bool = true;
+    var sendPing:Bool = true;
     var dontRandomize:Bool = false;
+    var skipBaseline:Bool = false;
     //MARK: - URLSession methods
+    
+    override init() {
+        super.init();
+        
+        self.sharedSession.configuration.httpMaximumConnectionsPerHost = 1;
+    }
     
     
     func makeBackgroundRequest(action:String, method:String, parameters:Dictionary<String, Any>?, files:Dictionary<String, String>?, timeout:TimeInterval = 60, onCompletion: @escaping ServiceResponse)
@@ -56,10 +86,10 @@ class DNRestAPI: NSObject {
         if PRINT_REQUESTS
         {
             DNLog("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-            DNLog("reqeust url: \(url)");
+            DNLog("reqeust url: \(String(describing: url))");
             DNLog("method: \(method)");
-            DNLog("parameters: \(parameters)");
-            DNLog("files: \(files)");
+            DNLog("parameters: \(String(describing: parameters))");
+            DNLog("files: \(String(describing: files))");
         }
         
         var task:URLSessionTask?;
@@ -89,6 +119,7 @@ class DNRestAPI: NSObject {
         
         if let t = task
         {
+            DNLog("starting background task #\(t.taskIdentifier) for action \(action)");
             sessionDelegate.taskCompletion[t.taskIdentifier] = onCompletion;
             t.resume();
         }
@@ -124,22 +155,23 @@ class DNRestAPI: NSObject {
         if PRINT_REQUESTS
         {
             DNLog("-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");
-            DNLog("reqeust url: \(url)");
+            DNLog("reqeust url: \(String(describing: url))");
             DNLog("method: \(method)");
-            DNLog("parameters: \(parameters)");
-            DNLog("files: \(files)");
+            DNLog("parameters: \(String(describing: parameters))");
+            DNLog("files: \(String(describing: files))");
             if PRINT_A_LOT_OF_STUFF
             {
                 if files == nil && parameters != nil && request.httpBody != nil
                 {
                     let paramJSON = String(data: request.httpBody!, encoding: .utf8);
-                    DNLog("json parameters: \(paramJSON)");
+                    DNLog("json parameters: \(String(describing: paramJSON))");
                 }
             }
             
         }
         
         let task = session.dataTask(with: request as URLRequest);
+        DNLog("starting task #\(task.taskIdentifier) for action \(action)");
         self.sharedDelegate.taskCompletion[task.taskIdentifier] = onCompletion;
         
         
@@ -149,9 +181,16 @@ class DNRestAPI: NSObject {
     }
     
     
-    
     func sendFile(action:String, background:Bool = true, file:URL, timeout:TimeInterval = 60, delay:TimeInterval = 0, onCompletion: @escaping ServiceResponse)
     {
+        if FileManager.default.fileExists(atPath: file.path) == false
+        {
+            DNLog("Error sending file, file \(file.lastPathComponent) does not exist");
+            onCompletion(nil, 500, nil, NSError(domain: "com.happyMedium.Arc", code: 500, userInfo: ["errorString":"file \(file.lastPathComponent) does not exist"]));
+            return;
+        }
+        
+        
         self.lastRequest = nil;
         self.lastResponse = nil;
         self.lastError = nil;
@@ -234,18 +273,136 @@ class DNRestAPI: NSObject {
                     print("error deleting file: \(error)");
                 }
             }
-            onCompletion(data, 500, response, NSError(domain: "com.dian.arc", code: 500, userInfo: nil));
+            onCompletion(data, statusCode, response, NSError(domain: "com.dian.arc", code: statusCode, userInfo: nil));
         }
         
         
         
         if let t = task
         {
+            DNLog("starting task #\(t.taskIdentifier) for filename \(file.lastPathComponent)");
             sessionDelegate?.taskCompletion[t.taskIdentifier] = fileOnCompletion;
             t.perform(#selector(t.resume), with: nil, afterDelay: delay);
         }
     }
     
+    // MARK: - file upload enqueuing
+
+    // Add a file to the UploadQueue.
+    
+    func enqueueFile(action:String, background:Bool = true, file:URL)
+    {
+        DNLog("Enqueuing file \(file.lastPathComponent)");
+        let queueItem:UploadQueue = NSManagedObject.createIn(context: DNDataManager.backgroundContext);
+        queueItem.action = action;
+        queueItem.filepath = file.path;
+        queueItem.background = background;
+        queueItem.added = NSDate();
+        DNDataManager.save();
+    }
+    
+    // Process any existing UploadQueue items who haven't been successfully uploaded yet.
+    // On failure, the queueItem.attempts will be incremented.
+    // On success, queueItem.success will be marked true. If we're not storing data, it and the file will be deleted from the device.
+    
+    func processEnqueuedFiles()
+    {
+        DNLog("Processing enqueued files...");
+        let request:NSFetchRequest<UploadQueue> = NSFetchRequest<UploadQueue>(entityName: "UploadQueue");
+        request.predicate = NSPredicate(format: "success = %@", NSNumber(booleanLiteral: false));
+        
+        do
+        {
+            let results = try DNDataManager.backgroundContext.fetch(request);
+            
+            for queueItem in results
+            {
+                if let action = queueItem.action, let filepath = queueItem.filepath
+                {
+                    let fileUrl = URL(fileURLWithPath: filepath);
+                    
+                    // If we're not actually sending data, then let's at least do some testing
+                    if self.sendData == false
+                    {
+                        DNLog("Pretending to upload \(fileUrl.lastPathComponent).");
+                        
+                        if FileManager.default.fileExists(atPath: filepath)
+                        {
+                            DNLog("file exists!");
+                        }
+                        else
+                        {
+                            DNLog("file does not exist!");
+                        }
+                        
+                        if arc4random() % 2 == 0
+                        {
+                            queueItem.success = true;
+                            DNLog("pretend upload successful!");
+                        }
+                        else
+                        {
+                            queueItem.success = false;
+                            queueItem.attempts = queueItem.attempts + 1;
+                            DNLog("pretend upload failed!");
+                        }
+                        
+                        DNDataManager.save();
+                        continue;
+                    }
+                    
+                    // otherwise, sendData = true, and let's actually send the data.
+                    
+                    DNLog("Attempting to send enqueued file \(fileUrl.lastPathComponent)");
+                    
+                    // If for some reason the file no longer exists, then let's just skip it.
+                    if FileManager.default.fileExists(atPath: filepath) == false
+                    {
+                        DNLog("file \(fileUrl.lastPathComponent) does not exist! Deleting this QueueItem");
+                        DNDataManager.backgroundContext.delete(queueItem);
+                        DNDataManager.save();
+                        continue;
+                    }
+                    
+                    self.sendFile(action: action, background: queueItem.background, file: fileUrl, timeout: 60, delay: 0, onCompletion: { (data, statusCode, response, error) in
+                       
+                        if let e = error
+                        {
+                            DNLog("Error uploading file: \(fileUrl.lastPathComponent): \(e)");
+                            queueItem.attempts =  queueItem.attempts + 1;
+                            DNDataManager.save();
+                        }
+                        else
+                        {
+                            queueItem.success = true;
+                            if self.storeZips == false
+                            {
+                                do{
+                                    if FileManager.default.fileExists(atPath: filepath)
+                                    {
+                                        try FileManager.default.removeItem(at: fileUrl);
+                                    }
+                                    DNDataManager.backgroundContext.delete(queueItem);
+                                }
+                                catch
+                                {
+                                    DNLog("error deleting file: \(error)");
+                                }
+                            }
+                            
+                            DNDataManager.save();
+                        }
+                        
+                    });
+                }
+            }
+            DNDataManager.save();
+        }
+        catch
+        {
+            DNLog("error retrieving upload queue: \(error)");
+        }
+    }
     
     //MARK: - helpers
     
@@ -309,7 +466,7 @@ class DNRestAPI: NSObject {
         {
             if val is Array<Any>
             {
-                var arrayName = "\(name)[]";
+                let arrayName = "\(name)[]";
                 for v in val as! Array<Any>
                 {
                     if let newQuery = self.getQueryItem(name:arrayName, val:v)
@@ -350,7 +507,7 @@ class DNRestAPI: NSObject {
     
     func createFormBody(boundary:String, formData:Dictionary<String, Any>?, files:Dictionary<String,String>?) -> String?
     {
-        let formBody = NSMutableData();
+        _ = NSMutableData();
         
         var formSections = Array<DNFormBodySection>();
         

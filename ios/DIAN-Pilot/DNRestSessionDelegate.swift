@@ -1,10 +1,11 @@
-//
-//  DNRestSessionDelegate.swift
-//  ARC
-//
-//  Created by Michael Votaw on 5/22/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 
@@ -30,9 +31,12 @@ class DNRestSessionDelegate:NSObject, URLSessionDelegate, URLSessionDataDelegate
         let error = taskErrors[task.taskIdentifier] as? Error;
         let response = taskResponses[task.taskIdentifier] as? URLResponse ?? task.response;
         let data = taskData[task.taskIdentifier] as? Data;
-        let completion = taskCompletion[task.taskIdentifier] as! ServiceResponse;
-                
-        self.finishTask(onCompletion: completion, data: data, response: response, error: error);
+        let completion = taskCompletion[task.taskIdentifier] as? ServiceResponse;
+        
+        if let c = completion
+        {
+            self.finishTask(task:task, onCompletion: c, data: data, response: response, error: error);
+        }
         
         
         taskErrors.removeObject(forKey: task.taskIdentifier);
@@ -75,30 +79,35 @@ class DNRestSessionDelegate:NSObject, URLSessionDelegate, URLSessionDataDelegate
         }
         catch
         {
-            DNLog("error loading downloaded data: \(error)");
+            DNLog("task #\(downloadTask.taskIdentifier) error loading downloaded data: \(error)");
         }
     }
     
     //MARK: - helper methods
     
-    func finishTask(onCompletion:ServiceResponse?, data:Data?, response:URLResponse?, error:Error?)
+    func finishTask(task:URLSessionTask, onCompletion:ServiceResponse?, data:Data?, response:URLResponse?, error:Error?)
     {
         if let d = data
         {
-            DNLog("response data: \(String(data:d, encoding:.utf8))");
+            DNLog("task #\(task.taskIdentifier) response data: \(String(describing: String(data:d, encoding:.utf8)))");
         }
         
-        if PRINT_REQUESTS
+        if let e = error
+        {
+            DNLog("task #\(task.taskIdentifier) error: \(e)");
+        }
+        
+        if DNRestAPI.shared.PRINT_REQUESTS
         {
             if let r = response
             {
-                DNLog("response response: \(r)");
+                DNLog("task #\(task.taskIdentifier) response response: \(r)");
             }
             else
             {
-                DNLog("no response for a task!");
+                DNLog("task #\(task.taskIdentifier) no response for a task!");
             }
-            DNLog("response errors: \(error)");
+            DNLog("task #\(task.taskIdentifier)response errors: \(String(describing: error))");
             DNLog("+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+");
         }
         
@@ -108,7 +117,7 @@ class DNRestSessionDelegate:NSObject, URLSessionDelegate, URLSessionDataDelegate
         // if error is a cancellation error (if the application has manually cancelled the task)
         // just quit. We don't need to do anything with the onCompletion handler
         
-        if let e = error as? NSError, e.code == -999
+        if let e = error as NSError?, e.code == -999
         {
             return;
         }

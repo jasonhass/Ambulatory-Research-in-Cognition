@@ -1,10 +1,11 @@
-//
-//  NotificationEntry+Methods.swift
-//  ARC
-//
-//  Created by Michael Votaw on 5/18/17.
-//  Copyright © 2017 HappyMedium. All rights reserved.
-//
+/*
+Copyright (c) 2017 Washington University in St. Louis 
+Created by: Jason J. Hassenstab, PhD
+
+Washington University in St. Louis hereby grants to you a non-transferable, non-exclusive, royalty-free license to use and copy the computer code provided here (the "Software").  You agree to include this license and the above copyright notice in all copies of the Software.  The Software may not be distributed, shared, or transferred to any third party.  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by Washington University in St. Louis.
+
+YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED "AS IS", WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT.  IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WASHINGTON UNIVERSITY IN ST LOUIS BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. 
+*/
 
 import Foundation
 import UIKit
@@ -16,7 +17,7 @@ extension NotificationEntry
     @discardableResult
     static func scheduleNotification(date:Date, title:String, body:String, identifierPrefix:String = "") -> NotificationEntry
     {
-        DNLog("Scheduling \(identifierPrefix) notification for \(date.localizedString())");
+        DNLog("Scheduling \(identifierPrefix) notification for \(date.localizedString(dateStyle: .short, timeStyle: .medium) )");
         
         let newNotification:NotificationEntry = NotificationEntry.createIn(context: DNDataManager.backgroundContext);
         
@@ -36,7 +37,7 @@ extension NotificationEntry
             let content = UNMutableNotificationContent()
             content.title = title;
             content.body = body;
-            content.sound = UNNotificationSound.default()
+            content.sound = UNNotificationSound(named: "pluck.aiff");
             let request = UNNotificationRequest(
                 identifier: identifier,
                 content: content,
@@ -56,7 +57,7 @@ extension NotificationEntry
             notification.alertTitle = title;
             notification.alertBody = body;
             notification.fireDate = date;
-            notification.soundName = UILocalNotificationDefaultSoundName;
+            notification.soundName = "pluck.aiff";
             notification.userInfo = ["notificationIdentifier": identifier];
             UIApplication.shared.scheduleLocalNotification(notification);
         };
@@ -72,29 +73,38 @@ extension NotificationEntry
     {
         
         let notifications = NotificationEntry.getNotifications(withIdentifierPrefix: identifierPrefix, onlyPending: true);
-        var identifiers:Array<String> = Array();
-        
-        for notification in notifications
-        {
-            identifiers.append(notification.notificationIdentifier!);
-            DNDataManager.backgroundContext.delete(notification);
-        }
+        NotificationEntry.manageDeleteNotifications(notifications: notifications);
+    }
     
-        DNDataManager.save();
-        
-        if #available(iOS 10.0, *)
-        {
-            UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers);
-        }
-        else
-        {
-            if let scheduledNotifications = UIApplication.shared.scheduledLocalNotifications
+    static func manageDeleteNotifications(notifications: Array<NotificationEntry>)
+    {
+        DNDataManager.backgroundContext.perform {
+            var identifiers:Array<String> = Array();
+            
+            for notification in notifications
+            {   
+                if let ident = notification.notificationIdentifier {
+                    identifiers.append(ident);
+                }
+                DNDataManager.backgroundContext.delete(notification);
+            }
+            
+            DNDataManager.save();
+            
+            if #available(iOS 10.0, *)
             {
-                for notification in scheduledNotifications
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: identifiers);
+            }
+            else
+            {
+                if let scheduledNotifications = UIApplication.shared.scheduledLocalNotifications
                 {
-                    if let info = notification.userInfo, let identifier = info["notificationIdentifier"] as? String, identifiers.contains(identifier)
+                    for notification in scheduledNotifications
                     {
-                        UIApplication.shared.cancelLocalNotification(notification);
+                        if let info = notification.userInfo, let identifier = info["notificationIdentifier"] as? String, identifiers.contains(identifier)
+                        {
+                            UIApplication.shared.cancelLocalNotification(notification);
+                        }
                     }
                 }
             }
@@ -169,6 +179,13 @@ extension NotificationEntry
         }
         request.sortDescriptors = [NSSortDescriptor(key:"scheduledAt", ascending:true)];
         
+        
+        return NotificationEntry.getNotifications(withFetchRequest: request);
+       
+    }
+    
+    static func getNotifications(withFetchRequest request:NSFetchRequest<NotificationEntry>) -> [NotificationEntry]
+    {
         do
         {
             let results = try DNDataManager.backgroundContext.fetch(request);

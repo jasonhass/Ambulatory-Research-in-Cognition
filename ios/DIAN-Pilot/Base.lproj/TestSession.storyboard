@@ -1,14 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gPY-Fi-PHA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="gPY-Fi-PHA">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="GeorgiaBoldItalic.ttf">
+            <string>Georgia-BoldItalic</string>
+        </array>
+        <array key="GeorgiaItalic.ttf">
+            <string>Georgia-Italic</string>
+        </array>
         <array key="Tahoma Bold.ttf">
             <string>Tahoma-Bold</string>
         </array>
@@ -17,7 +23,7 @@
         <!--Test Host View Controller-->
         <scene sceneID="F17-If-kk2">
             <objects>
-                <viewController storyboardIdentifier="DNTestHostViewController" id="gPY-Fi-PHA" customClass="DNTestHostViewController" customModule="ARC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DNTestHostViewController" id="gPY-Fi-PHA" customClass="DNTestHostViewController" customModule="ARCTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="p8c-AK-eKx"/>
                         <viewControllerLayoutGuide type="bottom" id="Qje-ea-Qhr"/>
@@ -42,7 +48,7 @@
                                     <constraint firstAttribute="height" constant="2" id="20q-OM-vZ3"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-2h-MPm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kd-2h-MPm" customClass="DNButton" customModule="ARCTests" customModuleProvider="target">
                                 <rect key="frame" x="-9" y="507" width="338" height="61"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="jFE-Vi-VxD"/>
@@ -52,6 +58,9 @@
                                 <state key="normal" title="Next" backgroundImage="button_bg1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="nextPressed:" destination="gPY-Fi-PHA" eventType="touchUpInside" id="IrD-Eo-8N0"/>
                                 </connections>
@@ -60,7 +69,7 @@
                                 <rect key="frame" x="16" y="117" width="288" height="390"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbols Instructions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nkW-TJ-1PV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Symbols Instructions" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nkW-TJ-1PV" customClass="DNLabel" customModule="ARCTests" customModuleProvider="target">
                                 <rect key="frame" x="16" y="62" width="288" height="39"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="39" id="EeM-El-ZV5"/>
@@ -68,6 +77,9 @@
                                 <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="30"/>
                                 <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
