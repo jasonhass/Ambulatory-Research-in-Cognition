@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+def versionMajor = 1 // max=2000 // bump to mark substantial changes
+def versionMinor = 0 // max=99   // bump for small changes (features, changes in intended behavior, etc)
+def versionPatch = 2 // max=99   // bump for fixes (crashes, unintended behavior, etc)
+def versionBuild = 3 // max=99   // bump for qa builds
+
+android {
+
+    compileSdkVersion 27
+    flavorDimensions "default"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 27
+        versionCode versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.session.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        prod {
+
+        }
+        qa {
+
+        }
+        dev {
+
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.0.2'
+    implementation 'net.danlew:android.joda:2.9.9'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    testImplementation 'junit:junit:4.12'
+    implementation 'com.android.support.test:runner:1.0.2'
+    implementation 'com.android.support.test:rules:1.0.2'
+}

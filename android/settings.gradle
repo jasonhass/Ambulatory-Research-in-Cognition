@@ -1,1 +1,1 @@
-include ':arc_tu',':arc_cs',':arc_exr', ':arc_lib'
+include ':arc', ':sample'

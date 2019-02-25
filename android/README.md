@@ -1,1 +1,1 @@
-dian_android
+core
