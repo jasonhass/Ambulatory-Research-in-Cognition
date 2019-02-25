@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GridTestViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="7mB-Ww-cRj" id="Hec-Ae-qhB"/>
+                <outlet property="collectionViewHeight" destination="Pyq-AP-BS4" id="BS8-bb-zct"/>
+                <outlet property="tapOnTheFsLabel" destination="11X-8i-GZq" id="su6-UX-kKa"/>
+                <outlet property="view" destination="UyT-2f-psd" id="Mh3-eb-a5q"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="UyT-2f-psd">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="efi-qX-YDc">
+                    <rect key="frame" x="0.0" y="32" width="320" height="528"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the Fs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="11X-8i-GZq">
+                            <rect key="frame" x="106" y="0.0" width="108" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="20" id="Th8-mY-BkH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <collectionView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-Ww-cRj">
+                            <rect key="frame" x="0.0" y="26" width="320" height="502"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="548" id="Pyq-AP-BS4"/>
+                                <constraint firstAttribute="width" constant="320" id="ZaE-P6-Kyy"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="2" id="6UV-zq-TEM">
+                                <size key="itemSize" width="60" height="105"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="4" minY="4" maxX="4" maxY="5"/>
+                            </collectionViewFlowLayout>
+                            <cells/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Dig-ma-RNB"/>
+                                <outlet property="delegate" destination="-1" id="sL8-Ql-nIY"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="efi-qX-YDc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dS7-jz-zik" secondAttribute="top" constant="12" id="YDp-7F-p1d"/>
+                <constraint firstItem="dS7-jz-zik" firstAttribute="bottom" secondItem="efi-qX-YDc" secondAttribute="bottom" constant="8" id="bBv-0O-GAg"/>
+                <constraint firstItem="efi-qX-YDc" firstAttribute="centerX" secondItem="UyT-2f-psd" secondAttribute="centerX" id="u6i-wT-ofd"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="dS7-jz-zik"/>
+            <point key="canvasLocation" x="2228" y="316"/>
+        </view>
+    </objects>
+</document>

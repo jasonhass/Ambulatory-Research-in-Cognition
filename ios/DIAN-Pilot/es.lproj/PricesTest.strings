@@ -1,27 +1,0 @@
-
-/* Class = "UIButton"; normalTitle = "No"; ObjectID = "60X-FY-Afp"; */
-"60X-FY-Afp.normalTitle" = "No";
-
-/* Class = "UILabel"; text = "¿Es este un buen precio?"; ObjectID = "9YS-6z-g1L"; */
-"9YS-6z-g1L.text" = "¿Es este un buen precio?";
-
-/* Class = "UIButton"; normalTitle = "Start"; ObjectID = "A4U-ME-sU5"; */
-"A4U-ME-sU5.normalTitle" = "Start";
-
-/* Class = "UILabel"; text = "Soap"; ObjectID = "PBl-Ob-cpO"; */
-"PBl-Ob-cpO.text" = "Soap";
-
-/* Class = "UILabel"; text = "$0.52"; ObjectID = "cC6-dj-MYS"; */
-"cC6-dj-MYS.text" = "$0.52";
-
-/* Class = "UILabel"; text = "¿Cuál fue el precio de"; ObjectID = "efW-l8-QvT"; */
-"efW-l8-QvT.text" = "¿Cuál fue el precio de";
-
-/* Class = "UIButton"; normalTitle = "Sí"; ObjectID = "hns-HN-xki"; */
-"hns-HN-xki.normalTitle" = "Sí";
-
-/* Class = "UITextView"; text = "En esta tarea, le mostraremos algunos artículos de compra y precios. \n\nDecida si el precio desplegado es una \"ganga\" por ese producto.\n \nEl par solo permanecerá en la pantalla por poco tiempo así que tome su decisión rápidamente y preste mucha atención.\n\nDespués de que vea 10 pares de artículos de compra y precios, se le pedirá que una el precio correcto con cada artículo, así que intente recordar los precios.\n\nPresione Comenzar para dar inicio.\n"; ObjectID = "rWE-R1-mq7"; */
-"rWE-R1-mq7.text" = "En esta tarea, le mostraremos algunos artículos de compra y precios. \n\nDecida si el precio desplegado es una \"ganga\" por ese producto.\n \nEl par solo permanecerá en la pantalla por poco tiempo así que tome su decisión rápidamente y preste mucha atención.\n\nDespués de que vea 10 pares de artículos de compra y precios, se le pedirá que una el precio correcto con cada artículo, así que intente recordar los precios.\n\nPresione Comenzar para dar inicio.\n";
-
-/* Class = "UITextView"; text = "Let’s see how many you can remember. \nFor each item, click on the price that was shown previously. \nPress Start to begin"; ObjectID = "ypj-wr-GUA"; */
-"ypj-wr-GUA.text" = "Let’s see how many you can remember. \nFor each item, click on the price that was shown previously. \nPress Start to begin";

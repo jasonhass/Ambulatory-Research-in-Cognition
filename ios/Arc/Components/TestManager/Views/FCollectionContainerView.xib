@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="JuG-PE-2do">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="W9L-Wx-KjF">
+                    <rect key="frame" x="27.5" y="66" width="320" height="601"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="320" id="Wlv-8K-bs2"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="4" id="2DK-gc-Phh">
+                        <size key="itemSize" width="45" height="46"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="9" minY="8" maxX="10" maxY="5"/>
+                    </collectionViewFlowLayout>
+                    <cells>
+                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="fCell" id="bcp-yh-5th">
+                            <rect key="frame" x="9" y="8" width="38" height="48"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="E" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="meD-Nd-OIK">
+                                        <rect key="frame" x="0.0" y="0.0" width="38" height="48"/>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="40"/>
+                                        <color key="textColor" red="0.0076712537559999999" green="0.53814172739999999" blue="0.74218708280000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </view>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="meD-Nd-OIK" secondAttribute="trailing" id="1yP-JS-Tsc"/>
+                                <constraint firstItem="meD-Nd-OIK" firstAttribute="leading" secondItem="bcp-yh-5th" secondAttribute="leading" id="Nly-4a-F33"/>
+                                <constraint firstItem="meD-Nd-OIK" firstAttribute="top" secondItem="bcp-yh-5th" secondAttribute="top" id="k3w-yY-w2f"/>
+                                <constraint firstAttribute="bottom" secondItem="meD-Nd-OIK" secondAttribute="bottom" id="r6y-gf-sTb"/>
+                            </constraints>
+                            <size key="customSize" width="38" height="48"/>
+                            <connections>
+                                <outlet property="label" destination="meD-Nd-OIK" id="Mry-fd-lrn"/>
+                            </connections>
+                        </collectionViewCell>
+                    </cells>
+                </collectionView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap on the Fs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mTM-9U-COX">
+                    <rect key="frame" x="136" y="40" width="103" height="20"/>
+                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                    <color key="textColor" red="0.25490197539999998" green="0.27450981740000002" blue="0.30196079609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="W9L-Wx-KjF" firstAttribute="centerX" secondItem="JuG-PE-2do" secondAttribute="centerX" id="4On-ml-3yV"/>
+                <constraint firstAttribute="bottom" secondItem="W9L-Wx-KjF" secondAttribute="bottom" id="5cB-0F-Tad"/>
+                <constraint firstItem="W9L-Wx-KjF" firstAttribute="top" secondItem="mTM-9U-COX" secondAttribute="bottom" constant="6" id="Ye3-T4-S6D"/>
+                <constraint firstItem="mTM-9U-COX" firstAttribute="centerX" secondItem="W9L-Wx-KjF" secondAttribute="centerX" id="d0b-YP-HT9"/>
+                <constraint firstItem="mTM-9U-COX" firstAttribute="top" secondItem="JuG-PE-2do" secondAttribute="top" constant="40" id="mZA-ci-8ZW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="zno-zf-qZF"/>
+        </view>
+    </objects>
+</document>

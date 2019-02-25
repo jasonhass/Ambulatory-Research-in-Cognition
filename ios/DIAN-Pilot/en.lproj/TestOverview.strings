@@ -1,42 +1,0 @@
-
-/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "3DO-CB-UTR"; */
-"3DO-CB-UTR.normalTitle" = "Next";
-
-/* Class = "UITextView"; text = "What is the answer to this questions (select all that apply)?"; ObjectID = "61r-kx-JpU"; */
-"61r-kx-JpU.text" = "What is the answer to this questions (select all that apply)?";
-
-/* Class = "UIButton"; normalTitle = "SKIP"; ObjectID = "6CO-AK-noh"; */
-"6CO-AK-noh.normalTitle" = "SKIP";
-
-/* Class = "UILabel"; text = "SECOND"; ObjectID = "c8o-7w-0bR"; */
-"c8o-7w-0bR.text" = "SECOND";
-
-/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dsY-gx-C4y"; */
-"dsY-gx-C4y.normalTitle" = "Button";
-
-/* Class = "UILabel"; text = "INSTRUCTIONS"; ObjectID = "eBt-1e-2A7"; */
-"eBt-1e-2A7.text" = "INSTRUCTIONS";
-
-/* Class = "UILabel"; text = "FIRST"; ObjectID = "hU2-gg-RKZ"; */
-"hU2-gg-RKZ.text" = "FIRST";
-
-/* Class = "UITextView"; text = "We will need about five minutes to complete everything, maybe less.  You will be asked a few questions, and then you will complete three quick tests.  Press Next to begin."; ObjectID = "k4f-dk-7o5"; */
-"k4f-dk-7o5.text" = "We will need about five minutes to complete everything, maybe less.  You will be asked a few questions, and then you will complete three quick tests.  Press Next to begin.";
-
-/* Class = "UITextView"; text = "You will now complete three quick tests.  You cannot pause a test once it has been started.  Press Next to begin."; ObjectID = "kqI-dr-KHk"; */
-"kqI-dr-KHk.text" = "You will now complete three quick tests.  You cannot pause a test once it has been started.  Press Next to begin.";
-
-/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "lfi-0R-TRV"; */
-"lfi-0R-TRV.normalTitle" = "Next";
-
-/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "paA-xq-CaO"; */
-"paA-xq-CaO.normalTitle" = "Next";
-
-/* Class = "UILabel"; text = "TEST OVERVIEW"; ObjectID = "vuV-H3-q9e"; */
-"vuV-H3-q9e.text" = "TEST OVERVIEW";
-
-/* Class = "UILabel"; text = "SURVEY"; ObjectID = "w0N-z1-5jv"; */
-"w0N-z1-5jv.text" = "SURVEY";
-
-/* Class = "UITextView"; text = "Which of these best describes your answer right now?"; ObjectID = "ygv-xT-nhJ"; */
-"ygv-xT-nhJ.text" = "Which of these best describes your answer right now?";

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB" customClass="MHAlertView" customModule="Arc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="280" height="492"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="260" translatesAutoresizingMaskIntoConstraints="NO" id="j99-yT-uEN">
+                    <rect key="frame" x="20" y="20" width="240" height="452"/>
+                    <subviews>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fq3-AT-81R">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="452"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="200" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="FlI-Hi-NX0">
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="200"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilg-3i-FGW">
+                                            <rect key="frame" x="20" y="20" width="200" height="0.0"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="CFp-YW-tgP">
+                                            <rect key="frame" x="20" y="36" width="200" height="144"/>
+                                        </stackView>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="FlI-Hi-NX0" firstAttribute="top" secondItem="fq3-AT-81R" secondAttribute="top" id="1hC-RD-Ud3"/>
+                                <constraint firstAttribute="trailing" secondItem="FlI-Hi-NX0" secondAttribute="trailing" id="6Vh-DG-zpF"/>
+                                <constraint firstItem="FlI-Hi-NX0" firstAttribute="centerX" secondItem="fq3-AT-81R" secondAttribute="centerX" id="fab-hI-Ehn"/>
+                                <constraint firstItem="FlI-Hi-NX0" firstAttribute="leading" secondItem="fq3-AT-81R" secondAttribute="leading" id="tl7-sr-6L4"/>
+                                <constraint firstAttribute="bottom" secondItem="FlI-Hi-NX0" secondAttribute="bottom" id="und-eW-lp4"/>
+                            </constraints>
+                        </scrollView>
+                    </subviews>
+                    <color key="backgroundColor" name="Secondary Background"/>
+                    <constraints>
+                        <constraint firstItem="fq3-AT-81R" firstAttribute="top" secondItem="j99-yT-uEN" secondAttribute="top" id="Ekd-fC-lHr"/>
+                        <constraint firstItem="fq3-AT-81R" firstAttribute="leading" secondItem="j99-yT-uEN" secondAttribute="leading" id="KYq-fF-KLs"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="420" id="Tff-H5-qMb"/>
+                        <constraint firstAttribute="trailing" secondItem="fq3-AT-81R" secondAttribute="trailing" id="gHS-Cr-wdn"/>
+                        <constraint firstAttribute="bottom" secondItem="fq3-AT-81R" secondAttribute="bottom" id="mxe-9p-kd4"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" name="Modal Fade"/>
+            <constraints>
+                <constraint firstItem="j99-yT-uEN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="DKO-3I-1EF"/>
+                <constraint firstAttribute="trailing" secondItem="j99-yT-uEN" secondAttribute="trailing" constant="20" id="HJ2-LT-1Rb"/>
+                <constraint firstItem="j99-yT-uEN" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="K8T-cW-6d7"/>
+                <constraint firstItem="j99-yT-uEN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="top" priority="999" constant="20" id="fUC-RB-nVN"/>
+                <constraint firstItem="j99-yT-uEN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" priority="1" constant="20" placeholder="YES" id="nC7-1B-6pu"/>
+                <constraint firstItem="j99-yT-uEN" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="oSd-Qc-0VK"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="messageLabel" destination="ilg-3i-FGW" id="SQy-Xb-qEe"/>
+                <outlet property="stack" destination="CFp-YW-tgP" id="024-TG-ICW"/>
+            </connections>
+            <point key="canvasLocation" x="-35.200000000000003" y="167.31634182908547"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Modal Fade">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Background">
+            <color red="0.96899998188018799" green="0.96899998188018799" blue="0.96899998188018799" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

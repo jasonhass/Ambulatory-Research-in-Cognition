@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB" customClass="SegmentedTextView" customModule="Arc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Ytg-pt-8Z5">
+                    <rect key="frame" x="97.5" y="0.0" width="180" height="105"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtH-hO-0xV" customClass="BorderedView" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="22.5" width="24" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chb-eT-VdB">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="50.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                    <color key="textColor" name="Primary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="chb-eT-VdB" firstAttribute="top" secondItem="TtH-hO-0xV" secondAttribute="topMargin" id="1m6-88-b3a"/>
+                                <constraint firstAttribute="width" priority="999" constant="24" id="GFm-7h-LUE"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="chb-eT-VdB" secondAttribute="trailing" id="K3Z-Lz-Br7"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="chb-eT-VdB" secondAttribute="bottom" id="VcE-qM-gNU"/>
+                                <constraint firstItem="chb-eT-VdB" firstAttribute="leading" secondItem="TtH-hO-0xV" secondAttribute="leadingMargin" id="zOm-4i-ULK"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="10" right="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Primary Text"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tc6-cr-zuQ" customClass="BorderedView" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="39" y="22.5" width="24" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PE3-5x-6Nf">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="50.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                    <color key="textColor" name="Primary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" priority="999" constant="24" id="4o5-oy-psz"/>
+                                <constraint firstItem="PE3-5x-6Nf" firstAttribute="leading" secondItem="Tc6-cr-zuQ" secondAttribute="leadingMargin" id="Arr-7K-WYb"/>
+                                <constraint firstItem="PE3-5x-6Nf" firstAttribute="top" secondItem="Tc6-cr-zuQ" secondAttribute="topMargin" id="L0P-77-Ihh"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="PE3-5x-6Nf" secondAttribute="bottom" id="Qrj-5A-488"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="PE3-5x-6Nf" secondAttribute="trailing" id="TpS-2Y-c3f"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="10" right="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Primary Text"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2t5-hi-MEl" customClass="BorderedView" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="78" y="22.5" width="24" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ffd-Uc-q6B">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="50.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                    <color key="textColor" name="Primary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="Ffd-Uc-q6B" firstAttribute="top" secondItem="2t5-hi-MEl" secondAttribute="topMargin" id="JuU-6o-qEe"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="Ffd-Uc-q6B" secondAttribute="bottom" id="LOq-Nq-TuT"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="Ffd-Uc-q6B" secondAttribute="trailing" id="ioo-UB-dVA"/>
+                                <constraint firstAttribute="width" priority="999" constant="24" id="lZ0-av-lId"/>
+                                <constraint firstItem="Ffd-Uc-q6B" firstAttribute="leading" secondItem="2t5-hi-MEl" secondAttribute="leadingMargin" id="zb4-7U-eV9"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="10" right="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Primary Text"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yl4-Kz-csZ" customClass="BorderedView" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="117" y="22.5" width="24" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch8-bu-CMA">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="50.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                    <color key="textColor" name="Primary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottomMargin" secondItem="Ch8-bu-CMA" secondAttribute="bottom" id="BmQ-J3-LzU"/>
+                                <constraint firstAttribute="width" priority="999" constant="24" id="KRB-Qk-5Hg"/>
+                                <constraint firstItem="Ch8-bu-CMA" firstAttribute="top" secondItem="Yl4-Kz-csZ" secondAttribute="topMargin" id="NSa-hL-d4T"/>
+                                <constraint firstAttribute="trailingMargin" secondItem="Ch8-bu-CMA" secondAttribute="trailing" id="XJ2-aw-A0y"/>
+                                <constraint firstItem="Ch8-bu-CMA" firstAttribute="leading" secondItem="Yl4-Kz-csZ" secondAttribute="leadingMargin" id="gyx-Bc-StY"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="10" right="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Primary Text"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dYP-pi-F8f" customClass="BorderedView" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="156" y="22.5" width="24" height="60.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Fn-oP-ncS">
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="50.5"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="21"/>
+                                    <color key="textColor" name="Primary"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="1Fn-oP-ncS" secondAttribute="trailing" id="0gF-LU-WET"/>
+                                <constraint firstItem="1Fn-oP-ncS" firstAttribute="leading" secondItem="dYP-pi-F8f" secondAttribute="leadingMargin" id="4BZ-82-gcI"/>
+                                <constraint firstAttribute="width" priority="999" constant="24" id="540-nK-wrC"/>
+                                <constraint firstItem="1Fn-oP-ncS" firstAttribute="top" secondItem="dYP-pi-F8f" secondAttribute="topMargin" id="ukM-rf-SZV"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="1Fn-oP-ncS" secondAttribute="bottom" id="vwo-XR-WUX"/>
+                            </constraints>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="10" right="0.0"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="borderBottom" value="YES"/>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="Primary Text"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderThickness">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="105" id="mqV-rj-Zer"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ytg-pt-8Z5" secondAttribute="trailing" id="AKi-Wa-w7I"/>
+                <constraint firstItem="Ytg-pt-8Z5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" id="FfY-fj-6wz"/>
+                <constraint firstItem="Ytg-pt-8Z5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="LbM-jd-0QH"/>
+                <constraint firstAttribute="bottom" secondItem="Ytg-pt-8Z5" secondAttribute="bottom" id="o3B-cB-Elb"/>
+                <constraint firstItem="Ytg-pt-8Z5" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rIf-0k-NXL"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="inputStack" destination="Ytg-pt-8Z5" id="6Yn-SW-yxa"/>
+            </connections>
+            <point key="canvasLocation" x="-852" y="114"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.37254901960784315" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Text">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

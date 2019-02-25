@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14315.18" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AuthEntry" representedClassName=".AuthEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="authDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="participantID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+    </entity>
+    <entity name="JSONData" representedClassName=".JSONData" syncable="YES" codeGenerationType="class">
+        <attribute name="data" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="id" attributeType="String" syncable="YES"/>
+        <attribute name="isFilledOut" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="type" attributeType="String" syncable="YES"/>
+        <attribute name="uploaded" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="testSession" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Session" inverseName="sessionData" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <entity name="NotificationEntry" representedClassName=".NotificationEntry" syncable="YES" codeGenerationType="class">
+        <attribute name="body" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="notificationIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scheduledAt" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="studyID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" elementID="arcID" syncable="YES"/>
+        <attribute name="submitted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Schedule" representedClassName=".Schedule" syncable="YES" codeGenerationType="category">
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="modifiedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="participantID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scheduleID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="scheduleEntries" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="ScheduleEntry" inverseName="schedule" inverseEntity="ScheduleEntry" syncable="YES"/>
+    </entity>
+    <entity name="ScheduleEntry" representedClassName=".ScheduleEntry" syncable="YES" codeGenerationType="category">
+        <attribute name="availabilityEnd" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="availabilityStart" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createdOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="modifiedOn" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="participantID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weekday" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="schedule" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Schedule" inverseName="scheduleEntries" inverseEntity="Schedule" syncable="YES"/>
+    </entity>
+    <entity name="Session" representedClassName=".Session" syncable="YES" codeGenerationType="class">
+        <attribute name="completeTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="endSignature" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="expirationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="finishedSession" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasTakenChronotype" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasTakenWake" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="interrupted" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="missedSession" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="session" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sessionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="sessionDayIndex" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="sessionID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startSignature" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="uploaded" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="week" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="willUpgradePhone" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="sessionData" toMany="YES" deletionRule="Nullify" destinationEntity="JSONData" inverseName="testSession" inverseEntity="JSONData" syncable="YES"/>
+        <relationship name="study" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StudyPeriod" inverseName="sessions" inverseEntity="StudyPeriod" syncable="YES"/>
+    </entity>
+    <entity name="StudyPeriod" representedClassName=".StudyPeriod" elementID="TestArc" syncable="YES" codeGenerationType="class">
+        <attribute name="endDate" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="arcEndDate" syncable="YES"/>
+        <attribute name="hasConfirmedDate" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="hasScheduledNotifications" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scheduleUploaded" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" usesScalarValueType="NO" elementID="arcStartDate" syncable="YES"/>
+        <attribute name="studyID" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES" elementID="arcID" syncable="YES"/>
+        <attribute name="userEndDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="userStartDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="sessions" optional="YES" toMany="YES" deletionRule="No Action" ordered="YES" destinationEntity="Session" inverseName="study" inverseEntity="Session" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="AuthEntry" positionX="-36" positionY="135" width="128" height="75"/>
+        <element name="JSONData" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="NotificationEntry" positionX="-36" positionY="135" width="128" height="165"/>
+        <element name="Schedule" positionX="-9" positionY="171" width="128" height="120"/>
+        <element name="ScheduleEntry" positionX="-36" positionY="135" width="128" height="150"/>
+        <element name="Session" positionX="-36" positionY="27" width="128" height="345"/>
+        <element name="StudyPeriod" positionX="-27" positionY="144" width="128" height="180"/>
+    </elements>
+</model>

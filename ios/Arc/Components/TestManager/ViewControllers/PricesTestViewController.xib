@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PricesTestViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="buttonStack" destination="gFZ-wv-brY" id="smA-GJ-zIk"/>
+                <outlet property="goodPriceLabel" destination="Ry4-bz-xcA" id="c5z-S6-hrT"/>
+                <outlet property="itemNameLabel" destination="0Es-5H-REM" id="Rp5-GB-eag"/>
+                <outlet property="itemPriceLabel" destination="rEo-Tc-W1Y" id="T2Q-af-79R"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" placeholderIntrinsicWidth="288" placeholderIntrinsicHeight="300" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="1DZ-Kx-WAa">
+                    <rect key="frame" x="43.5" y="40" width="288" height="587"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SC-Oo-a7f">
+                            <rect key="frame" x="0.0" y="0.0" width="288" height="104.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cheeseburger" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="0Es-5H-REM" customClass="DNWordWrappingLabel" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="124.5" width="288" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="44" id="TCf-Kh-eGZ"/>
+                                <constraint firstAttribute="width" constant="288" id="xhX-zK-eG5"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="35"/>
+                            <color key="textColor" red="0.30193126199999998" green="0.30197969079999998" blue="0.30192065239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$0.52" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.30000001192092896" translatesAutoresizingMaskIntoConstraints="NO" id="rEo-Tc-W1Y" customClass="DNWordWrappingLabel" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="188.5" width="288" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="40" id="WVc-Lm-9e8"/>
+                                <constraint firstAttribute="width" constant="288" id="ZYc-px-E2A"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="35"/>
+                            <color key="textColor" red="0.30193126199999998" green="0.30197969079999998" blue="0.30192065239999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this a good price?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ry4-bz-xcA" customClass="DNLabel" customModule="Arc" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="248.5" width="288" height="30.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="999" constant="30" id="Cr5-PL-yf0"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                            <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="price_test_isgood"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gFZ-wv-brY">
+                            <rect key="frame" x="0.0" y="299" width="288" height="140"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VbF-85-xCy">
+                            <rect key="frame" x="0.0" y="459" width="288" height="128"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="1DZ-Kx-WAa" secondAttribute="bottom" priority="999" constant="20" id="Grw-9X-Bnt"/>
+                <constraint firstItem="1DZ-Kx-WAa" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="HuR-Sx-ymO"/>
+                <constraint firstItem="1DZ-Kx-WAa" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WJy-Yi-sCv"/>
+                <constraint firstItem="1DZ-Kx-WAa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="eBD-Id-eqf"/>
+                <constraint firstItem="Ry4-bz-xcA" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" constant="-40" id="mXx-XD-gwM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>

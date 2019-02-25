@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IntroViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="contentTextview" destination="D4g-XW-PG0" id="ppy-nS-YS4"/>
+                <outlet property="headingLabel" destination="GIC-4o-6XR" id="dbs-vv-aK0"/>
+                <outlet property="nextButton" destination="Z5Z-U1-8N0" id="b4D-6b-rk1"/>
+                <outlet property="subheadingLabel" destination="QP4-b1-t95" id="ige-ps-8nK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Esb-3J-cVZ">
+                    <rect key="frame" x="0.0" y="97" width="375" height="647"/>
+                    <subviews>
+                        <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Mk7-hK-GUr">
+                            <rect key="frame" x="32" y="-42" width="311" height="50"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6ix-QI-5UQ">
+                                    <rect key="frame" x="130.5" y="0.0" width="50" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="2EG-m2-7H2"/>
+                                        <constraint firstAttribute="width" constant="50" id="atP-37-3fE"/>
+                                    </constraints>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-15-iz0">
+                            <rect key="frame" x="32" y="8" width="311" height="67"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIC-4o-6XR" customClass="ACLabel" customModule="ArcUIKit">
+                                    <rect key="frame" x="0.0" y="0.0" width="311" height="50"/>
+                                    <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="22.5"/>
+                                    <color key="textColor" name="Secondary Text"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                            <integer key="value" value="4"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WeC-WD-2RT">
+                                    <rect key="frame" x="0.0" y="58" width="311" height="1"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="pMy-kk-Qq6"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP4-b1-t95" customClass="ACLabel" customModule="ArcUIKit">
+                                    <rect key="frame" x="0.0" y="67" width="311" height="0.0"/>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="26"/>
+                                    <color key="textColor" name="Secondary Text"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                            <integer key="value" value="3"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D4g-XW-PG0" customClass="ACTextView" customModule="ArcUIKit">
+                            <rect key="frame" x="32" y="95" width="311" height="460"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="Secondary Text"/>
+                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="styleId">
+                                    <integer key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </textView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bzq-rK-vvg">
+                            <rect key="frame" x="32" y="575" width="311" height="64"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z5Z-U1-8N0" customClass="ACButton" customModule="ArcUIKit">
+                                    <rect key="frame" x="47.5" y="0.0" width="216" height="48"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="999" constant="48" id="XdN-h7-1hL"/>
+                                        <constraint firstAttribute="width" constant="216" id="aBc-pM-EC1"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                    <state key="normal" title="NEXT">
+                                        <color key="titleColor" name="Primary"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                                            <color key="value" name="Secondary"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                                            <color key="value" name="Secondary Gradient"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="nextButtonPressed:" destination="-1" eventType="touchUpInside" id="LXj-Zd-SO0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="16" right="0.0"/>
+                        </stackView>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="32" bottom="8" trailing="32"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" name="Primary"/>
+            <constraints>
+                <constraint firstItem="Esb-3J-cVZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BJl-a6-0ji"/>
+                <constraint firstItem="Esb-3J-cVZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Det-n9-qU5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Esb-3J-cVZ" secondAttribute="trailing" id="e0h-YT-Rnf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Esb-3J-cVZ" secondAttribute="bottom" id="vYT-yN-yhf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.37254901960784315" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Gradient">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
