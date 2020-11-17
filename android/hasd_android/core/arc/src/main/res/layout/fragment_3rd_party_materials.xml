@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/secondary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1"
+                android:background="@drawable/background_back_button"
+                android:drawableLeft="@drawable/ic_arrow_left_white"
+                android:drawablePadding="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="Back"
+                android:textAllCaps="true"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                android:textColor="@color/white"
+                android:textSize="14dp"
+                android:visibility="visible"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/textViewMainHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:text="This application uses the following 3rd Party materials:"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHeader13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="25dp"
+                android:text="The ARC open source code and all open source 3rd Parties used by the ARC open source code in accordance with the ARC User Agreement and as posted in GitHub. "
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:autoLink="web"
+                android:lineSpacingExtra="3dp"
+                android:linksClickable="true"
+                android:paddingTop="16dp"
+                android:paddingBottom="0dp"
+                android:text="The ARC Open Source Code can be found at: https://github.com/jasonhass/Ambulatory-Research-in-Cognition"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="16dp"
+                android:text="The ARC User Agreement is described as the following:"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/textViewHeader14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="25dp"
+                android:text="User Agreement for Open-Source Software"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader23"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="16dp"
+                android:singleLine="false"
+				android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="This is a user agreement (&quot;Agreement&quot;) between You and The Washington University (&quot;WU&quot;) and governs Your use of the computer code provided here (the &quot;Software&quot;).  &quot;You&quot; and &quot;Your&quot; means the individual or legal entity licensing the Software under this Agreement." />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9dp"
+                    android:paddingTop="16dp"
+                    android:text="1."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="16dp"
+                    android:text="WU hereby grants to You a non-exclusive, royalty-free license to use, copy, modify, merge, publish, and distribute the computer code provided here (the &quot;Software&quot;).  This license does not grant any rights or licenses to any other patents, copyrights, or other forms of intellectual property owned or controlled by WU. You agree to acknowledge the Software and its creators in all written publications concerning the use of the Software. You agree to include this Agreement and the copyright notice below in all copies or substantial portions of the Software."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/textViewSubHeader24"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:autoText="false"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="16dp"
+                android:singleLine="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text="Copyright (c) 2017 Washington University in St. Louis\n\nCreated by: Jason J. Hassenstab, PhD" />
+                
+			<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9dp"
+                    android:paddingTop="16dp"
+                    android:text="2."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="16dp"
+                    android:text="YOU AGREE THAT THE SOFTWARE PROVIDED HEREUNDER IS EXPERIMENTAL AND IS PROVIDED &quot;AS IS&quot;, WITHOUT ANY WARRANTY OF ANY KIND, EXPRESSED OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY OR FITNESS FOR ANY PARTICULAR PURPOSE, OR NON-INFRINGEMENT OF ANY THIRD-PARTY PATENT, COPYRIGHT, OR ANY OTHER THIRD-PARTY RIGHT. IN NO EVENT SHALL THE CREATORS OF THE SOFTWARE OR WU BE LIABLE FOR ANY DIRECT, INDIRECT, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING OUT OF OR IN ANY WAY CONNECTED WITH THE SOFTWARE, THE USE OF THE SOFTWARE, OR THIS AGREEMENT, WHETHER IN BREACH OF CONTRACT, TORT OR OTHERWISE, EVEN IF SUCH PARTY IS ADVISED OF THE POSSIBILITY OF SUCH DAMAGES."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </TableRow>
+            
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9dp"
+                    android:paddingTop="16dp"
+                    android:text="3."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="16dp"
+                    android:text="Except to the extent prohibited by law, You agree to indemnify, defend, reimburse and hold harmless WU, WU personnel, WU’s Affiliates, and each of their respective trustees, faculty, staff, employees, students, directors, officers, agents, successors and assigns (altogether the &quot;WU Indemnitees&quot;) from, for and against any and all judgments, settlements, losses, expenses, damages and/or liabilities and any and all court costs, attorneys’ fees, and expert witness fees and expenses that a WU Indemnitee may incur from any and all allegations, claims, suits, actions or proceedings (the &quot;Claims&quot;) arising out of, relating to, or incidental to Your breach of this Agreement or Your use, development, commercialization, or other exploitation of the Software, whether by or through You, and including all Claims for infringement, injury to business, personal injury, and product liability.  The obligations set forth in this Section shall survive termination of this Agreement, shall continue even after assignment of rights and responsibilities, and shall not be limited by any provision of this Agreement outside this Section."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </TableRow>
+            
+			<TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="9dp"
+                    android:paddingTop="16dp"
+                    android:text="4."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="3dp"
+                    android:paddingTop="16dp"
+                    android:text="You may not use the trademarks or name of WU for any commercial, advertisement, or promotional purposes without the prior consent of WU."
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TextView
+                android:id="@+id/textViewHeader15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="25dp"
+                android:text="The microMCTQ 3rd Party Copyrighted Material "
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_weight="1"
+                android:lineSpacingExtra="3dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="45dp"
+                android:text="The microMCTQ is an ultra-short version of the Munich Chronotype Questionnaire, and the copyright belongs to the author Dr. Till Roenneberg."
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

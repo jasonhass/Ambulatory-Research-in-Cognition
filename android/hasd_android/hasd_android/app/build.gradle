@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+def versionMajor = 1 // max=2000 // bump to mark substantial changes
+def versionMinor = 0 // max=99   // bump for small changes (features, changes in intended behavior, etc)
+def versionPatch = 7 // max=99   // bump for fixes (crashes, unintended behavior, etc)
+def versionBuild = 0 // max=99   // bump for qa builds
+
+def flavor = getGradle().getStartParameter().getTaskRequests().toString().toLowerCase()
+
+android {
+
+    compileSdkVersion 28
+    flavorDimensions "default"
+    defaultConfig {
+        minSdkVersion 23
+        applicationId 'com.healthymedium.hasd'
+        targetSdkVersion 28
+        versionCode versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        prod {
+            resValue "string", "app_name", "MAP ARC"
+        }
+        qa {
+            resValue "string", "app_name", "MAP ARC QA"
+            applicationIdSuffix '.qa'
+        }
+        dev {
+            resValue "string", "app_name", "MAP ARC DEV"
+            applicationIdSuffix '.dev'
+        }
+    }
+}
+
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'joda-time:joda-time:2.9.9'
+
+    implementation project(':arc')
+    testImplementation project(':test_suite')
+    androidTestImplementation project(':test_suite')
+
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+}

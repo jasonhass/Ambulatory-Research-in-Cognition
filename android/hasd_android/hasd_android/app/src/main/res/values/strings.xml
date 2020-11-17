@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+	<string name="gen_welcome_key">Welcome to the &lt;b>MAP App&lt;/b></string>
+	<string name="login_enter_raterID">Please enter your\n &lt;b>Rater ID&lt;/b> below.</string>
+	<string name="login_enter_ARCID">Please enter your\n&lt;b>ARC ID&lt;/b> below.</string>
+	<string name="login_confirm_ARCID">To confirm, please\n&lt;b>re-enter your ARC ID&lt;/b>.</string>
+	<string name="onboarding_header">What to Expect</string>
+	<string name="onboarding_body">Every six months, you will be asked to complete &lt;b>one week&lt;/b> of cognitive tests. During the week, you will be reminded &lt;b>4 times a day&lt;/b> to complete tests within the app. You may be in the study for as long as &lt;b>5 years&lt;/b> (10 weeks of testing).</string>
+	<string name="contact_call1">I would like to &lt;b>call&lt;/b> my study coordinator.</string>
+	<string name="contact_call2">+1-314-584-0560</string>
+	<string name="contact_email2">map.arc@wustl.edu</string>
+	<string name="about_body">The Ambulatory Research in Cognition (ARC) app was designed by the Cognitive Technology Research Laboratory in the Department of Neurology at Washington University in St. Louis for participants enrolled in the Memory and Aging Project. The ARC app assesses cognition using frequently administered but brief cognitive tests. This app is intended for use only by participants enrolled in the Memory and Aging Project studies.</string>
+	<string name="faq_tech_a7">You may see this message appear during a test session: “Please close other apps to improve performance.” This may mean your device is not capable of running other apps at the same time as ARC. For the best performance, please close other apps before starting a test session.</string>
+	<string name="faq_earnings_a3">Payments can come in the form of a check, physical gift card, or electronic gift card. You will be paid via the option you chose when enrolling in the study. Contact your coordinator if you have any specific questions.</string>
+	<string name="faq_earnings_a4">\"This week\" refers to the amount of money you have earned during the current testing cycle. \"Study total\" refers to the cumulative amount of money you have earned from all testing cycles, including the current one.</string>
+	<string name="earnings_body0">&lt;b>Starting tomorrow&lt;/b>, you will earn small amounts of money for completing test sessions.&lt;br />&lt;br />You will receive a &lt;b>Gift Card&lt;/b> for the earned amount after each week of testing.</string>
+	<string name="earnings_body1">You will receive a &lt;b>Gift Card&lt;/b> for the earned amount after each week of testing.</string>
+	<string name="prices_body">Please memorize the displayed&lt;br >items and their prices.&lt;br >&lt;br >The pair will only remain on the screen for a short time, so please pay close attention.</string>
+	<string name="login_error4">Non-matching ARC ID</string>
+	<string name="popup_tutorial_welcome">&lt;b>Welcome to the tutorial!&lt;/b> This progress bar shows how much of the tutorial you\'ve completed.</string>
+	<string name="popup_tutorial_price_intro">&lt;b>Memorize the displayed&lt;br>items and their prices.&lt;/b> &lt;br>You will have 3 seconds&lt;br>per item.</string>
+	<string name="popup_tutorial_price_memorize">Tap the price that was shown in part one.</string>
+	<string name="prices_tutorial_item1">Bananas</string>
+	<string name="prices_tutorial_price1">3.27</string>
+	<string name="prices_tutorial_price1_match">6.78</string>
+	<string name="prices_tutorial_item2">Soup</string>
+	<string name="prices_tutorial_price2">4.01</string>
+	<string name="prices_tutorial_price2_match">10.82</string>
+	<string name="prices_tutorial_item3">Dental floss</string>
+	<string name="prices_tutorial_price3">7.63</string>
+	<string name="prices_tutorial_price3_match">2.33</string>
+	<string name="popup_tutorial_recall">Tap the price that was &lt;br/>shown in part one.</string>
+	<string name="popup_tutorial_pricetap">This was the price from part one.</string>
+	<string name="popup_tutorial_onemore">&lt;b>Nice!&lt;/b> &lt;br /> One more&#8230;</string>
+	<string name="checkbox_commit">I understand</string>
+</resources>

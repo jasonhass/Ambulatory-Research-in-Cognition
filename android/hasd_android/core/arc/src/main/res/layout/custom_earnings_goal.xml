@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthymedium.arc.ui.base.RoundedLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:orientation="vertical"
+    app:fillColor="@color/white"
+    app:radiusBottomLeft="8dp"
+    app:radiusBottomRight="8dp"
+    app:radiusTopLeft="8dp"
+    app:radiusTopRight="8dp">
+
+    <com.healthymedium.arc.ui.base.RoundedLinearLayout
+        android:id="@+id/linearLayoutHeader"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:fillColor="@color/earningsGoalHeaderBackground"
+        app:radiusBottomLeft="0dp"
+        app:radiusBottomRight="0dp"
+        app:radiusTopLeft="8dp"
+        app:radiusTopRight="8dp">
+
+        <TextView
+            android:id="@+id/textViewHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="8dp"
+            android:textColor="@color/secondaryDark"
+            android:textSize="20dp"
+            tools:text="4 Out Of 4" />
+
+        <com.healthymedium.arc.ui.base.RoundedFrameLayout
+            android:id="@+id/frameLayoutDone"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:visibility="invisible"
+            app:fillColor="@color/hintDark"
+            app:radius="8dp">
+
+            <TextView
+                android:id="@+id/textViewDone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/status_done"
+                android:textColor="@color/secondaryDark"
+                android:textSize="16dp" />
+
+        </com.healthymedium.arc.ui.base.RoundedFrameLayout>
+
+
+    </com.healthymedium.arc.ui.base.RoundedLinearLayout>
+
+    <com.healthymedium.arc.ui.base.RoundedLinearLayout
+        android:id="@+id/linearLayoutBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingTop="12dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        app:fillColor="@color/white"
+        app:radiusBottomLeft="8dp"
+        app:radiusBottomRight="8dp"
+        app:radiusTopLeft="0dp"
+        app:radiusTopRight="0dp">
+
+        <TextView
+            android:id="@+id/textViewBody"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:textColor="@color/secondaryDark"
+            android:textSize="17dp"
+            tools:text="Complete all 4 test sessions for the day to earn $1.00." />
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal" />
+
+        <com.healthymedium.arc.ui.base.RoundedLinearLayout
+            android:id="@+id/bonusView"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            app:dashLength="6dp"
+            app:dashSpacing="6dp"
+            app:radius="6dp"
+            app:strokeColor="@color/unearnedGray"
+            app:strokeWidth="2dp">
+
+
+            <TextView
+                android:id="@+id/bonusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/unearnedGray"
+                android:textSize="16dp"
+                tools:text="$6.00 Bonus" />
+
+
+        </com.healthymedium.arc.ui.base.RoundedLinearLayout>
+
+    </com.healthymedium.arc.ui.base.RoundedLinearLayout>
+
+</com.healthymedium.arc.ui.base.RoundedLinearLayout>
+

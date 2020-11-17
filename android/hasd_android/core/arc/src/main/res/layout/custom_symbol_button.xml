@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthymedium.arc.ui.base.RoundedLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    app:radius="8dp"
+    app:gradient="linearVertical"
+    app:gradientColor0="@color/white"
+    app:gradientColor1="@color/symbolsOffWhite"
+    app:strokeColor="@color/headerGrey"
+    app:strokeWidth="1dp">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/symbolTop"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="14dp"
+        android:adjustViewBounds="true"
+        android:clipToPadding="true"
+        android:scaleType="fitXY"
+        android:tint="@color/text"
+        tools:srcCompat="@drawable/ic_audiotrack_dark" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/symbolBottom"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="14dp"
+        android:adjustViewBounds="true"
+        android:clipToPadding="true"
+        android:scaleType="fitXY"
+        android:tint="@color/text"
+        tools:srcCompat="@drawable/ic_audiotrack_dark" />
+
+</com.healthymedium.arc.ui.base.RoundedLinearLayout>

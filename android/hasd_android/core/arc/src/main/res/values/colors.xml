@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- these are thematic colors, they can change fairly widely between applications -->
+    <color name="primary">#005781</color>
+
+    <color name="secondary">#0b1f55</color>
+    <color name="secondaryDark">#04102e</color>
+    <color name="secondaryAccent">#67c8C7</color>
+
+    <color name="accent">#40066187</color>
+    <color name="light">#1a066187</color>
+    <color name="splash">#066187</color>
+    <color name="faded">#bfd4df</color>
+
+    <!-- these are content specific colors -->
+    <color name="primaryButtonLight">#007cad</color>
+    <color name="primaryButtonDark">#005f85</color>
+    <color name="whiteButtonLight">#f4f4f4</color>
+    <color name="whiteButtonDark">#dadada</color>
+    <color name="whiteButtonSelected">#e7e7e7</color>
+    <color name="blackButtonLight">#323232</color>
+    <color name="blackButtonDark">#212121</color>
+    <color name="blackButtonSelected">#222222</color>
+
+    <color name="gridNormal">#40066187</color>
+    <color name="gridSelected">#066187</color>
+
+    <color name="grid2NormalBorder">#858D91</color>
+    <color name="grid2Selected">#FFFFFF</color>
+    <color name="grid2SelectedBorder">#005781</color>
+    <color name="grid2Letter">#005F85</color>
+
+    <color name="gridOptionBackground">#f3f3f3</color>
+    <color name="gridOptionBorder">#c8c8C9</color>
+    <color name="infoBackButtonBackground">#2e406e</color>
+    <color name="btnBorderUnselected">#bfd4df</color>
+    <color name="tealSubheader">#66c8c7</color>
+    <color name="hintLight">#fdde82</color>
+    <color name="hintDark">#f8be15</color>
+    <color name="shadow">#cc000000</color>
+    <color name="earnedGradientLight">#ffeaab</color>
+    <color name="unearnedGray">#b3b3b3</color>
+    <color name="weekProgressBorder">#979797</color>
+    <color name="weekProgressFill">#005781</color>
+    <color name="sessionProgressBackground">#66c8c7</color>
+    <color name="progressWeekBackground">#e1f4f4</color>
+    <color name="earningsDetailsBlue">#13275b</color>
+    <color name="earningsGoalHeaderBackground">#3367C8C7</color>
+    <color name="symbolsGreyBackground">#ededef</color>
+    <color name="symbolsOffWhite">#f3f3f3</color>
+
+    <!-- these are discrete colors, they should be close no matter the application -->
+    <color name="transparent">#00000001</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#d1d1d1</color>
+    <color name="darkGrey">#898989</color>
+    <color name="headerGrey">#6d6d6d</color>
+    <color name="text">#3c3c3d</color>
+    <color name="red">#990000</color>
+    <color name="yellow">#f8be13</color>
+</resources>

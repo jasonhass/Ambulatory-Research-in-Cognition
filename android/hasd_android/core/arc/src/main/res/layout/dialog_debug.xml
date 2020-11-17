@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <com.healthymedium.arc.ui.base.RoundedLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_alignParentTop="true"
+        app:gradient="linearVertical"
+        app:gradientColor0="@color/white"
+        app:gradientColor1="@color/transparent" />
+
+    <ScrollView
+        android:id="@+id/scrollViewStatus"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button"
+        android:elevation="-2dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp" >
+
+            <TextView
+                android:id="@+id/textviewStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:text="status:" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/scrollViewOptions"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button"
+        android:visibility="invisible"
+        android:paddingTop="32dp"
+        android:elevation="-2dp"
+        android:alpha="0.0"
+        tools:visibility="visible"
+        tools:alpha="1.0" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/white" >
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Open DateTime Settings"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp"/>
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewBatteryOptimization"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Open Battery Optimization Settings"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp" />
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewClearAppData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Clear App Data"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp"/>
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewLocale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Switch Locale"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp"/>
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewSendLogs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Send Logs to Analytics"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp"/>
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewSendState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Send State to Analytics"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp"/>
+
+            <com.healthymedium.arc.ui.base.RoundedTextView
+                android:id="@+id/textViewDeviation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:padding="16dp"
+                android:text="Mock Proctor Deviation"
+                android:textColor="@color/secondaryDark"
+                android:textStyle="bold"
+                android:elevation="2dp"
+                app:fillColor="@color/whiteButtonLight"
+                app:radius="16dp" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.healthymedium.arc.ui.base.RoundedLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_above="@id/button"
+        app:gradient="linearVertical"
+        app:gradientColor0="@color/transparent"
+        app:gradientColor1="@color/white" />
+
+    <com.healthymedium.arc.ui.Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/view"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:text="View Debug Options"
+        app:buttonTheme="dark"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>

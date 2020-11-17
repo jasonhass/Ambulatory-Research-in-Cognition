@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@android:style/Theme.Dialog"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="18dp"
+    android:paddingBottom="2dp">
+
+    <TextView
+        android:id="@+id/textViewGridDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_gravity="center"
+        android:textColor="@color/text"
+        android:gravity="center"
+        android:text="Select the item that was here"
+        android:textSize="17dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingTop="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:clipChildren="false">
+
+        <com.healthymedium.arc.ui.Grid2ChoiceView
+            android:id="@+id/phone"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp" />
+
+        <com.healthymedium.arc.ui.Grid2ChoiceView
+            android:id="@+id/key"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="16dp" />
+
+        <com.healthymedium.arc.ui.Grid2ChoiceView
+            android:id="@+id/pen"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="80dp" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gridOptionBorder"
+        android:visibility="gone"/>
+
+    <TextView
+        android:id="@+id/textViewRemoveItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="12dp"
+        android:paddingTop="12dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Remove Item"
+        android:textAlignment="center"
+        android:textColor="@color/text"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
+
+</LinearLayout>

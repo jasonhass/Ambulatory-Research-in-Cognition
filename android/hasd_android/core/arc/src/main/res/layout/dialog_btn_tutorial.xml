@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_yellow_bubble"
+    android:orientation="vertical" >
+
+    <TextView
+            android:id="@+id/dialogBtnTutorialHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Great job!" />
+
+    <TextView
+        android:id="@+id/dialogBtnTutorialBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dialogBtnTutorialHeader"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Let's try a couple more for practice." />
+
+    <FrameLayout
+            android:id="@+id/lineFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@+id/dialogBtnTutorialBody"
+            android:background="#f8be14">
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/lineFrameLayout"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="Next"/>
+
+</RelativeLayout>

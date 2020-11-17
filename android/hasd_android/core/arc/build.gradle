@@ -1,0 +1,63 @@
+apply plugin: 'com.android.library'
+
+def versionMajor = 3 // max=2000 // bump to mark substantial changes
+def versionMinor = 1 // max=99   // bump for small changes (features, changes in intended behavior, etc)
+def versionPatch = 0 // max=99   // bump for fixes (crashes, unintended behavior, etc)
+def versionBuild = 0 // max=99   // bump for qa builds
+
+def flavor = getGradle().getStartParameter().getTaskRequests().toString().toLowerCase()
+
+android {
+
+    compileSdkVersion 28
+    flavorDimensions "default"
+
+    defaultConfig {
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.session.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        prod {
+
+        }
+        qa {
+
+        }
+        dev {
+
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.github.gcacace:signature-pad:1.2.1'
+
+//    testImplementation project(':test_data')
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'joda-time:joda-time:2.9.9'
+
+    implementation "android.arch.lifecycle:extensions:1.1.0"
+    api 'com.android.support:appcompat-v7:28.0.0'
+    api 'com.android.support:support-v4:28.0.0'
+    api 'com.android.support:mediarouter-v7:28.0.0'
+    api 'com.android.support:design:28.0.0'
+    api 'net.danlew:android.joda:2.9.9'
+    api 'com.squareup.retrofit2:converter-gson:2.5.0'
+    api 'com.squareup.retrofit2:retrofit:2.5.0'
+
+}

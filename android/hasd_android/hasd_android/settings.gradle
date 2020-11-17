@@ -1,0 +1,4 @@
+include ':app', ':arc', ':test_suite', ':translation_tool'
+project(':arc').projectDir = new File('../core/arc')
+project(':test_suite').projectDir = new File('../core/test_suite')
+project(':translation_tool').projectDir = new File('../core/translation_tool')
