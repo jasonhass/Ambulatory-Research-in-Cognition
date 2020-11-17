@@ -1,0 +1,40 @@
+{
+  "instructions": [
+    
+  ],
+  "questions": [
+    {
+      "answers": [
+        {
+          "answerId": "1_a",
+          "value": "Australia - English"
+        },
+        {
+          "answerId": "1_c",
+          "value": "Canada - English"
+        },
+        {
+          "answerId": "1_i",
+          "value": "Canada - Français"
+        },
+        {
+          "answerId": "1_d",
+          "value": "US - English"
+        },
+        {
+          "answerId": "1_e",
+          "value": "US - Español"
+        },
+        {
+          "answerId": "1_f",
+          "value": "UK - English"
+        }
+      ],
+      "nextButtonTitle": "button_confirm",
+      "prompt": "language_prefer",
+      "questionId": "ac_language_1",
+      "type": "choice"
+    }
+  ],
+  "type": "language"
+}

@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EXContactViewController" customModule="MAP_ARC" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="hfB-OH-UXp" id="cOf-Mz-wAd"/>
+                <outlet property="callButton" destination="IR2-8Z-TKS" id="GCb-4F-68e"/>
+                <outlet property="emailButton" destination="r0b-Y3-I8r" id="a6i-PO-BQ5"/>
+                <outlet property="emailLabel" destination="p8p-sg-Qa1" id="a2z-pb-4eg"/>
+                <outlet property="phoneLabel" destination="pxI-de-uSA" id="y5z-NY-oPF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-OH-UXp" customClass="HMMarkupButton" customModule="HMMarkup">
+                    <rect key="frame" x="8" y="0.0" width="72" height="32"/>
+                    <color key="backgroundColor" white="1" alpha="0.14701947773972604" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="8" maxX="15" maxY="8"/>
+                    <inset key="imageEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="BACK" image="cut-ups/icons/arrow_left_white">
+                        <color key="titleColor" name="Secondary Text"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_back"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="Bwf-EL-Xhz"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to call my study coordinator." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPb-th-cxh" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="24" y="49" width="272" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="qsP-27-B7F"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                    <color key="textColor" name="Secondary Text"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="contact_call1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555-555-5555" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-de-uSA" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="56" y="126" width="240" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="MIU-AL-nvu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                    <color key="textColor" name="Secondary Text"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="contact_call2"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/phone-handset-solid" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-hP-8BO">
+                    <rect key="frame" x="24" y="126" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="JgR-ea-TcQ"/>
+                        <constraint firstAttribute="width" constant="24" id="oTF-uO-GOz"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR2-8Z-TKS" customClass="ACButton" customModule="ArcUIKit">
+                    <rect key="frame" x="32" y="166" width="256" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="dan-Jo-Wjs"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="CALL">
+                        <color key="titleColor" red="0.02" green="0.059999999999999998" blue="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                            <color key="value" name="Secondary"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                            <color key="value" name="Secondary Gradient"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_call"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                            <color key="value" name="SecondaryInnerTop"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                            <color key="value" name="SecondaryInnerBottom"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="callPressed:" destination="-1" eventType="touchUpInside" id="fNf-Jr-zXO"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAK-Z4-BXG" userLabel="separator">
+                    <rect key="frame" x="0.0" y="250" width="320" height="1"/>
+                    <color key="backgroundColor" name="Resources Separator"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="RZ1-Bw-8hm"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sample@email.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8p-sg-Qa1" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="56" y="352" width="264" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="sYk-8Q-xdo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                    <color key="textColor" name="Secondary Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/email-solid" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-5W-zYm">
+                    <rect key="frame" x="24" y="352" width="24" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="WsZ-yu-bNY"/>
+                        <constraint firstAttribute="width" constant="24" id="mbN-oP-NXt"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Y3-I8r" customClass="ACButton" customModule="ArcUIKit">
+                    <rect key="frame" x="32" y="392" width="256" height="48"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="DCv-bI-fxV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="EMAIL">
+                        <color key="titleColor" red="0.02" green="0.059999999999999998" blue="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                            <color key="value" name="Secondary"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                            <color key="value" name="Secondary Gradient"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_email"/>
+                        <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                            <color key="value" name="SecondaryInnerTop"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                            <color key="value" name="SecondaryInnerBottom"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="emailPressed:" destination="-1" eventType="touchUpInside" id="pbz-z8-4lP"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to email my study coordinator." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-M8-bHI" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="24" y="275" width="272" height="61"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="FmU-hb-NI9"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                    <color key="textColor" name="Secondary Text"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="contact_email1"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="Primary Info"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tAK-Z4-BXG" secondAttribute="trailing" id="032-e3-jFz"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="p8p-sg-Qa1" secondAttribute="trailing" id="1aI-TQ-B1q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pxI-de-uSA" secondAttribute="trailing" constant="24" id="1rH-tw-pq7"/>
+                <constraint firstItem="IR2-8Z-TKS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="3el-Rd-Md9"/>
+                <constraint firstItem="KPb-th-cxh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="6TF-L3-3xp"/>
+                <constraint firstItem="hfB-OH-UXp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Ni-B5-GZ0"/>
+                <constraint firstItem="BAw-5W-zYm" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="7tE-dj-7i8"/>
+                <constraint firstItem="hfB-OH-UXp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="B9a-Wd-TaW"/>
+                <constraint firstItem="pxI-de-uSA" firstAttribute="top" secondItem="KPb-th-cxh" secondAttribute="bottom" constant="16" id="DpJ-3r-djW"/>
+                <constraint firstItem="IR2-8Z-TKS" firstAttribute="top" secondItem="pxI-de-uSA" secondAttribute="bottom" constant="16" id="GeM-LD-SgO"/>
+                <constraint firstItem="r0b-Y3-I8r" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="32" id="IKc-9p-wS0"/>
+                <constraint firstItem="tAK-Z4-BXG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IYp-WF-jYC"/>
+                <constraint firstItem="gO3-hP-8BO" firstAttribute="top" secondItem="KPb-th-cxh" secondAttribute="bottom" constant="16" id="Id7-sC-LhK"/>
+                <constraint firstItem="uwq-M8-bHI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="LVv-0P-tin"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="KPb-th-cxh" secondAttribute="trailing" constant="24" id="OeC-ra-cKj"/>
+                <constraint firstItem="r0b-Y3-I8r" firstAttribute="top" secondItem="p8p-sg-Qa1" secondAttribute="bottom" constant="16" id="PAm-7f-Vza"/>
+                <constraint firstItem="tAK-Z4-BXG" firstAttribute="top" secondItem="IR2-8Z-TKS" secondAttribute="bottom" constant="36" id="PGv-Kh-4Wo"/>
+                <constraint firstItem="uwq-M8-bHI" firstAttribute="top" secondItem="tAK-Z4-BXG" secondAttribute="bottom" constant="24" id="TLR-5e-BGt"/>
+                <constraint firstItem="BAw-5W-zYm" firstAttribute="top" secondItem="uwq-M8-bHI" secondAttribute="bottom" constant="16" id="Yvu-Cc-sz3"/>
+                <constraint firstItem="p8p-sg-Qa1" firstAttribute="leading" secondItem="BAw-5W-zYm" secondAttribute="trailing" constant="8" id="bwD-1M-d22"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="IR2-8Z-TKS" secondAttribute="trailing" constant="32" id="ehZ-4H-7cl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uwq-M8-bHI" secondAttribute="trailing" constant="24" id="jE4-pf-lbs"/>
+                <constraint firstItem="pxI-de-uSA" firstAttribute="leading" secondItem="gO3-hP-8BO" secondAttribute="trailing" constant="8" id="kDD-g3-ol6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="r0b-Y3-I8r" secondAttribute="trailing" constant="32" id="lfJ-I4-pfl"/>
+                <constraint firstItem="KPb-th-cxh" firstAttribute="top" secondItem="hfB-OH-UXp" secondAttribute="bottom" constant="16" id="mQR-Uw-MhF"/>
+                <constraint firstItem="gO3-hP-8BO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="pnQ-lv-PVd"/>
+                <constraint firstItem="p8p-sg-Qa1" firstAttribute="top" secondItem="uwq-M8-bHI" secondAttribute="bottom" constant="16" id="zmr-rW-BnQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138.75" y="153.16901408450704"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cut-ups/icons/arrow_left_white" width="16" height="16"/>
+        <image name="cut-ups/icons/email-solid" width="48" height="48"/>
+        <image name="cut-ups/icons/phone-handset-solid" width="72" height="72"/>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Resources Separator">
+            <color red="0.12999999523162842" green="0.20000000298023224" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary">
+            <color red="0.95686274509803926" green="0.95686274509803926" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Gradient">
+            <color red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryInnerBottom">
+            <color red="0.52941176470588236" green="0.52941176470588236" blue="0.52941176470588236" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="SecondaryInnerTop">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

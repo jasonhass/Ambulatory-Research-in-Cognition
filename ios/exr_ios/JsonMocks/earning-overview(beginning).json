@@ -1,0 +1,52 @@
+{
+  "response": {
+    "success": true,
+    "earnings": {
+      "total_earnings": "$0.00",
+      "cycle": 0,
+      "day": 0,
+      "cycle_earnings": "$0.00",
+      "goals": [
+        {
+          "name": "21-sessions",
+          "value": "$5.00",
+          "progress": 0,
+          "amount_earned": "$0.00",
+          "completed": false,
+          "completed_on": null,
+          "progress_components": [
+            0
+          ]
+        },
+        {
+          "name": "2-a-day",
+          "value": "$6.00",
+          "progress": 0,
+          "amount_earned": "$0.00",
+          "completed": false,
+          "completed_on": null,
+          "progress_components": [
+            0
+          ]
+        },
+        {
+          "name": "4-out-of-4",
+          "value": "$1.00",
+          "progress": 0,
+          "amount_earned": "$0.00",
+          "completed": false,
+          "completed_on": null,
+          "progress_components": [
+            0
+          ]
+        }
+      ],
+      "new_achievements": [
+        
+      ]
+    }
+  },
+  "errors": {
+    
+  }
+}

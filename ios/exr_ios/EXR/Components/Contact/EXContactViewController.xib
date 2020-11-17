@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EXContactViewController" customModule="EXR" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="hfB-OH-UXp" id="cOf-Mz-wAd"/>
+                <outlet property="callButton" destination="IR2-8Z-TKS" id="GCb-4F-68e"/>
+                <outlet property="emailButton" destination="r0b-Y3-I8r" id="a6i-PO-BQ5"/>
+                <outlet property="emailLabel" destination="p8p-sg-Qa1" id="a2z-pb-4eg"/>
+                <outlet property="phoneLabel" destination="pxI-de-uSA" id="y5z-NY-oPF"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfB-OH-UXp" customClass="HMMarkupButton" customModule="HMMarkup">
+                    <rect key="frame" x="8" y="0.0" width="104" height="33"/>
+                    <color key="backgroundColor" white="1" alpha="0.14701947773972604" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="8" maxX="15" maxY="8"/>
+                    <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="BACK" image="cut-ups/icons/arrow_left_white">
+                        <color key="titleColor" name="Secondary Text"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_back"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="Bwf-EL-Xhz"/>
+                    </connections>
+                </button>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-wA-hYI">
+                    <rect key="frame" x="0.0" y="41" width="320" height="527"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="ePW-NY-Ku7">
+                            <rect key="frame" x="-20" y="8" width="320" height="481.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Mgj-CA-aCF">
+                                    <rect key="frame" x="24" y="8" width="272" height="106"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to call my study coordinator." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KPb-th-cxh" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                            <rect key="frame" x="0.0" y="0.0" width="272" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="qsP-27-B7F"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                                            <color key="textColor" name="Secondary Text"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="contact_call1"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tMZ-TW-5gJ">
+                                            <rect key="frame" x="0.0" y="82" width="272" height="24"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/phone-handset-solid" translatesAutoresizingMaskIntoConstraints="NO" id="gO3-hP-8BO">
+                                                    <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="JgR-ea-TcQ"/>
+                                                        <constraint firstAttribute="width" constant="24" id="oTF-uO-GOz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="755" text="555-555-5555" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxI-de-uSA" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                                    <rect key="frame" x="32" y="0.0" width="240" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="MIU-AL-nvu"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" priority="995" constant="250" id="NjR-OP-Dyj"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                    <color key="textColor" name="Secondary Text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-LO-rng">
+                                    <rect key="frame" x="24" y="138" width="272" height="64"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IR2-8Z-TKS" customClass="ACButton" customModule="ArcUIKit">
+                                            <rect key="frame" x="8" y="8" width="216" height="48"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="216" id="Gm4-uk-dET"/>
+                                                <constraint firstAttribute="height" constant="48" id="dan-Jo-Wjs"/>
+                                            </constraints>
+                                            <edgeInsets key="layoutMargins" top="8" left="50" bottom="8" right="8"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                            <state key="normal" title="CALL">
+                                                <color key="titleColor" red="0.02" green="0.059999999999999998" blue="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_call"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="callPressed:" destination="-1" eventType="touchUpInside" id="fNf-Jr-zXO"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAK-Z4-BXG" userLabel="separator">
+                                    <rect key="frame" x="24" y="226" width="272" height="1"/>
+                                    <color key="backgroundColor" name="Resources Separator"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="1" id="RZ1-Bw-8hm"/>
+                                    </constraints>
+                                </view>
+                                <stackView opaque="NO" contentMode="scaleToFill" placeholderIntrinsicWidth="infinite" placeholderIntrinsicHeight="134.5" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7xh-a8-Oyd">
+                                    <rect key="frame" x="24" y="251" width="272" height="134.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I would like to email my study coordinator." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwq-M8-bHI" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                            <rect key="frame" x="0.0" y="0.0" width="272" height="66"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="FmU-hb-NI9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                                            <color key="textColor" name="Secondary Text"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="contact_email1"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pqm-Mx-n2M">
+                                            <rect key="frame" x="0.0" y="82" width="272" height="52.5"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/email-solid" translatesAutoresizingMaskIntoConstraints="NO" id="BAw-5W-zYm">
+                                                    <rect key="frame" x="0.0" y="14.5" width="24" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="G4U-pf-Rlk"/>
+                                                        <constraint firstAttribute="width" constant="24" id="LC5-nC-YVr"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="758" placeholderIntrinsicWidth="250" placeholderIntrinsicHeight="24" text="sample@email.com" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p8p-sg-Qa1" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                                    <rect key="frame" x="32" y="14.5" width="240" height="24"/>
+                                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
+                                                    <color key="textColor" name="Secondary Text"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="5eG-qZ-t4H">
+                                    <rect key="frame" x="24" y="409.5" width="272" height="64"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r0b-Y3-I8r" customClass="ACButton" customModule="ArcUIKit">
+                                            <rect key="frame" x="8" y="8" width="216" height="48"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="216" id="98M-Yj-HmP"/>
+                                                <constraint firstAttribute="height" constant="48" id="DCv-bI-fxV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                            <state key="normal" title="EMAIL">
+                                                <color key="titleColor" red="0.02" green="0.059999999999999998" blue="0.17999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                                                    <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="16"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_email"/>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="emailPressed:" destination="-1" eventType="touchUpInside" id="pbz-z8-4lP"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                </stackView>
+                            </subviews>
+                            <edgeInsets key="layoutMargins" top="8" left="24" bottom="8" right="24"/>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ePW-NY-Ku7" secondAttribute="bottom" id="3bQ-Kf-357"/>
+                        <constraint firstItem="ePW-NY-Ku7" firstAttribute="leading" secondItem="5cr-wA-hYI" secondAttribute="leading" id="M6c-AD-xm4"/>
+                        <constraint firstAttribute="trailing" secondItem="ePW-NY-Ku7" secondAttribute="trailing" id="Ofr-ax-hm3"/>
+                        <constraint firstItem="ePW-NY-Ku7" firstAttribute="top" secondItem="5cr-wA-hYI" secondAttribute="top" id="jCV-lT-TvP"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="Primary Info"/>
+            <constraints>
+                <constraint firstItem="5cr-wA-hYI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="48J-HP-HTm"/>
+                <constraint firstItem="hfB-OH-UXp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="7Ni-B5-GZ0"/>
+                <constraint firstItem="hfB-OH-UXp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="8" id="B9a-Wd-TaW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5cr-wA-hYI" secondAttribute="bottom" id="HS1-Cb-xRS"/>
+                <constraint firstItem="5cr-wA-hYI" firstAttribute="top" secondItem="hfB-OH-UXp" secondAttribute="bottom" constant="8" id="Moc-dt-vpm"/>
+                <constraint firstAttribute="trailing" secondItem="5cr-wA-hYI" secondAttribute="trailing" id="SnG-8h-uQt"/>
+                <constraint firstItem="ePW-NY-Ku7" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="gTM-Nu-SeQ"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="136.875" y="153.16901408450704"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cut-ups/icons/arrow_left_white" width="16" height="16"/>
+        <image name="cut-ups/icons/email-solid" width="48" height="48"/>
+        <image name="cut-ups/icons/phone-handset-solid" width="72" height="72"/>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Resources Separator">
+            <color red="0.12999999523162842" green="0.20000000298023224" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

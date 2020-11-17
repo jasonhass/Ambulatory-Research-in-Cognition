@@ -1,0 +1,20 @@
+{
+  "questions" : [
+    {
+      "prompt" : "Please enter your *Rater ID* below",
+      "questionId" : "auth_rater",
+      "type" : "segmentedText"
+    },
+    {
+      "prompt" : "login_enter_ARCID",
+      "questionId" : "auth_arc",
+      "type" : "segmentedText"
+    },
+    {
+      "prompt" : "login_confirm_ARCID",
+      "questionId" : "auth_confirm",
+      "type" : "segmentedText"
+    }
+  ],
+  "type" : "auth"
+}

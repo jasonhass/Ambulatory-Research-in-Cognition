@@ -1,0 +1,12 @@
+{
+  "response": {
+    "success": true,
+    "earnings": {
+      "total_earnings": "$0.00",
+      "cycles": null
+    }
+  },
+  "errors": {
+    
+  }
+}

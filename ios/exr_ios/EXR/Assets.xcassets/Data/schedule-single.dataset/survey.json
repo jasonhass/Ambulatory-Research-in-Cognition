@@ -1,0 +1,27 @@
+{
+
+  "questions" : [
+	  {
+		  "questionId":"start",
+		  "style":"instruction",
+		  "preface" : "setup_avail_body",
+		  "subtitle" : "setup_avail_subheader",
+		  "title" : "setup_avail_header"
+	  }
+	  {
+		  "questionId": "whole_schedule_1",
+		  "prompt": "What time do you usually *wake up*?",
+		  "type": "time",
+		  "nextButtonTitle": "SUBMIT TIME"
+	  },
+	  {
+		  "questionId": "whole_schedule_2",
+		  "prompt": "What time do you usually *go to bed*?",
+		  "type": "time",
+		  "nextButtonTitle": "SUBMIT TIME"
+	  }
+    }
+  ],
+  
+  "type" : "schedule"
+}

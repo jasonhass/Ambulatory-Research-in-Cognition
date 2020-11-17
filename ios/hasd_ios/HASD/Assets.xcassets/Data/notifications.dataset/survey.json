@@ -1,0 +1,32 @@
+{
+	
+  "questions" : [
+	  {
+		  "prompt" : "",
+		  
+		  "style" : "viewController",
+		  "state" : "NotificationAccess",
+		  
+		  "questionId" : "yes_sub_2",
+		  "type" : "none",
+		  "routes" : [
+			  {
+				  "answerId" : null,
+				  "nextQuestionId" : "allow_from_settings",
+				  "operand" : null,
+				  "value" : 0
+			  }
+		  ]
+	  },
+	  {
+		  "nextButtonTitle" : "GO TO SETTINGS",
+		  "prompt" : "Please turn on notifications.",
+		  "detail" : "You must turn on notifications for the study to function properly. Please visit the Settings App, tap  Notifications, then tap HASD and turn on the Allow Notifications switch.",
+		  "style" : "instruction",
+		  
+		  "questionId" : "allow_from_settings",
+		  "type" : "none"
+	  }
+  ],
+  "type" : "auth"
+}

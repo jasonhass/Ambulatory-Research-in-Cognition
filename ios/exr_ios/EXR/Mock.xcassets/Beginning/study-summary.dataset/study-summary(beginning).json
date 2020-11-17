@@ -1,0 +1,14 @@
+{
+  "response": {
+    "success": true,
+    "summary": {
+      "total_earnings": "$0.00",
+      "tests_taken": 1,
+      "days_tested": 1,
+      "goals_met": 0
+    }
+  },
+  "errors": {
+    
+  }
+}

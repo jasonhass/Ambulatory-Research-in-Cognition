@@ -1,0 +1,76 @@
+{
+  "instructions": [
+    
+  ],
+  "questions": [
+    {
+      "answers": [
+        {
+          "answerId": "1_a",
+          "value": "Nederland - Nederlands"
+        },
+        {
+          "answerId": "1_a",
+          "value": "Australia - English"
+        },
+        {
+          "answerId": "1_c",
+          "value": "Canada - English"
+        },
+        {
+          "answerId": "1_d",
+          "value": "Ireland - English"
+        },
+        {
+          "answerId": "1_e",
+          "value": "UK - English"
+        },
+        {
+          "answerId": "1_f",
+          "value": "US - English"
+        },
+        {
+          "answerId": "1_g",
+          "value": "Canada - Français"
+        },
+        {
+          "answerId": "1_h",
+          "value": "France - Français"
+        },
+        {
+          "answerId": "1_i",
+          "value": "Deutschland - Deutsche"
+        },
+        {
+          "answerId": "1_j",
+          "value": "Italia - Italiano"
+        },
+        {
+          "answerId": "1_k",
+          "value": "Argentina - Español"
+        },
+        {
+          "answerId": "1_l",
+          "value": "Mexico - Español"
+        },
+		{
+			"answerId": "1_m",
+			"value": "Columbia - Español"
+		},
+        {
+          "answerId": "1_n",
+          "value": "España - Español"
+        },
+        {
+          "answerId": "1_o",
+          "value": "US - Español"
+        }
+      ],
+      "nextButtonTitle": "button_confirm",
+      "prompt": "key_language",
+      "questionId": "ac_language_1",
+      "type": "choice"
+    }
+  ],
+  "type": "language"
+}

@@ -1,0 +1,38 @@
+{
+  "postSurvey" : [
+    {
+        "nextButtonImage" : "cut-ups/icons/home_active",
+        "nextButtonTitle" : "",
+        
+      "preface" : "thankyou_body3",
+      "subtitle" : "thankyou_finished_subhead3",
+      "title" : "thankyou_header3"
+    }
+  ],
+  "questions" : [
+    {
+      "answers" : [
+        {
+          "answerId" : "1_a",
+          "value" : "radio_yes"
+        },
+        {
+          "answerId" : "1_b",
+          "value" : "radio_no"
+        }
+      ],
+	   "prompt" : "testing_interrupted_header",
+           "subTitle" : "testing_interrupted_body",
+           "questionId" : "finished_1",
+           "altNextButtonTitle" : "button_chooseanswer",
+           "type" : "choice"
+    },
+    {
+		"detail" : "testing_id_body",
+		"prompt" : "testing_id_header",
+      "questionId" : "auth_signature",
+      "type" : "image"
+    }
+  ],
+  "type" : "finished"
+}

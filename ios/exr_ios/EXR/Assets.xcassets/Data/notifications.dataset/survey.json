@@ -1,0 +1,32 @@
+{
+	
+  "questions" : [
+	  {
+		  "prompt" : "",
+		  
+		  "style" : "viewController",
+		  "state" : "NotificationAccess",
+		  
+		  "questionId" : "yes_sub_2",
+		  "type" : "none",
+		  "routes" : [
+			  {
+				  "answerId" : null,
+				  "nextQuestionId" : "allow_from_settings",
+				  "operand" : null,
+				  "value" : 0
+			  }
+		  ]
+	  },
+	  {
+		  "nextButtonTitle" : "button_settings",
+		  "prompt" : "onboarding_notifications_header2",
+		  "detail" : "onboarding_notifications_body2_ios",
+		  "style" : "instruction",
+		  
+		  "questionId" : "allow_from_settings",
+		  "type" : "none"
+	  }
+  ],
+  "type" : "auth"
+}

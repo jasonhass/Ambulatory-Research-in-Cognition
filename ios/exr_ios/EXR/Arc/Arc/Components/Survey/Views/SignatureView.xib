@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Light.ttf">
+            <string>Roboto-Light</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="D4G-2C-nZW" customClass="SignatureView" customModule="Arc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="463" height="197"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="uMB-h7-Wie">
+                    <rect key="frame" x="0.0" y="0.0" width="463" height="197"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dp2-0V-xsC">
+                            <rect key="frame" x="8" y="8" width="0.0" height="152"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" id="1Me-Fb-6Eo"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="X" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="otj-6a-UKr">
+                            <rect key="frame" x="8" y="164" width="10.5" height="20"/>
+                            <fontDescription key="fontDescription" name="Roboto-Light" family="Roboto" pointSize="17"/>
+                            <color key="textColor" name="Primary"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6UG-lz-0q6">
+                            <rect key="frame" x="8" y="188" width="447" height="1"/>
+                            <color key="backgroundColor" name="Primary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="IN0-jY-tdH"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="160" id="6FX-fh-VRR"/>
+                        <constraint firstItem="6UG-lz-0q6" firstAttribute="width" secondItem="uMB-h7-Wie" secondAttribute="width" priority="999" id="uKW-l0-M7h"/>
+                    </constraints>
+                    <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Wk6-qw-Wtd" firstAttribute="bottom" secondItem="uMB-h7-Wie" secondAttribute="bottom" id="Ifm-tQ-I4S"/>
+                <constraint firstItem="uMB-h7-Wie" firstAttribute="leading" secondItem="Wk6-qw-Wtd" secondAttribute="leading" id="Il9-Wp-xqL"/>
+                <constraint firstItem="uMB-h7-Wie" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Wk6-qw-Wtd" secondAttribute="top" priority="999" id="KIb-jX-Bc1"/>
+                <constraint firstItem="uMB-h7-Wie" firstAttribute="top" secondItem="Wk6-qw-Wtd" secondAttribute="top" id="N7B-5d-8OZ"/>
+                <constraint firstItem="uMB-h7-Wie" firstAttribute="trailing" secondItem="Wk6-qw-Wtd" secondAttribute="trailing" id="lJ7-8s-8Tr"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="Wk6-qw-Wtd"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                    <color key="value" name="Primary Selection"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                    <real key="value" value="1"/>
+                </userDefinedRuntimeAttribute>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                    <real key="value" value="8"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="148.80000000000001" y="-170.01499250374815"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.3411764705882353" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Selection">
+            <color red="0.0" green="0.3411764705882353" blue="0.50588235294117645" alpha="0.24899999797344208" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

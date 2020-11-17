@@ -1,0 +1,151 @@
+{
+  "questions": [
+    {
+      "detail": "context_body",
+      "subTitle": "context_subheader",
+      "prompt": "context_header",
+      "style": "instruction",
+      "nextButtonTitle" : "button_beginsurvey",
+      "questionId" : "start"
+    },
+    {
+      "answers": [
+        {
+          "answerId": "1_a",
+          "exclusive": true,
+          "value": "context_q1_a1"
+        },
+        {
+          "answerId": "1_b",
+          "value": "context_q1_a2"
+        },
+        {
+          "answerId": "1_c",
+          "value": "context_q1_a3"
+        },
+        {
+          "answerId": "1_d",
+          "value": "context_q1_a4"
+        },
+        {
+          "answerId": "1_e",
+          "value": "context_q1_a5"
+        },
+        {
+          "answerId": "1_f",
+          "value": "context_q1_a6"
+        },
+        {
+          "answerId": "1_g",
+          "value": "context_q1_a7"
+        }
+      ],
+      "detail": "list_selectall",
+      "prompt": "context_q1",
+      "questionId": "context_1",
+      "altNextButtonTitle" : "button_chooseanswer",
+      "type": "checkbox"
+    },
+    {
+      "answers": [
+        {
+          "answerId": "2_a",
+          "value": "context_q2_a1"
+        },
+        {
+          "answerId": "2_b",
+          "value": "context_q2_a2"
+        },
+        {
+          "answerId": "2_c",
+          "value": "context_q2_a3"
+        },
+        {
+          "answerId": "2_d",
+          "value": "context_q2_a4"
+        },
+        {
+          "answerId": "2_e",
+          "value": "context_q2_a5"
+        },
+        {
+          "answerId": "2_f",
+          "value": "context_q2_a6"
+        },
+        {
+          "answerId": "2_g",
+          "value": "context_q1_a7"
+        }
+      ],
+      "detail": "list_selectone",
+      "prompt": "context_q2",
+      "questionId": "context_2",
+      "altNextButtonTitle" : "button_chooseanswer",
+      "type": "choice"
+    },
+    {
+      "maxMessage": "context_good",
+      "minMessage": "context_bad",
+      "prompt": "context_q3",
+      "questionId": "context_3",
+      "type": "slider"
+    },
+    {
+      "maxMessage": "context_active",
+      "minMessage": "context_tired",
+      "prompt": "context_q4",
+      "questionId": "context_4",
+      "type": "slider"
+    },
+    {
+      "answers": [
+        {
+          "answerId": "5_a",
+          "value": "context_q5_a1"
+        },
+        {
+          "answerId": "5_b",
+          "value": "context_q5_a2"
+        },
+        {
+          "answerId": "5_c",
+          "value": "context_q5_a3"
+        },
+        {
+          "answerId": "5_d",
+          "value": "context_q5_a4"
+        },
+        {
+          "answerId": "5_e",
+          "value": "context_q5_a5"
+        },
+        {
+          "answerId": "5_f",
+          "value": "context_q5_a6"
+        },
+        {
+          "answerId": "5_g",
+          "value": "context_q5_a7"
+        },
+        {
+          "answerId": "5_h",
+          "value": "context_q5_a8"
+        },
+        {
+          "answerId": "5_i",
+          "value": "context_q5_a9"
+        },
+        {
+          "answerId": "5_j",
+          "value": "context_q5_a10"
+        }
+      ],
+      "detail": "list_selectone",
+      "prompt": "context_q5",
+      "questionId": "context_5",
+      "altNextButtonTitle" : "button_chooseanswer",
+      "type": "choice"
+    }
+  ],
+  "type": "context"
+}

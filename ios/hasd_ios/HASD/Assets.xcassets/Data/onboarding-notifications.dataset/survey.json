@@ -1,0 +1,25 @@
+{
+	
+  "questions" : [
+	  {
+		  "nextButtonTitle" : "button_submit",
+		  "prompt" : "onboarding_commit_header",
+		  "detail" : "onboarding_commit_body",
+		  "style" : "instruction",
+		  
+		  "questionId" : "yes_sub_1",
+		  "type" : "none"
+	  },
+	  {
+		  "prompt" : "",
+		  
+		  "style" : "viewController",
+		  "state" : "NotificationAccess",
+		  
+		  "questionId" : "yes_sub_2",
+		  "type" : "none"
+	  }
+  ],
+   
+  "type" : "auth"
+}

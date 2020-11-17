@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="heading" destination="Hca-8b-Gis" id="Eg4-nj-7t0"/>
+                <outlet property="message" destination="11X-d6-l6g" id="YNZ-an-HmA"/>
+                <outlet property="mindfulnessView" destination="fb2-IQ-EtV" id="NvC-zw-2NU"/>
+                <outlet property="surveyButton" destination="Qjl-MQ-sUK" id="alr-9H-cMG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Pnu-Fl-nes">
+                    <rect key="frame" x="0.0" y="20" width="320" height="398"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="WED-7g-hPF">
+                            <rect key="frame" x="16" y="16" width="288" height="131.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="M80-Lq-p3T">
+                                    <rect key="frame" x="16" y="16" width="135" height="99.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello," textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hca-8b-Gis" customClass="ACLabel" customModule="ArcUIKit">
+                                            <rect key="frame" x="0.0" y="0.0" width="67.5" height="30.5"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="26"/>
+                                            <color key="textColor" name="Primary Text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have a new survey." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="11X-d6-l6g" customClass="ACLabel" customModule="ArcUIKit">
+                                            <rect key="frame" x="0.0" y="38.5" width="135" height="61"/>
+                                            <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                                            <color key="textColor" name="Primary Text"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qjl-MQ-sUK" customClass="ACButton" customModule="ArcUIKit">
+                                    <rect key="frame" x="16" y="0.0" width="216" height="0.0"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" priority="999" constant="216" id="Zjq-q9-rT8"/>
+                                        <constraint firstAttribute="height" priority="999" constant="48" id="wJn-Up-CY7"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="BEGIN">
+                                        <color key="titleColor" name="Secondary Text"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="24"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                                            <color key="value" name="Primary"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                                            <color key="value" name="Primary Gradient"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="beginPressed:" destination="-1" eventType="touchUpInside" id="Yg0-dJ-dVv"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="16" trailing="16"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fb2-IQ-EtV">
+                            <rect key="frame" x="16" y="241" width="288" height="141"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="9hf-p6-ZQa">
+                                    <rect key="frame" x="16" y="16" width="256" height="109"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kr3-kE-Z4D">
+                                            <rect key="frame" x="0.0" y="0.0" width="220" height="45"/>
+                                            <attributedString key="attributedText">
+                                                <fragment content="Be sure to take the ">
+                                                    <attributes>
+                                                        <color key="NSColor" name="Primary Text"/>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="14"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content="Weekly Mindfulness Class">
+                                                    <attributes>
+                                                        <color key="NSColor" name="Primary Text"/>
+                                                        <font key="NSFont" metaFont="system" size="18.001000000000001"/>
+                                                        <font key="NSOriginalFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                                <fragment content=".">
+                                                    <attributes>
+                                                        <color key="NSColor" name="Primary Text"/>
+                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ep-c9-7xf" customClass="ACButton" customModule="ArcUIKit">
+                                            <rect key="frame" x="0.0" y="61" width="216" height="48"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" priority="999" constant="216" id="Svy-Gm-xCK"/>
+                                                <constraint firstAttribute="height" priority="999" constant="48" id="lAi-wN-Ed6"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
+                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <state key="normal" title="TAKE CLASS">
+                                                <color key="titleColor" name="Secondary Text"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="24"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                                                    <color key="value" name="Primary"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                                                    <color key="value" name="Primary Gradient"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="mindfulnessPressed:" destination="-1" eventType="touchUpInside" id="Ekj-bL-mTi"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="Primary Section Background"/>
+                            <constraints>
+                                <constraint firstAttribute="trailingMargin" secondItem="9hf-p6-ZQa" secondAttribute="trailing" id="0Kt-x2-mhe"/>
+                                <constraint firstItem="9hf-p6-ZQa" firstAttribute="top" secondItem="fb2-IQ-EtV" secondAttribute="topMargin" id="BfB-tJ-IWb"/>
+                                <constraint firstAttribute="bottomMargin" secondItem="9hf-p6-ZQa" secondAttribute="bottom" id="byh-tf-a63"/>
+                                <constraint firstItem="9hf-p6-ZQa" firstAttribute="leading" secondItem="fb2-IQ-EtV" secondAttribute="leadingMargin" id="yAe-WQ-ApY"/>
+                            </constraints>
+                            <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="16" trailing="16"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                    </subviews>
+                    <directionalEdgeInsets key="directionalLayoutMargins" top="16" leading="16" bottom="16" trailing="16"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lhr-vP-p5l">
+                    <rect key="frame" x="0.0" y="418" width="320" height="150"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zwz-oC-s8b">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="1"/>
+                            <color key="backgroundColor" name="Primary Linebreak"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="1" id="7HP-jc-1FY"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvA-sw-r0R">
+                            <rect key="frame" x="0.0" y="1" width="320" height="74"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TJ6-V8-4HR">
+                                    <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/alarm-clock-solid" translatesAutoresizingMaskIntoConstraints="NO" id="xhy-Id-VfP">
+                                            <rect key="frame" x="34" y="20" width="32" height="34"/>
+                                            <color key="backgroundColor" name="Primary"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="5yv-U1-xPD"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <constraints>
+                                        <constraint firstItem="xhy-Id-VfP" firstAttribute="top" secondItem="TJ6-V8-4HR" secondAttribute="topMargin" id="Etc-f0-ox2"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xhy-Id-VfP" secondAttribute="bottom" id="Hvs-Vv-zt1"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="xhy-Id-VfP" secondAttribute="trailing" id="gfQ-lM-una"/>
+                                        <constraint firstItem="xhy-Id-VfP" firstAttribute="leading" secondItem="TJ6-V8-4HR" secondAttribute="leadingMargin" id="zMJ-5d-9tR"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="20" left="34" bottom="20" right="8"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VBy-Pz-ltx">
+                                    <rect key="frame" x="74" y="0.0" width="246" height="74"/>
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="998" constant="74" id="DjG-Iz-jFo"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Change Your Availability">
+                                                <attributes>
+                                                    <color key="NSColor" name="Secondary Text"/>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="changeAvailabilityPressed:" destination="-1" eventType="touchUpInside" id="fUY-zn-bDf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gD6-Uj-ETR">
+                            <rect key="frame" x="0.0" y="75" width="320" height="1"/>
+                            <color key="backgroundColor" name="Primary Linebreak"/>
+                            <constraints>
+                                <constraint firstAttribute="height" priority="999" constant="1" id="HFI-Jd-JA2"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN4-a1-GNf">
+                            <rect key="frame" x="0.0" y="76" width="320" height="74"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zxX-c0-ZBj">
+                                    <rect key="frame" x="0.0" y="0.0" width="74" height="74"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cut-ups/icons/avatar-solid" translatesAutoresizingMaskIntoConstraints="NO" id="7Wi-Yo-eIy">
+                                            <rect key="frame" x="34" y="20" width="32" height="34"/>
+                                            <color key="backgroundColor" name="Primary"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="32" id="wdS-3n-OmN"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <constraints>
+                                        <constraint firstItem="7Wi-Yo-eIy" firstAttribute="top" secondItem="zxX-c0-ZBj" secondAttribute="topMargin" id="7rD-ZT-FTH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="7Wi-Yo-eIy" secondAttribute="trailing" id="CIf-lE-t3h"/>
+                                        <constraint firstItem="7Wi-Yo-eIy" firstAttribute="leading" secondItem="zxX-c0-ZBj" secondAttribute="leadingMargin" id="bVK-8K-q07"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="7Wi-Yo-eIy" secondAttribute="bottom" id="t8Y-6q-kga"/>
+                                    </constraints>
+                                    <edgeInsets key="layoutMargins" top="20" left="34" bottom="20" right="8"/>
+                                </view>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naC-t9-BU8">
+                                    <rect key="frame" x="74" y="0.0" width="246" height="74"/>
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" priority="998" constant="74" id="pYX-Oo-ndA"/>
+                                    </constraints>
+                                    <inset key="contentEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal">
+                                        <attributedString key="attributedTitle">
+                                            <fragment content="Contact Study Coordinator">
+                                                <attributes>
+                                                    <color key="NSColor" name="Secondary Text"/>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                    <integer key="NSUnderline" value="1"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="imageView.contentMode">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="contactStudyCoordinatorPressed:" destination="-1" eventType="touchUpInside" id="tut-if-gw0"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Pnu-Fl-nes" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8GV-ek-fB0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lhr-vP-p5l" secondAttribute="trailing" id="F1k-FJ-8aN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lhr-vP-p5l" secondAttribute="bottom" id="G6q-zp-KUg"/>
+                <constraint firstItem="Pnu-Fl-nes" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="GjH-Uj-2xu"/>
+                <constraint firstItem="lhr-vP-p5l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JRk-8T-Is8"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Pnu-Fl-nes" secondAttribute="trailing" id="MaK-mJ-OOF"/>
+                <constraint firstItem="lhr-vP-p5l" firstAttribute="top" secondItem="Pnu-Fl-nes" secondAttribute="bottom" priority="100" id="Rbk-Qz-hnU"/>
+                <constraint firstItem="lhr-vP-p5l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Pnu-Fl-nes" secondAttribute="bottom" id="S5B-u0-hhf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="0.0" y="102"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cut-ups/icons/alarm-clock-solid" width="72" height="72"/>
+        <image name="cut-ups/icons/avatar-solid" width="72" height="72"/>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.37299999594688416" blue="0.5220000147819519" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Gradient">
+            <color red="0.0" green="0.49000000953674316" blue="0.68000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Linebreak">
+            <color red="0.0" green="0.23999999463558197" blue="0.33000001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Section Background">
+            <color red="0.0" green="0.37299999594688416" blue="0.5220000147819519" alpha="0.10000000149011612" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Text">
+            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Text">
+            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

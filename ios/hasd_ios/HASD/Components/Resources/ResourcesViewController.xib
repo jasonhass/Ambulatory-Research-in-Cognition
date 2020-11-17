@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResourcesViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="brW-oA-y9k" id="t2t-2d-rqk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="brW-oA-y9k">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" name="Primary Info"/>
+                    <color key="sectionIndexBackgroundColor" name="Primary Info"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eA0-8a-AAB"/>
+                        <outlet property="delegate" destination="-1" id="1BX-Lu-1Ug"/>
+                    </connections>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" name="Primary Info"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="brW-oA-y9k" secondAttribute="bottom" id="Bcs-9h-1wu"/>
+                <constraint firstItem="brW-oA-y9k" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="eYu-cy-GQg"/>
+                <constraint firstItem="brW-oA-y9k" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="xTJ-1W-7go"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="brW-oA-y9k" secondAttribute="trailing" id="y3s-et-FVC"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="-266" y="139"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

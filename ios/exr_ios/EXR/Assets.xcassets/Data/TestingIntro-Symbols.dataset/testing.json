@@ -1,0 +1,13 @@
+{
+  "questions" : [
+    {
+		"questionId":"intro",
+
+      "prompt" : "symbols_body",
+      "subTitle" : "symbols_header",
+	  "style" : "symbols",
+      "nextButtonTitle" : "button_begintest"
+    }
+  ]
+  
+}

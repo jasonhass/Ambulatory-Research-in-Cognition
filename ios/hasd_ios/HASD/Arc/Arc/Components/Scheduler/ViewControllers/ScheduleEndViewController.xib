@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScheduleEndViewController" customModule="Arc" customModuleProvider="target">
+            <connections>
+                <outlet property="message" destination="hCE-ep-AMn" id="cqT-f7-4we"/>
+                <outlet property="okayButton" destination="oHK-Gp-JMt" id="XLk-v4-nJw"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Great! Starting tomorrow, we’ll only send you reminders between 7:00 AM and 11:00 PM." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCE-ep-AMn" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="24" y="68" width="327" height="122"/>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                    <color key="textColor" name="Primary Text"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2PP-q1-Lor" customClass="HMMarkupButton" customModule="HMMarkup">
+                    <rect key="frame" x="48" y="539" width="279" height="32"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="32" id="Sxh-fl-iKY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="Change Times">
+                        <color key="titleColor" red="0.0" green="0.37" blue="0.52000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="availability_change_linked"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="changeTimesPressed:" destination="-1" eventType="touchUpInside" id="x3b-fK-yeA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHK-Gp-JMt" customClass="ACButton" customModule="ArcUIKit">
+                    <rect key="frame" x="24" y="595" width="327" height="48"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="999" constant="48" id="vrm-tF-jlR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="18"/>
+                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <state key="normal" title="OKAY">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="primaryColor">
+                            <color key="value" name="Primary"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="secondaryColor">
+                            <color key="value" name="Primary Gradient"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="24"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_okay"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="okayPressed:" destination="-1" eventType="touchUpInside" id="jlC-tl-bN3"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="oHK-Gp-JMt" secondAttribute="trailing" constant="24" id="0G6-K8-Ura"/>
+                <constraint firstItem="hCE-ep-AMn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="9q9-FU-0sc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="oHK-Gp-JMt" secondAttribute="bottom" constant="24" id="LBB-Mp-L2R"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hCE-ep-AMn" secondAttribute="trailing" constant="24" id="RwH-5M-IhL"/>
+                <constraint firstItem="oHK-Gp-JMt" firstAttribute="top" secondItem="2PP-q1-Lor" secondAttribute="bottom" constant="24" id="fbH-Gc-a2l"/>
+                <constraint firstItem="hCE-ep-AMn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="48" id="iqx-iK-j0U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2PP-q1-Lor" secondAttribute="trailing" constant="48" id="m23-it-p72"/>
+                <constraint firstItem="oHK-Gp-JMt" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="olc-fK-JDW"/>
+                <constraint firstItem="2PP-q1-Lor" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="48" id="pul-eL-skG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="40.799999999999997" y="46.326836581709152"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.3411764705882353" blue="0.50588235294117645" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Gradient">
+            <color red="0.0" green="0.49000000953674316" blue="0.68000000715255737" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Text">
+            <color red="0.23499999940395355" green="0.23499999940395355" blue="0.23499999940395355" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

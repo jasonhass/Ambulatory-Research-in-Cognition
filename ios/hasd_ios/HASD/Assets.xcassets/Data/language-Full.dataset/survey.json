@@ -1,0 +1,69 @@
+{
+  "instructions" : [
+
+  ],
+  "questions" : [
+    {
+      "answers" : [
+        {
+          "answerId" : "1_a",
+          "value" : "US - English"
+        },
+        {
+          "answerId" : "1_b",
+          "value" : "Nederland - Nederlands"
+        },
+        {
+          "answerId" : "1_c",
+          "value" : "France - Français"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "España - Español"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Argentina - Español"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Canada - Français"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Deutschland - Deutsche"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Italia - Italiano"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "日本 - 日本語"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Brasil - Português"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "Mexico - Español"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "US - Español"
+        },
+        {
+            "answerId" : "1_c",
+            "value" : "中国 - 简体中文"
+        }
+        
+      ],
+      "nextButtonTitle" : "button_confirm",
+      "prompt" : "key_language",
+      "questionId" : "ac_language_1",
+      "type" : "choice"
+    }
+  ],
+  "type" : "language"
+}

@@ -1,0 +1,32 @@
+{
+  "postSurvey" : [
+    {
+        "nextButtonImage" : "cut-ups/icons/home_active",
+        "nextButtonTitle" : "",
+        
+        "preface" : "thankyou_testcomplete_body1",
+      "subtitle" : "thankyou_testcomplete_subhead1",
+      "title" : "thank_you_header1"
+    }
+  ],
+  "questions" : [
+    {
+      "answers" : [
+        {
+          "answerId" : "1_a",
+          "value" : "Yes"
+        },
+        {
+          "answerId" : "1_b",
+          "value" : "No"
+        }
+      ],
+      "prompt" : "testing_interrupted_header",
+	  "subTitle" : "testing_interrupted_body",
+      "questionId" : "finished_1",
+      "altNextButtonTitle" : "button_chooseanswer",
+      "type" : "choice"
+    }
+  ],
+  "type" : "finished"
+}

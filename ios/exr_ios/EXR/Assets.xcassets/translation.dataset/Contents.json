@@ -1,0 +1,13 @@
+{
+  "data" : [
+    {
+      "filename" : "exr_translation2.10.0.json",
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.json"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

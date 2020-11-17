@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Tahoma.ttf">
+            <string>Tahoma</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view opaque="NO" contentMode="scaleToFill" id="uD2-mX-PIU" customClass="TextAlertView" customModule="mHealth" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-mn-WLa">
+                    <rect key="frame" x="38" y="213.5" width="299" height="240"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pK4-wB-fQj">
+                            <rect key="frame" x="0.0" y="0.0" width="299" height="189"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Nyg-Rg-N37">
+                                    <rect key="frame" x="8" y="8" width="283" height="173"/>
+                                    <fontDescription key="fontDescription" name="Tahoma" family="Tahoma" pointSize="17"/>
+                                    <color key="textColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstItem="Nyg-Rg-N37" firstAttribute="leading" secondItem="pK4-wB-fQj" secondAttribute="leading" constant="8" id="8rI-Mg-ozR"/>
+                                <constraint firstItem="Nyg-Rg-N37" firstAttribute="top" secondItem="pK4-wB-fQj" secondAttribute="top" constant="8" id="N0Y-Jh-5hT"/>
+                                <constraint firstAttribute="bottom" secondItem="Nyg-Rg-N37" secondAttribute="bottom" constant="8" id="P5S-Hv-rcg"/>
+                                <constraint firstAttribute="trailing" secondItem="Nyg-Rg-N37" secondAttribute="trailing" constant="8" id="vpl-NS-aE2"/>
+                            </constraints>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mbe-2A-haM">
+                            <rect key="frame" x="-11" y="176" width="321" height="64"/>
+                            <color key="backgroundColor" name="Primary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="vIB-t8-948"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Georgia-BoldItalic" family="Georgia" pointSize="22"/>
+                            <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="Okay">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="okay"/>
+                                <userDefinedRuntimeAttribute type="string" keyPath="colorKey" value="Primary"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="confirm:" destination="uD2-mX-PIU" eventType="touchUpInside" id="eQR-bq-bgF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="pK4-wB-fQj" secondAttribute="trailing" id="5H4-62-1z3"/>
+                        <constraint firstAttribute="height" constant="240" id="9Qe-9Z-mbz"/>
+                        <constraint firstAttribute="bottom" secondItem="mbe-2A-haM" secondAttribute="bottom" id="NZi-0h-c0F"/>
+                        <constraint firstItem="mbe-2A-haM" firstAttribute="top" secondItem="pK4-wB-fQj" secondAttribute="bottom" constant="-13" id="Q3k-y7-Udx"/>
+                        <constraint firstItem="pK4-wB-fQj" firstAttribute="top" secondItem="kSA-mn-WLa" secondAttribute="top" id="Tn0-OO-xvX"/>
+                        <constraint firstAttribute="trailing" secondItem="mbe-2A-haM" secondAttribute="trailing" constant="-11" id="dHd-1q-sOq"/>
+                        <constraint firstItem="pK4-wB-fQj" firstAttribute="leading" secondItem="kSA-mn-WLa" secondAttribute="leading" id="i2J-q8-SFc"/>
+                        <constraint firstItem="mbe-2A-haM" firstAttribute="leading" secondItem="kSA-mn-WLa" secondAttribute="leading" constant="-11" id="ufb-0d-XNy"/>
+                        <constraint firstAttribute="width" constant="299" id="xVg-hD-cwF"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.50752411909999995" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="kSA-mn-WLa" firstAttribute="centerY" secondItem="uD2-mX-PIU" secondAttribute="centerY" id="3uV-k0-BJF"/>
+                <constraint firstItem="kSA-mn-WLa" firstAttribute="centerX" secondItem="uD2-mX-PIU" secondAttribute="centerX" id="fHY-Vy-HLe"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="RvD-oA-2Yw"/>
+            <connections>
+                <outlet property="okayButton" destination="mbe-2A-haM" id="cJq-X2-t64"/>
+                <outlet property="textLabel" destination="Nyg-Rg-N37" id="U5n-Au-7Ij"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.37254901960784315" blue="0.52156862745098043" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

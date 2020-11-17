@@ -1,0 +1,50 @@
+{
+    "response": {
+        "success": true,
+        "wake_sleep_schedule": {
+            "app_version": "2.4.0",
+            "device_id": "4C0C695A-FE91-40A3-8217-DA2A97FBA78F",
+            "device_info": " iOS|x86_64|13.3",
+            "model_version": "2.1.0",
+            "participant_id": "999980",
+            "wake_sleep_data": [
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Sunday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Monday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Tuesday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Wednesday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Thursday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Friday"
+                },
+                {
+                    "bed": "8:00 PM",
+                    "wake": "5:00 AM",
+                    "weekday": "Saturday"
+                }
+            ]
+        }
+    },
+    "errors": {}
+}

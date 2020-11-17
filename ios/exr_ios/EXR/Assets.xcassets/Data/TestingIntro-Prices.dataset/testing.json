@@ -1,0 +1,13 @@
+{
+  "questions" : [
+    {
+		"questionId":"intro",
+
+      "prompt" : "prices_body",
+      "subTitle" : "prices_header",
+	  "style" : "prices",
+      "nextButtonTitle" : "button_begintest"
+    }
+  ]
+  
+}

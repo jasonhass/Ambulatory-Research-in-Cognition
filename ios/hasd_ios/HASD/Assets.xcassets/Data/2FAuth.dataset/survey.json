@@ -1,0 +1,41 @@
+{
+  "questions" : [
+	  
+    {
+      "prompt" : "login_enter_ARCID",
+      "questionId" : "auth_arc",
+      "type" : "segmentedText"
+    },
+    {
+      "prompt" : "login_confirm_ARCID",
+      "questionId" : "auth_confirm",
+      "type" : "segmentedText"
+    },
+	{
+		"prompt" : "Please enter your *login verification code.*",
+		"detail" : "We’ve sent a security code to your phone with number ending in *{digits}*.",
+		"questionId" : "2fa",
+		"type" : "segmentedText",
+		"routes" : [
+			{
+				"answerId" : null,
+				"nextQuestionId" : "resendCode",
+				"operand" : null,
+				"value" : "0"
+			}
+		]
+	}
+  ],
+  "subQuestions" : [
+	  {
+		  "prompt" : "",
+		  
+		  "style" : "viewController",
+		  "state" : "ResendCode",
+		  
+		  "questionId" : "resendCode",
+		  "type" : "none"
+	  }
+  ],
+  "type" : "auth"
+}

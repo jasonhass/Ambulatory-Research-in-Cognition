@@ -1,0 +1,106 @@
+{
+  "questions": [
+    {
+      "prompt": "",
+      "style": "viewController",
+      "state": "rebuked",
+      "questionId": "rebuked",
+      "type": "none"
+    },
+    {
+      "nextButtonTitle": "button_next",
+      "prompt": "onboarding_header",
+      "detail": "onboarding_body",
+      "questionId": "commitment",
+      "style": "onboarding",
+      "type": "choice",
+      "answers": [
+        {
+          "answerId": "1_a",
+          "value": "radio_commit"
+        },
+        {
+          "answerId": "1_b",
+          "value": "radio_nocommit"
+        }
+      ],
+      "routes": [
+        {
+          "answerId": null,
+          "nextQuestionId": "yes_sub_1",
+          "operand": null,
+          "value": 0
+        },
+        {
+          "answerId": null,
+          "nextQuestionId": "yes_sub_3",
+          "operand": null,
+          "value": 0
+        },
+        {
+          "answerId": null,
+          "nextQuestionId": "yes_sub_2",
+          "operand": null,
+          "value": 0
+        },
+        {
+          "answerId": null,
+          "nextQuestionId": "no_sub_1",
+          "operand": null,
+          "value": 1
+        }
+      ]
+    }
+  ],
+  "subQuestions": [
+    {
+      "altNextButtonTitle": "button_next",
+      "prompt": "onboarding_nocommit_header",
+      "detail": "onboarding_nocommit_body",
+      "questionId": "no_sub_1",
+      "type": "none",
+      "style": "impasse"
+    },
+    {
+      "nextButtonTitle": "button_next",
+      "prompt": "onboarding_commit_header",
+      "detail": "onboarding_commit_body",
+      "style": "instruction",
+      "questionId": "yes_sub_1",
+      "type": "none"
+    },
+    {
+      "nextButtonTitle": "button_next",
+      "prompt": "onboarding_notifications_header1",
+      "detail": "onboarding_notifications_body1",
+      "style": "instruction",
+      "questionId": "yes_sub_3",
+      "type": "none"
+    },
+    {
+      "prompt": "",
+      "style": "viewController",
+      "state": "NotificationAccess",
+      "questionId": "yes_sub_2",
+      "type": "none",
+      "routes": [
+        {
+          "answerId": null,
+          "nextQuestionId": "allow_from_settings",
+          "operand": null,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "nextButtonTitle": "button_settings",
+      "prompt": "onboarding_notifications_header2",
+      "detail": "onboarding_notifications_body2_ios",
+      "style": "viewController",
+      "state": "NotificationAccessRejected",
+      "questionId": "allow_from_settings",
+      "type": "none"
+    }
+  ],
+  "type": "auth"
+}

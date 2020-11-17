@@ -1,0 +1,48 @@
+{
+  "type": "region",
+  "instructions": [
+    
+  ],
+  "questions": [
+    {
+      "questionId": "hb_region_1",
+      "prompt": "Please select your *state or territory*.",
+      "type": "choice",
+      "nextButtonTitle": "CHOOSE ANSWER",
+      "answers": [
+        {
+          "answerId": "1_a",
+          "value": "Australian Capital Territory"
+        },
+        {
+          "answerId": "1_b",
+          "value": "New South Wales"
+        },
+        {
+          "answerId": "1_c",
+          "value": "Northern Territory"
+        },
+        {
+          "answerId": "1_d",
+          "value": "Queensland"
+        },
+        {
+          "answerId": "1_e",
+          "value": "South Australia"
+        },
+        {
+          "answerId": "1_f",
+          "value": "Tasmania"
+        },
+        {
+          "answerId": "1_g",
+          "value": "Victoria"
+        },
+        {
+          "answerId": "1_h",
+          "value": "Western Australia"
+        }
+      ]
+    }
+  ]
+}

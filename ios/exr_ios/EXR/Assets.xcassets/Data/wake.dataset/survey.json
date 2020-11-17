@@ -1,0 +1,51 @@
+{
+	
+  "questions" : [
+	  {
+      "detail" : "wakesurvey_body",
+      "subTitle" : "wakesurvey_subheader",
+      "prompt" : "wakesurvey_header",
+      "questionId" : "sleepwakesurvey_intro",
+      "nextButtonTitle" : "button_beginsurvey",
+	  "style" : "instruction"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "wake_q1",
+      "questionId" : "wake_1",
+      "type" : "time"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "wake_q2",
+      "questionId" : "wake_2",
+      "type" : "duration"
+    },
+    {
+      "detail" : "wake_q3b",
+      "prompt" : "wake_q3a",
+      "questionId" : "wake_3",
+      "type" : "number"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "wake_q4",
+      "questionId" : "wake_4",
+      "type" : "time"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "wake_q5",
+      "questionId" : "wake_5",
+      "type" : "time"
+    },
+    {
+      "maxMessage" : "wake_excellent",
+      "minMessage" : "wake_poor",
+      "prompt" : "wake_q6",
+      "questionId" : "wake_6",
+      "type" : "slider"
+    }
+  ],
+  "type" : "wake"
+}

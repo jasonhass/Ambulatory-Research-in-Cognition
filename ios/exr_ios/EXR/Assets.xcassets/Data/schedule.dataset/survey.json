@@ -1,0 +1,32 @@
+{
+
+  "questions" : [
+  {
+	  "questionId" : "start",
+	  "detail" : "availability_body",
+	  "prompt" : "availability_header",
+      "nextButtonTitle" : "button_beginsurvey",
+	  "style" : "instruction"
+  },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "availability_start",
+      "questionId" : "wake_time",
+      "type" : "time"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "availability_stop",
+      "questionId" : "sleep_time",
+      "type" : "time"
+    },
+    {
+      "nextButtonTitle" : "button_submittime",
+      "prompt" : "",
+      "questionId" : "sleep_confirm",
+      "type" : "none",
+      "style": "viewController"
+    }
+  ],
+  "type" : "schedule"
+}

@@ -1,0 +1,10 @@
+{
+    "response": {
+        "success": true,
+        "contact_info": {
+            "phone": "+13142737112",
+            "email": "neuro-dianarc@email.wustl.edu"
+        }
+    },
+    "errors": {}
+}

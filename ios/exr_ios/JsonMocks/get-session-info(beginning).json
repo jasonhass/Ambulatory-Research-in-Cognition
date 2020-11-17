@@ -1,0 +1,32 @@
+{
+  "response": {
+    "success": true,
+    "first_test": {
+      "session_date": 1588017971,
+      "week": 0,
+      "day": 0,
+      "session": 0,
+      "session_id": "0"
+    },
+    "latest_test": {
+      "session_date": 1588017971,
+      "week": 0,
+      "day": 0,
+      "session": 0,
+      "session_id": "0"
+    },
+    "current_device": {
+      "os_type": "iOS",
+      "os_version": "13.3",
+      "app_version": "2.4.0"
+    },
+    "previous_device": {
+      "os_type": "iOS",
+      "os_version": "13.3",
+      "app_version": "2.4.0"
+    }
+  },
+  "errors": {
+    
+  }
+}

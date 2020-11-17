@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Bold.ttf">
+            <string>Roboto-Bold</string>
+        </array>
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AboutViewController" customModule="EXR" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dGf-H2-Gcf">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWf-Rb-62x">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="470.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qpb-lh-7ca" customClass="HMMarkupButton" customModule="HMMarkup">
+                                    <rect key="frame" x="8" y="0.0" width="72" height="32"/>
+                                    <color key="backgroundColor" white="1" alpha="0.14701947770000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="zHI-c0-Y9r"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="15" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="-8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <state key="normal" title="BACK" image="cut-ups/icons/arrow_left_white">
+                                        <color key="titleColor" name="Secondary Text"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                            <integer key="value" value="16"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_back"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                                            <integer key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="goBackPressed:" destination="-1" eventType="touchUpInside" id="s3T-Ag-NrO"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="About This App" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lna-hP-V3o" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                    <rect key="frame" x="24" y="48" width="272" height="30.5"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30.5" id="6kw-Q3-MnF"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="26"/>
+                                    <color key="textColor" name="Secondary Text"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="about_header"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-7N-VNI" customClass="HMMarkupLabel" customModule="HMMarkup">
+                                    <rect key="frame" x="24" y="112.5" width="272" height="338"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="338" placeholder="YES" id="6ES-sN-YGz"/>
+                                    </constraints>
+                                    <string key="text">The Ambulatory Research in Cognition (ARC) app was designed by the Cognitive Technology Research Laboratory (CTRLab) in the Department of Neurology at Washington University in St. Louis for participants enrolled in the Dominantly Inherited Alzheimer Network (DIAN) studies. The ARC app assesses cognition using frequently administered but brief cognitive tests. This app is intended for use only by participants enrolled in DIAN studies.</string>
+                                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                                    <color key="textColor" name="Secondary Text"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="spacing">
+                                            <real key="value" value="7"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="about_body"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IFm-LG-9jp">
+                                    <rect key="frame" x="24" y="94.5" width="40" height="2"/>
+                                    <color key="backgroundColor" name="TutorialHighlight"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="Jiu-Ly-XBl"/>
+                                        <constraint firstAttribute="width" constant="40" id="VUp-4X-qWR"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="JfE-7N-VNI" secondAttribute="trailing" constant="24" id="13L-Tu-EEj"/>
+                                <constraint firstItem="Qpb-lh-7ca" firstAttribute="leading" secondItem="MWf-Rb-62x" secondAttribute="leading" constant="8" id="1TM-3I-MWi"/>
+                                <constraint firstItem="JfE-7N-VNI" firstAttribute="leading" secondItem="MWf-Rb-62x" secondAttribute="leading" constant="24" id="4a0-YB-PKv"/>
+                                <constraint firstItem="Qpb-lh-7ca" firstAttribute="top" secondItem="MWf-Rb-62x" secondAttribute="top" id="9UC-uY-OHL"/>
+                                <constraint firstAttribute="bottom" secondItem="JfE-7N-VNI" secondAttribute="bottom" constant="20" id="AVb-dd-wVd"/>
+                                <constraint firstAttribute="trailing" secondItem="Lna-hP-V3o" secondAttribute="trailing" constant="24" id="MQI-kc-VEc"/>
+                                <constraint firstItem="Lna-hP-V3o" firstAttribute="leading" secondItem="MWf-Rb-62x" secondAttribute="leading" constant="24" id="Raf-0f-SNa"/>
+                                <constraint firstItem="IFm-LG-9jp" firstAttribute="top" secondItem="Lna-hP-V3o" secondAttribute="bottom" constant="16" id="T0h-d5-kuo"/>
+                                <constraint firstItem="IFm-LG-9jp" firstAttribute="leading" secondItem="MWf-Rb-62x" secondAttribute="leading" constant="24" id="ViF-UY-gVD"/>
+                                <constraint firstItem="Lna-hP-V3o" firstAttribute="top" secondItem="Qpb-lh-7ca" secondAttribute="bottom" constant="16" id="YpW-mg-MXg"/>
+                                <constraint firstItem="JfE-7N-VNI" firstAttribute="top" secondItem="IFm-LG-9jp" secondAttribute="bottom" constant="16" id="vuU-tW-dNV"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="MWf-Rb-62x" firstAttribute="width" secondItem="dGf-H2-Gcf" secondAttribute="width" id="AL6-ml-Dhz"/>
+                        <constraint firstAttribute="bottom" secondItem="MWf-Rb-62x" secondAttribute="bottom" id="MiU-y5-xah"/>
+                        <constraint firstItem="MWf-Rb-62x" firstAttribute="leading" secondItem="dGf-H2-Gcf" secondAttribute="leading" id="ZQL-lX-OhG"/>
+                        <constraint firstItem="MWf-Rb-62x" firstAttribute="top" secondItem="dGf-H2-Gcf" secondAttribute="top" id="cba-4A-jKY"/>
+                        <constraint firstAttribute="trailing" secondItem="MWf-Rb-62x" secondAttribute="trailing" id="iaJ-mg-Ldd"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" name="Primary Info"/>
+            <constraints>
+                <constraint firstItem="dGf-H2-Gcf" firstAttribute="top" secondItem="zVx-9i-YSW" secondAttribute="top" id="BJd-pe-P2U"/>
+                <constraint firstItem="dGf-H2-Gcf" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="BOy-LM-Ar5"/>
+                <constraint firstItem="dGf-H2-Gcf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LWv-pe-PQs"/>
+                <constraint firstItem="dGf-H2-Gcf" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="SWV-Bf-IZo"/>
+                <constraint firstItem="dGf-H2-Gcf" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="zIc-la-uq4"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="zVx-9i-YSW"/>
+            <point key="canvasLocation" x="183.75" y="55.985915492957744"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cut-ups/icons/arrow_left_white" width="16" height="16"/>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TutorialHighlight">
+            <color red="0.97000002861022949" green="0.75" blue="0.079999998211860657" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

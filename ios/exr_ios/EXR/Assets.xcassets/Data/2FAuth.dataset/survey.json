@@ -1,0 +1,38 @@
+{
+  "questions": [
+    {
+      "prompt": "login_enter_ARCID",
+      "questionId": "auth_arc",
+      "type": "segmentedText"
+    },
+    {
+      "prompt": "login_confirm_ARCID",
+      "questionId": "auth_confirm",
+      "type": "segmentedText"
+    },
+    {
+      "prompt": "login_enter_2FA",
+      "detail": "login_2FA_body",
+      "questionId": "2FA",
+      "type": "segmentedText",
+      "routes": [
+        {
+          "answerId": null,
+          "nextQuestionId": "resendCode",
+          "operand": null,
+          "value": "0"
+        }
+      ]
+    }
+  ],
+  "subQuestions": [
+    {
+      "prompt": "",
+      "style": "viewController",
+      "state": "ResendCode",
+      "questionId": "resendCode",
+      "type": "none"
+    }
+  ],
+  "type": "auth"
+}

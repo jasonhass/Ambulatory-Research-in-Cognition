@@ -1,0 +1,14 @@
+[
+    [
+        {
+            "item": "prices_tutorial_item1",
+            "price": "prices_tutorial_price1_match",
+            "alt": "prices_tutorial_price1"
+        },
+        {
+            "item": "prices_tutorial_item2",
+            "price": "prices_tutorial_price2_match",
+            "alt": "prices_tutorial_price2"
+        }
+    ]
+]

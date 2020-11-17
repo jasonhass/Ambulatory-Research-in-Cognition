@@ -1,0 +1,7 @@
+//
+// NotificationsRejectedView.swift
+//
+
+
+
+import Foundation

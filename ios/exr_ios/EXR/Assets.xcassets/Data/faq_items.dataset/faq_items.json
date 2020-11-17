@@ -1,0 +1,104 @@
+[{
+		"topic_name": "faq_testing",
+        "topic_header": "faq_testing_header",
+		"questions": [{
+				"question": "faq_testing_q1",
+				"answer": "faq_testing_a1"
+			},
+			{
+				"question": "faq_testing_q2",
+				"answer": "faq_testing_a2"
+			},
+			{
+				"question": "faq_testing_q3",
+				"answer": "faq_testing_a3"
+			},
+			{
+				"question": "faq_testing_q4",
+				"answer": "faq_testing_a4"
+			},
+			{
+				"question": "faq_testing_q5",
+				"answer": "faq_testing_a5"
+			},
+			{
+				"question": "faq_testing_q6",
+				"answer": "faq_testing_a6"
+			},
+			{
+				"question": "faq_testing_q7",
+				"answer": "faq_testing_a7"
+			},
+			{
+				"question": "faq_testing_q8",
+				"answer": "faq_testing_a8"
+			},
+			{
+				"question": "faq_testing_q9",
+				"answer": "faq_testing_a9"
+			},
+			{
+				"question": "faq_testing_q10",
+				"answer": "faq_testing_a10"
+			}
+		]
+	},
+	{
+		"topic_name": "faq_earnings",
+        "topic_header": "faq_earnings_header",
+		"questions": [{
+				"question": "faq_earnings_q1",
+				"answer": "faq_earnings_a1"
+			},
+			{
+				"question": "faq_earnings_q2",
+				"answer": "faq_earnings_a2"
+			},
+			{
+				"question": "faq_earnings_q3",
+				"answer": "faq_earnings_a3"
+			},
+			{
+				"question": "faq_earnings_q4",
+				"answer": "faq_earnings_a4"
+			},
+			{
+				"question": "faq_earnings_q5",
+				"answer": "faq_earnings_a5"
+			}
+		]
+	},
+	{
+		"topic_name": "faq_technology",
+        "topic_header": "faq_tech_header",
+		"questions": [{
+				"question": "faq_tech_q1",
+				"answer": "faq_tech_a1"
+			},
+			{
+				"question": "faq_tech_q2",
+				"answer": "faq_tech_a2"
+			},
+			{
+				"question": "faq_tech_q3",
+				"answer": "faq_tech_a3"
+			},
+			{
+				"question": "faq_tech_q4",
+				"answer": "faq_tech_a4"
+			},
+            {
+                "question": "faq_tech_q5",
+                "answer": "faq_tech_a5"
+            },
+            {
+                "question": "faq_tech_q6",
+                "answer": "faq_tech_a6"
+            },
+            {
+                "question": "faq_tech_q7",
+                "answer": "faq_tech_a7"
+            }
+		]
+	}
+]

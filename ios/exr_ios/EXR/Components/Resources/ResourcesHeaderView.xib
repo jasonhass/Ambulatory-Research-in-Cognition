@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Medium.ttf">
+            <string>Roboto-Medium</string>
+        </array>
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ResourcesHeaderView" customModule="Arc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="217"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="etx-C5-FMu" customClass="HMMarkupButton" customModule="HMMarkup">
+                    <rect key="frame" x="8" y="0.0" width="52" height="37"/>
+                    <color key="backgroundColor" white="1" alpha="0.14701947770000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="37" id="4iG-M9-mrq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Medium" family="Roboto" pointSize="14"/>
+                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    <inset key="imageEdgeInsets" minX="-4" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <state key="normal" title="BACK" image="arrow_left_white">
+                        <color key="titleColor" name="Secondary Text"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="16"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="string" keyPath="translationKey" value="button_back"/>
+                        <userDefinedRuntimeAttribute type="number" keyPath="numberOfLines">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9J-rR-V2d" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="24" y="53" width="331" height="117"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="tfe-w4-Llj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="26"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="39L-OU-SuI">
+                    <rect key="frame" x="24" y="189" width="40" height="2"/>
+                    <color key="backgroundColor" red="0.96999999999999997" green="0.75" blue="0.080000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="Vzk-ej-316"/>
+                        <constraint firstAttribute="width" constant="40" id="oYt-yJ-eJd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nl7-LW-E5w" userLabel="Separator">
+                    <rect key="frame" x="0.0" y="216" width="375" height="1"/>
+                    <color key="backgroundColor" name="Resources Separator"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="S7k-n4-wFW"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8n-My-qRq" userLabel="Sub Label" customClass="HMMarkupLabel" customModule="HMMarkup">
+                    <rect key="frame" x="24" y="203" width="327" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" id="2HS-rM-iWv"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                    <color key="textColor" name="Highlight"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" name="Primary Info"/>
+            <constraints>
+                <constraint firstItem="39L-OU-SuI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="4Gu-tX-ybK"/>
+                <constraint firstItem="Nl7-LW-E5w" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Atn-n2-2ch"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Z8n-My-qRq" secondAttribute="trailing" constant="24" id="Bzy-X8-Svb"/>
+                <constraint firstItem="etx-C5-FMu" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="E8w-UT-imf"/>
+                <constraint firstItem="Z8n-My-qRq" firstAttribute="top" secondItem="39L-OU-SuI" secondAttribute="bottom" constant="12" id="Ix4-H3-2A8"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Nl7-LW-E5w" secondAttribute="bottom" id="Tis-6B-bnT"/>
+                <constraint firstItem="39L-OU-SuI" firstAttribute="top" secondItem="U9J-rR-V2d" secondAttribute="bottom" constant="19" id="WiM-Bc-1g1"/>
+                <constraint firstItem="Z8n-My-qRq" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="eZw-Cf-WzR"/>
+                <constraint firstItem="etx-C5-FMu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="8" id="hG9-Oc-MxV"/>
+                <constraint firstItem="U9J-rR-V2d" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="j0v-Ks-BCD"/>
+                <constraint firstAttribute="trailing" secondItem="Nl7-LW-E5w" secondAttribute="trailing" id="p5h-v6-bfp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="U9J-rR-V2d" secondAttribute="trailing" constant="20" id="rA9-3P-ssa"/>
+                <constraint firstItem="Nl7-LW-E5w" firstAttribute="top" secondItem="Z8n-My-qRq" secondAttribute="bottom" constant="13" id="wQ8-rE-hZE"/>
+                <constraint firstItem="U9J-rR-V2d" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="53" id="x6j-9p-Uw7"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="backButton" destination="etx-C5-FMu" id="nsb-xI-Qgq"/>
+                <outlet property="headerLabel" destination="U9J-rR-V2d" id="ZHz-EE-i6Y"/>
+                <outlet property="subLabel" destination="Z8n-My-qRq" id="rmU-qX-Ak5"/>
+            </connections>
+            <point key="canvasLocation" x="-239.19999999999999" y="181.25937031484258"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="arrow_left_white" width="16" height="16"/>
+        <namedColor name="Highlight">
+            <color red="0.40000000000000002" green="0.77647058823529413" blue="0.77647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Resources Separator">
+            <color red="0.12999999523162842" green="0.20000000298023224" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

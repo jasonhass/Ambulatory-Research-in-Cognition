@@ -1,0 +1,20 @@
+{
+  "instructions" : [
+
+  ],
+  "questions" : [
+    {
+      "nextButtonTitle" : "button_submitdates",
+      "prompt" : "availability_change_week",
+      "questionId" : "user_schedule_1",
+      "type" : "picker"
+    },
+    {
+      "nextButtonTitle" : "button_done",
+      "prompt" : "availability_change_week_confirm",
+      "questionId" : "user_schedule_2",
+      "type" : "calendar"
+    }
+  ],
+  "type" : "schedule"
+}

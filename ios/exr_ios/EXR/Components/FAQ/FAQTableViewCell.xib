@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="faq_cell" rowHeight="51" id="NLd-Qb-xjU" customClass="FAQTableViewCell" customModule="Arc" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NLd-Qb-xjU" id="NVP-Mt-Tvz">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="51"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FAQ" lineBreakMode="wordWrap" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4t-Fz-sWx" customClass="HMMarkupLabel" customModule="HMMarkup">
+                        <rect key="frame" x="24" y="8" width="294" height="35"/>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
+                        <color key="textColor" name="Secondary Text"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VfR-3h-ktz" userLabel="indicator">
+                        <rect key="frame" x="328" y="9.5" width="32" height="32"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_right_white" translatesAutoresizingMaskIntoConstraints="NO" id="qYc-2C-Eq2">
+                                <rect key="frame" x="8" y="8" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="VvM-mM-hsc"/>
+                                    <constraint firstAttribute="width" constant="16" id="lQD-E4-4nw"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="1Tq-Zr-vRI"/>
+                            <constraint firstItem="qYc-2C-Eq2" firstAttribute="top" secondItem="VfR-3h-ktz" secondAttribute="top" constant="8" id="E9J-T4-srJ"/>
+                            <constraint firstAttribute="bottom" secondItem="qYc-2C-Eq2" secondAttribute="bottom" constant="8" id="Rdk-nY-Vwd"/>
+                            <constraint firstItem="qYc-2C-Eq2" firstAttribute="centerY" secondItem="VfR-3h-ktz" secondAttribute="centerY" id="UH9-Nd-bnx"/>
+                            <constraint firstItem="qYc-2C-Eq2" firstAttribute="leading" secondItem="VfR-3h-ktz" secondAttribute="leading" constant="8" id="cvO-qz-HmW"/>
+                            <constraint firstAttribute="trailing" secondItem="qYc-2C-Eq2" secondAttribute="trailing" constant="8" id="g7P-Tj-pd9"/>
+                            <constraint firstAttribute="width" constant="32" id="hCE-Om-tOu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OlR-tt-Q1E" userLabel="Separator">
+                        <rect key="frame" x="0.0" y="50" width="375" height="1"/>
+                        <color key="backgroundColor" name="Resources Separator"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="KAa-Nr-jxr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="d4t-Fz-sWx" firstAttribute="leading" secondItem="NVP-Mt-Tvz" secondAttribute="leading" constant="24" id="7fw-R3-iMu"/>
+                    <constraint firstItem="OlR-tt-Q1E" firstAttribute="leading" secondItem="NVP-Mt-Tvz" secondAttribute="leading" id="Avi-V6-wlj"/>
+                    <constraint firstItem="VfR-3h-ktz" firstAttribute="centerY" secondItem="NVP-Mt-Tvz" secondAttribute="centerY" id="C36-Cr-8je"/>
+                    <constraint firstItem="OlR-tt-Q1E" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VfR-3h-ktz" secondAttribute="bottom" constant="8" id="IKR-uS-rbQ"/>
+                    <constraint firstAttribute="trailing" secondItem="OlR-tt-Q1E" secondAttribute="trailing" id="P3I-PE-NYI"/>
+                    <constraint firstAttribute="bottom" secondItem="OlR-tt-Q1E" secondAttribute="bottom" id="aPL-Lm-w7Z"/>
+                    <constraint firstItem="VfR-3h-ktz" firstAttribute="leading" secondItem="d4t-Fz-sWx" secondAttribute="trailing" constant="10" id="gAX-1Z-0s3"/>
+                    <constraint firstAttribute="bottom" secondItem="d4t-Fz-sWx" secondAttribute="bottom" constant="8" id="hiy-TM-Vtr"/>
+                    <constraint firstItem="VfR-3h-ktz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="NVP-Mt-Tvz" secondAttribute="top" constant="9.5" id="o9o-PB-pgS"/>
+                    <constraint firstAttribute="trailing" secondItem="VfR-3h-ktz" secondAttribute="trailing" constant="15" id="vZM-il-3Hx"/>
+                    <constraint firstItem="d4t-Fz-sWx" firstAttribute="top" secondItem="NVP-Mt-Tvz" secondAttribute="top" constant="8" id="wWs-Ou-3Nt"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="Primary Info"/>
+            <connections>
+                <outlet property="label" destination="d4t-Fz-sWx" id="D99-8d-me1"/>
+            </connections>
+            <point key="canvasLocation" x="-65" y="-255"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_right_white" width="16" height="16"/>
+        <namedColor name="Primary Info">
+            <color red="0.039215686274509803" green="0.12156862745098039" blue="0.32941176470588235" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Resources Separator">
+            <color red="0.12999999523162842" green="0.20000000298023224" blue="0.40000000596046448" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Secondary Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,66 @@
+{
+	
+  "questions" : [
+	  {
+		  "prompt" : "",
+		  
+		  "style" : "viewController",
+		  "state" : "rebuked",
+		  
+		  "questionId" : "rebuked",
+		  "type" : "none"
+	  },
+	  {
+		  "nextButtonTitle" : "button_submit",
+          "prompt" : "onboarding_header",
+          "detail" : "onboarding_body",
+          "questionId" : "commitment",
+          "style" : "onboarding",
+		  "type" : "choice",
+		  "answers" : [
+			  {
+				  "answerId" : "1_a",
+                  "value" : "radio_commit"
+			  },
+			  {
+				  "answerId" : "1_b",
+                  "value" : "radio_nocommit"
+			  }
+		  ],
+		  "routes" : [
+			  {
+				  "answerId" : null,
+				  "nextQuestionId" : "yes_sub_1",
+				  "operand" : null,
+				  "value" : 0
+			  },
+			  {
+				  "answerId" : null,
+				  "nextQuestionId" : "no_sub_1",
+				  "operand" : null,
+				  "value" : 1
+			  }
+		  ]
+	  }
+  ],
+  "subQuestions" : [
+	  {
+          "altNextButtonTitle" : "button_submit",
+          "prompt" : "onboarding_nocommit_header",
+          "detail" : "onboarding_nocommit_body",
+		  "questionId" : "no_sub_1",
+		  "type" : "none",
+		  "style": "impasse"
+	  },
+	  {
+		  "nextButtonTitle" : "button_submit",
+          "prompt" : "onboarding_commit_header",
+          "detail" : "onboarding_commit_body",
+		  "style" : "instruction",
+		  
+		  "questionId" : "yes_sub_1",
+		  "type" : "none"
+	  }
+  ],
+  "type" : "auth"
+}

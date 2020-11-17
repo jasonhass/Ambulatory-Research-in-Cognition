@@ -1,0 +1,11 @@
+{
+  "questions" : [
+    {
+      "detail" : "idverify_body",
+      "prompt" : "idverify_header",
+      "questionId" : "auth_signature",
+      "type" : "image"
+    }
+  ],
+  "type" : "auth"
+}
