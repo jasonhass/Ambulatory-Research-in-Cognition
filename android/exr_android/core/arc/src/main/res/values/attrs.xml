@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="text" format="string" />
+    <attr name="enabled" format="boolean" />
+
+    <attr name="fillColor" format="color" />
+    <attr name="strokeWidth" format="dimension" />
+    <attr name="strokeColor" format="color" />
+    <attr name="dashLength" format="dimension" />
+    <attr name="dashSpacing" format="dimension" />
+
+    <attr name="radius" format="dimension" />
+    <attr name="radiusTopLeft" format="dimension" />
+    <attr name="radiusTopRight" format="dimension" />
+    <attr name="radiusBottomLeft" format="dimension" />
+    <attr name="radiusBottomRight" format="dimension" />
+
+    <attr name="gradientColor0" format="color" />
+    <attr name="gradientColor1" format="color" />
+    <attr name="gradient" format="enum" >
+        <enum name="linearHorizontal" value="0"/>
+        <enum name="linearVertical" value="1"/>
+    </attr>
+
+    <attr name="enableBorderTop" format="boolean" />
+    <attr name="enableBorderBottom" format="boolean" />
+
+    <attr name="buttonTheme" format="enum" >
+        <enum name="primary" value="0"/>
+        <enum name="light" value="1"/>
+        <enum name="dark" value="2"/>
+    </attr>
+
+    <declare-styleable name="FancyButton">
+        <attr name="rounded" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="Question">
+        <attr name="text"/>
+        <attr name="button_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Rating">
+        <attr name="text_low" format="string" />
+        <attr name="text_high" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="Button">
+        <attr name="android:text"/>
+        <attr name="android:enabled"/>
+        <attr name="buttonTheme" />
+        <attr name="icon" format="reference" />
+        <attr name="iconRight" format="reference" />
+        <attr name="allCaps" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="WeekdayButton">
+        <attr name="text"/>
+    </declare-styleable>
+
+    <declare-styleable name="RoundedFrameLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="radius" />
+        <attr name="radiusTopLeft" />
+        <attr name="radiusTopRight" />
+        <attr name="radiusBottomLeft" />
+        <attr name="radiusBottomRight" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedLinearLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="radius" />
+        <attr name="radiusTopLeft" />
+        <attr name="radiusTopRight" />
+        <attr name="radiusBottomLeft" />
+        <attr name="radiusBottomRight" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedRelativeLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="radius" />
+        <attr name="radiusTopLeft" />
+        <attr name="radiusTopRight" />
+        <attr name="radiusBottomLeft" />
+        <attr name="radiusBottomRight" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="RoundedTextView">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="radius" />
+        <attr name="radiusTopLeft" />
+        <attr name="radiusTopRight" />
+        <attr name="radiusBottomLeft" />
+        <attr name="radiusBottomRight" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+
+    <declare-styleable name="ChipFrameLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="ChipLinearLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="ChipRelativeLayout">
+        <attr name="fillColor" />
+        <attr name="strokeWidth" />
+        <attr name="strokeColor" />
+        <attr name="dashLength" />
+        <attr name="dashSpacing" />
+        <attr name="gradientColor0" />
+        <attr name="gradientColor1" />
+        <attr name="gradient" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="baseColor" format="color" />
+        <attr name="sweepColor" format="color" />
+        <attr name="checkmarkColor" format="color" />
+        <attr name="strokeWidth" />
+    </declare-styleable>
+
+    <declare-styleable name="EarningsBonusView">
+        <attr name="textLeft" format="string" />
+        <attr name="textRight" format="string" />
+        <attr name="textCenter" format="string" />
+        <attr name="unearned" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="RadioButton">
+        <attr name="showButton" format="boolean"/>
+        <attr name="labelPosition" format="enum">
+            <enum name="left" value="0"/>
+            <enum name="right" value="1"/>
+            <enum name="center" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="FaqListItem">
+        <attr name="question" format="string"/>
+        <attr name="answer" format="string"/>
+        <attr name="enableBorderTop" />
+        <attr name="enableBorderBottom" />
+    </declare-styleable>
+
+</resources>

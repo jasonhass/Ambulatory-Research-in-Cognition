@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/secondary">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp"
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/backgroundImageView"
+                    android:src="@drawable/ic_grids_bg"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/headerLayout"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTestNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="28dp"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="32dp"
+                        android:textSize="16dp"
+                        android:textColor="@color/tealSubheader"
+                        tools:text="Test 1 of 3" />
+
+                    <TextView
+                        android:id="@+id/textViewHeader"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:paddingLeft="32dp"
+                        android:paddingRight="32dp"
+                        android:textSize="32dp"
+                        android:textColor="@color/white"
+                        tools:text="This is a header" />
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="50dp"
+                        android:layout_height="2dp"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:layout_weight="1"
+                        android:background="@color/yellow" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/textViewBody"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:textSize="17dp"
+                android:lineHeight="26dp"
+                android:textColor="@color/white"
+                tools:text="This is the body text"
+                tools:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewTutorial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="80dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        tools:text="Tutorial" />
+
+    <com.healthymedium.arc.ui.Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="48dp"
+        android:layout_marginRight="48dp"
+        android:enabled="true"
+        android:text="BEGIN TEST"
+        app:buttonTheme="light"/>
+
+    <TextView
+        android:id="@+id/textViewScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/ic_rating_scroll_indicator"
+        android:gravity="center"
+        android:paddingBottom="10dp"
+        android:text="Scroll"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+        android:visibility="gone" />
+
+</RelativeLayout>

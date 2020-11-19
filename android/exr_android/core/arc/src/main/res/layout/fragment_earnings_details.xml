@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/background_back_button"
+                android:drawableLeft="@drawable/ic_arrow_left_white"
+                android:drawablePadding="8dp"
+                android:paddingLeft="8dp"
+                android:paddingTop="8dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="8dp"
+                android:text="@string/button_back"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/earnings_details_header"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewSessionDivider"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="1"
+                android:background="@color/yellow" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:text="@string/earnings_studytotal"
+                    android:textColor="@color/tealSubheader"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/studyTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="32dp"
+                    android:text="$0.00"
+                    android:textColor="@color/white"
+                    android:textSize="32dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textViewLastSync"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="32dp"
+                    android:textColor="@color/unearnedGray"
+                    android:textSize="16dp"
+                    tools:text="Last Synced: Just Now" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cycleLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+            <com.healthymedium.arc.ui.Button
+                android:id="@+id/viewFaqButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/button_viewfaq"
+                app:buttonTheme="light">
+
+            </com.healthymedium.arc.ui.Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>

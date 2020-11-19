@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/secondary">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/sessions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/textViewSessionsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_daily_header"
+                android:textColor="@color/secondaryDark"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textViewSessionDivider"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="1"
+                android:background="@color/yellow" />
+
+            <LinearLayout
+                android:id="@+id/sessionProgressLayout"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:orientation="horizontal" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/complete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2 Complete"
+                    android:textColor="@color/secondary"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="|"
+                    android:textColor="@color/secondary"
+                    android:textSize="17dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/remaining"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1 Remaining"
+                    android:textColor="@color/secondary"
+                    android:textSize="17dp" />
+
+                <com.healthymedium.arc.ui.base.RoundedFrameLayout
+                    android:id="@+id/dayStatusBadge"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    android:visibility="gone"
+                    app:fillColor="@color/hintDark"
+                    app:radius="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/progress_schedule_status2"
+                        android:textColor="@color/secondaryDark"
+                        android:textSize="16dp" />
+
+                </com.healthymedium.arc.ui.base.RoundedFrameLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/week"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/progressWeekBackground"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/textViewWeekHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_weekly_header"
+                android:textColor="@color/secondaryDark"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textViewWeekDivider"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="1"
+                android:background="@color/yellow" />
+
+            <TextView
+                android:id="@+id/weeklyStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Day 6 of 7"
+                android:textColor="@color/secondaryDark"
+                android:textSize="21dp" />
+
+            <com.healthymedium.arc.ui.WeekProgressView
+                android:id="@+id/weekProgressView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp">
+
+            </com.healthymedium.arc.ui.WeekProgressView>
+
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="Start Date"
+                android:textColor="@color/primary"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/startDate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="Sunday, March 5"
+                android:textColor="@color/secondaryDark"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/endDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="End Date"
+                android:textColor="@color/primary"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/endDate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="26dp"
+                android:text="Saturday, March 11"
+                android:textColor="@color/secondaryDark"
+                android:textSize="17dp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/week"
+            android:orientation="vertical"
+            android:background="@color/secondary">
+
+            <TextView
+                android:id="@+id/textViewStudyHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_study_header"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textViewStudyDivider"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:layout_weight="1"
+                android:background="@color/yellow" />
+
+
+            <TextView
+                android:id="@+id/studyStatus2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="22dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/studyStatusLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/studyStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:textSize="22dp"
+                    android:textColor="@color/white"
+                    android:text="Week 4 of 12"/>
+
+                <TextView
+                    android:id="@+id/asterisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="@string/footnote_symbol"
+                    android:textColor="@color/yellow" />
+
+                <com.healthymedium.arc.ui.base.RoundedFrameLayout
+                    android:id="@+id/studyStatusBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="8dp"
+                    app:fillColor="@color/hintDark"
+                    app:radius="8dp">
+
+                    <TextView
+                        android:id="@+id/studyStatusBadgeTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:text="@string/status_inprogress"
+                        android:textColor="@color/secondaryDark"
+                        android:textSize="16dp" />
+
+                </com.healthymedium.arc.ui.base.RoundedFrameLayout>
+
+            </LinearLayout>
+
+            <com.healthymedium.arc.ui.StudyProgressView
+                android:id="@+id/studyProgressView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="16dp">
+
+            </com.healthymedium.arc.ui.StudyProgressView>
+
+            <TextView
+                android:id="@+id/joinedDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_joindate"
+                android:textColor="@color/tealSubheader"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/joinedDate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="December 3, 2018"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:id="@+id/finishDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/progress_finishdate"
+                    android:textColor="@color/tealSubheader"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/finishDate"
+                    android:text="@string/footnote_symbol"
+                    android:textColor="@color/yellow"/>
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/finishDate_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="December 3, 2020"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/timeBetween"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_timebtwtesting"
+                android:textColor="@color/tealSubheader"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/timeBetween_units"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="2 Months"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewNextCycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/progress_nextcycle"
+                android:textColor="@color/tealSubheader"
+                android:textSize="17dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textViewNextCycleDates"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="2 Months"
+                android:textColor="@color/white"
+                android:textSize="17dp"
+                android:visibility="gone"/>
+
+
+            <com.healthymedium.arc.ui.base.RoundedFrameLayout
+                android:id="@+id/nextCycleBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="4dp"
+                android:visibility="gone"
+                app:fillColor="@color/hintDark"
+                app:radius="8dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/status_nonedone"
+                    android:textColor="@color/secondaryDark"
+                    android:textSize="16dp" />
+
+            </com.healthymedium.arc.ui.base.RoundedFrameLayout>
+
+            <com.healthymedium.arc.ui.Button
+                android:id="@+id/viewFaqButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/button_viewfaq"
+                app:buttonTheme="light">
+
+            </com.healthymedium.arc.ui.Button>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/asterisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginLeft="32dp"
+                    android:text="@string/footnote_symbol"
+                    android:textColor="@color/yellow"/>
+
+                <TextView
+                    android:id="@+id/endDepends"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/asterisk"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="26dp"
+                    android:text="@string/progress_studydisclaimer"
+                    android:textColor="@color/white"
+                    android:textSize="14dp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

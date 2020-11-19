@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="112dp"
+                android:orientation="horizontal">
+            </View>
+
+            <TextView
+                android:id="@+id/textViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/legacy_migration_error"
+                android:textAlignment="center"
+                android:textSize="18dp" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textViewContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/legacy_migration_contact"
+        android:textColor="@color/primary"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"
+        android:layout_above="@id/buttonNext"/>
+
+    <com.healthymedium.arc.ui.Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/button_install_update" />
+
+</RelativeLayout>

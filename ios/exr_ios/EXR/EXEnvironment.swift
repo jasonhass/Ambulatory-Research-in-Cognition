@@ -45,9 +45,9 @@ enum EXEnvironment : ArcEnvironment {
     var crashReporterApiKey: String? {
         switch self {
         case .userTest, .unitTest, .qa, .dev:
-            return "HmnfQU2uJpIOx23kQ2DaeXm6uWa8968r"
+            return ""
         case .production:
-            return "0RX3JDXOaxcq7vgvsrKKsNxY4CKUzHKC"
+            return ""
         default:
             return nil
         }

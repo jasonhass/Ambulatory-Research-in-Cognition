@@ -34,17 +34,17 @@ public class Application extends com.healthymedium.arc.core.Application{
         Config.REPORT_STUDY_INFO = true;
 
         if(BuildConfig.FLAVOR.equals(Config.FLAVOR_DEV)){
-            Config.REST_ENDPOINT = "https://hasdapi.thinkhealthymedium.com/";
+            Config.REST_ENDPOINT = "";
             Config.DEBUG_DIALOGS = true;
             Config.REST_HEARTBEAT = false;
             Config.REST_BLACKHOLE = true;
 
         } else if(BuildConfig.FLAVOR.equals(Config.FLAVOR_QA)){
-            Config.REST_ENDPOINT = "https://hasd-api-qa.arc-base.com/";
+            Config.REST_ENDPOINT = "";
             Config.DEBUG_DIALOGS = true;
 
         } else if(BuildConfig.FLAVOR.equals(Config.FLAVOR_PROD)){
-            Config.REST_ENDPOINT = "https://hasd-api.arc-base.com/"; // todo: confirm this
+            Config.REST_ENDPOINT = "";
         }
 
         super.onCreate();

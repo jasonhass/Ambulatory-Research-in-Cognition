@@ -21,7 +21,7 @@ public class Config {
     public static boolean CHOOSE_LOCALE = false;
 
     // Rest API
-    public static String REST_ENDPOINT = "http://thinkhealthymedium.com/"; // where we send the data
+    public static String REST_ENDPOINT = ""; // where we send the data
     public static boolean REST_BLACKHOLE = false; // used for debugging, keeps all rest calls from reaching the outside world
     public static boolean REST_HEARTBEAT = true; // heartbeat will fail if blackhole is enabled
     public static boolean CHECK_SESSION_INFO = false; // if true, an api is called after registration to check for existing session info

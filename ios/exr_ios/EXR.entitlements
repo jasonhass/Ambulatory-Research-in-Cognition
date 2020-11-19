@@ -3,9 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>com.apple.developer.associated-domains</key>
-	<array>
-		<string>applinks:exr.thinkhealthymedium.com</string>
-		<string>applinks:dashboard.arc-base.com</string>
-	</array>
+	<array/>
 </dict>
 </plist>

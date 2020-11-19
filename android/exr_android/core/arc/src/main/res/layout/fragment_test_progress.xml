@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/secondary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="120dp"
+                android:layout_marginRight="32dp"
+                android:text="Test Complete!"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="26dp" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:text="Well Done!"
+                android:textColor="@color/white"
+                android:textSize="18dp" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="56dp"
+                android:layout_marginTop="48dp"
+                android:layout_marginRight="56dp"
+                android:foregroundGravity="right">
+
+                <TextView
+                    android:id="@+id/textViewTextNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="1"
+                    android:textColor="@color/white"
+                    android:textSize="48dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="/"
+                    android:textColor="@color/secondaryAccent"
+                    android:textSize="56dp" />
+
+                <TextView
+                    android:id="@+id/textViewThree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:text="3"
+                    android:textColor="@color/white"
+                    android:textSize="48dp" />
+
+                <com.healthymedium.arc.ui.CircleProgressView
+                    android:id="@+id/circleProgressView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:strokeWidth="28dp"
+                    app:baseColor="@color/primary"
+                    app:sweepColor="@color/secondaryAccent"
+                    app:checkmarkColor="@color/secondary"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

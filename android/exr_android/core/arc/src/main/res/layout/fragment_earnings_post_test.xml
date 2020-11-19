@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary" >
+
+    <ImageView
+        android:id="@+id/imageViewConfetti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/confetti" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="96dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:text="@string/progress_earnings_header"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="34dp"
+                android:layout_marginRight="34dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="32dp"
+                        android:text="@string/earnings_weektotal"
+                        android:textColor="@color/tealSubheader"
+                        android:textSize="17dp" />
+
+                    <com.healthymedium.arc.ui.TotalEarningsView
+                        android:id="@+id/weeklyTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="32dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginRight="32dp"
+                        android:text="@string/earnings_studytotal"
+                        android:textColor="@color/tealSubheader"
+                        android:textSize="17dp" />
+
+                    <com.healthymedium.arc.ui.TotalEarningsView
+                        android:id="@+id/studyTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginRight="32dp"
+                        android:text="$0.00" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/achievementLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewHeader2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginRight="32dp"
+                android:gravity="center"
+                android:text="@string/earnings_bonus_header"
+                android:textColor="@color/white"
+                android:textSize="26dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewHeader3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="18dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="@string/earnings_bonus_body"
+                android:textColor="@color/white"
+                android:textSize="17dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goalLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom">
+
+        <com.healthymedium.arc.ui.base.RoundedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            app:gradient="linearVertical"
+            app:gradientColor0="@color/transparent"
+            app:gradientColor1="@color/secondary"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/secondary" />
+
+    </LinearLayout>
+
+    <com.healthymedium.arc.ui.Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="24dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="@string/button_next"
+        app:buttonTheme="light" />
+
+</FrameLayout>

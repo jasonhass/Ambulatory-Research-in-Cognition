@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+def versionMajor = 0 // max=2000 // bump to mark substantial changes
+def versionMinor = 0 // max=99   // bump for small changes (features, changes in intended behavior, etc)
+def versionPatch = 0 // max=99   // bump for fixes (crashes, unintended behavior, etc)
+def versionBuild = 1 // max=99   // bump for qa builds
+
+android {
+    compileSdkVersion 28
+    flavorDimensions "default"
+
+    defaultConfig {
+        applicationId "com.healthymedium.sample"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode versionMajor * 1000000 + versionMinor * 10000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}.${versionPatch}"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        debug {
+
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        prod {
+
+        }
+        qa {
+
+        }
+        dev {
+
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'joda-time:joda-time:2.9.9'
+
+    implementation project(':arc')
+}

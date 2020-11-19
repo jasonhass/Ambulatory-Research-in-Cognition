@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="4dp">
+
+        <RelativeLayout
+            android:id="@+id/landing_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp"
+            android:paddingBottom="100dp">
+
+            <TextView
+                android:id="@+id/textViewBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_arrow_left"
+                android:drawablePadding="8dp"
+                android:paddingLeft="16dp"
+                android:paddingBottom="22dp"
+                android:text="@string/button_back"
+                android:textAllCaps="true"
+                android:textColor="@color/primary"
+                android:textSize="14dp"
+                />
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewBack"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:textSize="26dp"
+                tools:text="Resend code?"
+                />
+
+            <TextView
+                android:id="@+id/textViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewHeader"
+                android:paddingLeft="24dp"
+                android:paddingTop="16dp"
+                android:paddingRight="24dp"
+                android:textSize="17dp"
+                tools:text="Keep in mind that it might take a few minutes to receive your security code."
+                />
+
+            <com.healthymedium.arc.ui.Button
+                android:id="@+id/newCodeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textViewSubHeader"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="43dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/button_sendnewcode" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/newCodeButton"
+                android:paddingLeft="32dp"
+                android:orientation="vertical" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

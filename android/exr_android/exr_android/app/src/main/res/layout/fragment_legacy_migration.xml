@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="@color/white">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fadeScrollbars="false"
+        android:scrollbarSize="4dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="100dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:orientation="horizontal">
+            </View>
+
+            <TextView
+                android:id="@+id/textViewHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:textSize="26dp"
+                tools:text="This is a header" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="50dp"
+                android:layout_height="2dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:layout_weight="1"
+                android:background="@color/yellow" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/legacy_migration_body"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/textViewSubHeader2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="32dp"
+                android:lineSpacingExtra="12dp"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/legacy_migration_body2"
+                android:textSize="18dp"
+                android:textStyle="italic" />
+
+            <LinearLayout
+                android:id="@+id/linearLayoutContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutProgress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp">
+
+
+    <TextView
+        android:id="@+id/textViewProgressBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/legacy_migration_progress"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:max="100"
+            android:progress="0" />
+
+    </LinearLayout>
+
+    <com.healthymedium.arc.ui.Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:visibility="gone"
+        android:text="@string/button_next" />
+
+</RelativeLayout>

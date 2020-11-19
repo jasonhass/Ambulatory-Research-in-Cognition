@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.healthymedium.arc.ui.base.RoundedRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginBottom="4dp"
+    android:padding="12dp"
+    app:fillColor="@color/white"
+    app:gradient="linearHorizontal"
+    app:gradientColor0="@color/hintLight"
+    app:gradientColor1="@color/hintDark"
+    app:radius="8dp"
+    app:strokeColor="@color/hintDark"
+    app:strokeWidth="2dp">
+
+    <TextView
+        android:id="@+id/textViewValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/secondaryDark"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:text="+$0.50" />
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:textColor="@color/secondaryDark"
+        android:textSize="17dp"
+        tools:text="Completed test session" />
+
+</com.healthymedium.arc.ui.base.RoundedRelativeLayout>
+

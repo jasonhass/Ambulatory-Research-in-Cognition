@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
+
+    <string name="legacy_migration_header">New in this Update</string>
+    <string name="legacy_migration_body">We’ve refreshed the look of the app and added some helpful features.&lt;br/&gt;Now you can:&lt;br/&gt;+ View tutorials for each test&lt;br/&gt;+ See your study timeline&lt;br/&gt;+ See how much you’ve earned</string>
+    <string name="legacy_migration_body2">As before, you’ll receive a notification when it’s time to take a test.</string>
+    <string name="legacy_migration_progress">Installing update…</string>
+    <string name="legacy_migration_error">There was a problem with the installation. Please check your connection and tap the button below to try again.&lt;br/&gt;&lt;br/&gt;If this problem persists, please contact the DIAN study team for assistance.</string>
+    <string name="legacy_migration_contact">Contact Study Team</string>
+
+
+    <string name="button_install_update">INSTALL UPDATE</string>
+
+    <string name="contact_email2">neuro-dianarc@email.wustl.edu</string>
+    <string name="contact_call2">+1&#8211;314&#8211;273&#8211;7112</string>
+
+</resources>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/secondary">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/secondary">
+
+                <TextView
+                    android:id="@+id/textViewHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="32dp"
+                    android:text="@string/resources_nav_earnings"
+                    android:textColor="@color/white"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:id="@+id/textViewSessionDivider"
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="24dp"
+                    android:layout_weight="1"
+                    android:background="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/earningsBody1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginRight="32dp"
+                    android:lineSpacingExtra="4.5dp"
+                    android:text="@string/earnings_body1"
+                    android:textColor="@color/white"
+                    android:textSize="17dp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginRight="34dp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/weeklyTotalLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:text="@string/earnings_weektotal"
+                            android:textColor="@color/tealSubheader"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/weeklyTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="32dp"
+                            android:text="$0.00"
+                            android:textColor="@color/white"
+                            android:textSize="32dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/studyTotalLabel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginRight="32dp"
+                            android:text="@string/earnings_studytotal"
+                            android:textColor="@color/tealSubheader"
+                            android:textSize="17dp" />
+
+                        <TextView
+                            android:id="@+id/studyTotal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="32dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="32dp"
+                            android:text="$0.00"
+                            android:textColor="@color/white"
+                            android:textSize="32dp" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textViewLastSync"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/unearnedGray"
+                    android:textSize="16dp"
+                    tools:text="Last Synced: Just Now" />
+
+                <com.healthymedium.arc.ui.Button
+                    android:id="@+id/viewDetailsButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/button_viewdetails"
+                    app:buttonTheme="light">
+
+                </com.healthymedium.arc.ui.Button>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/bonusGoalsHeader"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginRight="32dp"
+                    android:text="@string/earnings_bonus_header"
+                    android:textColor="@color/black"
+                    android:textSize="26dp" />
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="2dp"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="19dp"
+                    android:layout_weight="1"
+                    android:background="@color/yellow" />
+
+                <TextView
+                    android:id="@+id/bonusBody"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="32dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="32dp"
+                    android:layout_marginBottom="24dp"
+                    android:text="@string/earnings_bonus_body"
+                    android:textColor="@color/black"
+                    android:textSize="17dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/goalLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:orientation="vertical">
+
+
+            </LinearLayout>
+
+            <com.healthymedium.arc.ui.Button
+                android:id="@+id/viewFaqButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:text="@string/button_viewfaq"
+                app:buttonTheme="light">
+
+            </com.healthymedium.arc.ui.Button>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</android.support.v4.widget.SwipeRefreshLayout>
+
