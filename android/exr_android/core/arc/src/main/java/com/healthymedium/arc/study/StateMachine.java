@@ -43,7 +43,6 @@ import com.healthymedium.arc.core.SimplePopupScreen;
 import com.healthymedium.arc.library.R;
 import com.healthymedium.arc.misc.TransitionSet;
 import com.healthymedium.arc.path_data.AvailabilityPathData;
-import com.healthymedium.arc.path_data.ChronotypePathData;
 import com.healthymedium.arc.path_data.ContextPathData;
 import com.healthymedium.arc.path_data.GridTestPathData;
 import com.healthymedium.arc.path_data.PriceTestPathData;
@@ -463,68 +462,7 @@ public class StateMachine {
     // ---------------------------------------------------------------------------------------------
 
     public void addChronotypeSurvey(){
-        List<BaseFragment> fragments = new ArrayList<>();
-
-        Resources res = Application.getInstance().getResources();
-
-        fragments.add(new StateInfoTemplate(
-                false,
-                res.getString(R.string.chronotype_header),
-                res.getString(R.string.chronotype_subheader),
-                res.getString(R.string.chronotype_body1),
-                res.getString(R.string.button_beginsurvey)));
-
-        fragments.add(new QuestionPolar(true, res.getString(R.string.chronotype_q1),""));
-
-        List<String> workingDayCountOptions = new ArrayList<>();
-        workingDayCountOptions.add("0");
-        workingDayCountOptions.add("1");
-        workingDayCountOptions.add("2");
-        workingDayCountOptions.add("3");
-        workingDayCountOptions.add("4");
-        workingDayCountOptions.add("5");
-        workingDayCountOptions.add("6");
-        workingDayCountOptions.add("7");
-
-        fragments.add(new QuestionRadioButtons(true,false, res.getString(R.string.chronotype_q2), res.getString(R.string.list_selectone ),workingDayCountOptions));
-
-        fragments.add(new StateInfoTemplate(
-                false,
-                "",
-                "",
-                res.getString(R.string.chronotype_body2),
-                res.getString(R.string.button_next)));
-
-
-        CircadianClock clock = Study.getParticipant().getCircadianClock();
-        CircadianRhythm rhythm;
-        String weekday;
-
-
-        weekday = TimeUtil.getWeekday();
-        if(!clock.hasWakeRhythmChanged(weekday)){
-            weekday = TimeUtil.getWeekday(DateTime.now().minusDays(1));
-        }
-        rhythm = clock.getRhythm(weekday);
-        LocalTime wakeTime = rhythm.getWakeTime();
-
-
-        weekday = TimeUtil.getWeekday();
-        if(!clock.hasBedRhythmChanged(weekday)){
-            weekday = TimeUtil.getWeekday(DateTime.now().minusDays(1));
-        }
-        rhythm = clock.getRhythm(weekday);
-        LocalTime bedTime = rhythm.getBedTime();
-
-
-        fragments.add(new QuestionTime(true, res.getString(R.string.chronotype_workdays_sleep), res.getString(R.string.chronotype_disclaim1), bedTime));
-        fragments.add(new QuestionTime(true, res.getString(R.string.chronotype_workdays_wake), res.getString(R.string.chronotype_disclaim2), wakeTime));
-        fragments.add(new QuestionTime(true, res.getString(R.string.chronotype_workfree_sleep), res.getString(R.string.chronotype_disclaim1), bedTime));
-        fragments.add(new QuestionTime(true, res.getString(R.string.chronotype_workfree_wake), res.getString(R.string.chronotype_disclaim2), wakeTime));
-
-        PathSegment segment = new PathSegment(fragments,ChronotypePathData.class);
-        enableTransition(segment,true);
-        cache.segments.add(segment);
+        
     }
 
     public void addWakeSurvey(){

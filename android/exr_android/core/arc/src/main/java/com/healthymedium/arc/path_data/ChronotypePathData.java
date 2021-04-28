@@ -30,21 +30,6 @@ public class ChronotypePathData extends PathSegmentData {
         ChronotypeSurvey survey = new ChronotypeSurvey();
         survey.questions = new ArrayList<>();
 
-        int size = objects.size();
-        for (int i=0;i<size;i++) {
-            Map<String, Object> response = (Map<String, Object>) objects.get(i);
-            ChronotypeSurveySection surveySection = processHashMap(response,ChronotypeSurveySection.class);
-
-            if(i==0){
-                survey.start_date = surveySection.display_time;
-            } else if(survey.start_date > surveySection.display_time){
-                survey.start_date = surveySection.display_time;
-            }
-
-            surveySection.question_id = "chronotype_" + (i+1);
-            survey.questions.add(surveySection);
-        }
-
         return survey;
 
     }
